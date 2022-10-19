@@ -1,0 +1,29 @@
+.slick-slider
+   .slick-dots
+      position: relative
+      bottom: 0
+      padding: 20px 0 10px
+      @include flexCenter
+      li
+         display: block
+         button
+            width: 15px
+            height: 15px
+         @media (max-width: $mobile)
+            width: 20px
+            height: 20px
+         &.slick-active
+            button
+               opacity: 1
+         button
+            display: block
+            width: 100%
+            height: 100%
+            border-radius: 50%
+            background-color: #747474
+            opacity: .3
+            &::before
+               display: none
+            &:hover
+               opacity: 1
+         

@@ -1,0 +1,202 @@
+$container-width: 1240px
+
+// Tipografia
+
+$tipografia-principal: 'Source Sans Pro', sans-serif
+$tipografia-acento: 'Gentium Plus', sans-serif
+$tipografia-titulos: 'Cairo', sans-serif
+
+$font-size-h1: 43px
+$font-size-h2: 30px
+$font-size-h3: 25px
+$font-size-h4: 22px
+$font-size-h5: 18px
+$font-size-h6: 14px
+$font-size-p: 17px
+$font-size-a: 16px
+$font-size-links-hyf: 16px
+
+// Weight font
+
+$thin: 100
+$light: 300
+$regular: 400
+$medium: 500
+$semiBold: 600
+$bold: 700
+$extraBold: 800
+
+// Colores
+
+// Primary colors
+$dark-green: #00534C
+$light-dark-green: #007864
+$aqua-dark: #00A499
+$aqua-light: #6BCABA
+$green-pastel: #26D07C
+
+// Secondary colors
+$white-yellow: #F9F1E6
+$gray-blue: #C3D7EE
+
+// Text color
+$color-text-default: #151515
+$color-text-gray: #393939
+$color-text-white: #F8F9FA
+
+// $medium-green: #2DA546
+// $haze-green: #00A475
+// $catalina-blue: #002C70
+// $catalina-blue-dark: #002154
+// $mid-blue: #216FBA
+// $picton-blue: #48B4DD
+// $royal-azure-blue: #0045AB
+// $honey-flower-purple: #561770
+// $dark-hot-pink: #D10071
+// $blaze-orange: #FF6A00
+// $red-error: rgb(218, 0, 0)
+
+$maploc-yellow: #FFC639
+$maploc-orange: #FF983B
+$maploc-pink: #FF668B
+$maploc-skyblue: #40D3E2
+$maploc-aqua: #42D1B5
+
+$shadow-grey: #dcdddf
+$footer-grey: #171717
+$semi-negro: #171717
+$dock-campus-inter: #747474
+$bajo-negro: #3C3C3C
+$grey-iron: #dadcde
+$negro: #000000
+$blanco: #ffffff
+$colortexto: #2B2B2B
+$grisfondovideo: #313131
+$grisfondodropmenu: #f1f1f1
+
+// $color-principal: negro
+// $color-secundario: blanco
+
+// Iconos
+// $icomoon-font-path: "../fonts"
+// $fav: e924
+// $right-arrow: e920
+// $left-arrow: e923
+// $call: e903
+// $download: e904
+// $email: e91d
+// $map-locator: e91e
+// $play-button: e91f
+// $smartphone-call: e921
+// $whatsapp: e922
+// $google-docs: e91a
+// $conversation: e91b
+// $phone-call: e91c
+// $menu: e918
+// $close: e91
+// $education: e90d
+// $exclamation: e90e
+// $people: e0f
+// $world: e910
+// $book: e911
+// $certification: e912
+// $first: e913
+// $school: e914
+// $laptop: e915
+// $open-book: e916
+// $search: e917
+// $youtube:e900
+// $twitter: e901
+// $settings: e902
+// $phone-cube: e905
+// $hat: e906
+// $map-point: e907
+// $linkedin: e908
+// $tec: e909
+// $facebook: e90a
+// $elearning: e90b
+// $customer-service: e9c
+
+// Media queries
+// 1440 
+$desktop: $container-width
+$desktop-small: 1140px
+$tablet-landscape: 1024px
+$tablet-portrait: 960px
+$tablet: 768px
+$phablet: 740px
+$mobile: 568px
+$mobile-landscape: 480px
+$mobile-portrait: 355px
+
+// 1024 - 1140
+@mixin tabletLandscapeDesktop
+   @media (min-width: $tablet-landscape ) and ( max-width: $desktop-small )
+      @content
+// 1024
+@mixin minTabletLandscape
+   @media (min-width: $tablet-landscape ) 
+      @content
+// min 960
+@mixin minTabletPortrait
+   @media ( min-width: $tablet-portrait )
+      @content
+// max 960
+@mixin maxTabletPortrait
+   @media ( max-width: $tablet-portrait )
+      @content
+// 568 - 740      
+@mixin mobileToPhablet
+   @media ( min-width: $mobile ) and ( max-width: $phablet )
+      @content
+// 568     
+@mixin maxMobile
+   @media ( max-width: $mobile )
+      @content
+// 480 - 568
+@mixin mobileLandscapeToMobile 
+   @media (min-width: $mobile-landscape) and (max-width: $mobile )
+      @content
+// max 480
+@mixin maxMobileLandscape
+   @media (max-width: $mobile-landscape)
+      @content
+// min 355 max 568
+@mixin mobilePortraitToMobile
+   @media (min-width: $mobile-portrait) and (max-width: $mobile)
+      @content
+// max 355
+@mixin maxMobilePortrait
+   @media (max-width: $mobile-portrait)
+      @content
+
+// Mixins
+@mixin flexStart
+   display: flex
+   align-items: center
+   justify-content: flex-start
+
+@mixin flexEnd
+   display: flex
+   align-items: center
+   justify-content: flex-end
+
+@mixin flexCenter
+   display: flex
+   align-items: center
+   justify-content: center
+
+@mixin flexAround
+   display: flex
+   align-items: center
+   justify-content: space-around
+
+@mixin flexBetween
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+@mixin flexEvenly
+   display: flex
+   align-items: center
+   justify-content: space-evenly      

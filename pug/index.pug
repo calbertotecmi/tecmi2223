@@ -1,0 +1,29 @@
+//- Extend template global
+extends layout/_template
+block contenido
+
+   main
+      //- include components/_c-hero-home-component
+      ._c-start-of-classes-cta
+         .o-container
+            .o-grid-row.row-center
+               .col.size-4
+                  ._c-start-of-classes-cta--intro
+                     img(src="../images/svg/ico-notif-svg.svg", alt="")
+                     h2.title-acento Próximo#[br] inicio de clases
+               .col.size-4
+                  ._c-start-of-classes-cta--dates
+                     ._c-start-of-classes-cta--date
+                        h3 Tetramestral
+                        p Enero 2023
+                     ._c-start-of-classes-cta--date
+                        h3 Semestral
+                        p Enero 2023
+               .col.size-4
+                  ._c-start-of-classes-cta--actions
+                     a.o-btn(href="#!") 
+                        img(src="../images/svg/ico-admisiones-btn.svg", alt="Admisiones")
+                        | Admisiones
+                     a.o-btn(href="#!")
+                        img(src="../images/svg/ico-informacion-btn.svg", alt="Informacion")
+                        | Información

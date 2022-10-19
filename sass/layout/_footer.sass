@@ -1,0 +1,388 @@
+$footerpadding: 65
+
+// footer global
+.footermain
+   background-color: $footer-grey
+   // display: none
+   &--flex-content
+      display: flex
+      justify-content: space-between
+      padding: $footerpadding+px 0 0
+      &--col
+         width: 100%
+         max-width: 300px
+      &--accordion
+         h3
+            color: $blanco
+            font-weight: $semiBold
+            margin: 0 0 calc($footerpadding/2)+px
+            font-size: 18px
+         ul
+            li
+               color: $blanco
+               font-size: $font-size-links-hyf
+               margin-bottom: 7px
+               &:last-child
+                  margin-bottom: 0
+               a
+                  opacity: .8
+                  position: relative
+                  left: 0
+                  transition: all .1s linear
+                  &:hover
+                     opacity: 1
+                     left: 2px
+      &--socialblock
+         &--blockiframe
+            position: relative
+            width: 100%
+            min-height: 210px 
+            background-color: $bajo-negro
+            iframe
+               position: absolute
+               width: 100%
+               height: 100%
+               border: 0
+         &--oursocial
+            h4
+               text-align: center
+               font-size: 17px
+               color: $blanco
+               font-weight: $semiBold
+               margin: 30px 0 20px
+            ul
+               display: flex
+               justify-content: center
+               li
+                  font-size: 22px
+                  color: $blanco
+                  margin: 0 10px
+                  transition: all .1s linear
+                  a
+                     span
+                        &.facebook
+                           &:hover
+                              // color: $royal-azure-blue
+                        &.linkedin
+                           &:hover
+                              // color: $mid-blue
+                        &.twitter
+                           &:hover
+                              // color: $picton-blue
+                        &.youtube
+                           &:hover
+                              // color: $red-error
+
+
+   &--end-page
+      margin-top: $footerpadding+px
+      background-color: $negro
+      .o-container
+         display: flex
+         align-items: center
+         height: 70px
+         p, a
+            color: white
+            font-size: 13px
+         .links
+            display: flex
+            margin-left: auto
+            a
+               opacity: 1
+               transition: all .1s linear
+               &:hover
+                  opacity: 1
+               &::after
+                  content: "|"
+                  margin: 0 20px
+               &:last-child
+                  &::after
+                     display: none
+
+
+// Responsive part for the module
+// @media ( min-width: $desktop-small ) and ( max-width: $desktop )
+@media ( min-width: $tablet-landscape ) and ( max-width: $desktop-small )
+   $footerpadding: 60
+
+   .footermain
+      &--flex-content
+         padding: $footerpadding+px 0 0
+         flex-wrap: wrap
+         &--col
+            width: 30%
+            &:last-child
+               position: relative
+               margin-left: auto
+               top: -80px
+         &--accordion 
+            h3
+               font-size: 16px
+               margin-bottom: 20px
+            ul
+               li
+                  a
+                     font-size: 14px
+         &--socialblock
+            &--blockiframe
+               display: none
+            &--oursocial
+               h4
+                  text-align: left
+               ul
+                  justify-content: flex-start
+                  li
+                     margin: 0 15px 0 0
+      &--end-page
+         margin-top: -20px
+         .o-container
+            p, a
+               font-size: 12px
+
+@media ( min-width: $tablet-portrait ) and ( max-width: $tablet-landscape )
+
+   $footerpadding: 50
+
+   .footermain
+      &--flex-content
+         padding: $footerpadding+px 0 0
+         flex-wrap: wrap
+         &--col
+            width: 30%
+            &:last-child
+               position: relative
+               margin-left: auto
+               top: -100px
+         &--accordion 
+            h3
+               font-size: 16px
+               margin-bottom: 20px
+            ul
+               li
+                  a
+                     font-size: 13px
+         &--socialblock
+            &--blockiframe
+               display: none
+            &--oursocial
+               h4
+                  text-align: left
+               ul
+                  justify-content: flex-start
+                  li
+                     margin: 0 15px 0 0
+      &--end-page
+         margin-top: -40PX
+         .o-container
+            p, a
+               font-size: 12px
+
+@media ( min-width: $tablet ) and ( max-width: $tablet-portrait )
+   $footerpadding: 50
+
+   .footermain
+      &--flex-content
+         padding: $footerpadding+px 0 0
+         flex-wrap: wrap
+         &--col
+            width: 30%
+            &:last-child
+               position: relative
+               margin-left: auto
+               top: -85px
+         &--accordion 
+            h3
+               font-size: 14px
+               margin-bottom: 20px
+            ul
+               li
+                  margin-bottom: 5px
+                  a
+                     font-size: 13px
+         &--socialblock
+            &--blockiframe
+               display: none
+            &--oursocial
+               h4
+                  text-align: left
+               ul
+                  justify-content: flex-start
+                  li
+                     margin: 0 15px 0 0
+      &--end-page
+         margin-top: -40PX
+         .o-container
+            p, a
+               font-size: 11px
+
+@media ( min-width: $phablet ) and ( max-width: $tablet )
+   $footerpadding: 50
+
+   .footermain
+      &--flex-content
+         padding: $footerpadding+px 0 0
+         flex-wrap: wrap
+         &--col
+            width: 30%
+            &:last-child
+               position: relative
+               margin-left: auto
+               top: -85px
+         &--accordion 
+            h3
+               font-size: 14px
+               margin-bottom: 20px
+            ul
+               li
+                  margin-bottom: 5px
+                  a
+                     font-size: 13px
+         &--socialblock
+            &--blockiframe
+               display: none
+            &--oursocial
+               h4
+                  text-align: left
+               ul
+                  justify-content: flex-start
+                  li
+                     margin: 0 15px 0 0
+      &--end-page
+         margin-top: -40PX
+         .o-container
+            p, a
+               font-size: 11px
+
+
+@media ( min-width: $mobile ) and ( max-width: $phablet )
+   $footerpadding: 50
+
+   .footermain
+      &--flex-content
+         padding: $footerpadding+px 0 0
+         flex-wrap: wrap
+         &--col
+            width: 30%
+            &:last-child
+               position: relative
+               margin-left: auto
+               top: -85px
+         &--accordion 
+            h3
+               font-size: 14px
+               margin-bottom: 20px
+            ul
+               li
+                  margin-bottom: 5px
+                  a
+                     font-size: 13px
+         &--socialblock
+            &--blockiframe
+               display: none
+            &--oursocial
+               h4
+                  text-align: left
+               ul
+                  justify-content: flex-start
+                  li
+                     margin: 0 15px 0 0
+      &--end-page
+         margin-top: -40PX
+         .o-container
+            flex-flow: column
+            justify-content: center
+            p, a
+               font-size: 11px
+               text-align: center
+            .links
+               margin: 10px auto 0
+
+@media ( max-width: $mobile )
+   $footerpadding: 30
+
+   .footermain
+      .o-container
+         padding: 0
+         width: 100%
+      &--flex-content
+         padding: $footerpadding+px 0 0
+         display: block
+         &--col
+            width: 100%
+            max-width: 100%
+            padding: 0 15px
+            &:last-child
+               background-color: $negro
+               padding: 30px 15px 0
+         &--accordion 
+            h3
+               font-size: 16px
+               margin-bottom: 5px
+               border-bottom: 2px solid 
+               padding: 10px 5px
+               position: relative
+               cursor: pointer
+               &::selection
+                  background-color: transparent
+               &::after
+                  content: "+"
+                  color: white
+                  position: absolute
+                  right: 20px
+                  font-size: 20px
+                  top: 5px
+               &.open
+                  &::after
+                     content: "-"
+            ul
+               position: relative
+               margin: 0 0 20px
+               padding: 0 10px
+               opacity: 0
+               height: 0
+               z-index: -1
+               transition: all .1s linear
+               &.open
+                  height: 100%
+                  opacity: 1
+                  z-index: 1
+               li
+                  margin-bottom: 10px
+                  a
+                     font-size: 14px
+         &--socialblock
+            &--blockiframe
+               display: none
+            &--oursocial
+               h4
+                  text-align: left
+                  margin-top: 0
+                  display: none
+               ul
+                  justify-content: flex-start
+                  li
+                     margin: 0 15px 0 0
+                     font-size: 30px
+      &--end-page
+         margin-top: 0
+         .o-container
+            flex-flow: column-reverse
+            height: auto
+            p, a
+               font-size: 14px
+               text-align: center
+            p
+               text-align: left
+               padding: 0 15px 30px
+            .links
+               width: 100%
+               margin: 20px 0 30px 
+               padding: 0 15px
+               display: block
+               a
+                  display: table
+                  margin: 0 0 10px
+                  text-align: left
+                  &::after
+                     display: none
+               

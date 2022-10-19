@@ -1,0 +1,126 @@
+header
+   nav.mainNav
+      .mainNav--logo
+         img(src="../images/logo-tecmilenio.svg", alt="Tecmilenio").img-responsive
+      .mainNav--menu
+         //- Menu first level
+         ul.level--one
+            //- First link - level one
+            li
+               a(href="#!").actionDrop Modelo Tecmilenio
+               //- Menu second level
+               ol.level--two
+                  li
+                     a(href="#!") Universidad Positiva
+                     //- Menu third level
+                     ul.level--three
+                        li
+                           a(href="#!") Submenu Universidad positivas
+                        li
+                           a(href="#!") Submenu Universidad positivas
+                        li
+                           a(href="#!") Submenu Universidad positivas
+                        li
+                           a(href="#!") Submenu Universidad positivas
+                     .level--two--cta-link 
+                        a(href="#!").link-go
+                           img(src="http://via.placeholder.com/275x275", alt="test")
+                           span Descubre nuestro modelo Connect                           
+                  li 
+                     a(href="#!") Campus
+                     //- Menu third level
+                     ul.level--three
+                        li
+                           a(href="#!") Submenu Campus
+                        li
+                           a(href="#!") Submenu Campus
+                        li
+                           a(href="#!") Submenu Campus
+                        li
+                           a(href="#!") Submenu Campus
+                  li 
+                     a(href="#!") Mensaje del Rector
+                  li 
+                     a(href="#!") Reglamentos
+                  li 
+                     a(href="#!") Programas internacionales
+
+            //- third link - level one
+            li
+               a(href="#!").actionDrop Oferta educativa
+               //- Menu second level
+               ol.level--two
+                  li
+                     a(href="#!") Preparatoria
+                     //- Menu third level
+                     ul.level--three
+                        li
+                           a(href="#!") Preparatoria Intercultural
+                        li
+                           a(href="#!") Preparatoria Connect        
+                  li
+                     a(href="#!") Carreras profesionales
+                     ul.level--three
+                        each val in [1,2,3]
+                           li
+                              a(href="#!") Escuela #[=val]
+                  li
+                     a(href="#!") Carreras ejecutivas
+                     ul.level--three
+                        each val in [4,5,6]
+                           li
+                              a(href="#!") Escuela #[=val]
+                  li
+                     a(href="#!") Maestrías
+                     ul.level--three
+                        each val in [7,8,9]
+                           li
+                              a(href="#!") Escuela #[=val]                     
+                  li
+                     a(href="#!") Especialidades
+                     ul.level--three
+                        each val in [10,11,12]
+                           li
+                              a(href="#!") Escuela #[=val]                     
+                  li
+                     a(href="#!") Programas en línea
+                     ul.level--three
+                        each val in [13,14,15]
+                           li
+                              a(href="#!") Escuela #[=val]                     
+                  li
+                     a(href="#!") Educación continua
+                     ul.level--three
+                        each val in [16,17,18]
+                           li
+                              a(href="#!") Escuela #[=val]                     
+                  li
+                     a(href="#!") Centro de idiomas
+                     ul.level--three
+                        each val in [19,20,21]
+                           li
+                              a(href="#!") Escuela #[=val]                     
+
+            //- //- fourthd link - level one
+            li
+               a(href="#!").actionDrop Admisiones
+               ol.level--two
+                  li 
+                     a(href="#!") Hola
+            //- fiveth link - level one
+            li
+               a(href="#!") Contacto
+            //- sixth link - level one
+            li.search-lk
+               a(href="#!")
+                  span.icon.search
+            //- last link - level one
+            li
+               a(href="#!").o-btn.btn-green Aplicar ahora
+      .mainNav--mobileActions
+         a(href="#!").mobileActions--search
+            span.icon.search
+         a(href="#!").mobileActions--toggleMenu
+            span.icon.menu
+
+
