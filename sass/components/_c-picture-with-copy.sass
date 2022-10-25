@@ -1,0 +1,42 @@
+._c-picture-with-copy
+   background-color: $blanco
+   padding-bottom: 50px
+   &--picture
+      position: relative
+      left: -10%
+      img
+         width: 100%
+   &--copy
+      width: 100%
+      position: relative
+      @include square( absolute, 100px, -115px, -55px, $green-pastel )
+      h2
+         color: $dark-green
+         font-size: 2.5rem
+         text-transform: uppercase
+         max-width: 500px
+      h3
+         font-family: $tipografia-principal
+         font-size: 1.4rem
+         color: $aqua-dark
+         margin: 40px 0 25px
+      p
+         line-height: 1.5
+         font-size: 1.25rem
+         color: $color-text-gray
+         strong
+            font-size: inherit
+   
+   &--footer
+      position: relative
+      left: 45%
+      width: 50%
+      .col
+         padding: 0 0
+         position: relative
+         margin-left: -7.5px
+         @include square( absolute, 100px, 0, -100px, $dark-green )
+         
+      
+
+      

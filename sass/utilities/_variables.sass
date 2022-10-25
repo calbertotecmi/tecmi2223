@@ -1,4 +1,5 @@
-$container-width: 1240px
+$container-width: 1280px
+$font-size-body: 16px
 
 // Tipografia
 
@@ -6,15 +7,15 @@ $tipografia-principal: 'Source Sans Pro', sans-serif
 $tipografia-acento: 'Gentium Plus', sans-serif
 $tipografia-titulos: 'Cairo', sans-serif
 
-$font-size-h1: 43px
-$font-size-h2: 30px
-$font-size-h3: 25px
-$font-size-h4: 22px
-$font-size-h5: 18px
-$font-size-h6: 14px
-$font-size-p: 17px
-$font-size-a: 16px
-$font-size-links-hyf: 16px
+$font-size-h1: 2.25rem
+$font-size-h2: 2rem
+$font-size-h3: 1.5rem
+$font-size-h4: 1.25rem
+$font-size-h5: 1.15rem
+$font-size-h6: 1.1rem
+$font-size-p: 1.1rem
+$font-size-a: 1rem
+$font-size-links-hyf: 1rem
 
 // Weight font
 
@@ -27,6 +28,10 @@ $bold: 700
 $extraBold: 800
 
 // Colores
+$color-prepa: #F68D2E
+$color-profesional: #78D64B
+$color-posgrado: #64A70B
+$color-cdc: #1EC6BD
 
 // Primary colors
 $dark-green: #00534C
@@ -43,18 +48,6 @@ $gray-blue: #C3D7EE
 $color-text-default: #151515
 $color-text-gray: #393939
 $color-text-white: #F8F9FA
-
-// $medium-green: #2DA546
-// $haze-green: #00A475
-// $catalina-blue: #002C70
-// $catalina-blue-dark: #002154
-// $mid-blue: #216FBA
-// $picton-blue: #48B4DD
-// $royal-azure-blue: #0045AB
-// $honey-flower-purple: #561770
-// $dark-hot-pink: #D10071
-// $blaze-orange: #FF6A00
-// $red-error: rgb(218, 0, 0)
 
 $maploc-yellow: #FFC639
 $maploc-orange: #FF983B
@@ -73,9 +66,6 @@ $blanco: #ffffff
 $colortexto: #2B2B2B
 $grisfondovideo: #313131
 $grisfondodropmenu: #f1f1f1
-
-// $color-principal: negro
-// $color-secundario: blanco
 
 // Iconos
 // $icomoon-font-path: "../fonts"
@@ -200,3 +190,13 @@ $mobile-portrait: 355px
    display: flex
    align-items: center
    justify-content: space-evenly      
+
+
+@mixin square( $position, $size, $top, $right, $color )
+   .square
+      position: $position
+      width: $size
+      height: $size
+      top: $top
+      right: $right
+      background-color: $color

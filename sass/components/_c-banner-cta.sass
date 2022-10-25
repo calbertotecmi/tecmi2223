@@ -1,0 +1,99 @@
+._c-banner-cta
+
+   text-align: center
+   // padding: 60px 0
+   .o-container
+      @include flexCenter
+      flex-flow: column
+      min-height: 450px
+
+   p, h4
+      font-size: 1.25rem
+      font-family: $tipografia-principal
+
+
+   // bg picture
+   &.bg-picture
+
+      overflow: hidden
+
+      .o-container
+         max-width: 100%
+         width: 100%
+         min-height: 540px
+
+      [class*="--intro"]
+         margin-top: auto
+         h2
+            color: $blanco
+      [class*="--footer"]
+         margin-top: auto
+         margin-bottom: 60px
+         a.o-btn
+            color: $green-pastel
+            &:hover
+               background-color: $green-pastel
+               border-color: $green-pastel
+               color: $blanco
+
+   // bg green
+   &.bg-dark-green
+      color: $blanco
+      [class*="--intro"]
+         margin-top: auto
+         h2
+            color: $green-pastel
+
+   
+   &--background
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      z-index: 0
+      @include flexCenter
+      &::before
+         content: ""
+         position: absolute
+         top: 0
+         left: 0
+         width: 100%
+         height: 100%
+         background-color: rgba(0,0,0,.5)
+         z-index: 1
+      img
+         min-width: 100%
+         position: relative
+
+   
+   &--intro
+      position: relative
+      img
+         display: block
+         margin-bottom: 25px
+      h2
+         font-size: 2.5rem
+         text-transform: uppercase
+         span
+            display: block
+            text-transform: none
+            font-size: 1.75rem
+            font-family: $tipografia-principal
+   
+   &--info
+      position: relative
+      margin: 25px 0
+
+   &--sesionInfo
+      position: relative
+      margin-top: auto
+      margin-bottom: 50px
+      h4
+         font-weight: 600
+      .o-btn
+         width: 100%
+         max-width: 335px
+         margin: 25px 0 0
+         font-weight: 600
+   

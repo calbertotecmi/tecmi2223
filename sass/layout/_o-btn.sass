@@ -3,11 +3,42 @@
    display: inline-block
    border-radius: 3px
    text-align: center
-   font-size: 16px
+   font-size: 1rem
    position: relative
    // Default size - medium
-   padding: 8px 20px
+   padding: 7px 20px
    &.small-btn
       padding: 6px 12px
    &.large-btn
-      padding: 12px 24px
+      padding: 10px 22px
+   &.btn-ico
+      @include flexCenter
+      // padding-left: 35px
+      &::before
+         content: ""
+         position: relative
+         // top: 10px
+         // left: 15px
+         width: 15px
+         height: 15px
+         background-size: 15px            
+         margin-right: 10px
+      img
+         display: block
+         margin-right: 5px
+         max-width: 100%
+      &.ico-informacion
+         &::before
+            background-image: url('../images/svg/ico-informacion-btn.svg')
+      &.ico-admision
+         &::before
+            background-image: url('../images/svg/ico-admisiones-btn.svg')
+   &.btn-outline
+      border: 1px solid
+      &.outline-aqua-dark
+         border-color: $aqua-dark
+         &:hover
+            background-color: $aqua-dark
+            color: $blanco
+   &.btn-solid
+      color: $blanco

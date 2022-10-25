@@ -1,6 +1,11 @@
 ._c-start-of-classes-cta
+   padding: 35px 0
+   background-color: $blanco
+   box-shadow: 0px 4px 22px rgba(118 , 118 , 118 , .1)
+   position: relative
+   z-index: 5
    &--intro
-      @include flexCenter
+      @include flexStart
       h2
          color: $dark-green
          margin: 0 0 0 25px
@@ -19,7 +24,15 @@
             height: 100%
             width: 1px
             background-color: $green-pastel
-      h3, p
+      p
          font-family: $tipografia-principal
-         font-size: 20px
          color: $dark-green
+         font-weight: bold
+         font-size: 1.25rem
+         span
+            display: block
+            font-weight: normal
+   &--actions
+      @include flexEnd
+      .o-btn
+         margin: 0 5px

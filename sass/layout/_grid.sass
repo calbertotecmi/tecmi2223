@@ -1,12 +1,26 @@
+.o-container
+   width: 95%
+   max-width: $container-width
+   display: block
+   margin: 0 auto
+   position: relative
+   &::before,
+   &::after
+      display: table
+      content: ""
+      clear: both
+
 .o-grid-row
    display: flex
    flex-wrap: wrap
    width: 100%
-   padding: 0 15px
+   &.row-end
+      @include flexEnd
    &.row-center
       @include flexCenter
    .col
       width: auto
+      padding: 0 10px
       &.size-12
          width: 100%
       &.size-11

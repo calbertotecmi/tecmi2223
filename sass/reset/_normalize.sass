@@ -7,6 +7,7 @@
    font-smoothing: antialiased
    -webkit-font-smoothing: antialiased
    -moz-osx-font-smoothing: grayscale
+   font-size: $font-size-body
 
 html
    -webkit-text-size-adjust: 100%
@@ -27,17 +28,6 @@ main
    -webkit-box-sizing: border-box
    -moz-box-sizing: border-box
    box-sizing: border-box
-
-.o-container
-   width: 95%
-   max-width: $container-width
-   display: block
-   margin: 0 auto
-   &::before,
-   &::after
-      display: table
-      content: ""
-      clear: both
 
 // Reset tag H1 - H6
 @for $i from 1 through 6
@@ -77,19 +67,24 @@ ul
    li
       list-style: none
 
-
+span
+   font-size: inherit
+   color: inherit
 
 
 .title-acento
    font-family: $tipografia-acento
    line-height: 1
-   font-size: 30px
+   font-size: 1.9rem
    font-weight: 700
 
 
 // Global class for colors
 .white-color
    color: $blanco
+
+.aqua-dark-color
+   color: $aqua-dark
 
 // Global class for backgrounds
 .bg-dark-green
@@ -98,6 +93,8 @@ ul
    background-color: $light-dark-green
 .bg-green-pastel
    background-color: $green-pastel
+.bg-aqua-dark
+   background-color: $aqua-dark
 // .bg-grey-iron
 //    background-color: $grey-iron
 // .bg-catalina-blue
@@ -133,18 +130,19 @@ ul
 // @include tabletportraitToLandscape
 //    h2
 //       font-size: 28px
-@include maxTabletPortrait
-   h2
-      font-size: 26px
-@include mobileToPhablet
-   h2
-      font-size: 28px
-@include mobileLandscapeToMobile
-   h2
-      font-size: 25px       
-@include maxMobileLandscape
-   h2
-      font-size: 23px   
-@include maxMobilePortrait
-   h2
-      font-size: 20px   
+// @include maxTabletPortrait
+//    h2
+//       font-size: 26px
+// @include mobileToPhablet
+//    h2
+//       font-size: 28px
+// @include mobileLandscapeToMobile
+//    h2
+//       font-size: 25px       
+// @include maxMobileLandscape
+//    h2
+//       font-size: 23px   
+// @include maxMobilePortrait
+//    h2
+//       font-size: 20px   
+   

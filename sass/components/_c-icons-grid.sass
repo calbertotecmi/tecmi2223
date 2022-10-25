@@ -1,0 +1,80 @@
+//.type-transparent
+._c-icons-grid
+   padding: 50px 0
+   // Type numbers
+   &.type-numbers
+
+      [class*="--icondot"]
+         max-width: 215px
+         padding: 20px 0
+      [class*="--icon-img"]
+         @include flexCenter
+         margin: 0 auto
+         width: 105px
+         height: 105px
+         border-radius: 50%
+         background-color: $green-pastel
+      [class*="--icon-inf"]
+         h3, p
+            color: $dark-green            
+         h3
+            font-size: 3.125rem
+            font-weight: 700
+            line-height: 1
+            // margin: 25px 0 5px
+         p
+            font-size: 1.25rem
+   // Type transparent
+   &.type-transparent 
+      .o-grid-row
+         display: flex
+         justify-content: space-around
+      .col
+         width: 20%
+         position: relative
+         &:last-child
+            &::before
+               display: none
+         &::before
+            content: ""
+            position: absolute
+            right: 0
+            top: 0
+            width: 1px
+            height: 100%
+            background-color: $green-pastel
+      [class*="--icondot"]
+         max-width: 215px
+         padding: 20px 0
+      [class*="--icon-img"]
+         width: 100%
+         height: 65px         
+      [class*="--icon-inf"]
+         h3
+            font-size: 1.5rem
+            margin: 25px 0 5px
+            color: $dark-green
+         p
+            font-size: 1.25rem
+            color: $color-text-gray
+   // .o-container
+   .o-grid-row
+      display: flex
+      flex-wrap: nowrap
+   .col
+      width: 100%
+   &--icondot
+      width: 100%
+      display: block
+      margin: 0 auto
+   &--icon-img 
+      @include flexCenter
+      height: 65px
+   &--icon-inf
+      text-align: center
+      h3, p
+         font-family: $tipografia-principal
+      h3
+         margin: 20px 0 5px
+      p
+         font-size: 1.2rem

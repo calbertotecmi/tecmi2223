@@ -3,27 +3,32 @@ extends layout/_template
 block contenido
 
    main
-      //- include components/_c-hero-home-component
-      ._c-start-of-classes-cta
+      include components/_c-hero-home-component
+      include components/_c-start-of-classes-cta
+      include components/_c-picture-with-copy
+      include components/_c-icons-grid-type-transparent
+      include components/_c-edu-levels                
+      include components/_c-icons-grid-type-numbers
+      include components/_c-banner-cta-bg-picture
+      section._c-picture-with-copy
          .o-container
             .o-grid-row.row-center
-               .col.size-4
-                  ._c-start-of-classes-cta--intro
-                     img(src="../images/svg/ico-notif-svg.svg", alt="")
-                     h2.title-acento Próximo#[br] inicio de clases
-               .col.size-4
-                  ._c-start-of-classes-cta--dates
-                     ._c-start-of-classes-cta--date
-                        h3 Tetramestral
-                        p Enero 2023
-                     ._c-start-of-classes-cta--date
-                        h3 Semestral
-                        p Enero 2023
-               .col.size-4
-                  ._c-start-of-classes-cta--actions
-                     a.o-btn(href="#!") 
-                        img(src="../images/svg/ico-admisiones-btn.svg", alt="Admisiones")
-                        | Admisiones
-                     a.o-btn(href="#!")
-                        img(src="../images/svg/ico-informacion-btn.svg", alt="Informacion")
-                        | Información
+               .col.size-6
+                  ._c-picture-with-copy--picture
+                     img(src="../images/img-sample-1.jpg", alt="Img Home", srcset="../images/img-sample-1.jpg").img-responsive
+               .col.size-6
+                  ._c-picture-with-copy--copy
+                     h2 Reserva tu lugar y no te quedes fuera
+                     br
+                     p Si ya lo tienes claro #[strong ¡aparta tu lugar con nosotros!]
+                     br
+                     p Los pasos para que te integres y continúes en tu siguiente etapa son sencillos, si ya estás listo para #[strong continuar con tu desarrollo], consulta la papelería que necesitas y comienza a construir tu camino con nosotros.
+                     br
+                     br
+                     a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Hecho! ¿Qué necesito?
+      include components/_c-banner-cta                     
+
+
+
+
+
