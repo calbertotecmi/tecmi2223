@@ -50,9 +50,15 @@ h5
    font-size: $font-size-h5
    font-weight: $semiBold
 
+p
+   font-size: $font-size-p
+   color: $color-text-gray
+
 a
    outline: 0!important
    color: inherit
+   font-size: inherit
+   font-weight: inherit
    text-decoration: none
    span
       color: inherit
@@ -83,8 +89,12 @@ span
 .white-color
    color: $blanco
 
-.aqua-dark-color
+.aqua-dark-color,
+.color-aqua-dark
    color: $aqua-dark
+
+.color-dark-green
+   color: $dark-green
 
 // Global class for backgrounds
 .bg-dark-green
@@ -123,8 +133,12 @@ span
    text-align: left!important
 .text-align-right
    text-align: right!important
-.text-align-center
-   text-align: center!important
+.text-align-center,
+.text-center
+   text-align: center
+
+.text-uppercase
+   text-transform: uppercase
 
 // Media queries
 // @include tabletportraitToLandscape

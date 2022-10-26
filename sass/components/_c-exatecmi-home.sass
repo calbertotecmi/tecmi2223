@@ -1,0 +1,62 @@
+._c-exatecmi-home
+   padding: 50px 0 100px
+
+   .o-grid-row
+      .col
+         &:nth-child(odd)
+            [class*="exatecmicard"]
+               background-color: $aqua-dark
+            [class*="copy"]
+               h3, p
+                  color: $blanco
+               a.o-btn
+                  border-color: $blanco
+                  background-color: transparent
+                  color: $blanco
+
+   &--intro
+      margin-bottom: 50px
+      p
+         margin: 15px 0
+   
+
+   // card
+   &--exatecmicard
+      width: 100%
+      max-width: 400px
+      display: block
+      margin: 0 auto
+      background-color: $white-gray         
+
+   &--person
+      width: 100%
+      height: 240px
+      position: relative
+      @include flexCenter
+      img
+         width: 100%
+         height: 100%
+         position: absolute
+         top: 0
+         left: 0
+
+   &--copy
+      padding: 40px 50px 100px
+      position: relative
+      h3, p
+         color: $dark-green
+      h3
+         font-size: 1.5rem
+         font-family: $tipografia-acento
+      p
+         font-size: 1.1rem
+         line-height: 1.5
+         margin: 20px 0
+      a.o-btn
+         position: absolute
+         bottom: 40px
+         left: 50px
+         background-color: $green-pastel
+         border-color: $green-pastel
+         color: $dark-green
+         font-weight: bold

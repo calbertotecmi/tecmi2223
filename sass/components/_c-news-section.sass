@@ -1,0 +1,45 @@
+._c-news-section
+   padding: 50px 0
+
+   h2
+      margin-bottom: 50px
+
+   &--new
+      background-color: $white-gray
+      @include flexCenter
+      margin-bottom: 65px
+      &:hover
+         background-color: $aqua-dark
+         [class*="--preview"]
+            h3, p
+               color: $blanco
+            .o-btn
+               background-color: $green-pastel
+      // align-items: flex-start
+   &--new--picture
+      width: 100%
+      padding: 0 22px
+      img
+         position: relative
+         top: 22px
+   &--new--preview
+      width: 100%
+      max-width: 280px
+      padding: 22px 0
+      h3
+         color: $aqua-dark
+         font-family: $tipografia-principal
+         font-weight: bold
+      p 
+         line-height: 1.3
+         font-size: 1.5rem
+         margin: 10px 0 20px
+
+   
+   .btn-seeall
+      margin: 25px auto 0
+      display: block
+      max-width: 110px
+      color: $blanco
+      &:hover
+         background-color: $green-pastel

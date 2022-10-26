@@ -263,12 +263,12 @@ h6 {
 }
 
 h1 {
-  font-size: 2.25rem;
+  font-size: 2.8125rem;
   font-weight: 600;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 600;
 }
 
@@ -282,9 +282,16 @@ h5 {
   font-weight: 600;
 }
 
+p {
+  font-size: 1.25rem;
+  color: #393939;
+}
+
 a {
   outline: 0 !important;
   color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
   text-decoration: none;
 }
 a span {
@@ -317,8 +324,13 @@ span {
   color: #ffffff;
 }
 
-.aqua-dark-color {
+.aqua-dark-color,
+.color-aqua-dark {
   color: #00A499;
+}
+
+.color-dark-green {
+  color: #00534C;
 }
 
 .bg-dark-green {
@@ -364,6 +376,7 @@ span {
   font-size: 1rem;
   position: relative;
   padding: 7px 20px;
+  min-width: 115px;
 }
 .o-btn.small-btn {
   padding: 6px 12px;
@@ -417,8 +430,13 @@ span {
   text-align: right !important;
 }
 
-.text-align-center {
-  text-align: center !important;
+.text-align-center,
+.text-center {
+  text-align: center;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }
 
 .slick-slider .slick-dots {
@@ -462,7 +480,7 @@ span {
 
 .o-container {
   width: 95%;
-  max-width: 1280px;
+  max-width: 1240px;
   display: block;
   margin: 0 auto;
   position: relative;
@@ -559,7 +577,7 @@ header .mainNav {
   position: relative;
   padding: 0 15px;
 }
-@media (min-width: 1280px) {
+@media (min-width: 1240px) {
   header .mainNav {
     padding: 0 0;
   }
@@ -807,7 +825,7 @@ header .mainNav--mobileActions a {
     background-color: rgb(0, 0, 0);
   }
 }
-@media (min-width: 1140px) and (max-width: 1280px) {
+@media (min-width: 1140px) and (max-width: 1240px) {
   header .mainNav--menu ul.level--one li a {
     font-size: 15px;
   }
@@ -1782,6 +1800,8 @@ header .mainNav--mobileActions a {
   margin: 15px 0 30px;
   font-size: 1.0625rem;
   min-height: 150px;
+  color: #ffffff;
+  line-height: 1.35;
 }
 
 ._c-banner-cta {
@@ -1832,6 +1852,9 @@ header .mainNav--mobileActions a {
 }
 ._c-banner-cta.bg-dark-green [class*="--intro"] h2 {
   color: #26D07C;
+}
+._c-banner-cta.bg-dark-green [class*="--info"] p {
+  color: #ffffff;
 }
 ._c-banner-cta--background {
   position: absolute;
@@ -1892,6 +1915,188 @@ header .mainNav--mobileActions a {
   max-width: 335px;
   margin: 25px 0 0;
   font-weight: 600;
+}
+
+._c-exatecmi-home {
+  padding: 50px 0 100px;
+}
+._c-exatecmi-home .o-grid-row .col:nth-child(odd) [class*=exatecmicard] {
+  background-color: #00A499;
+}
+._c-exatecmi-home .o-grid-row .col:nth-child(odd) [class*=copy] h3, ._c-exatecmi-home .o-grid-row .col:nth-child(odd) [class*=copy] p {
+  color: #ffffff;
+}
+._c-exatecmi-home .o-grid-row .col:nth-child(odd) [class*=copy] a.o-btn {
+  border-color: #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+._c-exatecmi-home--intro {
+  margin-bottom: 50px;
+}
+._c-exatecmi-home--intro p {
+  margin: 15px 0;
+}
+._c-exatecmi-home--exatecmicard {
+  width: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 0 auto;
+  background-color: #EFEFEF;
+}
+._c-exatecmi-home--person {
+  width: 100%;
+  height: 240px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._c-exatecmi-home--person img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+._c-exatecmi-home--copy {
+  padding: 40px 50px 100px;
+  position: relative;
+}
+._c-exatecmi-home--copy h3, ._c-exatecmi-home--copy p {
+  color: #00534C;
+}
+._c-exatecmi-home--copy h3 {
+  font-size: 1.5rem;
+  font-family: "Gentium Plus", sans-serif;
+}
+._c-exatecmi-home--copy p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+._c-exatecmi-home--copy a.o-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50px;
+  background-color: #26D07C;
+  border-color: #26D07C;
+  color: #00534C;
+  font-weight: bold;
+}
+
+._c-events-list {
+  padding: 50px 0;
+}
+._c-events-list h2 {
+  margin-bottom: 50px;
+}
+._c-events-list--event {
+  width: 100%;
+  max-width: 290px;
+  background-color: white;
+  box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+._c-events-list--event:hover {
+  background-color: #00534C;
+}
+._c-events-list--event:hover [class*="--information"] h3 {
+  color: #26D07C;
+}
+._c-events-list--event:hover [class*="--information"] p {
+  color: #ffffff;
+}
+._c-events-list--information {
+  padding: 36px 24px;
+  min-height: 300px;
+}
+._c-events-list--information h3 {
+  color: #00534C;
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+}
+._c-events-list--information h3 a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+._c-events-list--information p {
+  margin: 15px 0;
+  line-height: 1.5;
+  font-size: 1.075rem;
+}
+._c-events-list--information .o-btn {
+  width: 100%;
+  max-width: 145px;
+  position: absolute;
+  bottom: 36px;
+}
+
+._c-news-section {
+  padding: 50px 0;
+}
+._c-news-section h2 {
+  margin-bottom: 50px;
+}
+._c-news-section--new {
+  background-color: #EFEFEF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 65px;
+}
+._c-news-section--new:hover {
+  background-color: #00A499;
+}
+._c-news-section--new:hover [class*="--preview"] h3, ._c-news-section--new:hover [class*="--preview"] p {
+  color: #ffffff;
+}
+._c-news-section--new:hover [class*="--preview"] .o-btn {
+  background-color: #26D07C;
+}
+._c-news-section--new--picture {
+  width: 100%;
+  padding: 0 22px;
+}
+._c-news-section--new--picture img {
+  position: relative;
+  top: 22px;
+}
+._c-news-section--new--preview {
+  width: 100%;
+  max-width: 280px;
+  padding: 22px 0;
+}
+._c-news-section--new--preview h3 {
+  color: #00A499;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+._c-news-section--new--preview p {
+  line-height: 1.3;
+  font-size: 1.5rem;
+  margin: 10px 0 20px;
+}
+._c-news-section .btn-seeall {
+  margin: 25px auto 0;
+  display: block;
+  max-width: 110px;
+  color: #ffffff;
+}
+._c-news-section .btn-seeall:hover {
+  background-color: #26D07C;
+}
+
+._c-instagram-grid {
+  padding: 50px 0 0;
+}
+._c-instagram-grid h2 {
+  margin-bottom: 50px;
+}
+._c-instagram-grid img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=mainstyle.css.map */
