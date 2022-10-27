@@ -1,0 +1,90 @@
+._c-modalidades-grid
+
+   margin: 50px 0 100px
+   position: relative
+   overflow: hidden
+   
+   .o-container
+      position: relative
+      z-index: 2
+
+   &--background
+      position: absolute
+      width: 40%
+      z-index: 0
+      left: 0
+      @include flexCenter
+      img
+         min-width: 100%  
+         min-height: 100%
+         display: block
+         position: relative
+
+   // introduction
+   &--intro
+      width: 100%
+      max-width: 700px
+      margin-left: auto
+      margin-bottom: 80px
+      padding-top: 30px
+      p
+         margin: 25px 0
+         line-height: 1.75
+         
+   // Navs for carousel
+   &--modalidadesNav
+      @include flexEnd
+      margin: 40px 0
+      .modalidadNav
+         width: 35px
+         display: flex
+         @include flexCenter
+         margin: 0 10px
+         cursor: pointer
+         &.prev
+            transform: rotate(180deg)
+
+
+   // List carousel
+   &--modalidadesList
+      padding-bottom: 30px
+
+   .item-modalidad
+      padding: 0 10px
+      &.slick-current.slick-center
+         ._c-modalidades-grid--modalidad
+            background-color: $aqua-dark
+            ._c-modalidades-grid--modalidad-info
+               h3, p
+                  color: white
+               a.o-btn
+                  border-color: $blanco
+                  color: $blanco
+
+   &--modalidad
+      width: 100%
+      max-width: 605px
+      // height: 370px
+      background-color: $white-gray
+      padding: 40px 20px
+
+      &-ico
+         width: 100%
+         height: 70px
+         @include flexCenter
+
+      &-info
+         width: 100%
+         max-width: 520px
+         margin: 0 auto
+         text-align: center
+
+         h3
+            font-family: $tipografia-acento
+            font-size: 1.5rem
+         p
+            font-size: 1.15rem
+            line-height: 1.5
+            margin: 20px 0 60px
+         a.o-btn
+            border-color: $dark-green

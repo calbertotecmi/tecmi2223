@@ -313,6 +313,11 @@ span {
   color: inherit;
 }
 
+strong {
+  font-size: inherit;
+  font-family: inherit;
+}
+
 .title-acento {
   font-family: "Gentium Plus", sans-serif;
   line-height: 1;
@@ -1661,7 +1666,6 @@ header .mainNav--mobileActions a {
   margin: 0 auto;
   width: 105px;
   height: 105px;
-  border-radius: 50%;
   background-color: #26D07C;
 }
 ._c-icons-grid.type-numbers [class*="--icon-inf"] h3, ._c-icons-grid.type-numbers [class*="--icon-inf"] p {
@@ -2097,6 +2101,107 @@ header .mainNav--mobileActions a {
 }
 ._c-instagram-grid img {
   width: 100%;
+}
+
+._c-modalidades-grid {
+  margin: 50px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+._c-modalidades-grid .o-container {
+  position: relative;
+  z-index: 2;
+}
+._c-modalidades-grid--background {
+  position: absolute;
+  width: 40%;
+  z-index: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._c-modalidades-grid--background img {
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+  position: relative;
+}
+._c-modalidades-grid--intro {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-bottom: 80px;
+  padding-top: 30px;
+}
+._c-modalidades-grid--intro p {
+  margin: 25px 0;
+  line-height: 1.75;
+}
+._c-modalidades-grid--modalidadesNav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 40px 0;
+}
+._c-modalidades-grid--modalidadesNav .modalidadNav {
+  width: 35px;
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  cursor: pointer;
+}
+._c-modalidades-grid--modalidadesNav .modalidadNav.prev {
+  transform: rotate(180deg);
+}
+._c-modalidades-grid--modalidadesList {
+  padding-bottom: 30px;
+}
+._c-modalidades-grid .item-modalidad {
+  padding: 0 10px;
+}
+._c-modalidades-grid .item-modalidad.slick-current.slick-center ._c-modalidades-grid--modalidad {
+  background-color: #00A499;
+}
+._c-modalidades-grid .item-modalidad.slick-current.slick-center ._c-modalidades-grid--modalidad ._c-modalidades-grid--modalidad-info h3, ._c-modalidades-grid .item-modalidad.slick-current.slick-center ._c-modalidades-grid--modalidad ._c-modalidades-grid--modalidad-info p {
+  color: white;
+}
+._c-modalidades-grid .item-modalidad.slick-current.slick-center ._c-modalidades-grid--modalidad ._c-modalidades-grid--modalidad-info a.o-btn {
+  border-color: #ffffff;
+  color: #ffffff;
+}
+._c-modalidades-grid--modalidad {
+  width: 100%;
+  max-width: 605px;
+  background-color: #EFEFEF;
+  padding: 40px 20px;
+}
+._c-modalidades-grid--modalidad-ico {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+._c-modalidades-grid--modalidad-info {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+}
+._c-modalidades-grid--modalidad-info h3 {
+  font-family: "Gentium Plus", sans-serif;
+  font-size: 1.5rem;
+}
+._c-modalidades-grid--modalidad-info p {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  margin: 20px 0 60px;
+}
+._c-modalidades-grid--modalidad-info a.o-btn {
+  border-color: #00534C;
 }
 
 /*# sourceMappingURL=mainstyle.css.map */
