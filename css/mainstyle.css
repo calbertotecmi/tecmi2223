@@ -1666,6 +1666,7 @@ header .mainNav--mobileActions a {
   margin: 0 auto;
   width: 105px;
   height: 105px;
+  border-radius: 50%;
   background-color: #26D07C;
 }
 ._c-icons-grid.type-numbers [class*="--icon-inf"] h3, ._c-icons-grid.type-numbers [class*="--icon-inf"] p {
