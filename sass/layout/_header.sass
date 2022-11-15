@@ -1,17 +1,17 @@
 // Aplica para el alto del head y el top del menu level 2
-$altoheader: 100px
+$altoheader: 80px
 // Se usa para el padding del level 2 y top del level 3
 $paddingMenuUpDown: 70px
 
 header
-   position: absolute
+   position: relative
    top: 0
    left: 0
    width: 100%
-   background-color: transparent
+   background-color: $dark-green
    transition: all .1s linear
    z-index: 10001
-   border-bottom: 1px solid white
+   border-bottom: 1px solid $dark-green
    // Cuando se da scroll se aplica esta clase
    &.sticky-nav
       position: fixed
@@ -21,6 +21,7 @@ header
       .mainNav
          &--menu
             ul.level--one
+               height: ($altoheader - 10)
                li
                   a
                      color: white
@@ -31,7 +32,7 @@ header
       display: flex
       align-items: center
       width: 100%
-      max-width: 1440px
+      max-width: $container-width
       margin: 0 auto
       position: relative
       padding: 0 15px
@@ -43,6 +44,7 @@ header
          width: 100%
          max-width: 160px
          margin-right: auto
+         margin-left: 30px
          // display: none
       &--menu
          width: 100%
@@ -69,7 +71,7 @@ header
                         display: none
                a
                   font-size: $font-size-links-hyf
-                  // color: $catalina-blue
+                  color: $dark-green
                   color: $blanco
                   position: relative
                   // z-index: 3
@@ -80,7 +82,7 @@ header
                      left: 0
                      width: 0
                      height: 1px
-                     // background-color: $catalina-blue
+                     background-color: $dark-green
                      transition: all .1s linear
                   &.activeLk,
                   &:hover
@@ -90,6 +92,7 @@ header
                      min-width: 155px
                      max-width: 155px
                      padding: 12px 0
+                     background-color: $green-pastel
                
                // second level - left nav
                .level--two 
@@ -114,7 +117,7 @@ header
                      top: 0
                      height: 100%
                      width: 270%
-                     // background-color: $mid-blue 
+                     background-color: $light-dark-green
                      // z-index: 0                 
                   &::before
                      content: ""
@@ -144,7 +147,7 @@ header
                         color: white
                         padding: 10px 5px
                         // z-index: 10
-                        // border-bottom: 1px solid $catalina-blue
+                        border-bottom: 1px solid $dark-green
                         position: relative
                         z-index: 2
                         &::before
@@ -171,9 +174,9 @@ header
                                  border-bottom: 0
                            a
                               width: 100%
-                              // color: $catalina-blue
+                              color: $dark-green
                               padding: 10px 5px
-                              // border-bottom: 1px solid $catalina-blue
+                              border-bottom: 1px solid $dark-green
                               // z-index: 11
                               // &::before
                               //    display: none
@@ -226,9 +229,9 @@ header
                            padding: 20px
                            display: flex
                            align-items: center
-                           &::after
-                              font-family: 'tecmilenio' !important
-                              content: "\e920"
+                           // &::after
+                           //    font-family: 'tecmilenio' !important
+                           //    content: "\e920"
                      &.visible-cta
                         opacity: 1
                         z-index: 5
@@ -449,7 +452,7 @@ header
                      padding-bottom: 10px
                      border-bottom: 1px solid $shadow-grey
                      font-weight: 500
-                     // color: $catalina-blue!important
+                     color: $dark-green!important
                      &::after
                         content: ""
                         position: absolute

@@ -2,7 +2,7 @@ $footerpadding: 65
 
 // footer global
 .footermain
-   background-color: $footer-grey
+   background-color: $dark-green
    // display: none
    &--flex-content
       display: flex
@@ -13,10 +13,11 @@ $footerpadding: 65
          max-width: 300px
       &--accordion
          h3
-            color: $blanco
+            color: $green-pastel
             font-weight: $semiBold
             margin: 0 0 calc($footerpadding/2)+px
             font-size: 18px
+            font-family: $tipografia-principal
          ul
             li
                color: $blanco
@@ -45,14 +46,14 @@ $footerpadding: 65
                border: 0
          &--oursocial
             h4
-               text-align: center
+               text-align: left
                font-size: 17px
-               color: $blanco
+               color: $green-pastel
                font-weight: $semiBold
-               margin: 30px 0 20px
+               margin: 0 0 20px
             ul
                display: flex
-               justify-content: center
+               justify-content: flex-start
                li
                   font-size: 22px
                   color: $blanco
@@ -76,7 +77,7 @@ $footerpadding: 65
 
    &--end-page
       margin-top: $footerpadding+px
-      background-color: $negro
+      background-color: $darker-green
       .o-container
          display: flex
          align-items: center

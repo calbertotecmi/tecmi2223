@@ -19,6 +19,7 @@ body
    -moz-osx-font-smoothing: grayscale
    font-family: $tipografia-principal
    overflow-x: hidden
+   max-width: 100%
 
 main
    display: block
@@ -64,6 +65,10 @@ a
       color: inherit
 
 img
+   &.img-full-responsive
+      display: block
+      margin: 0 auto
+      width: 100%
    &.img-responsive
       display: block
       margin: 0 auto

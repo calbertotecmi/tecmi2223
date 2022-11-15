@@ -5,8 +5,11 @@ extends layout/_template
 block contenido
    link(rel="stylesheet", href="../css/slick.css")
    link(rel="stylesheet", href="../css/slick-theme.css")
+   link(rel="stylesheet", href="../css/slick-lightbox.css")
 
    main
+
+      include layout/_header
 
       include components/_c-hero-home-component
       include components/_c-start-of-classes-cta
@@ -14,60 +17,8 @@ block contenido
       include components/_c-icons-grid-type-transparent
       include components/_c-edu-levels                
       include components/_c-icons-grid-type-numbers
-      section._c-modalidades-grid
-         ._c-modalidades-grid--background 
-            img(src="../images/bg-modalidades-grid.jpg", alt="", srcset="../images/bg-modalidades-grid.jpg")
-
-         .o-container
-            ._c-modalidades-grid--intro
-               h2.color-dark-green.text-uppercase Conoce las modalidades que #[br] te permitirán cumplir tus sueños
-               p Selecciona la modalidad que se adapte a tu estilo de vida, a tus objetivos profesionales y que beneficie más tus necesidades de aprendizaje.
-
-            ._c-modalidades-grid--modalidadesNav
-               .modalidadNav.prev
-                  img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
-               .modalidadNav.next
-                  img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
-
-
-            ._c-modalidades-grid--modalidadesList
-
-               .item-modalidad
-                  ._c-modalidades-grid--modalidad
-                     ._c-modalidades-grid--modalidad-ico
-                        img(src="../images/modalidad-1.png", alt="", srcset="../images/modalidad-1.png")
-                     ._c-modalidades-grid--modalidad-info
-                        h3 Presencial
-                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
-                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
-
-               .item-modalidad
-                  ._c-modalidades-grid--modalidad
-                     ._c-modalidades-grid--modalidad-ico
-                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._c-modalidades-grid--modalidad-info
-                        h3 Online
-                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
-                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
-
-               .item-modalidad
-                  ._c-modalidades-grid--modalidad
-                     ._c-modalidades-grid--modalidad-ico
-                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._c-modalidades-grid--modalidad-info
-                        h3 Connect
-                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
-                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
-
-               .item-modalidad
-                  ._c-modalidades-grid--modalidad
-                     ._c-modalidades-grid--modalidad-ico
-                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._c-modalidades-grid--modalidad-info
-                        h3 Autodirigido
-                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
-                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
-
+      include components/_c-modalidades-grid
+      include components/_c-installations-overview
       include components/_c-banner-cta-bg-picture
       include components/_c-exatecmi-home
       section._c-picture-with-copy
@@ -91,8 +42,12 @@ block contenido
       include components/_c-news-section
       include components/_c-instagram-grid
 
+      include layout/_footer
+
       script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+      script(src="../js/global.js")
       script(src="../js/slick.min.js")
+      script(src="../js/slick-lightbox.min.js")
 
 
       script.
@@ -107,6 +62,9 @@ block contenido
             prevArrow: '.modalidadNav.prev',
             nextArrow: '.modalidadNav.next'
          });
+          $('._c-installations-overview--gallery-grid').slickLightbox({
+            lazy: true
+          });
 
 
 

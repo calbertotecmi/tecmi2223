@@ -1,4 +1,4 @@
-$container-width: 1240px 
+$container-width: 1440px 
 $font-size-body: 16px
 
 // Tipografia
@@ -36,6 +36,7 @@ $color-cdc: #1EC6BD
 
 // Primary colors
 $dark-green: #00534C
+$darker-green: #00433D
 $light-dark-green: #007864
 $aqua-dark: #00A499
 $aqua-light: #6BCABA
@@ -191,7 +192,13 @@ $mobile-portrait: 355px
 @mixin flexEvenly
    display: flex
    align-items: center
-   justify-content: space-evenly      
+   justify-content: space-evenly   
+
+
+@mixin flexColumnSpaceBetween
+   display: flex
+   flex-flow: column
+   justify-content: space-between            
 
 
 @mixin square( $position, $size, $top, $right, $color )
