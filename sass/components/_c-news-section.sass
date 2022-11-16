@@ -1,13 +1,22 @@
 ._c-news-section
    padding: 50px 0
-
+   @include maxMobile
+      padding: 25px 0
    h2
       margin-bottom: 50px
 
    &--new
       background-color: $white-gray
-      @include flexCenter
-      margin-bottom: 65px
+      @media (min-width: $mobile)
+         margin-bottom: 65px
+         @include flexCenter
+      @include phabletToTablet
+         width: 100%
+         max-width: 655px
+         margin: 0 auto
+      @include maxMobile
+         min-height: 500px
+         background-color: $aqua-dark
       &:hover
          background-color: $aqua-dark
          [class*="--preview"]
@@ -18,22 +27,58 @@
       // align-items: flex-start
    &--new--picture
       width: 100%
-      padding: 0 22px
+      @media (min-width: $mobile)
+         padding: 0 22px
+      @include tabletPortraitToDesktopSmall
+         padding: 0
+         width: 40%
+         min-height: 250px
+         @include flexCenter
+         overflow: hidden
+      @include maxMobile
+         height: 220px
+         overflow: hidden
+         @include flexCenter
       img
          position: relative
-         top: 22px
+         @media (min-width: $mobile)
+            top: 22px
+         @include tabletPortraitToDesktopSmall
+            top: 0
+            height: 100%
+            width: auto
+            max-width: unset
+         @include maxMobile
+            width: auto
+            max-width: unset
+            min-width: 100%   
+            min-height: 100%
    &--new--preview
       width: 100%
       max-width: 280px
-      padding: 22px 0
+      @media (min-width: $mobile)
+         padding: 22px 0
+      @include tabletPortraitToDesktopSmall
+         padding: 20px
+         width: 100%
+      @include maxMobile
+         padding: 20px
+         max-width: 100%
       h3
          color: $aqua-dark
          font-family: $tipografia-principal
          font-weight: bold
+         @include maxMobile
+            color: $blanco
       p 
          line-height: 1.3
          font-size: 1.5rem
          margin: 10px 0 20px
+         @include maxMobile
+            color: $blanco 
+      .o-btn
+         @include maxMobile
+            background-color: $green-pastel        
 
    
    .btn-seeall

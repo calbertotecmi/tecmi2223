@@ -1,10 +1,10 @@
 // Variables
-const windowWidth = window.innerWidth;
+const bodyWith = document.getElementsByTagName('body')[0].clientWidth;
 
 // Ejecutar funciones
 window.addEventListener('load', () => {
    headerScripts();
-   // if ( windowWidth <= 568  ){
+   // if ( bodyWith <= 568  ){
 
    //    footerScripts();
 
@@ -34,7 +34,7 @@ const headerScripts = () => {
    });
 
    // Actions for desktop
-   if ( windowWidth > 768 ){
+   if ( bodyWith > 768 ){
       li__Global.forEach ( m => {
          m.addEventListener( 'mouseover', openDropsLevelTwo );
       });
@@ -71,7 +71,7 @@ const headerScripts = () => {
    // Interactuar con los enlaces
    function openDropsLevelTwo(e, pos){
       // Desktop actions
-      if ( windowWidth > 768 ){
+      if ( bodyWith > 768 ){
          // Remover clase active a todos los ul
          nav__levelTwo.forEach( n => {
             if ( n.classList.contains('activeMenu') ){
@@ -119,7 +119,7 @@ const headerScripts = () => {
    function openDropsLevelThree(e, pos){
 
       // Desktop actions
-      if ( windowWidth > 768 ){
+      if ( bodyWith > 768 ){
          // Limpiar clase
          document.querySelectorAll('.level--two--cta-link').forEach( m => {
             if ( m.classList.contains('visible-cta') ){

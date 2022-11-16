@@ -123,12 +123,19 @@ $mobile-landscape: 480px
 $mobile-portrait: 355px
 
 // 1024 - 1140
+@mixin maxDesktopSmall
+   @media ( max-width: $desktop-small )
+      @content
 @mixin tabletLandscapeDesktop
    @media (min-width: $tablet-landscape ) and ( max-width: $desktop-small )
       @content
 // 1024
 @mixin minTabletLandscape
    @media (min-width: $tablet-landscape ) 
+      @content
+// 960 - 1140
+@mixin tabletPortraitToDesktopSmall
+   @media ( min-width: $tablet-portrait ) and ( max-width: $desktop-small )
       @content
 // min 960
 @mixin minTabletPortrait
@@ -137,6 +144,14 @@ $mobile-portrait: 355px
 // max 960
 @mixin maxTabletPortrait
    @media ( max-width: $tablet-portrait )
+      @content
+// min 740 - 1140
+@mixin phabletToDesktopSmall
+   @media ( min-width: $phablet ) and ( max-width: $tablet-portrait )
+      @content
+// min 740 - 960
+@mixin phabletToTablet
+   @media ( min-width: $phablet ) and ( max-width: $tablet-portrait )
       @content
 // 568 - 740      
 @mixin mobileToPhablet
@@ -164,6 +179,13 @@ $mobile-portrait: 355px
       @content
 
 // Mixins
+@mixin flexTopLeft
+   display: flex
+   align-items: flex-start
+   justify-content: flex-start
+@mixin flexStrech
+   display: flex
+   align-items: stretch
 @mixin flexStart
    display: flex
    align-items: center

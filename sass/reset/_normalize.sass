@@ -148,24 +148,49 @@ strong
 
 .text-uppercase
    text-transform: uppercase
+   @include maxMobile
+      text-transform: unset
+
+
+// Dots for slick
+.slick-slider
+   @include maxMobile
+      width: 100%
+      position: relative
+      overflow: hidden      
+   ul.slick-dots
+      li
+         width: 8px
+         height: 8px
+         &.slick-active
+            width: 16px
+            height: 16px
+            button
+               opacity: 1
+         button
+            opacity: .4
+            background-color: $green-pastel
 
 // Media queries
 // @include tabletportraitToLandscape
 //    h2
-//       font-size: 28px
-// @include maxTabletPortrait
-//    h2
-//       font-size: 26px
-// @include mobileToPhablet
-//    h2
-//       font-size: 28px
-// @include mobileLandscapeToMobile
-//    h2
-//       font-size: 25px       
-// @include maxMobileLandscape
-//    h2
-//       font-size: 23px   
-// @include maxMobilePortrait
-//    h2
-//       font-size: 20px   
+//       font-size: 30px
+@include maxTabletPortrait
+   h2
+      font-size: 1.875rem
+@include mobileToPhablet
+   h2
+      font-size: 1.8125rem
+@include mobileLandscapeToMobile
+   h2
+      font-size: 1.6875rem       
+@include maxMobileLandscape
+   h2
+      font-size: 1.5625rem   
+@include maxMobilePortrait
+   h2
+      font-size: 1.4375rem   
+      padding: 0 5px
+   h3
+      font-size: 1.3125rem
    

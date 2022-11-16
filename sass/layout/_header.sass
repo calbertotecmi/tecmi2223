@@ -4,7 +4,8 @@ $altoheader: 80px
 $paddingMenuUpDown: 70px
 
 header
-   position: relative
+   position: absolute
+   // margin-bottom: $altoheader
    top: 0
    left: 0
    width: 100%
@@ -495,7 +496,7 @@ header
 
 
 @media ( max-width: $mobile )
-   $altoheader: 80px
+   $altoheader: 60px
 
    header
       .mainNav
@@ -503,17 +504,21 @@ header
          height: $altoheader
          &--logo
             max-width: 120px
+            margin: 0 auto 0 10px
+            img
+               margin: 0
          &--menu
             display: none
          &--mobileActions
             display: flex
+            margin: 0
 
-@media ( max-width: $mobile-landscape )
-   $altoheader: 80px
+// @media ( max-width: $mobile-landscape )
+//    $altoheader: 80px
 
-   header
-      .mainNav
-         // padding-right: 0
-         height: $altoheader
-         &--logo
-            max-width: 100px
+//    header
+//       .mainNav
+//          // padding-right: 0
+//          height: $altoheader
+//          &--logo
+//             max-width: 100px

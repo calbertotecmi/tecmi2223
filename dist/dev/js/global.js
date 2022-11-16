@@ -1,12 +1,12 @@
 "use strict";
 
 // Variables
-var windowWidth = window.innerWidth;
+var bodyWith = document.getElementsByTagName('body')[0].clientWidth;
 
 // Ejecutar funciones
 window.addEventListener('load', function () {
   headerScripts();
-  // if ( windowWidth <= 568  ){
+  // if ( bodyWith <= 568  ){
 
   //    footerScripts();
 
@@ -30,7 +30,7 @@ var headerScripts = function headerScripts() {
   });
 
   // Actions for desktop
-  if (windowWidth > 768) {
+  if (bodyWith > 768) {
     li__Global.forEach(function (m) {
       m.addEventListener('mouseover', openDropsLevelTwo);
     });
@@ -67,7 +67,7 @@ var headerScripts = function headerScripts() {
   // Interactuar con los enlaces
   function openDropsLevelTwo(e, pos) {
     // Desktop actions
-    if (windowWidth > 768) {
+    if (bodyWith > 768) {
       // Remover clase active a todos los ul
       nav__levelTwo.forEach(function (n) {
         if (n.classList.contains('activeMenu')) {
@@ -117,7 +117,7 @@ var headerScripts = function headerScripts() {
   // Open ul level three
   function openDropsLevelThree(e, pos) {
     // Desktop actions
-    if (windowWidth > 768) {
+    if (bodyWith > 768) {
       // Limpiar clase
       document.querySelectorAll('.level--two--cta-link').forEach(function (m) {
         if (m.classList.contains('visible-cta')) {

@@ -4,45 +4,45 @@ extends layout/_template
 append configuracion
    -var page			= {}
    -page['lang']		= 'es'
-   -page['libsCss']	= ['slick','slick-theme.css','slick-lightbox.css']
+   -page['libsCss']	= ['slick','slick-theme','slick-lightbox']
 
 block contenido
    main
 
-      include layout/_header
+      //- include layout/_header
 
-      include components/_c-hero-home-component
-      include components/_c-start-of-classes-cta
-      include components/_c-picture-with-copy
-      include components/_c-icons-grid-type-transparent
-      include components/_c-edu-levels                
-      include components/_c-icons-grid-type-numbers
-      include components/_c-modalidades-grid
-      include components/_c-installations-overview
-      include components/_c-banner-cta-bg-picture
-      include components/_c-exatecmi-home
-      section._c-picture-with-copy
-         .o-container
-            .o-grid-row.row-center
-               .col.size-6
-                  ._c-picture-with-copy--picture
-                     img(src="../images/img-sample-1.jpg" alt="Img Home" srcset="../images/img-sample-1.jpg").img-responsive
-               .col.size-6
-                  ._c-picture-with-copy--copy
-                     h2 Reserva tu lugar y no te quedes fuera
-                     br
-                     p Si ya lo tienes claro #[strong ¡aparta tu lugar con nosotros!]
-                     br
-                     p Los pasos para que te integres y continúes en tu siguiente etapa son sencillos, si ya estás listo para #[strong continuar con tu desarrollo], consulta la papelería que necesitas y comienza a construir tu camino con nosotros.
-                     br
-                     br
-                     a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Hecho! ¿Qué necesito?
-      include components/_c-banner-cta
+      //- include components/_c-hero-home-component
+      //- include components/_c-start-of-classes-cta
+      //- include components/_c-picture-with-copy
+      //- include components/_c-icons-grid-type-transparent
+      //- include components/_c-edu-levels                
+      //- include components/_c-icons-grid-type-numbers
+      //- include components/_c-modalidades-grid
+      //- include components/_c-installations-overview
+      //- include components/_c-banner-cta-bg-picture
+      //- include components/_c-exatecmi-home
+      //- section._c-picture-with-copy
+      //-    .o-container
+      //-       .o-grid-row.row-center
+      //-          .col.size-6
+      //-             ._c-picture-with-copy--picture
+      //-                img(src="../images/img-sample-1.jpg" alt="Img Home" srcset="../images/img-sample-1.jpg").img-responsive
+      //-          .col.size-6
+      //-             ._c-picture-with-copy--copy
+      //-                h2 Reserva tu lugar y no te quedes fuera
+      //-                br
+      //-                p Si ya lo tienes claro #[strong ¡aparta tu lugar con nosotros!]
+      //-                br
+      //-                p Los pasos para que te integres y continúes en tu siguiente etapa son sencillos, si ya estás listo para #[strong continuar con tu desarrollo], consulta la papelería que necesitas y comienza a construir tu camino con nosotros.
+      //-                br
+      //-                br
+      //-                a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Hecho! ¿Qué necesito?
+      //- include components/_c-banner-cta
       include components/_c-events-list
       include components/_c-news-section
       include components/_c-instagram-grid
 
-      include layout/_footer
+      //- include layout/_footer
 
       script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
       script(src="../js/global.js")
@@ -51,6 +51,12 @@ block contenido
 
 
       script.
+      
+         // Body width size
+         const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+
+         // === Carousel scripts === 
+
          // Carousel for modalidades
          $('._c-modalidades-grid ._c-modalidades-grid--modalidadesList').slick({
             dots: false,
@@ -62,9 +68,51 @@ block contenido
             prevArrow: '.modalidadNav.prev',
             nextArrow: '.modalidadNav.next'
          });
-            $('._c-installations-overview--gallery-grid').slickLightbox({
-               lazy: true
+         $('._c-installations-overview--gallery-grid').slickLightbox({
+            lazy: true
+         });
+
+
+         // Range: 0 - 960
+         if ( widthDevice <= 960 ){
+            $('#news-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 1,
             });
+         }
+         // Range: 740 - 1024
+         if ( widthDevice > 740 && widthDevice <= 1140 ){
+            $('#events-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 3
+            });
+            $('#news-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 2,
+            });
+         }
+
+         // Range: 568 - 740
+         if ( widthDevice > 568 && widthDevice <= 740 ){
+            $('#events-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 2
+            });
+         }
+         
+         //- Range: Max 568
+         if ( widthDevice <= 568 ){
+            $('#events-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 1,
+            });
+         }
+         
 
 
 
