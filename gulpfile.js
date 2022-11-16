@@ -3,6 +3,7 @@
 const gulp = require('gulp');
 const {src, dest, series, watch, parallel} = require('gulp');
 const fs = require('fs');
+const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
 const pug = require('gulp-pug');
 var browserSync = require('browser-sync').create();
@@ -18,16 +19,25 @@ function htmlDesarrollo(done){
 			.pipe(dest(configuracion.directorios.pug.destino.dev))
 			.pipe(browserSync.reload({stream: true}));
 }
-
+// Sass
 function compilarSass() {
    return src('./sass/**/*.sass')
       .pipe(sourcemaps.init())
       .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
-      // .pipe(sourcemaps.write('./maps'))
+      .pipe(sourcemaps.write('./maps'))
       .pipe(dest(configuracion.directorios.sass.destino.dev))
 		.pipe(browserSync.stream());
 };
-
+// Imagenes
+function imagenesDesarrollo(){
+	return src(configuracion.directorios.imagenes.fuente)
+		.pipe(dest(configuracion.directorios.imagenes.destino.dev))
+}
+// fonts
+function fontsDesarrollo(){
+	return src(configuracion.directorios.fonts.fuente)
+		.pipe(dest(configuracion.directorios.fonts.destino.dev))
+}
 function browserSyncDesarrollo(done){
 
 	browserSync.init({
@@ -46,6 +56,8 @@ function browserSyncDesarrollo(done){
    watcherHtml.on('change', function(path){htmlDesarrollo(path)});
 	
 	watch(configuracion.directorios.sass.watcher,     compilarSass);
+	watch(configuracion.directorios.imagenes.fuente,     imagenesDesarrollo);
+	watch(configuracion.directorios.fonts.fuente,     fontsDesarrollo);
    watch(configuracion.directorios.pug.recargar.dev).on('change', browserSync.reload);
 
    done();
@@ -53,7 +65,9 @@ function browserSyncDesarrollo(done){
 
 exports.htmlDesarrollo = htmlDesarrollo;
 exports.compilarSass   = compilarSass;
+exports.imagenesDesarrollo  = imagenesDesarrollo;
+exports.fontsDesarrollo     = fontsDesarrollo;
 
-const compilarDesarrollo    = series(parallel( compilarSass, htmlDesarrollo), browserSyncDesarrollo);
+const compilarDesarrollo    = series(parallel( compilarSass, htmlDesarrollo, imagenesDesarrollo, fontsDesarrollo ), browserSyncDesarrollo);
 
 exports.default = compilarDesarrollo;

@@ -25,6 +25,20 @@
 				"prod": "dist/prod/css"
 			},
 			"watcher": "sass/**/*.sass"
-		}		
+		},	
+		"imagenes": {
+			"fuente": "images/**/*.*",
+			"destino": {
+				"dev": "dist/dev/images",
+				"prod": "dist/prod/images"
+			}
+		},		
+		"fonts": {
+			"fuente": "fonts/**/*.*",
+			"destino": {
+				"dev": "dist/dev/fonts",
+				"prod": "dist/prod/fonts"
+			}
+		}
 	}
 }

@@ -26,6 +26,7 @@
     "sass": "^1.56.1"
   },
   "dependencies": {
-    "gulp-pug": "^5.0.0"
+    "gulp-pug": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0"
   }
 }
