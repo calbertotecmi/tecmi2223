@@ -1,5 +1,10 @@
+block configuracion
+	-var page = {}
+	-page['lang']		= 'es'
+	-page['libsCss']	= [ ]
+
 doctype html
-html(lang="es")
+html(lang=page.lang)
 	//- Import head
 	include _head
 	body

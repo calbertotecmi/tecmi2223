@@ -1,12 +1,12 @@
 //- Extend template global
 extends layout/_template
 
+append configuracion
+   -var page			= {}
+   -page['lang']		= 'es'
+   -page['libsCss']	= ['slick','slick-theme.css','slick-lightbox.css']
 
 block contenido
-   link(rel="stylesheet", href="../vendor/slick.css")
-   link(rel="stylesheet", href="../vendor/slick-theme.css", type="text/css")
-   link(rel="stylesheet", href="../vendor/slick-lightbox.css", type="text/css")
-
    main
 
       include layout/_header
@@ -26,7 +26,7 @@ block contenido
             .o-grid-row.row-center
                .col.size-6
                   ._c-picture-with-copy--picture
-                     img(src="../images/img-sample-1.jpg", alt="Img Home", srcset="../images/img-sample-1.jpg").img-responsive
+                     img(src="../images/img-sample-1.jpg" alt="Img Home" srcset="../images/img-sample-1.jpg").img-responsive
                .col.size-6
                   ._c-picture-with-copy--copy
                      h2 Reserva tu lugar y no te quedes fuera
@@ -62,9 +62,9 @@ block contenido
             prevArrow: '.modalidadNav.prev',
             nextArrow: '.modalidadNav.next'
          });
-          $('._c-installations-overview--gallery-grid').slickLightbox({
-            lazy: true
-          });
+            $('._c-installations-overview--gallery-grid').slickLightbox({
+               lazy: true
+            });
 
 
 

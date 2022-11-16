@@ -17,14 +17,14 @@ const configuracion = JSON.parse(fs.readFileSync("config.json", "utf8"));
 const prefixerOptions = {
 	overrideBrowserslist: ['last 3 versions']
 };
-// Pug
+// Html
 function htmlDesarrollo(done){
 		return src(configuracion.directorios.pug.fuente)
 			.pipe(pug({doctype: 'html', pretty: true}).on('error', error => {console.log('Error en pug: ' + error);}))
 			.pipe(dest(configuracion.directorios.pug.destino.dev))
 			.pipe(browserSync.reload({stream: true}));
 }
-// Sass
+// Styles
 function compilarCssDesarrollo() {
    return src('./sass/**/*.sass')
 		.pipe(sourcemaps.init())
@@ -55,7 +55,7 @@ function fontsDesarrollo(){
 		.pipe(dest(configuracion.directorios.fonts.destino.dev))
 }
 // vendor all (slick, plugins...)
-function vendorAll(){
+function vendorAllDesarrollo(){
 	return src(configuracion.directorios.vendor.fuente)
 		.pipe(dest(configuracion.directorios.vendor.destino.dev))
 }
@@ -82,7 +82,7 @@ function browserSyncDesarrollo(done){
 	watch("./js/**/*.js",                           jsDesarrollo);
 	watch(configuracion.directorios.imagenes.fuente,     imagenesDesarrollo);
 	watch(configuracion.directorios.fonts.fuente,     fontsDesarrollo);
-	watch(configuracion.directorios.vendor.fuente,     vendorAll);
+	watch(configuracion.directorios.vendor.fuente,     vendorAllDesarrollo);
    watch(configuracion.directorios.pug.recargar.dev).on('change', browserSync.reload);
 
    done();
@@ -93,7 +93,7 @@ exports.compilarCssDesarrollo   = compilarCssDesarrollo;
 exports.jsDesarrollo        = jsDesarrollo;
 exports.imagenesDesarrollo  = imagenesDesarrollo;
 exports.fontsDesarrollo     = fontsDesarrollo;
-exports.vendorAll     = vendorAll;
+exports.vendorAllDesarrollo     = vendorAllDesarrollo;
 
-const compilarDesarrollo    = series(parallel( compilarCssDesarrollo, jsDesarrollo, htmlDesarrollo, vendorAll, imagenesDesarrollo, fontsDesarrollo ), browserSyncDesarrollo);
+const compilarDesarrollo    = series(parallel( compilarCssDesarrollo, jsDesarrollo, htmlDesarrollo, vendorAllDesarrollo, imagenesDesarrollo, fontsDesarrollo ), browserSyncDesarrollo);
 exports.default = compilarDesarrollo;
