@@ -38,6 +38,11 @@ function fontsDesarrollo(){
 	return src(configuracion.directorios.fonts.fuente)
 		.pipe(dest(configuracion.directorios.fonts.destino.dev))
 }
+// vendor all
+function vendorAll(){
+	return src(configuracion.directorios.vendor.fuente)
+		.pipe(dest(configuracion.directorios.vendor.destino.dev))
+}
 function browserSyncDesarrollo(done){
 
 	browserSync.init({
@@ -58,6 +63,7 @@ function browserSyncDesarrollo(done){
 	watch(configuracion.directorios.sass.watcher,     compilarSass);
 	watch(configuracion.directorios.imagenes.fuente,     imagenesDesarrollo);
 	watch(configuracion.directorios.fonts.fuente,     fontsDesarrollo);
+	watch(configuracion.directorios.vendor.fuente,     vendorAll);
    watch(configuracion.directorios.pug.recargar.dev).on('change', browserSync.reload);
 
    done();
@@ -67,7 +73,8 @@ exports.htmlDesarrollo = htmlDesarrollo;
 exports.compilarSass   = compilarSass;
 exports.imagenesDesarrollo  = imagenesDesarrollo;
 exports.fontsDesarrollo     = fontsDesarrollo;
+exports.vendorAll     = vendorAll;
 
-const compilarDesarrollo    = series(parallel( compilarSass, htmlDesarrollo, imagenesDesarrollo, fontsDesarrollo ), browserSyncDesarrollo);
+const compilarDesarrollo    = series(parallel( compilarSass, htmlDesarrollo, vendorAll, imagenesDesarrollo, fontsDesarrollo ), browserSyncDesarrollo);
 
 exports.default = compilarDesarrollo;
