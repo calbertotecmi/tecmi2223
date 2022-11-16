@@ -1,0 +1,31 @@
+{
+  "name": "tecmilenio-2023",
+  "version": "0.0.0",
+  "description": "Sitio institucional de Tecmilenio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calbertotecmi/tecmi2223.git"
+  },
+  "keywords": [
+    "universidad"
+  ],
+  "author": "Alberto Martinez Samaniego - Web y HubSpot - Mkt Systems",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calbertotecmi/tecmi2223/issues"
+  },
+  "homepage": "https://github.com/calbertotecmi/tecmi2223#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.56.1"
+  },
+  "dependencies": {
+    "gulp-pug": "^5.0.0"
+  }
+}

@@ -1,0 +1,30 @@
+{
+	"directorios": {
+		"pug": {
+			"fuente": [
+				"html/**/*.pug", 
+				"!html/layout/*.pug", 
+				"!html/components/*.pug"
+			],
+			"destino": {
+				"dev": "dist/dev/",
+				"prod": "dist/prod"
+			},
+			"watcher": "html/**/*.pug",
+			"recargar": {
+				"dev": "dist/dev/**.html",
+				"prod": "dist/prod/**.html"
+			}
+		},
+		"sass": {
+			"fuente": [
+				"sass/**/*.sass"
+			],
+			"destino": {
+				"dev": "dist/dev/css",
+				"prod": "dist/prod/css"
+			},
+			"watcher": "sass/**/*.sass"
+		}		
+	}
+}
