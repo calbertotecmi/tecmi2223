@@ -1,19 +1,22 @@
-'use strict';
+"use strict";
 
 const gulp = require('gulp');
 const {src, dest, series, watch, parallel} = require('gulp');
 const fs = require('fs');
+const prefixer = require("gulp-autoprefixer");
 const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass')(require('sass'));
-// const cleanCSS = require('gulp-clean-css');
-const autoprefixer = require('gulp-autoprefixer');
+const babel = require('gulp-babel');
 const pug = require('gulp-pug');
-var browserSync = require('browser-sync').create();
-
+let browserSync = require('browser-sync').create();
 
 // Carpetas desde el config
 const configuracion = JSON.parse(fs.readFileSync("config.json", "utf8"));
 
+// Opciones para el prefix
+const prefixerOptions = {
+	overrideBrowserslist: ['last 3 versions']
+};
 // Pug
 function htmlDesarrollo(done){
 		return src(configuracion.directorios.pug.fuente)
@@ -24,16 +27,23 @@ function htmlDesarrollo(done){
 // Sass
 function compilarCssDesarrollo() {
    return src('./sass/**/*.sass')
-      .pipe(sourcemaps.init())
-		// .pipe(autoprefixer({
-		// 	cascade: false
-		// }))
-		// .pipe(cleanCSS())
-      .pipe(sass.sync({ outputStyle: 'compressed' }).on('error', sass.logError))
+		.pipe(sourcemaps.init())
+      .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+		.pipe(prefixer(prefixerOptions))
       .pipe(sourcemaps.write('./maps'))
       .pipe(dest(configuracion.directorios.sass.destino.dev))
 		.pipe(browserSync.stream());
-};
+}
+// Javascript
+function jsDesarrollo(){
+	return src('./js/**/*.js')
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
+		.on('error', function(error){console.log(error.toString())})
+		.pipe(dest(configuracion.directorios.js.destino.dev))
+		.pipe(browserSync.stream());
+}
 // Imagenes
 function imagenesDesarrollo(){
 	return src(configuracion.directorios.imagenes.fuente)
@@ -44,11 +54,13 @@ function fontsDesarrollo(){
 	return src(configuracion.directorios.fonts.fuente)
 		.pipe(dest(configuracion.directorios.fonts.destino.dev))
 }
-// vendor all
+// vendor all (slick, plugins...)
 function vendorAll(){
 	return src(configuracion.directorios.vendor.fuente)
 		.pipe(dest(configuracion.directorios.vendor.destino.dev))
 }
+
+// Browser sync
 function browserSyncDesarrollo(done){
 
 	browserSync.init({
@@ -67,6 +79,7 @@ function browserSyncDesarrollo(done){
    watcherHtml.on('change', function(path){htmlDesarrollo(path)});
 	
 	watch(configuracion.directorios.sass.watcher,     compilarCssDesarrollo);
+	watch("./js/**/*.js",                           jsDesarrollo);
 	watch(configuracion.directorios.imagenes.fuente,     imagenesDesarrollo);
 	watch(configuracion.directorios.fonts.fuente,     fontsDesarrollo);
 	watch(configuracion.directorios.vendor.fuente,     vendorAll);
@@ -77,10 +90,10 @@ function browserSyncDesarrollo(done){
 
 exports.htmlDesarrollo = htmlDesarrollo;
 exports.compilarCssDesarrollo   = compilarCssDesarrollo;
+exports.jsDesarrollo        = jsDesarrollo;
 exports.imagenesDesarrollo  = imagenesDesarrollo;
 exports.fontsDesarrollo     = fontsDesarrollo;
 exports.vendorAll     = vendorAll;
 
-const compilarDesarrollo    = series(parallel( compilarCssDesarrollo, htmlDesarrollo, vendorAll, imagenesDesarrollo, fontsDesarrollo ), browserSyncDesarrollo);
-
+const compilarDesarrollo    = series(parallel( compilarCssDesarrollo, jsDesarrollo, htmlDesarrollo, vendorAll, imagenesDesarrollo, fontsDesarrollo ), browserSyncDesarrollo);
 exports.default = compilarDesarrollo;

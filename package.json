@@ -19,16 +19,36 @@
     "url": "https://github.com/calbertotecmi/tecmi2223/issues"
   },
   "homepage": "https://github.com/calbertotecmi/tecmi2223#readme",
+  "autoprefixer": {
+    "browserslist": "last 3 versions"
+  },
+  "postcss": {},
   "devDependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
     "browser-sync": "^2.27.10",
+    "cssnano": "^5.1.14",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
+    "gulp-postcss": "^9.0.1",
     "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.19",
+    "postcss-load-config": "^4.0.1",
     "sass": "^1.56.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.20.1",
+    "autoprefixer": "^10.4.13",
+    "babel-plugin-transform-es2015-arrow-functions": "^6.22.0",
+    "babel-plugin-transform-es2015-block-scoping": "^6.26.0",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-object-super": "^6.24.1",
+    "babel-plugin-transform-es2015-template-literals": "^6.22.0",
     "gulp-pug": "^5.0.0",
-    "gulp-sourcemaps": "^3.0.0"
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss-sass": "^0.5.0"
   }
 }

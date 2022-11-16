@@ -26,6 +26,23 @@
 			},
 			"watcher": "sass/**/*.sass"
 		},	
+		"js": {
+			"babelPlugins": [
+				"transform-es2015-arrow-functions",
+				"transform-es2015-block-scoping",
+				"transform-es2015-classes",
+				"transform-es2015-template-literals",
+				"transform-es2015-object-super"
+			],
+			"destino": {
+				"dev": "dist/dev/js",
+				"prod": "dist/prod/js"
+			},
+			"recargar": {
+				"dev": "dist/dev/js/**.js",
+				"prod": "dist/prod/js/**.js"
+			}
+		},		
 		"imagenes": {
 			"fuente": "images/**/*.*",
 			"destino": {
