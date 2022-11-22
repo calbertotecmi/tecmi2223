@@ -4,18 +4,36 @@
    box-shadow: 0px 4px 22px rgba(118 , 118 , 118 , .1)
    position: relative
    z-index: 5
+
+   .o-grid-row
+      @include maxMobilePortrait
+         display: block
+      .col
+         @include maxMobilePortrait
+            width: 100%
+
    &--intro
       @include flexStart
       h2
          color: $dark-green
          margin: 0 0 0 25px
+         @include maxMobilePortrait
+            font-size: 1.3rem
+            line-height: 1.3
+            margin: 0
    &--dates
       @include flexCenter
+      margin: 30px 0
+      @include maxMobilePortrait
+         @include flexAround
    &--date
       position: relative
       &:first-child
          padding-right: 50px
          margin-right: 50px
+         @include maxMobilePortrait
+            padding-right: 0
+            margin-right: 0
          &::after
             content: ""
             position: absolute
@@ -24,6 +42,8 @@
             height: 100%
             width: 1px
             background-color: $green-pastel
+            @include maxMobilePortrait
+               display: none
       p
          font-family: $tipografia-principal
          color: $dark-green

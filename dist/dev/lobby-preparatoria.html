@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecmilenio</title>
+    <link rel="stylesheet" href="../css/mainstyle.css">
+  </head>
+  <body>
+    <div class="page">
+      <main>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js"> </script>
+        <script src="../js/global.js"></script>
+        <script src="../vendor/slick.min.js"></script>
+        <script src="../vendor/slick-lightbox.min.js"></script>
+        <script>
+          // Body width size
+          const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+          
+          // === Carousel scripts === 
+          
+          // Carousel for modalidades
+          $('._c-modalidades-grid ._c-modalidades-grid--modalidadesList').slick({
+             dots: false,
+             infinite: false,
+             speed: 300,
+             slidesToShow: 2,
+             centerMode: true,
+             variableWidth: true,
+             prevArrow: '.modalidadNav.prev',
+             nextArrow: '.modalidadNav.next'
+          });
+          $('._c-installations-overview--gallery-grid').slickLightbox({
+             lazy: true
+          });
+          
+          
+          // Range: 0 - 960
+          if ( widthDevice <= 960 ){
+             $('#news-list-id').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 1,
+             });
+          }
+          // Range: 740 - 1024
+          if ( widthDevice > 740 && widthDevice <= 1140 ){
+             $('#events-list-id').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 3
+             });
+             $('#news-list-id').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 2,
+             });
+          }
+          
+          // Range: 568 - 740
+          if ( widthDevice > 568 && widthDevice <= 740 ){
+             $('#events-list-id').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 2
+             });
+          }
+          
+          //- Range: Max 568
+          if ( widthDevice <= 568 ){
+             $('#events-list-id').slick({
+                dots: true,
+                infinite: false,
+                slidesToShow: 1,
+             });
+          }
+        </script>
+      </main>
+    </div>
+  </body>
+</html>
