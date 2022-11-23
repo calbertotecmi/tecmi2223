@@ -1,29 +1,74 @@
 ._c-picture-with-copy
    background-color: $blanco
    padding-bottom: 50px
+   @include maxMobile
+      padding: 30px 0 0
+
+   .o-container
+      @include maxMobile
+         padding: 0
+         width: 100%   
+   .o-grid-row
+      @include mobileToPortrait
+         flex-flow: column-reverse
+      @include maxMobile
+         flex-flow: column-reverse
+      .col
+         @include mobileToPortrait
+            width: 100%
+         @include maxMobile
+            width: 100%
+            padding: 0
+   .m-b-100
+      @include tabletPortraitToDesktopSmall
+         margin-block: 25px
+      @include mobileToPortrait
+         margin-bottom: 50px
+      @include maxMobile
+         margin-bottom: 50px
+
    &--picture
       position: relative
       left: -10%
       img
          width: 100%
+         @include mobileToPortrait
+            height: auto
+      @include tabletPortraitToDesktopSmall
+         left: 0
+      @include mobileToPortrait
+         min-height: 0
+         height: 200px
+         display: flex
+         align-items: flex-start
+         overflow: hidden
+      @include maxMobile
+         min-height: 0
    &--copy
       width: 100%
       position: relative
       @include square( absolute, 100px, -115px, -55px, $green-pastel )
+      @include tabletPortraitToDesktopSmall
+         padding: 0 15px
+      @include maxMobile
+         padding: 0 30px
       h2
-         color: $dark-green
-         font-size: 2.5rem
-         text-transform: uppercase
          max-width: 500px
+         @include minDesktopSmall
+            font-size: 2.5rem
+         @include tabletPortraitToDesktopSmall
+            font-size: 1.9rem
       h3
          font-family: $tipografia-principal
-         font-size: 1.4rem
-         color: $aqua-dark
          margin: 40px 0 25px
+         @include minDesktopSmall
+            font-size: 1.4rem
       p
          line-height: 1.5
-         font-size: 1.25rem
-         color: $color-text-gray
+         @include tabletPortraitToDesktopSmall
+            font-size: 1.2rem
+         @include minDesktopSmall
+            font-size: 1.15rem
          strong
             font-size: inherit
    
@@ -36,6 +81,66 @@
          position: relative
          margin-left: -7.5px
          @include square( absolute, 100px, 0, -100px, $dark-green )
+
+
+   // For prepa
+   &.prepa-information
+      padding: 50px 0
+      @include maxMobile
+         padding: 30px 0 0
+      .o-grid-row
+         &:nth-child(odd)
+            ._c-picture-with-copy--picture
+               @include minDesktopSmall
+                  @include squareInAfter( absolute, 105px, 100%, 105px, $color-prepa )
+                  @include squareInBefore( absolute, 105px, calc( 100% - 105px ), 0, $color-prepa-2 )
+         &:nth-child(even)
+            ._c-picture-with-copy--picture
+               @include minDesktopSmall
+                  @include squareInBefore( absolute, 105px, -105px, 100%, $color-prepa  )               
+            ._c-picture-with-copy--copy
+               margin-left: 100px
+               @include tabletPortraitToDesktopSmall
+                  margin-left: 0
+               @include mobileToPortrait
+                  margin-left: 0
+               @include maxMobile
+                  margin-left: 0               
+
+      ._c-picture-with-copy--picture
+         left: 0
+         min-height: 410px
+         display: flex
+         justify-content: center
+         position: relative
+         @include tabletPortraitToDesktopSmall
+            min-height: 0
+         @include mobileToPortrait
+            min-height: 0
+            margin-top: 50px
+            align-items: center
+         @include maxMobile
+            min-height: 0
+            margin-top: 50px
+         img
+            height: 100%
+            width: 100%
+            max-width: unset
+            @include mobileToPortrait
+               height: auto
+      
+      ._c-picture-with-copy--copy
+         max-width: 485px
+         @include mobileToPortrait
+            max-width: 100%
+         h2
+            margin-top: 50px
+            @include tabletPortraitToDesktopSmall
+               margin-top: 0
+            @include mobileToPortrait
+               margin-top: 0
+            @include maxMobile
+               margin-top: 0
          
       
 

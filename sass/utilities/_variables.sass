@@ -7,7 +7,7 @@ $tipografia-principal: 'Source Sans Pro', sans-serif
 $tipografia-acento: 'Gentium Plus', sans-serif
 $tipografia-titulos: 'Cairo', sans-serif
 
-$font-size-h1: 2.8125rem
+$font-size-h1: 3.4rem
 $font-size-h2: 2.5rem
 $font-size-h3: 1.5rem
 $font-size-h4: 1.25rem
@@ -30,6 +30,8 @@ $extraBold: 800
 
 // Colores
 $color-prepa: #F68D2E
+$color-prepa-2: #FFB549
+$color-prepa-3: #CB6015
 $color-profesional: #78D64B
 $color-posgrado: #64A70B
 $color-cdc: #1EC6BD
@@ -122,10 +124,24 @@ $mobile: 568px
 $mobile-landscape: 480px
 $mobile-portrait: 355px
 
-// 1024 - 1140
+// min desktopBig
+@mixin minDesktopSize
+   @media ( min-width: $desktop)
+      @content
+
+// min desktopBig
+@mixin minDesktopSmall
+   @media ( min-width: $desktop-small)
+      @content
+// max 1140
 @mixin maxDesktopSmall
    @media ( max-width: $desktop-small )
       @content
+// 1140 - desktop
+@mixin desktopSmallToBig
+   @media (min-width: $desktop-small ) and ( max-width: $desktop )
+      @content
+// 1024 - 1140      
 @mixin tabletLandscapeDesktop
    @media (min-width: $tablet-landscape ) and ( max-width: $desktop-small )
       @content
@@ -152,6 +168,10 @@ $mobile-portrait: 355px
 // min 740 - 960
 @mixin phabletToTablet
    @media ( min-width: $phablet ) and ( max-width: $tablet-portrait )
+      @content
+// 568 - 960      
+@mixin mobileToPortrait
+   @media ( min-width: $mobile ) and ( max-width: $tablet-portrait )
       @content
 // 568 - 740      
 @mixin mobileToPhablet
@@ -183,9 +203,11 @@ $mobile-portrait: 355px
    display: flex
    align-items: flex-start
    justify-content: flex-start
+
 @mixin flexStrech
    display: flex
    align-items: stretch
+
 @mixin flexStart
    display: flex
    align-items: center
@@ -216,15 +238,38 @@ $mobile-portrait: 355px
    align-items: center
    justify-content: space-evenly   
 
-
 @mixin flexColumnSpaceBetween
    display: flex
    flex-flow: column
    justify-content: space-between            
 
+@mixin flexRowReverse
+   display: flex
+   flex-flow: row-reverse
+   // justify-content: space-between            
+
 
 @mixin square( $position, $size, $top, $right, $color )
    .square
+      position: $position
+      width: $size
+      height: $size
+      top: $top
+      right: $right
+      background-color: $color
+
+@mixin squareInAfter( $position, $size, $top, $right, $color )
+   &::after
+      content: ""
+      position: $position
+      width: $size
+      height: $size
+      top: $top
+      right: $right
+      background-color: $color
+@mixin squareInBefore( $position, $size, $top, $right, $color )
+   &::before
+      content: ""
       position: $position
       width: $size
       height: $size

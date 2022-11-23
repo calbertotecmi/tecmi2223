@@ -8,6 +8,8 @@
    -webkit-font-smoothing: antialiased
    -moz-osx-font-smoothing: grayscale
    font-size: $font-size-body
+   @include maxMobile
+      font-size: 15px
 
 html
    -webkit-text-size-adjust: 100%
@@ -105,7 +107,12 @@ strong
 .color-dark-green
    color: $dark-green
 
+.color-prepa
+   color: $color-prepa
+
 // Global class for backgrounds
+.bg-color-prepa-prepa
+   background-color: $color-prepa
 .bg-dark-green
    background-color: $dark-green
 .bg-light-dark-green
@@ -137,7 +144,7 @@ strong
 // Btns
 @import ../layout/_o-btn
 
-// Clases for thext
+// Clases for text
 .text-align-left
    text-align: left!important
 .text-align-right
@@ -150,6 +157,11 @@ strong
    text-transform: uppercase
    @include maxMobile
       text-transform: unset
+
+
+// Utilities (as margin, etc)
+.m-b-100
+   margin-bottom: 100px
 
 
 // Dots for slick
@@ -187,10 +199,16 @@ strong
 @include maxMobileLandscape
    h2
       font-size: 1.5625rem   
+@include maxMobile
+   h1
+      font-size: 2.5rem
+   p
+      font-size: 1.2rem
 @include maxMobilePortrait
    h2
-      font-size: 1.4375rem   
-      padding: 0 5px
+      font-size: 1.4375rem
    h3
       font-size: 1.3125rem
+   p
+      font-size: 1.1rem
    

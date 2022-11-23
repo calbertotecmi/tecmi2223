@@ -9,26 +9,46 @@ append configuracion
 block contenido
    main
 
-      //- include layout/_header
+      include layout/_header
+      include components/preparatoria/_c-hero-lobby-prepa
 
-      //- section._c-picture-with-copy
-      //-    .o-container
-      //-       .o-grid-row.row-center
-      //-          .col.size-6
-      //-             ._c-picture-with-copy--picture
-      //-                img(src="../images/img-sample-1.jpg" alt="Img Home" srcset="../images/img-sample-1.jpg").img-responsive
-      //-          .col.size-6
-      //-             ._c-picture-with-copy--copy
-      //-                h2 Reserva tu lugar y no te quedes fuera
-      //-                br
-      //-                p Si ya lo tienes claro #[strong ¡aparta tu lugar con nosotros!]
-      //-                br
-      //-                p Los pasos para que te integres y continúes en tu siguiente etapa son sencillos, si ya estás listo para #[strong continuar con tu desarrollo], consulta la papelería que necesitas y comienza a construir tu camino con nosotros.
-      //-                br
-      //-                br
-      //-                a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Hecho! ¿Qué necesito?
-
-      //- include layout/_footer
+      section._c-picture-with-copy.prepa-information
+         .o-container
+            .o-grid-row.row-reverse.m-b-100
+               .col.size-6
+                  ._c-picture-with-copy--picture
+                     img(src="../images/prepa-img-end-1.png" alt="Img Prepa" srcset="../images/prepa-img-end-1.png").img-responsive
+               .col.size-6
+                  ._c-picture-with-copy--copy
+                     h2.color-prepa ¿Cómo iniciar tu proceso de admisión de prepa tecmilenio?
+                     br
+                     p Te invitamos a consultar el proceso de admisión y la documentación requerida para comenzar a construir tu camino con nosotros. 
+                     br
+                     br
+                     a.o-btn.btn-solid.bg-dark-green(href="#!") ¡Conoce más aquí!
+            .o-grid-row
+               .col.size-6
+                  ._c-picture-with-copy--picture
+                     img(src="../images/prepa-img-end.png" alt="Img Prepa" srcset="../images/prepa-img-end.png").img-responsive
+               .col.size-6
+                  ._c-picture-with-copy--copy
+                     h2.color-prepa Becas y Financiamiento
+                     br
+                     p Entendemos que a veces la situación económica puede ser cambiante y eso puede ser un impedimento para seguir estudiando. Por ello, en Tecmilenio contamos con programas de becas y financiamiento para que continúes con tu desarrollo.
+                     br
+                     br
+                     a.o-btn.btn-solid.bg-dark-green(href="#!") Ver más información
+      section._c-banner-cta.bg-color-prepa-prepa
+         .o-container
+            ._c-banner-cta--intro
+               img.img-responsive(src="../images/dialogo-dark-green.png", alt="", srcset="../images/dialogo-dark-green.png")
+               h2 Si tienes alguna duda, escríbenos aquí.
+            ._c-banner-cta--info
+               p Nos contactaremos contigo para ayudarte a tomar la mejor decisión y que construyas tu camino con nosotros.
+            ._c-banner-cta--sesionInfo
+               //- h4 Horario de atención 9:00am a 6:30pm
+               a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Sí! Quiero más información
+      include layout/_footer
 
       script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
       script(src="../js/global.js")

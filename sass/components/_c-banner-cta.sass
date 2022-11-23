@@ -1,13 +1,22 @@
 ._c-banner-cta
    text-align: center
+
+   @include maxMobile
+      padding: 50px 0
+
    .o-container
       @include flexCenter
       flex-flow: column
       min-height: 450px
+      @include maxMobile
+         min-height: 0
 
    p, h4
-      font-size: 1.25rem
       font-family: $tipografia-principal
+      @include minDesktopSmall
+         font-size: 1.25rem
+      @include maxMobile
+         padding: 0 10px
 
 
    // bg picture
@@ -44,6 +53,22 @@
       [class*="--info"]
          p
             color: $blanco
+
+   // banner in prepa
+   &.bg-color-prepa-prepa
+      color: $blanco
+      [class*="--intro"]
+         margin-top: auto
+         h2
+            color: $dark-green
+      [class*="--info"]
+         p
+            color: $blanco
+      [class*="--sesionInfo"]
+         margin-top: 20px
+         a.o-btn
+            background-color: $dark-green
+   
    
    &--background
       position: absolute
@@ -73,8 +98,11 @@
          display: block
          margin-bottom: 25px
       h2
-         font-size: 2.5rem
          text-transform: uppercase
+         @include minDesktopSmall
+            font-size: 2.5rem
+         @include maxMobile
+            text-transform: unset
          span
             display: block
             text-transform: none
@@ -89,6 +117,8 @@
       position: relative
       margin-top: auto
       margin-bottom: 50px
+      @include maxMobile
+         margin-bottom: 0
       h4
          font-weight: 600
       .o-btn

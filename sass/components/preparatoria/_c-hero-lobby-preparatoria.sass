@@ -1,0 +1,111 @@
+._c-hero-lobby-preparatoria
+   background-color: $color-prepa
+   position: relative
+   @include maxTabletPortrait
+      padding: 55px 0
+
+   &--pictures
+      position: relative
+      @include flexEnd
+      @include minDesktopSize
+         transform: translateY(10%)
+      @include desktopSmallToBig
+         transform: translateY(25%)
+      @include tabletPortraitToDesktopSmall
+         transform: translateY(25%)
+      &::before
+         content: ""
+         position: absolute
+         top: 30%
+         left: -30px
+         width: 105px
+         height: 105px
+         z-index: 0
+         background-color: $color-prepa-3
+         @include minDesktopSize
+            left: 27%
+      @include maxTabletPortrait
+         display: none
+      img
+         display: block
+         z-index: 2
+         position: relative
+         &:first-child
+            position: absolute
+            bottom: 0
+            transform: translateX(-95%) translateY(-35%)
+            z-index: 3
+
+   &--copytext
+      position: relative
+      z-index: 5
+      @include minDesktopSize
+         // margin-top: 70px
+         margin: auto 0
+      &.col.size-6
+         @include maxTabletPortrait
+            width: 100%
+            max-width: 100%
+      @include tabletPortraitToDesktopSmall
+         margin-top: 30px
+      h1
+         @include maxTabletPortrait
+            width: 100%
+            line-height: 1.1
+         @include minDesktopSize
+            max-width: 400px
+            margin-bottom: 40px
+      p
+         margin: 20px 0
+         line-height: 1.4
+         @include minDesktopSize
+            max-width: 590px   
+            font-size: 1.3rem
+            font-weight: 400         
+         @include maxMobile
+            font-size: 1rem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   // .o-container
+   //    .o-grid-row
+   //       @include desktopSmallToBig
+   //          align-items: center
+
+
+   .decorations
+      display: none
+      @include maxTabletPortrait
+         display: block
+      span
+         @include maxTabletPortrait
+            position: absolute
+            z-index: 1
+            width: 50px
+            height: 50px
+      span.box-1
+         @include maxTabletPortrait
+            top: 0
+            left: 0
+            background-color: $color-prepa-3
+      span.box-2
+         @include maxTabletPortrait
+            bottom: 0
+            right: 50px
+            background-color: $color-prepa-2
+      span.box-3
+         @include maxTabletPortrait
+            bottom: 50px
+            right: 0
+            background-color: $color-prepa-3            
