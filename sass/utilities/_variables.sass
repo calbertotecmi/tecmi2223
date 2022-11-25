@@ -13,7 +13,7 @@ $font-size-h3: 1.5rem
 $font-size-h4: 1.25rem
 $font-size-h5: 1.15rem
 $font-size-h6: 1.1rem
-$font-size-p: 1.25rem
+$font-size-p: 1.1rem
 // $font-size-p: 1.1rem
 $font-size-a: 1rem
 $font-size-links-hyf: 1rem
@@ -32,6 +32,7 @@ $extraBold: 800
 $color-prepa: #F68D2E
 $color-prepa-2: #FFB549
 $color-prepa-3: #CB6015
+$color-prepa-brillante: #FF7F32
 $color-profesional: #78D64B
 $color-posgrado: #64A70B
 $color-cdc: #1EC6BD
@@ -145,7 +146,11 @@ $mobile-portrait: 355px
 @mixin tabletLandscapeDesktop
    @media (min-width: $tablet-landscape ) and ( max-width: $desktop-small )
       @content
-// 1024
+// max 1024
+@mixin maxTabletLandscape
+   @media (max-width: $tablet-landscape ) 
+      @content
+// min 1024
 @mixin minTabletLandscape
    @media (min-width: $tablet-landscape ) 
       @content
@@ -163,7 +168,7 @@ $mobile-portrait: 355px
       @content
 // min 740 - 1140
 @mixin phabletToDesktopSmall
-   @media ( min-width: $phablet ) and ( max-width: $tablet-portrait )
+   @media ( min-width: $phablet ) and ( max-width: $desktop-small )
       @content
 // min 740 - 960
 @mixin phabletToTablet
@@ -176,6 +181,10 @@ $mobile-portrait: 355px
 // 568 - 740      
 @mixin mobileToPhablet
    @media ( min-width: $mobile ) and ( max-width: $phablet )
+      @content
+// 740
+@mixin maxPhablet
+   @media ( max-width: $phablet )
       @content
 // 568     
 @mixin maxMobile
@@ -251,6 +260,14 @@ $mobile-portrait: 355px
 
 @mixin square( $position, $size, $top, $right, $color )
    .square
+      position: $position
+      width: $size
+      height: $size
+      top: $top
+      right: $right
+      background-color: $color
+@mixin squareID( $id, $position, $size, $top, $right, $color )
+   .square.#{$id}
       position: $position
       width: $size
       height: $size

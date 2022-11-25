@@ -1,0 +1,30 @@
+._c-separador-detalle
+   position: relative
+   &.separador-prepa-loby
+      height: 210px
+      @include squareID( first-square, absolute, 105px, 0, calc( 100% - 105px ), $dark-green )
+      @include squareID( second-square, absolute, 105px, 105px, calc( 100% - 210px ), $color-prepa-2 )
+      @include maxTabletPortrait
+         display: none
+      @include mobileToPortrait
+         display: block
+         height: auto
+         .square.first-square
+            position: relative
+            width: 50px
+            height: 50px
+            top: 0
+            right: 0
+         .square.second-square
+            display: none   
+      @include maxMobile
+         display: block
+         height: auto
+         .square.first-square
+            position: relative
+            width: 50px
+            height: 50px
+            top: 0
+            right: 0
+         .square.second-square
+            display: none   

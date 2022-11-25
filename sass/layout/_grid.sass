@@ -9,11 +9,21 @@
       display: table
       content: ""
       clear: both
+   &-fluid
+      width: 100%
+      display: block
+      margin: 0 auto
+      position: relative
+      .o-grid-row
+         .col
+            padding: 0
 
 .o-grid-row
    display: flex
    flex-wrap: wrap
    width: 100%
+   &.row-stretch
+      @include flexStrech
    &.row-end
       @include flexEnd
    &.row-center

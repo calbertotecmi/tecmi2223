@@ -3,7 +3,7 @@ const bodyWith = document.getElementsByTagName('body')[0].clientWidth;
 
 // Ejecutar funciones
 window.addEventListener('load', () => {
-   headerScripts();
+   // headerScripts();
    // if ( bodyWith <= 568  ){
 
    //    footerScripts();
@@ -181,4 +181,24 @@ const headerScripts = () => {
    });
 
 
+}
+
+
+// Funcion para accordeon sencillo
+const accordeonSection = ( selector ) => {
+   const accordeonBtn = Array.from(document.querySelector( selector + ' .accordeon-init' ).querySelectorAll('.accordeon-btn'));
+
+   accordeonBtn.forEach( btn => {
+      btn.addEventListener('click', (e) => {
+         // Deshabilitar links en enlaces del head
+         e.currentTarget.querySelectorAll('a').forEach(  m => {
+            m.addEventListener('click', e => e.preventDefault())
+         });
+         // Toggle clase activa
+         e.currentTarget.parentNode.classList.toggle('accordeon-active')
+      })
+   })
+
+   // console.log(accordeonBtn);
+   // console.log(accordeonBox);
 }

@@ -4,6 +4,12 @@
    @include maxTabletPortrait
       padding: 55px 0
 
+
+   .o-container
+      @include minDesktopSize
+         height: calc(100vh - 80px)
+         max-height: 650px
+         min-height: 600px
    &--pictures
       position: relative
       @include flexEnd
@@ -64,24 +70,6 @@
             font-weight: 400         
          @include maxMobile
             font-size: 1rem
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   // .o-container
-   //    .o-grid-row
-   //       @include desktopSmallToBig
-   //          align-items: center
 
 
    .decorations

@@ -1,0 +1,169 @@
+._c-programs-list
+   padding: 50px 0 100px
+   @include mobileToPortrait
+      padding: 30px 15px 50px
+   @include maxMobile
+      padding: 30px 15px 50px
+
+   .o-grid-row
+      .col
+         margin-bottom: 30px
+         &.size-6
+            @include maxTabletPortrait
+               width: 100%
+               max-width: 100%
+               padding: 0
+
+   &--title
+      margin-bottom: 80px
+      text-align: center
+      @include mobileToPortrait
+         margin-bottom: 60px
+         text-align: left
+      @include maxMobile
+         margin-bottom: 30px
+         text-align: left
+      p
+         width: 100%
+         max-width: 1030px
+         margin: 40px auto 0
+         line-height: 1.75
+         @include maxMobile
+            margin: 25px auto 0
+
+   &--boxes
+      width: 100%
+      max-width: 1260px
+      margin: 0 auto
+   &--box
+      width: 100%
+      max-width: 600px
+      margin: 0 auto
+      &.accordeon-active
+         ._c-programs-list--boxhead
+            .icon
+               @include mobileToPortrait
+                  &::before
+                     content: "-"
+                     top: -4px
+                     position: relative
+               @include maxMobile
+                  &::before
+                     content: "-"
+                     top: -4px
+                     position: relative
+         ._c-programs-list--boxcontent
+            height: auto
+   &--boxhead
+      background-color: $gray-blue
+      padding: 15px 30px
+      .o-grid-row
+         .col
+            padding: 0
+            margin: 0 
+            margin-bottom: 0
+      .icon
+         @include mobileToPortrait
+            position: relative
+            &::before
+               content: "+"
+               color: white
+               font-size: 2.2rem
+               font-family: $tipografia-principal
+         @include maxMobile
+            position: relative
+            &::before
+               content: "+"
+               color: white
+               font-size: 2.2rem
+               font-family: $tipografia-principal
+      img
+         display: block
+         margin: 0 auto
+         max-width: 100%
+         @include mobileToPortrait
+            display: none
+         @include maxMobile
+            display: none
+      
+      h3
+         font-family: $tipografia-principal
+         color: $blanco
+         @include tabletPortraitToDesktopSmall
+            font-size: 1.2rem
+
+      p
+         color: $blanco
+         font-size: 1.2rem
+         font-weight: 400
+         text-align: left
+         margin: 5px 0 0
+         span
+            display: inline-block
+            &:first-child
+               margin-right: 10px
+         @include tabletPortraitToDesktopSmall
+            font-size: 1.1rem
+         @include maxMobile
+            display: none
+   
+   &--boxcontent
+      background-color: $white-gray
+      padding: 30px
+      min-height: 300px
+      position: relative
+      transition: all .2s linear
+      @include mobileToPortrait
+         min-height: 0
+         height: 0
+         overflow: hidden
+         padding: 0
+      @include maxMobile
+         min-height: 0
+         height: 0
+         overflow: hidden
+         padding: 0
+      p
+         line-height: 1.6
+         @include mobileToPortrait
+            padding: 30px 
+         @include tabletPortraitToDesktopSmall
+            line-height: 1.4
+            font-size: 1rem
+         @include maxMobile
+            line-height: 1.4
+            font-size: 1rem
+            padding: 30px 
+      a.o-btn
+         position: absolute
+         bottom: 30px
+         @include mobileToPortrait
+            position: relative
+            bottom: 0
+            margin: 10px 30px 30px
+         @include maxMobile
+            position: relative
+            bottom: 0
+            margin: 10px 30px 30px
+      
+
+
+   // Theme for prepa
+   &.accent-color-prepa
+      padding-top: 0
+      @include minDesktopSize
+         margin-top: -50px
+      ._c-programs-list--boxes
+         .col
+            &:nth-child(2n+1)
+               ._c-programs-list--boxhead
+                  background-color: $color-prepa
+            &:nth-child(2n+2)
+               ._c-programs-list--boxhead
+                  background-color: $color-prepa-brillante
+            &:nth-child(2n+3)
+               ._c-programs-list--boxhead
+                  background-color: $color-prepa-3
+            &:nth-child(2n+4)
+               ._c-programs-list--boxhead
+                  background-color: $color-prepa-2

@@ -12,6 +12,109 @@ block contenido
       include layout/_header
       include components/preparatoria/_c-hero-lobby-prepa
 
+      section._c-separador-detalle.separador-prepa-loby
+         .square.first-square
+         .square.second-square
+
+      section._c-programs-list.accent-color-prepa
+         .o-container
+            
+            ._c-programs-list--title
+               h2.color-dark-green Tipos de Prepa para estudiar en Tecmilenio
+               p Ofrecemos #[strong cuatro programas de preparatoria presencial] que ayudan a nuestros(as) estudiantes a obtener las habilidades y la experiencia necesaria para impactar positivamente en su futuro profesional. 
+            
+            ._c-programs-list--boxes.accordeon-init
+               .o-grid-row
+               
+                  .col.size-6
+                     ._c-programs-list--box
+                        ._c-programs-list--boxhead.accordeon-btn
+                           .o-grid-row.row-center
+                              .col.size-11
+                                 h3 
+                                    a(href="#!") Prepa Intercultural
+                                 p #[span Agosto 2023] 
+                              .col.size-1
+                                 .icon
+                                    img(src="../images/icon-prod-tab-head.png", alt="Icono", srcset="../images/icon-prod-tab-head.png")
+                        ._c-programs-list--boxcontent.accordeon-box
+                           p Este programa de preparatoria se enfoca en desarrollar habilidades que acercan a las y los estudiantes al mundo laboral. Al mismo tiempo, viven nuevas experiencias interactuando con otras culturas, que potenciarán su desarrollo y fortalecerán su autonomía. Esto les permitirá tomar la mejor decisión en su vocación profesional y encontrar su Propósito de Vida. 
+                           a.o-btn.bg-dark-green.white-color(href="#!") Conoce más aquí
+
+                  .col.size-6
+                     ._c-programs-list--box
+                        ._c-programs-list--boxhead.accordeon-btn
+                           .o-grid-row.row-center
+                              .col.size-11
+                                 h3 
+                                    a(href="#!") Prepa Intercultural Bilingüe Avanzada 
+                                 p #[span Agosto 2023] 
+                              .col.size-1
+                                 .icon
+                                    img(src="../images/icon-prod-tab-head.png", alt="Icono", srcset="../images/icon-prod-tab-head.png")
+                        ._c-programs-list--boxcontent.accordeon-box
+                           p Este programa de preparatoria se enfoca en desarrollar habilidades que acercan a las y los estudiantes al mundo laboral. Al mismo tiempo, viven nuevas experiencias interactuando con otras culturas, que potenciarán su desarrollo y fortalecerán su autonomía. Esto les permitirá tomar la mejor decisión en su vocación profesional y encontrar su Propósito de Vida. 
+                           a.o-btn.bg-dark-green.white-color(href="#!") Conoce más aquí
+
+                  .col.size-6
+                     ._c-programs-list--box
+                        ._c-programs-list--boxhead.accordeon-btn
+                           .o-grid-row.row-center
+                              .col.size-11
+                                 h3 
+                                    a(href="#!") Prepa Bilingüe 
+                                 p #[span Enero 2023] #[span Septiembre 2023] 
+                              .col.size-1
+                                 .icon
+                                    img(src="../images/icon-prod-tab-head.png", alt="Icono", srcset="../images/icon-prod-tab-head.png")
+                        ._c-programs-list--boxcontent.accordeon-box
+                           p Va dirigido a estudiantes que tienen aprecio e interés en otras culturas y desean continuar desarrollando sus competencias en el idioma inglés y, adquirir habilidades de comunicación oral y escrita en un tercer idioma.
+                           a.o-btn.bg-dark-green.white-color(href="#!") Conoce más aquí
+
+                  .col.size-6
+                     ._c-programs-list--box
+                        ._c-programs-list--boxhead.accordeon-btn
+                           .o-grid-row.row-center
+                              .col.size-11
+                                 h3 
+                                    a(href="#!") Prepa General
+                                 p #[span Enero 2023] #[span Septiembre 2023] 
+                              .col.size-1
+                                 .icon
+                                    img(src="../images/icon-prod-tab-head.png", alt="Icono", srcset="../images/icon-prod-tab-head.png")
+                        ._c-programs-list--boxcontent.accordeon-box
+                           p Este programa de preparatoria se enfoca en desarrollar competencias en el idioma inglés y ayudarles a definir su Propósito de Vida. 
+                           a.o-btn.bg-dark-green.white-color(href="#!") Conoce más aquí
+
+
+
+      section._c-advantages-list.prepa-styles
+         .o-container-fluid   
+            .o-grid-row.row-center
+               .col.size-4
+                  ._c-advantages-list--picture
+                     img.img-full-responsive.center-block(src="./images/advantages-1.png", alt="./images/advantages-1.png")
+               .col.size-4
+                  ._c-advantages-list--information
+                     h2.text-center.white-color ¿Qué ventajas te ofrece Prepa Tecmilenio?
+                     ul
+                        li
+                           p.white-color Tres certificaciones que fortalecen tus habilidades técnicas, dan valor a tu currículum y te acercan al mundo laboral.
+                        li
+                           p.white-color Acompañamiento cercano de un mentor a lo largo de toda tu preparatoria.
+                        li
+                           p.white-color La oportunidad de desarrollar un plan vocacional y descubrir tu Propósito de Vida.
+                        li
+                           p.white-color Pertenecer a una sociedad estudiantil en donde desarrollas habilidades y crear lazos entre amigos.
+                        li
+                           p.white-color La posibilidad de cursar tus materias en inglés y adentrarte a un tercer idioma* Competencia en el idioma inglés comprobada. 
+                     
+               .col.size-4
+                  ._c-advantages-list--picture
+                     img.img-full-responsive.center-block(src="./images/img-lobby-prepa-2.png", alt="./images/advantages-1.png")
+
+      include components/preparatoria/_c-graduate-grid
+      
       section._c-picture-with-copy.prepa-information
          .o-container
             .o-grid-row.row-reverse.m-b-100
@@ -38,7 +141,7 @@ block contenido
                      br
                      br
                      a.o-btn.btn-solid.bg-dark-green(href="#!") Ver más información
-      section._c-banner-cta.bg-color-prepa-prepa
+      section._c-banner-cta.bg-color-prepa
          .o-container
             ._c-banner-cta--intro
                img.img-responsive(src="../images/dialogo-dark-green.png", alt="", srcset="../images/dialogo-dark-green.png")
@@ -46,8 +149,8 @@ block contenido
             ._c-banner-cta--info
                p Nos contactaremos contigo para ayudarte a tomar la mejor decisión y que construyas tu camino con nosotros.
             ._c-banner-cta--sesionInfo
-               //- h4 Horario de atención 9:00am a 6:30pm
                a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Sí! Quiero más información
+      
       include layout/_footer
 
       script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
@@ -86,6 +189,8 @@ block contenido
                infinite: false,
                slidesToShow: 1,
             });
+            // Accordeon
+            accordeonSection( '._c-programs-list' )
          }
          // Range: 740 - 1024
          if ( widthDevice > 740 && widthDevice <= 1140 ){

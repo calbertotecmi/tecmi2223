@@ -5,7 +5,7 @@ var bodyWith = document.getElementsByTagName('body')[0].clientWidth;
 
 // Ejecutar funciones
 window.addEventListener('load', function () {
-  headerScripts();
+  // headerScripts();
   // if ( bodyWith <= 568  ){
 
   //    footerScripts();
@@ -175,4 +175,24 @@ var headerScripts = function headerScripts() {
       headerMain.classList.add('sticky-nav');
     }
   });
+};
+
+// Funcion para accordeon sencillo
+var accordeonSection = function accordeonSection(selector) {
+  var accordeonBtn = Array.from(document.querySelector(selector + ' .accordeon-init').querySelectorAll('.accordeon-btn'));
+  accordeonBtn.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      // Deshabilitar links en enlaces del head
+      e.currentTarget.querySelectorAll('a').forEach(function (m) {
+        m.addEventListener('click', function (e) {
+          return e.preventDefault();
+        });
+      });
+      // Toggle clase activa
+      e.currentTarget.parentNode.classList.toggle('accordeon-active');
+    });
+  });
+
+  // console.log(accordeonBtn);
+  // console.log(accordeonBox);
 };

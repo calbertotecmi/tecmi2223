@@ -1,0 +1,75 @@
+._c-graduate-grid
+   
+   padding: 100px 0 50px
+   background-color: $white-gray
+   @include maxMobile
+      padding: 50px 0
+   .o-grid-row
+      .col
+         @include phabletToDesktopSmall
+            width: 33.333%
+         @include mobileToPhablet
+            width: 33.333%
+         @include maxMobile
+            width: 50%
+   
+   .m-b-100
+      @include phabletToDesktopSmall
+         margin-bottom: 50px
+      @include mobileToPhablet
+         margin-bottom: 50px
+      @include maxMobile
+         margin-bottom: 50px
+
+   h2
+      @include mobileToPhablet
+         text-align: left
+      @include maxMobile
+         text-align: left
+
+   &--ico
+      @include flexCenter
+      margin: 0 auto 30px
+      @include minDesktopSmall
+         width: 130px
+         height: 130px
+      @include phabletToDesktopSmall
+         width: 100px
+         height: 100px
+         padding: 15px
+         margin-bottom: 15px
+      @include mobileToPhablet
+         width: 100px
+         height: 100px
+         padding: 15px
+         margin-bottom: 15px
+      @include maxMobile
+         width: 80px
+         height: 80px
+         padding: 15px
+         margin-bottom: 15px
+      img
+         display: block
+         margin: 0 auto
+         max-width: 100%
+   &--copy
+      text-align: center
+      margin-left: auto
+      margin-right: auto
+      @include minDesktopSmall
+         margin-bottom: 50px
+         max-width: 410px
+      @include phabletToDesktopSmall
+         margin-bottom: 50px
+      @include mobileToPhablet
+         margin-bottom: 50px
+      @include maxMobile
+         margin-bottom: 25px
+      p
+         @include phabletToDesktopSmall
+            font-size: 1rem
+         @include mobileToPhablet
+            font-size: 1rem
+         @include maxMobile
+            font-size: 1rem
+      
