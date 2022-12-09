@@ -1,0 +1,22 @@
+//- Extend template global
+extends layout/_template
+
+append configuracion
+   -var page			= {}
+   -page['lang']		= 'es'
+   //- -page['libsCss']	= ['slick','slick-theme','slick-lightbox']
+block contenido
+   main
+
+      section._c-banner-principal-t.accent-prepa-inter
+         .o-container
+            .o-grid-row.no-padding.row-center
+               .col.size-6
+                  ._c-banner-principal-t--intro
+                     h1.color-white Prepa Intercultural
+                     h2.color-prepa-3 Crea tu historia en Prepa Intercultural Tecmilenio
+                     p.color-white Nuestro programa de preparatoria se enfoca en desarrollar habilidades para acercar a las y los estudiantes al mundo laboral. Por medio de rutas exploratorias, tomarán la mejor decisión con respecto a su vocación profesional al experimentar diferentes áreas de interés.
+                     a.o-btn.btn-solid.bg-color-prepa-3(href="#!") Quiero más información               
+               .col.size-6
+                  ._c-banner-principal-t--picture
+                     img(src="../images/img-t.jpg", srcset="../images/img-t.jpg", alt="Imagen")

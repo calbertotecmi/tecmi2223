@@ -1,0 +1,51 @@
+._c-banner-principal-t
+   position: relative
+
+   &.accent-prepa-inter
+      background-color: $color-prepa-2
+      &::before
+         content: ""
+         position: absolute
+         right: 0
+         bottom: 0
+         height: 100%
+         width: 50%
+         background-color: $color-prepa
+      ._c-banner-principal-t--picture
+         &::before
+            background-color: $color-prepa-2
+         &::after
+            background-color: $color-prepa-3
+   &--intro
+      width: 100%
+      max-width: 615px
+      h2
+         margin-top: 20px
+         font-size: 1.375rem
+      p
+         font-size: 1.25rem
+         line-height: 1.5
+         margin-bottom: 30px
+
+   &--picture
+      display: flex
+      position: relative
+      &::before,
+      &::after
+         content: ""
+         position: absolute
+         bottom: 0
+         z-index: 2
+      &::before
+         left: 0
+         width: 150px
+         height: 300px
+      &::after
+         width: 300px
+         height: 300px
+         left: 300px
+      img
+         display: block
+         max-width: 100%
+         marign: 0 0 0 auto
+         z-index: 1
