@@ -1,0 +1,108 @@
+._c-exploration-routes
+   padding: 20px 0 50px
+
+   .o-grid-row
+      .col.size-4
+         @include mobileToPortrait
+            width: 50%
+         @include maxMobile
+            width: 100%
+
+   &--intro
+      text-align: center
+      margin-bottom: 50px
+      h2
+         color: $dark-green
+      p
+         font-size: 1.25rem
+         margin: 10px 0 0
+
+
+   &--route
+      background-color: $white-gray
+      width: 100%
+      max-width: 400px
+      margin: 0 auto 30px
+
+
+   &--routehead
+      @include minDesktopSmall
+         display: flex
+         flex-flow: column-reverse
+      ._c-exploration-routes--routeimg
+         display: none
+         @include minDesktopSmall
+            display: block
+      
+      &.accordeon-active
+         ._c-exploration-routes--routeimg
+            display: block
+         ._c-exploration-routes--routeact
+            &::after
+               content: "+"
+   &--routeact
+      padding: 15px 25px
+      position: relative
+      &::after
+         content: "-"
+         position: absolute
+         right: 30px
+         top: 10px
+         font-size: 2.5rem
+         color: $color-prepa
+         @include minDesktopSmall
+            display: none
+
+   &--routeimg
+      overflow: hidden
+      margin-bottom: 20px
+      @include flexCenter
+      @include minDesktopSmall
+         height: 240px
+      @include maxMobile
+         height: 110px
+      img
+         display: block
+         width: 100%
+         max-width: 100%
+
+   &--routebody
+      padding: 15px 25px 35px
+      display: none
+      @include minDesktopSmall
+         display: block
+      p
+         line-height: 1.5
+      
+      &.active
+         display: block
+
+
+   &.accent-prepa
+      ._c-exploration-routes--route
+         &:hover
+            @include minDesktopSmall
+               background-color: $dark-green
+            ._c-exploration-routes--routeact
+               h3
+                  @include minDesktopSmall
+                     color: $color-prepa-2
+            ._c-exploration-routes--routebody   
+               p
+                  @include minDesktopSmall
+                     color: $blanco
+
+
+      ._c-exploration-routes--routehead
+         &.accordeon-active
+            ._c-exploration-routes--routeact
+               background-color: $dark-green
+               &::after
+                  color: $blanco
+               h3
+                  color: $blanco
+               p
+                  color: $color-prepa-2
+      ._c-exploration-routes--routeact
+         h3, span
+            color: $color-prepa

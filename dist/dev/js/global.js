@@ -190,6 +190,7 @@ var accordeonSection = function accordeonSection(selector) {
       });
       // Toggle clase activa
       e.currentTarget.parentNode.classList.toggle('accordeon-active');
+      e.currentTarget.parentNode.parentNode.querySelector('.accordeon-box') != null && e.currentTarget.parentNode.parentNode.querySelector('.accordeon-box').classList.toggle('active');
     });
   });
 

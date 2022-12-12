@@ -10,81 +10,9 @@ block contenido
 
       include layout/_header
 
-      section._c-banner-principal-t.accent-prepa-inter
-         .o-container
-            .o-grid-row.no-padding.row-center
-               .col.size-6
-                  ._c-banner-principal-t--intro
-                     h1.color-white Prepa Intercultural
-                     h2.color-prepa-3 Crea tu historia en Prepa Intercultural Tecmilenio
-                     p.color-white Nuestro programa de preparatoria se enfoca en desarrollar habilidades para acercar a las y los estudiantes al mundo laboral. Por medio de rutas exploratorias, tomarán la mejor decisión con respecto a su vocación profesional al experimentar diferentes áreas de interés.
-                     a.o-btn.btn-solid.bg-color-prepa-3(href="#!") Quiero más información               
-               .col.size-6
-                  ._c-banner-principal-t--picture
-                     img(src="../images/img-t.jpg", srcset="../images/img-t.jpg", alt="Imagen")
-
-
-
-      section._c-intro-producto.accent-green
-         .o-container
-            .o-grid-row.row-center
-               .col.size-6
-                  ._c-intro-producto--info
-                     p Sabemos que el mundo ha cambiado, por eso hemos creado el plan de estudios de #[strong Prepa Intercultural Tecmilenio, con un programa académico que ayuda a las y los estudiantes a descubrir su vocación y adquirir las bases para su carrera profesional], mientras reciben acompañamiento en el descubrimiento de su Propósito de Vida.
-                     p #[strong En Prepa Intercultural Tecmilenio] nuestros(as) estudiantes desarrollan la competencia en el idioma inglés, que le dará el acceso a mayores oportunidades en su futuro profesional. 
-                     a.o-btn.btn-solid(href="#!") ¡Quiero conocer más!
-               .col.size-6
-                  ._c-intro-producto--icons-boxes
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Modalidad 
-                           p Presencial
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Plan
-                           p Semestral
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Duración
-                           p 3 años
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Idioma
-                           p Español
-
-
-
-      section._c-plan-de-estudios
-         .o-container
-            h2.text-center.color-dark-green Plan de estudios de Prepa Intercultural Tecmilenio
-
-            ._c-plan-de-estudios--content
-               .o-grid-row
-                  .col.size-9
-                     img.img-responsive(src="../images/plan-estudios-demo.png", srcset="../images/plan-estudios-demo.png", alt="demo")
-                  .col.size-3._c-plan-de-estudios--percentageboxes.accent-prepa
-                     ._c-plan-de-estudios--box
-                        p 33%
-                        span Certificados y especialidades
-                     ._c-plan-de-estudios--box
-                        p 18%
-                        span Formación personal
-                     ._c-plan-de-estudios--box
-                        p 49%
-                        span Formación carrera
-
-
-               a.o-btn.btn-solid.bg-dark-green(href="#!") Descargar Plan
-
-
+      include components/_c-banner-principal-t
+      include components/_c-intro-producto
+      include components/_c-plan-de-estudios
 
       section._c-picture-with-copy.extended-info.accent-prepa
          .o-container
@@ -111,6 +39,84 @@ block contenido
                         p Queremos que no pierdas la oportunidad de participar en talleres deportivos y culturales que te permitan descubrir tu pasión y ser feliz durante tu paso como estudiante en #[strong Prepa Tecmilenio].
                         p Además, #[strong puedes pertenecer a una sociedad] y convivir con otros(as) estudiantes que comparten los mismos intereses, desarrollar hábitos y habilidades que contribuyan a su bienestar, mientras construyen relaciones positivas. 
                         img.img-responsive(src="../images/associations-icons.png", srcset="../images/associations-icons.png")
+      
+      section._c-exploration-routes.accent-prepa
+         .o-container
+            ._c-exploration-routes--intro
+               h2 Preparamos a nuestros estudiantes para dar su siguiente paso
+               p Nuestros(as) estudiantes de preparatoria experimentarán una área de interés con #[strong nuestras Rutas de Exploración].
+
+            .o-grid-row._c-exploration-routes--grid.accordeon-init
+               
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Marketing Digital
+                           span NEGOCIOS
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+               
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Marketing Digital
+                           span NEGOCIOS
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+               
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Marketing Digital
+                           span NEGOCIOS
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Marketing Digital
+                           span NEGOCIOS
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+               
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Marketing Digital
+                           span NEGOCIOS
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+               
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Marketing Digital
+                           span NEGOCIOS
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+
+
+
+
+
       section._c-banner-cta.bg-color-prepa
          .o-container
             ._c-banner-cta--intro
@@ -120,4 +126,16 @@ block contenido
                p Si tienes alguna duda sobre el proceso de admisión, escríbenos. Nos contactaremos contigo para ayudarte a tomar la mejor decisión.
             ._c-banner-cta--sesionInfo
                a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Sí! Quiero más información
-                                 
+
+
+   script(src="../js/global.js")
+
+   script.
+
+      // Body width size
+      const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+
+      if ( widthDevice < 1140 ){
+         // Accordeon
+         accordeonSection( '._c-exploration-routes' )
+      }
