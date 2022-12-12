@@ -1,0 +1,66 @@
+._c-plan-de-estudios
+   padding: 80px 0
+   h2
+      margin-bottom: 80px
+
+
+   .o-grid-row
+      @include maxTabletPortrait
+         display: block
+      .col
+         @include maxTabletPortrait
+            width: 100%
+
+   a.o-btn
+      display: table
+      margin: 80px auto 0
+      @include maxTabletPortrait
+         margin: 40px auto 0
+
+   &--percentageboxes
+      display: flex
+      flex-flow: column
+      @include maxTabletPortrait
+         margin-top: 30px
+
+      &.accent-prepa
+         ._c-plan-de-estudios--box
+            &:first-child
+               background-color: $color-prepa
+            &:nth-child(2)
+               background-color: $color-prepa-2
+               p, span
+                  color: $dark-green
+            &:last-child
+               background-color: $dark-green
+
+   &--box
+      @include flexCenter
+      flex-flow: column
+      text-align: center
+      width: 100%
+      min-height: 30%
+      border-radius: 6px
+      padding: 10px 0
+      @include maxTabletPortrait
+         padding: 15px 0
+      &:nth-child(2)
+         margin: auto 0
+         @include maxTabletPortrait
+            margin: 15px 0
+
+      p, span
+         color: $blanco
+
+      p
+         font-size: 3.125rem
+         font-weight: bold
+         margin: 0 0 5px
+         @include maxTabletPortrait
+            font-size: 3rem
+      
+      span
+         font-size: 1.25rem
+         display: block
+
+      

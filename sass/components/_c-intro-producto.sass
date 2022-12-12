@@ -1,0 +1,61 @@
+._c-intro-producto
+   background-color: $white-gray
+   padding: 75px 0
+
+   @include maxPhablet
+      padding: 50px 0
+
+
+   .o-grid-row
+      .col.size-6
+         @include maxPhablet
+            width: 100%
+
+
+   &.accent-green
+      ._c-intro-producto--ico,
+      ._c-intro-producto--info .o-btn
+         background-color: $dark-green
+      ._c-intro-producto--text h3
+         color: $dark-green
+
+   &--info
+      width: 100%
+      p
+         line-height: 1.5
+         margin-bottom: 20px
+      .o-btn
+         background-color: $bajo-negro
+         margin-top: 20px
+
+
+   &--icons-boxes
+      display: grid
+      grid-template-columns: 1fr 1fr
+      width: 100%
+      max-width: 500px
+      margin: 0 0 0 auto
+      grid-gap: 50px 0
+      @include maxPhablet
+         margin: 60px auto 0
+   
+   &--ico-box
+      width: 100px
+      margin: 0 auto 
+   
+   &--ico
+      background-color: $bajo-negro
+      width: 100%
+      height: 100px
+      @include flexCenter
+      margin-bottom: 15px
+      img
+         max-width: 100%
+         display: block
+         margin: 0 auto
+   
+   &--text
+      text-align: center
+      h3
+         font-family: $tipografia-principal
+         font-size: 1.25rem
