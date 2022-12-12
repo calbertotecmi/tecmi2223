@@ -30,6 +30,9 @@
    &--picture
       position: relative
       left: -10%
+      @include maxMobile
+         left: 0
+         margin: 30px 0
       img
          width: 100%
          @include mobileToPortrait
@@ -50,6 +53,8 @@
       @include square( absolute, 100px, -115px, -55px, $green-pastel )
       @include tabletPortraitToDesktopSmall
          padding: 0 15px
+      @include mobileToPortrait
+         overflow: hidden
       @include maxMobile
          padding: 0 30px
       h2
@@ -76,11 +81,47 @@
       position: relative
       left: 45%
       width: 50%
+      @include tabletPortraitToDesktopSmall
+         margin-top: 30px
       .col
          padding: 0 0
          position: relative
          margin-left: -7.5px
          @include square( absolute, 100px, 0, -100px, $dark-green )
+
+
+   &--discover
+      width: 100%
+      max-width: 525px
+      margin-left: auto
+      @include tabletPortraitToDesktopSmall
+         padding-left: 80px
+      @include phabletToTablet
+         margin: 0      
+         max-width: 100%
+      @include maxPhablet
+         margin: 0
+         max-width: 100%
+      @include maxMobile
+         padding: 0 20px   
+      h3
+         @include tabletPortraitToDesktopSmall
+            font-size: 1.3rem
+         @include minDesktopSmall
+            font-size: 1.6rem
+      p
+         margin-top: 25px
+         line-height: 1.5
+         @include tabletPortraitToDesktopSmall
+            font-size: 1.2rem
+         @include minDesktopSmall
+            font-size: 1.15rem
+      img
+         width: auto
+         max-width: 100%
+         display: block
+         margin: 50px auto 0
+
 
 
    // For prepa
@@ -139,9 +180,82 @@
                margin-top: 0
             @include mobileToPortrait
                margin-top: 0
-            @include maxMobile
+            @include maxPhablet
                margin-top: 0
          
       
+   // For product
+   // - prepa
+   &.extended-info
+      margin: 30px 0
+      @include minDesktopSmall
+         margin: 100px 0
+      ._c-picture-with-copy--copy
+         @include minDesktopSmall
+            padding-left: 50px
+         @include squareID( first, absolute, 105px, -105px, 0, $dark-green )
+         h2
+            margin-bottom: 40px
+         p
+            margin-top: 20px
 
+
+      ._c-picture-with-copy--picture
+         left: 0
+         @include mobileToPortrait
+            margin: 30px 0
+      ._c-picture-with-copy--footer
+         left: 0
+         width: 100%
+         .col
+            padding: 0 10px
+            margin: 0
+            .square
+               right: -90px
+               @media (min-width: 1200px) and ( max-width: 1300px )
+                  display: none               
+               @include phabletToTablet
+                  display: none
+               @include maxPhablet
+                  right: 0
+                  width: 50px
+                  height: 50px
+                  top: 0px
+                  right: 10%
+         img
+            display: block
+            margin-left: auto
+            max-width: 100%
+            &:first-child
+               @include phabletToTablet
+                  display: none
+            @include maxPhablet
+               margin: 20px auto 
+
+      &.accent-prepa
+         
+         ._c-picture-with-copy--discover
+            @media (min-width: 1300px)
+               margin-top: -25%
+            h3
+               color: $dark-green
+
+         ._c-picture-with-copy--copy
+            @include squareID( second, absolute, 105px, 0, -105px, $color-prepa )
+
+            .square
+               @include maxMobile
+                  display: none
+
+            h2
+               color: $dark-green
+         
+         ._c-picture-with-copy--footer
+            .square
+               background-color: $color-prepa
+               @include tabletPortraitToDesktopSmall
+                  width: 70px
+                  height: 70px
+                  right: -60px               
+            
       
