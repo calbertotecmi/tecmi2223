@@ -1,5 +1,8 @@
 ._c-exploration-routes
-   padding: 20px 0 50px
+   padding: 100px 0
+
+   @include maxMobile
+      padding: 60px 0
 
    .o-grid-row
       .col.size-4
@@ -10,12 +13,17 @@
 
    &--intro
       text-align: center
-      margin-bottom: 50px
+      margin-bottom: 100px
+      @include maxMobile
+         max-width: 90%
+         margin: 0 auto 50px
       h2
          color: $dark-green
       p
-         font-size: 1.25rem
+         // font-size: 1.25rem
          margin: 10px 0 0
+         @include maxMobile
+            margin-top: 40px
 
 
    &--route

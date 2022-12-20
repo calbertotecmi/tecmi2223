@@ -55,8 +55,15 @@ h5
    font-weight: $semiBold
 
 p
+   line-height: 1.5
+
+p, span
    font-size: $font-size-p
    color: $color-text-gray
+
+ul, ol
+   li
+      font-size: $font-size-p
 
 a
    outline: 0!important
@@ -178,6 +185,14 @@ strong
 
 
 // Dots for slick
+
+.accent-prepa
+   .slick-slider 
+      ul.slick-dots 
+         li 
+            button
+               background-color: $color-prepa-2
+
 .slick-slider
    @include maxMobile
       width: 100%
@@ -217,6 +232,9 @@ strong
       font-size: 2.5rem
    p
       font-size: 1.15rem
+@include maxMobileLandscape
+   p
+      font-size: 1.1rem
 @include maxMobilePortrait
    h2
       font-size: 1.4375rem
