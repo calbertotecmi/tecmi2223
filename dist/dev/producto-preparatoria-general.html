@@ -235,7 +235,7 @@
                 <div class="_c-events-in-career-section--eventbox">
                   <div class="_c-events-in-career-section--eventpic"><img src="../../images/evento-esports.jpg" srcset="../../images/evento-esports.jpg" alt="Evento"></div>
                   <div class="_c-events-in-career-section--eventinf">
-                    <h3>Esports</h3>
+                    <h3>Semana de <br> la Felicidad </h3>
                     <p>Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más.   </p>
                   </div>
                 </div>
@@ -245,6 +245,15 @@
                   <div class="_c-events-in-career-section--eventpic"><img src="../../images/evento-esports.jpg" srcset="../../images/evento-esports.jpg" alt="Evento"></div>
                   <div class="_c-events-in-career-section--eventinf">
                     <h3>Esports</h3>
+                    <p>Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="_c-events-in-career-section--slideitm">
+                <div class="_c-events-in-career-section--eventbox">
+                  <div class="_c-events-in-career-section--eventpic"><img src="../../images/evento-esports.jpg" srcset="../../images/evento-esports.jpg" alt="Evento"></div>
+                  <div class="_c-events-in-career-section--eventinf">
+                    <h3>FIRST Robotics<br>Competition</h3>
                     <p>Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más.</p>
                   </div>
                 </div>
@@ -433,19 +442,43 @@
         // Accordeon for certificados
         accordeonSection( '._c-certifications-accordeons' )
         
-         // Carousel for modalidades
-        $('._c-events-in-career-section--slidepart').slick({
-           dots: true,
-           infinite: true,
-           speed: 300,
-           slidesToShow: 1,
-           prevArrow: $('._c-events-in-career-section--nav.prev'),
-           nextArrow: $('._c-events-in-career-section--nav.next')
-        });
-        
         if ( widthDevice < 1140 ){
            // Accordeon
            accordeonSection( '._c-exploration-routes' )
+        }
+        if ( widthDevice >= 1140 ){
+           // Carousel for modalidades
+           $('._c-events-in-career-section--slidepart').slick({
+              arrows: false,
+              dots: false,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 3,
+           });
+        }
+        
+        if ( (widthDevice >= 740) && (widthDevice < 1140) ){
+           // Carousel for modalidades
+           $('._c-events-in-career-section--slidepart').slick({
+              dots: true,
+              infinite: false,
+              speed: 300,
+              slidesToShow: 2,
+              prevArrow: $('._c-events-in-career-section--nav.prev'),
+              nextArrow: $('._c-events-in-career-section--nav.next')
+           });
+        }
+        
+        if ( widthDevice < 740 ){
+           // Carousel for modalidades
+           $('._c-events-in-career-section--slidepart').slick({
+              dots: true,
+              infinite: true,
+              speed: 300,
+              slidesToShow: 1,
+              prevArrow: $('._c-events-in-career-section--nav.prev'),
+              nextArrow: $('._c-events-in-career-section--nav.next')
+           });
         }
       </script>
     </div>

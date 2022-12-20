@@ -212,6 +212,8 @@
             margin: 0
             .square
                right: -90px
+               @include desktopSmallToBig
+                  display: none
                @media (min-width: 1200px) and ( max-width: 1300px )
                   display: none               
                @include phabletToTablet
