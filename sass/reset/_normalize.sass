@@ -133,6 +133,8 @@ strong
    background-color: $color-prepa-2
 .bg-color-prepa-3
    background-color: $color-prepa-3
+.bg-color-profe
+   background-color: $color-profesional
 .bg-dark-green
    background-color: $dark-green
 .bg-light-dark-green
@@ -194,11 +196,16 @@ strong
                background-color: $color-prepa-2
 
 .slick-slider
+   &.slick-dotted
+      margin-bottom: 0
    @include maxMobile
       width: 100%
       position: relative
       overflow: hidden      
    ul.slick-dots
+
+      margin: 40px 0 20px
+
       li
          width: 8px
          height: 8px
@@ -232,9 +239,13 @@ strong
       font-size: 2.5rem
    p
       font-size: 1.15rem
+   h3
+      font-size: 1.35rem      
 @include maxMobileLandscape
    p
       font-size: 1.1rem
+   h3
+      font-size: 1.32rem      
 @include maxMobilePortrait
    h2
       font-size: 1.4375rem

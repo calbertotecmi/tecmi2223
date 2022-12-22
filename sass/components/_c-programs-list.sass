@@ -13,6 +13,11 @@
                width: 100%
                max-width: 100%
                padding: 0
+         &.size-4
+            @include maxTabletPortrait
+               width: 100%
+               max-width: 100%
+               padding: 0
 
    &--title
       margin-bottom: 80px
@@ -124,16 +129,20 @@
          overflow: hidden
          padding: 0
       p
-         line-height: 1.6
+         margin-bottom: 30px
+         &:last-child
+            margin-bottom: 0
          @include mobileToPortrait
-            padding: 30px 
+            padding: 15px 30px
+            margin-bottom: 0
          @include tabletPortraitToDesktopSmall
             line-height: 1.4
             font-size: 1rem
          @include maxMobile
             line-height: 1.4
             font-size: 1rem
-            padding: 30px 
+            padding: 10px 30px
+            margin-bottom: 0
       a.o-btn
          position: absolute
          bottom: 30px
@@ -167,3 +176,27 @@
             &:nth-child(2n+4)
                ._c-programs-list--boxhead
                   background-color: $color-prepa-2
+
+   // Theme for prepa
+   &.accent-profesional
+      padding-top: 0
+      @include minDesktopSize
+         margin-top: -50px
+      ._c-programs-list--boxes
+         .col
+            &:nth-child(2n+1)
+               ._c-programs-list--boxhead
+                  background-color: $color-profesioanl-aso
+            &:nth-child(2n+2)
+               ._c-programs-list--boxhead
+                  background-color: $color-profesional
+            &:nth-child(2n+3)
+               ._c-programs-list--boxhead
+                  background-color: $color-profesional-2
+      ._c-programs-list--boxcontent
+         @include minTabletLandscape
+            min-height: 560px
+         @include minDesktopSize
+            min-height: 520px
+         @include tabletPortraitToDesktopSmall
+            min-height: 470px

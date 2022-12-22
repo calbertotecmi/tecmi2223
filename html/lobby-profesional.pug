@@ -1,0 +1,164 @@
+//- Extend template global
+extends layout/_template
+
+append configuracion
+   -var page			= {}
+   -page['lang']		= 'es'
+   -page['libsCss']	= ['slick','slick-theme']
+
+block contenido
+   main
+
+      include layout/_header
+      include components/profesionalsem/_c-hero-lobby-profesional
+
+      section._c-separador-detalle.separador-profesem-loby
+         .square.first-square
+         .square.second-square
+
+      section._c-programs-list.accent-profesional
+         .o-container
+            
+            ._c-programs-list--title
+               h2.color-dark-green Conoce nuestros programas académicos
+            
+            ._c-programs-list--boxes.accordeon-init
+               .o-grid-row
+               
+                  .col.size-4
+                     ._c-programs-list--box
+                        ._c-programs-list--boxhead.accordeon-btn
+                           .o-grid-row.row-center
+                              .col.size-11
+                                 h3 
+                                    a(href="#!") Profesional Asociado
+                              .col.size-1
+                                 .icon
+                                    //- img(src="../images/icon-prod-tab-head.png", alt="Icono", srcset="../images/icon-prod-tab-head.png")
+                        ._c-programs-list--boxcontent.accordeon-box
+                           p Te ofrecemos carreras cortas #[strong (2 años en modalidad Connect o autodirigida)], en ocupaciones de alta empleabilidad, con las cuales podrás obtener un título de Profesional Asociado sin dejar de trabajar.
+                           p Cada materia es un certificado cocreado con empresas, para asegurar que desarrolles las competencias más valoradas en el mundo laboral. Además, contarás con el acompañamiento y la flexibilidad que necesitas para completar tus estudios.
+                           a.o-btn.bg-dark-green.white-color(href="#!") Conoce más aquí
+
+                  .col.size-4
+                     ._c-programs-list--box
+                        ._c-programs-list--boxhead.accordeon-btn
+                           .o-grid-row.row-center
+                              .col.size-11
+                                 h3 
+                                    a(href="#!") Profesional Semestral
+                              .col.size-1
+                                 .icon
+                                    //- img(src="../images/icon-prod-tab-head.png", alt="Icono", srcset="../images/icon-prod-tab-head.png")
+                        ._c-programs-list--boxcontent.accordeon-box
+                           p Este modelo te permite personalizar tu plan de estudios de acuerdo con tus objetivos, en cualquiera de nuestras carreras profesionales. Obtén un perfil único con base en tus intereses y planes de egreso.
+                           p Vive experiencias empresariales y aumenta tus posibilidades laborales. Te ayudamos a obtener herramientas para tu bienestar y felicidad, además de perfeccionar tus talentos y habilidades.
+                           p ¡Vive al máximo esta etapa en #[br] #[strong Universidad Tecmilenio]!
+
+                           a.o-btn.bg-dark-green.white-color(href="#!") Conoce más aquí
+
+                  .col.size-4
+                     ._c-programs-list--box
+                        ._c-programs-list--boxhead.accordeon-btn
+                           .o-grid-row.row-center
+                              .col.size-11
+                                 h3 
+                                    a(href="#!") Profesional Ejecutivo
+                              .col.size-1
+                                 .icon
+                                    //- img(src="../images/icon-prod-tab-head.png", alt="Icono", srcset="../images/icon-prod-tab-head.png")
+                        ._c-programs-list--boxcontent.accordeon-box
+                           p Si ya trabajas y necesitas el respaldo de una carrera que te impulse a crecer laboralmente, nuestros programas de carreras profesionales ejecutivas, con horarios accesibles y la posibilidad de estudiar de manera remota, son para ti.
+                           p Nuestros programas académicos de nivel superior te brindan la posibilidad de enfocar tu carrera a las especialidades de mayor demanda en el mercado. Con nuestros certificados perfeccionarás tus habilidades y te mantendrás actualizado, para dar respuesta a las necesidades de las empresas.
+                           a.o-btn.bg-dark-green.white-color(href="#!") Conoce más aquí
+
+      include components/_c-modalidades-grid-variant-center
+      
+      include layout/_footer
+
+      script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+      script(src="../js/global.js")
+      script(src="../vendor/slick.min.js")
+      script(src="../vendor/slick-lightbox.min.js")
+
+
+      script.
+      
+         // Body width size
+         const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+
+         // === Carousel scripts === 
+
+         // Carousel for modalidades
+         $('._c-modalidades-grid.variant-center ._c-modalidades-grid--modalidadesList').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 2,
+            centerMode: false,
+            variableWidth: false,
+            prevArrow: '.modalidadNav.prev',
+            nextArrow: '.modalidadNav.next',
+            responsive: [
+               {
+                  breakpoint: 700,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1
+                  }
+               }
+            ]
+         });
+         $('._c-installations-overview--gallery-grid').slickLightbox({
+            lazy: true
+         });
+
+
+         // Range: 0 - 960
+         if ( widthDevice <= 960 ){
+            $('#news-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 1,
+            });
+            // Accordeon
+            accordeonSection( '._c-programs-list' )
+         }
+         // Range: 740 - 1024
+         if ( widthDevice > 740 && widthDevice <= 1140 ){
+            $('#events-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 3
+            });
+            $('#news-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 2,
+            });
+         }
+
+         // Range: 568 - 740
+         if ( widthDevice > 568 && widthDevice <= 740 ){
+            $('#events-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 2
+            });
+         }
+         
+         //- Range: Max 568
+         if ( widthDevice <= 568 ){
+            $('#events-list-id').slick({
+               dots: true,
+               infinite: false,
+               slidesToShow: 1,
+            });
+         }
+         
+
+
+
+
+
+

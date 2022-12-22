@@ -1,5 +1,45 @@
-._c-hero-lobby-preparatoria
-   background-color: $color-prepa
+._c-hero-lobby
+
+   &.accent-profesional
+      background-color: $color-profesional-2
+      ._c-hero-lobby--pictures
+         // @include squareInBefore( absolute, 105px, unset, 100%, $color-profesional-4 )
+         // @extend bottom: 0
+         // @include minDesktopSize
+         //    left: 27%
+         // @include squareID( box-2, absolute, 105px, 0, 100%, $color-profesional )
+      .decorations
+         @include minDesktopSize
+            display: block
+         position: absolute
+         z-index: 2
+         bottom: 0
+         right: -57px
+         width: 50%
+         @include squareID( box-1, relative, 105px, unset, unset, $color-profesional-4 )
+         @include squareID( box-2, relative, 105px, 0, -105px, $color-profesional )
+         span,
+         [class*="box-"]
+            display: block
+            
+
+   &.accent-prepa
+      background-color: $color-prepa
+      ._c-hero-lobby--pictures
+         // @include minDesktopSize
+         //    transform: translateY(20%)
+         &::before
+            content: ""
+            position: absolute
+            top: 30%
+            left: -30px
+            width: 105px
+            height: 105px
+            z-index: 0
+            background-color: $color-prepa-3
+            @include minDesktopSize
+               left: 27%         
+
    position: relative
    @include maxTabletPortrait
       padding: 55px 0
@@ -8,35 +48,24 @@
    .o-container
       @include minDesktopSize
          height: calc(100vh - 80px)
-         max-height: 650px
+         max-height: 700px
          min-height: 600px
    &--pictures
       position: relative
       @include flexEnd
       @include minDesktopSize
-         transform: translateY(10%)
+         transform: translateY(20%)
       @include desktopSmallToBig
          transform: translateY(25%)
       @include tabletPortraitToDesktopSmall
          transform: translateY(25%)
-      &::before
-         content: ""
-         position: absolute
-         top: 30%
-         left: -30px
-         width: 105px
-         height: 105px
-         z-index: 0
-         background-color: $color-prepa-3
-         @include minDesktopSize
-            left: 27%
       @include maxTabletPortrait
          display: none
       img
          display: block
          z-index: 2
          position: relative
-         &:first-child
+         &.float-img-hero
             position: absolute
             bottom: 0
             transform: translateX(-95%) translateY(-35%)
@@ -45,7 +74,7 @@
    &--copytext
       position: relative
       z-index: 5
-      @include minDesktopSize
+      @include minTabletPortrait
          // margin-top: 70px
          margin: auto 0
       &.col.size-6
