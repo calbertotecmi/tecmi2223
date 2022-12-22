@@ -125,20 +125,35 @@
 
 
    // For prepa
-   &.prepa-information
+   &.custom-structure
       padding: 100px 0
       @include maxMobile
          padding: 30px 0 0
+      
+      &.accent-prepa
+         .o-grid-row
+            &:nth-child(odd)
+               ._c-picture-with-copy--picture
+                  @include minDesktopSmall         
+                     @include squareInAfter( absolute, 105px, 100%, 105px, $color-prepa )
+                     @include squareInBefore( absolute, 105px, calc( 100% - 105px ), 0, $color-prepa-2 )
+            &:nth-child(even)
+               ._c-picture-with-copy--picture
+                  @include minDesktopSmall
+                     @include squareInBefore( absolute, 105px, -105px, 100%, $color-prepa  )                                    
+      &.accent-profesional
+         .o-grid-row
+            &:nth-child(odd)
+               ._c-picture-with-copy--picture
+                  @include minDesktopSmall         
+                     @include squareInAfter( absolute, 105px, 100%, 105px, $color-profesional-2 )
+                     @include squareInBefore( absolute, 105px, calc( 100% - 105px ), 0, $color-profesional )
+            &:nth-child(even)
+               ._c-picture-with-copy--picture
+                  @include minDesktopSmall
+                     @include squareInBefore( absolute, 105px, -105px, 100%, $darker-green  )                                    
       .o-grid-row
-         &:nth-child(odd)
-            ._c-picture-with-copy--picture
-               @include minDesktopSmall
-                  @include squareInAfter( absolute, 105px, 100%, 105px, $color-prepa )
-                  @include squareInBefore( absolute, 105px, calc( 100% - 105px ), 0, $color-prepa-2 )
          &:nth-child(even)
-            ._c-picture-with-copy--picture
-               @include minDesktopSmall
-                  @include squareInBefore( absolute, 105px, -105px, 100%, $color-prepa  )               
             ._c-picture-with-copy--copy
                margin-left: 100px
                @include tabletPortraitToDesktopSmall
@@ -182,6 +197,10 @@
                margin-top: 0
             @include maxPhablet
                margin-top: 0
+         p
+            margin-bottom: 20px
+            &:last-child
+               margin-bottom: 0
          
       
    // For product

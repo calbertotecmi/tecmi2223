@@ -73,7 +73,71 @@ block contenido
                            a.o-btn.bg-dark-green.white-color(href="#!") Conoce más aquí
 
       include components/_c-modalidades-grid-variant-center
+
+
+      section._c-picture-with-copy.custom-structure.accent-profesional
+         .o-container
+            .o-grid-row.row-reverse.m-b-100
+               .col.size-6
+                  ._c-picture-with-copy--picture
+                     img(src="../images/prepa-img-end-1.png" alt="Img Prepa" srcset="../images/prepa-img-end-1.png").img-responsive
+               .col.size-6
+                  ._c-picture-with-copy--copy
+                     h2.color-dark-green Con docentes expertos en la industria
+                     br
+                     p Aprende con profesores(as) especializados en la industria y área que imparten, para entender las situaciones reales.
+                     p Puedes desarrollar, aún más, las habilidades aprendidas, cuando hay un(a) docente que te inspira a compartir, explorar, debatir y entender las situaciones reales de una empresa
+                     br
+                     br
+                     .grid-buttons.o-grid-row
+                        .col.size-6
+                           a.o-btn.btn-solid.bg-dark-green(href="#!") Becas y Financiamiento
+                        .col.size-6
+                           a.o-btn.btn-solid.bg-dark-green(href="#!") Línea de Salud y Bienestar
+
+      section._c-certifications-accordeons.accent-profesional
+         .o-container
+            h2.text-center Vive experiencias únicas con las #[br] carreras profesionales Tecmilenio
+
+            .o-grid-row._c-certifications-accordeons--grid
+
+               .col.size-5._c-certifications-accordeons--img
+                  img(src="../images/img-prepa-certifications.jpg", srcset="../images/img-prepa-certifications.jpg", alt="GG")
+                  
+               .col.size-7._c-certifications-accordeons--list.accordeon-init
+                  ._c-certifications-accordeons--certificate.accordeon-active
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Bienestar Integral
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Modelo de acompañamiento
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Vivencia Estudiantil
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Impacto Social
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+
+
+      section._c-banner-cta.bg-color-profe
+         .o-container
+            ._c-banner-cta--intro
+               img.img-responsive(src="../images/dialogo-dark-green.png", alt="", srcset="../images/dialogo-dark-green.png")
+               h2 Si tienes alguna duda, escríbenos aquí.
+            ._c-banner-cta--info
+               p Nos contactaremos contigo para ayudarte a tomar la mejor decisión y que construyas tu camino con nosotros.
+            ._c-banner-cta--sesionInfo
+               a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Sí! Quiero más información
       
+
+
       include layout/_footer
 
       script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
@@ -86,6 +150,9 @@ block contenido
       
          // Body width size
          const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+
+         // Accordeon for certificados
+         accordeonSection( '._c-certifications-accordeons' )
 
          // === Carousel scripts === 
 
