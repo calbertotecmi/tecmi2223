@@ -1,0 +1,53 @@
+._c-programs-profesional-boxes
+   padding: 40px 0
+   @include minDesktopSmall
+      padding-bottom: 100px
+   &--intro
+      text-align: center
+      color: $dark-green
+      width: 100%
+      max-width: 725px
+      margin: 0 auto 40px
+      @include minDesktopSmall
+         padding-bottom: 80px      
+   // &--careers
+   // &--itm
+   &--slide
+      width: 100%
+      max-width: 295px
+      height: 215px
+      display: block
+      margin: 0 auto
+      &.box-pa
+         ._c-programs-profesional-boxes--bg
+            background-color: $color-profesional-aso
+      &.box-profe
+         ._c-programs-profesional-boxes--bg
+            background-color: $color-profesional
+      &.box-ejec
+         ._c-programs-profesional-boxes--bg
+            background-color: $color-profesional-2
+   &--bg
+      height: 165px
+      @include flexCenter
+      img.fondo
+         position: absolute
+         z-index: 1
+      h3 
+         text-align: center
+         position: relative
+         font-family: $tipografia-acento
+         font-weight: normal
+         font-size: 1.5rem
+         color: $blanco
+         z-index: 2
+   &--inf
+      @include flexCenter
+      width: 100%
+      height: 50px
+      text-align: center
+      background-color: $white-gray
+      a
+         color: $dark-green
+         font-weight: bold
+         font-size: 1.1rem

@@ -182,12 +182,20 @@ var accordeonSection = function accordeonSection(selector) {
   var accordeonBtn = Array.from(document.querySelector(selector + ' .accordeon-init').querySelectorAll('.accordeon-btn'));
   accordeonBtn.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
+      for (var i = 0; i < document.querySelectorAll("".concat(selector, " .accordeon-btn")).length; i++) {
+        document.querySelectorAll("".concat(selector, " .accordeon-btn"))[i].parentNode.classList.contains('accordeon-active') && document.querySelectorAll("".concat(selector, " .accordeon-btn"))[i].parentNode.classList.remove('accordeon-active');
+      }
+
       // Deshabilitar links en enlaces del head
       e.currentTarget.querySelectorAll('a').forEach(function (m) {
         m.addEventListener('click', function (e) {
           return e.preventDefault();
         });
       });
+
+      // Toggle clase activa
+      // e.parentNode.classList.contains('accordeon-active') && e.parentNode.classList.remove('accordeon-active');
+
       // Toggle clase activa
       e.currentTarget.parentNode.classList.toggle('accordeon-active');
       e.currentTarget.parentNode.parentNode.querySelector('.accordeon-box') != null && e.currentTarget.parentNode.parentNode.querySelector('.accordeon-box').classList.toggle('active');

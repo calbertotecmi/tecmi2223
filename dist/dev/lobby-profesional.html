@@ -293,12 +293,47 @@
                   <div class="_c-certifications-accordeons--certificate-body">
                     <p>Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.</p>
                   </div>
+                </div>
+                <div class="_c-certifications-accordeons--certificate">  
                   <div class="_c-certifications-accordeons--certificate-title accordeon-btn">
                     <h3>Impacto Social</h3>
                   </div>
                   <div class="_c-certifications-accordeons--certificate-body">
                     <p>Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.</p>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="_c-programs-profesional-boxes">
+          <div class="o-container">
+            <div class="_c-programs-profesional-boxes--intro">
+              <h2>Conoce los programas que impulsarán tu desarrollo profesional al siguiente nivel</h2>
+            </div>
+            <div class="_c-programs-profesional-boxes--careers">
+              <div class="_c-programs-profesional-boxes--itm">
+                <div class="_c-programs-profesional-boxes--slide box-pa">
+                  <div class="_c-programs-profesional-boxes--bg"><img class="fondo" src="../images/t-pro-aso.png" srcset="../images/t-pro-aso.png" alt="PA">
+                    <h3> <a href="#!">Profesional Asociado</a></h3>
+                  </div>
+                  <div class="_c-programs-profesional-boxes--inf"><a href="#!">Más información</a></div>
+                </div>
+              </div>
+              <div class="_c-programs-profesional-boxes--itm">  
+                <div class="_c-programs-profesional-boxes--slide box-profe">
+                  <div class="_c-programs-profesional-boxes--bg"><img class="fondo" src="../images/t-pro.png" srcset="../images/t-pro.png" alt="PA">
+                    <h3> <a href="#!">Carrera Profesional</a></h3>
+                  </div>
+                  <div class="_c-programs-profesional-boxes--inf"><a href="#!">Más información</a></div>
+                </div>
+              </div>
+              <div class="_c-programs-profesional-boxes--itm">  
+                <div class="_c-programs-profesional-boxes--slide box-ejec">
+                  <div class="_c-programs-profesional-boxes--bg"><img class="fondo" src="../images/t-pro-ejec.png" srcset="../images/t-pro-ejec.png" alt="PA">
+                    <h3> <a href="#!">Carrera Profesional <br> Ejecutiva</a></h3>
+                  </div>
+                  <div class="_c-programs-profesional-boxes--inf"><a href="#!">Más información</a></div>
                 </div>
               </div>
             </div>
@@ -385,7 +420,7 @@
         <script src="../vendor/slick-lightbox.min.js"></script>
         <script>
           // Body width size
-          const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+          //- const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
           
           // Accordeon for certificados
           accordeonSection( '._c-certifications-accordeons' )
@@ -412,52 +447,31 @@
                 }
              ]
           });
-          $('._c-installations-overview--gallery-grid').slickLightbox({
-             lazy: true
+          // Carousel for programas boxes end
+          $('._c-programs-profesional-boxes--careers').slick({
+             dots: false,
+             arrows: false,
+             infinite: false,
+             slidesToShow: 3,
+             responsive: [
+                {
+                   breakpoint: 940,
+                   settings: {
+                      dots: true,
+                      slidesToShow: 2,
+                      slidesToScroll: 1
+                   }
+                },
+                {
+                   breakpoint: 700,
+                   settings: {
+                      dots: true,
+                      slidesToShow: 1,
+                      slidesToScroll: 1
+                   }
+                }
+             ]
           });
-          
-          
-          // Range: 0 - 960
-          if ( widthDevice <= 960 ){
-             $('#news-list-id').slick({
-                dots: true,
-                infinite: false,
-                slidesToShow: 1,
-             });
-             // Accordeon
-             accordeonSection( '._c-programs-list' )
-          }
-          // Range: 740 - 1024
-          if ( widthDevice > 740 && widthDevice <= 1140 ){
-             $('#events-list-id').slick({
-                dots: true,
-                infinite: false,
-                slidesToShow: 3
-             });
-             $('#news-list-id').slick({
-                dots: true,
-                infinite: false,
-                slidesToShow: 2,
-             });
-          }
-          
-          // Range: 568 - 740
-          if ( widthDevice > 568 && widthDevice <= 740 ){
-             $('#events-list-id').slick({
-                dots: true,
-                infinite: false,
-                slidesToShow: 2
-             });
-          }
-          
-          //- Range: Max 568
-          if ( widthDevice <= 568 ){
-             $('#events-list-id').slick({
-                dots: true,
-                infinite: false,
-                slidesToShow: 1,
-             });
-          }
         </script>
       </main>
     </div>

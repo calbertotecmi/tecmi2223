@@ -190,10 +190,20 @@ const accordeonSection = ( selector ) => {
 
    accordeonBtn.forEach( btn => {
       btn.addEventListener('click', (e) => {
+
+         for ( let i = 0 ; i < document.querySelectorAll(`${selector} .accordeon-btn`).length ; i++ ){
+            document.querySelectorAll(`${selector} .accordeon-btn`)[i].parentNode.classList.contains('accordeon-active') && document.querySelectorAll(`${selector} .accordeon-btn`)[i].parentNode.classList.remove('accordeon-active');
+         }
+
+
          // Deshabilitar links en enlaces del head
          e.currentTarget.querySelectorAll('a').forEach(  m => {
             m.addEventListener('click', e => e.preventDefault())
          });
+
+         // Toggle clase activa
+         // e.parentNode.classList.contains('accordeon-active') && e.parentNode.classList.remove('accordeon-active');
+
          // Toggle clase activa
          e.currentTarget.parentNode.classList.toggle('accordeon-active');
 
