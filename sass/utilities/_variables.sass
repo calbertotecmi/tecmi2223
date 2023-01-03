@@ -38,6 +38,9 @@ $color-profesional-2: #64A70B
 $color-profesional-3: #C5E86C
 $color-profesional-4: #97D700
 $color-profesional-aso: #DB0032
+$color-profesional-aso-2: #A12B2F
+$color-profesional-aso-3: #79242F
+$color-profesional-aso-transparent: #C7868D
 $color-cdc: #1EC6BD
 
 // Primary colors
@@ -229,6 +232,12 @@ $mobile-portrait: 355px
    display: flex
    align-items: center
    justify-content: flex-end
+
+@mixin flexEndColumnReverse
+   display: flex
+   align-items: flex-end
+   justify-content: flex-end
+   flex-flow: column-reverse
 
 @mixin flexCenter
    display: flex

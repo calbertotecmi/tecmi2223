@@ -1,0 +1,11 @@
+//- Extend template global
+extends layout/_template
+
+append configuracion
+   -var page			= {}
+   -page['lang']		= 'es'
+   -page['libsCss']	= ['slick','slick-theme']
+block contenido
+   main
+      include layout/_header
+      include components/profesionalaso/_c-hero-lobby-profesional-aso
