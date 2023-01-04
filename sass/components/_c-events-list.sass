@@ -1,13 +1,31 @@
 ._c-events-list
    padding: 50px 0
    @include maxMobile
-      padding: 25px 0   
+      padding: 25px 0
+
+
+   &.variant-three
+      background-color: #EFEFEF
+      padding: 70px 0
+      h2
+         margin-bottom: 10px
+         text-transform: unset
+         color: $dark-green
+         @include maxMobileLandscape
+            margin-bottom: 15px
+      
+      #events-list-id
+         margin-top: 70px
+      
+      ._c-events-list--event
+         max-width: 340px
+
+      
+
    h2
       margin-bottom: 50px
       @include maxMobileLandscape
          margin-bottom: 25px
-
-
 
    .o-grid-row
       @include maxMobile
@@ -16,7 +34,6 @@
          @include maxDesktopSmall 
             width: 100%
             transform: scale(.9)
-
 
    .slick-slider
       width: 100%
@@ -53,6 +70,7 @@
             overflow: hidden
             @include flexTopLeft            
       img
+         width: 100%
          @include maxMobile
             width: 100%
       // img
