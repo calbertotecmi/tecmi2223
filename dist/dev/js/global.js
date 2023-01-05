@@ -5,7 +5,7 @@ var bodyWith = document.getElementsByTagName('body')[0].clientWidth;
 
 // Ejecutar funciones
 window.addEventListener('load', function () {
-  headerScripts();
+  // headerScripts();
   // if ( bodyWith <= 568  ){
 
   //    footerScripts();
@@ -182,6 +182,7 @@ var accordeonSection = function accordeonSection(selector) {
   var accordeonBtn = Array.from(document.querySelector(selector + ' .accordeon-init').querySelectorAll('.accordeon-btn'));
   accordeonBtn.forEach(function (btn) {
     btn.addEventListener('click', function (e) {
+      console.log(e);
       for (var i = 0; i < document.querySelectorAll("".concat(selector, " .accordeon-btn")).length; i++) {
         document.querySelectorAll("".concat(selector, " .accordeon-btn"))[i].parentNode.classList.contains('accordeon-active') && document.querySelectorAll("".concat(selector, " .accordeon-btn"))[i].parentNode.classList.remove('accordeon-active');
       }
@@ -201,7 +202,18 @@ var accordeonSection = function accordeonSection(selector) {
       e.currentTarget.parentNode.parentNode.querySelector('.accordeon-box') != null && e.currentTarget.parentNode.parentNode.querySelector('.accordeon-box').classList.toggle('active');
     });
   });
-
-  // console.log(accordeonBtn);
-  // console.log(accordeonBox);
+};
+// Funcion para accordeon sencillo
+var accordeonCareers = function accordeonCareers(selector) {
+  var accordeonBtn = Array.from(document.querySelector(selector + ' .accordeon-init').querySelectorAll('.accordeon-btn'));
+  accordeonBtn.forEach(function (btn) {
+    var index = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+    btn.addEventListener('click', function (e) {
+      for (var i = 0; i < document.querySelectorAll("".concat(selector, " ._c-careers-list-in-level--itm-accordeon")).length; i++) {
+        document.querySelectorAll("".concat(selector, " ._c-careers-list-in-level--itm-accordeon"))[i].classList.contains('accordeon-active') && document.querySelectorAll("".concat(selector, " ._c-careers-list-in-level--itm-accordeon"))[i].classList.remove('accordeon-active');
+      }
+      !document.querySelectorAll("".concat(selector, " ._c-careers-list-in-level--itm-accordeon"))[index].classList.contains('accordeon-active') && document.querySelectorAll("".concat(selector, " ._c-careers-list-in-level--itm-accordeon"))[index].classList.add('accordeon-active');
+      console.log(document.querySelectorAll("".concat(selector, " ._c-careers-list-in-level--itm-accordeon"))[index].classList.contains('accordeon-active'));
+    });
+  });
 };

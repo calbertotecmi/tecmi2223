@@ -16,6 +16,19 @@
                &::before
                   background-image: url('../images/arrow-check-prepa.png')
    
+   &.accent-profeaso
+      background-color: $white-gray
+      ._c-copy-and-picture-color-box--textbox
+         &::before
+            background-color: $color-profesional-aso-2
+         h2
+            color: $color-profesional-aso
+            margin-bottom: 50px
+
+      ._c-copy-and-picture-color-box--acordeon-title
+         border-color: $dark-green
+         h3 
+            color: $dark-green
    
    .o-container
       @include maxMobile
@@ -150,3 +163,63 @@
             height: auto
             width: 100%
             margin-top: -25%
+
+
+
+   // &--acordeon-section
+   &--acordeon
+      margin-bottom: 15px
+      &:last-child
+         margin-bottom: 0
+      &.accordeon-active
+         ._c-copy-and-picture-color-box--acordeon-title
+            &::after
+               -webkit-transform: rotate(180deg)
+               -ms-transform: rotate(180deg)
+               transform: rotate(180deg)            
+         ._c-copy-and-picture-color-box--acordeon-body
+            p
+               display: block
+               height: auto
+               opacity: 1
+   &--acordeon-title
+      border-bottom: 2px solid
+      padding-bottom: 10px
+      margin-bottom: 10px
+      position: relative
+      display: flex
+      align-items: center
+      cursor: pointer      
+      &::after
+         content: ""
+         position: relative
+         width: 18px
+         height: 18px
+         background-image: url(../images/pick-accordeon-prepa.png)
+         background-position: center center
+         background-repeat: no-repeat
+         background-size: 15px
+         -webkit-transition: all .1s linear
+         -o-transition: all .1s linear
+         transition: all .1s linear
+         -webkit-transform: rotate(0)
+         -ms-transform: rotate(0)
+         transform: rotate(0) 
+         margin-left: auto        
+      h3
+         font-family: $tipografia-principal
+         position: relative
+         display: inline-block
+   &--acordeon-body
+      position: relative
+      overflow: hidden
+      p
+         display: none
+         margin: 0 0 15px
+         padding: 15px
+         position: relative
+         transition: opacity .1s linear
+         opacity: 0
+
+
+      

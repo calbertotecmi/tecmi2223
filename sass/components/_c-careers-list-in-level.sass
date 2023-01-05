@@ -1,0 +1,132 @@
+._c-careers-list-in-level
+   padding: 60px 0
+
+   @include minTabletPortrait
+      padding: 80px 0
+
+   &.accent-profeaso
+      ._c-careers-list-in-level--title
+         &::after
+            color: $color-profesional-aso-2
+         h3
+            color: $color-profesional-aso-2
+
+   &--intro
+      h2
+         text-align: center
+         color: $dark-green
+         margin: 0 0 40px
+         @include minTabletPortrait
+            margin-bottom: 100px
+
+   &--list
+      @include minTabletPortrait
+         // display: flex
+         display: grid
+         grid-template-columns: 1fr 1fr
+         max-width: 1200px
+         margin: 0 auto
+      @include phabletToTablet
+         display: grid
+         grid-template-columns: 1fr 1fr
+         grid-gap: 10px
+      
+   &--itm      
+      margin-bottom: 20px
+      @include minTabletPortrait
+         // width: 50%
+         width: 100%
+         padding: 0 10px
+
+   &--itm-accordeon
+      background-color: $white-gray
+      width: 100%
+      margin-left: auto
+      margin-right: auto
+      @include minTabletPortrait
+         max-width: 600px
+         display: flex
+         align-items: center
+         flex-flow: row-reverse
+         padding: 30px 20px
+
+
+      &:last-child
+         margin-bottom: 0
+      &.accordeon-active
+         ._c-careers-list-in-level--body,
+         ._c-careers-list-in-level--picture
+            display: flex
+         ._c-careers-list-in-level--title
+            &::after   
+               content: "-"
+
+   &--info
+
+      @include minTabletPortrait
+         padding: 0 0 0 20px
+
+      &.accordeon-active
+         ._c-careers-list-in-level--body
+            display: flex
+         ._c-careers-list-in-level--title
+            &::after   
+               content: "-"
+
+   &--title
+      width: 100%
+      padding: 20px
+      display: flex
+      align-items: center
+      @include minTabletPortrait
+         padding: 0 0 10px
+
+      &::after
+         content: "+"
+         position: relative
+         font-size: 2rem
+         margin-left: auto 
+         @include minTabletPortrait
+            display: none
+      h3
+         font-family: $tipografia-principal
+         font-weight: 700
+         padding-right: 20px
+         @include phabletToTablet
+            font-size: 1.3rem
+
+   &--body
+      padding: 0 20px 20px
+      display: none
+      flex-flow: column
+      @include minTabletPortrait
+         display: block
+         padding: 0 0
+      p 
+         margin: 0 0 20px
+      a.o-btn
+         max-width: 150px
+
+   &--picture
+      width: 100%
+      height: 100%
+      display: none
+      @include minTabletPortrait
+         display: flex
+         justify-content: center
+         align-items: center
+         grid-column-start: 1
+         grid-row-start: 1
+         grid-row-end: 3
+         overflow: hidden
+         max-width: 195px
+         height: 250px
+
+      img
+         width: 100%
+         @include minTabletPortrait
+            height: 100%
+            width: auto
+
+
+      

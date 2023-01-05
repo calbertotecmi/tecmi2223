@@ -10,84 +10,146 @@ block contenido
       include layout/_header
       include components/profesionalaso/_c-hero-lobby-profesional-aso
       include components/_c-intro-producto-variant
-      section._slide-slick-imgside
-         ._slide-slick-imgside--background 
+
+      //- Profesional Asociado: las carreras cortas de Tecmilenio
+
+      section._c-careers-list-in-level.accent-profeaso
+         .o-container
+            ._c-careers-list-in-level--intro
+               h2 Profesional Asociado: las carreras cortas de Tecmilenio
+
+            ._c-careers-list-in-level--list.accordeon-init
+
+               ._c-careers-list-in-level--itm
+
+                  ._c-careers-list-in-level--itm-accordeon
+                     ._c-careers-list-in-level--info
+                        ._c-careers-list-in-level--title.accordeon-btn
+                           h3 
+                              a(href="#!") Profesional Asociado en Administración de Negocios
+                        ._c-careers-list-in-level--body
+                           p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                           a.o-btn.btn-solid.bg-dark-green(href="#!") Ver más
+                     ._c-careers-list-in-level--picture
+                        img(src="../images/img-career-nutri.jpg", srcset="../images/img-career-nutri.jpg", alt="Carrera")
+               
+               ._c-careers-list-in-level--itm
+                  ._c-careers-list-in-level--itm-accordeon
+                     ._c-careers-list-in-level--info
+                        ._c-careers-list-in-level--title.accordeon-btn
+                           h3 
+                              a(href="#!") Profesional asociado en Desarrollo de software
+                        ._c-careers-list-in-level--body
+                           p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                           a.o-btn.btn-solid.bg-dark-green(href="#!") Ver más
+                     ._c-careers-list-in-level--picture
+                        img(src="../images/img-career-nutri.jpg", srcset="../images/img-career-nutri.jpg", alt="Carrera")
+
+               ._c-careers-list-in-level--itm
+                  ._c-careers-list-in-level--itm-accordeon
+                     ._c-careers-list-in-level--info
+                        ._c-careers-list-in-level--title.accordeon-btn
+                           h3 
+                              a(href="#!") Profesional asociado en Administración en salud*
+                        ._c-careers-list-in-level--body
+                           p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                           a.o-btn.btn-solid.bg-dark-green(href="#!") Ver más
+                     ._c-careers-list-in-level--picture
+                        img(src="../images/img-career-nutri.jpg", srcset="../images/img-career-nutri.jpg", alt="Carrera")
+               
+               ._c-careers-list-in-level--itm
+                  ._c-careers-list-in-level--itm-accordeon
+                     ._c-careers-list-in-level--info
+                        ._c-careers-list-in-level--title.accordeon-btn
+                           h3 
+                              a(href="#!") Profesional asociado en Turismo
+                        ._c-careers-list-in-level--body
+                           p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                           a.o-btn.btn-solid.bg-dark-green(href="#!") Ver más
+                     ._c-careers-list-in-level--picture
+                        img(src="../images/img-career-nutri.jpg", srcset="../images/img-career-nutri.jpg", alt="Carrera")
+
+
+      section._c-slide-slick-imgside
+         ._c-slide-slick-imgside--background 
             img(src="../images/bg-modalidades-grid.jpg", alt="", srcset="../images/bg-modalidades-grid.jpg")
 
          .o-container
-            ._slide-slick-imgside--intro
+            ._c-slide-slick-imgside--intro
                h2.color-dark-green 3 beneficios exclusivos de Profesional Asociado Tecmilenio
 
-            ._slide-slick-imgside--modalidadesNav
+            ._c-slide-slick-imgside--modalidadesNav
                .modalidadNav.prev
                   img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
                .modalidadNav.next
                   img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
 
 
-            ._slide-slick-imgside--modalidadesList
+            ._c-slide-slick-imgside--modalidadesList
 
                .item-modalidad
-                  ._slide-slick-imgside--modalidad
-                     ._slide-slick-imgside--modalidad-ico
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
                         img(src="../images/modalidad-1.png", alt="", srcset="../images/modalidad-1.png")
-                     ._slide-slick-imgside--modalidad-info
+                     ._c-slide-slick-imgside--modalidad-info
                         h3 Presencial
                         p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
                         a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
 
                .item-modalidad
-                  ._slide-slick-imgside--modalidad
-                     ._slide-slick-imgside--modalidad-ico
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
                         img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._slide-slick-imgside--modalidad-info
+                     ._c-slide-slick-imgside--modalidad-info
                         h3 Online
                         p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
                         a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
 
                .item-modalidad
-                  ._slide-slick-imgside--modalidad
-                     ._slide-slick-imgside--modalidad-ico
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
                         img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._slide-slick-imgside--modalidad-info
+                     ._c-slide-slick-imgside--modalidad-info
                         h3 Connect
                         p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
                         a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
 
                .item-modalidad
-                  ._slide-slick-imgside--modalidad
-                     ._slide-slick-imgside--modalidad-ico
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
                         img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._slide-slick-imgside--modalidad-info
+                     ._c-slide-slick-imgside--modalidad-info
                         h3 Autodirigido
                         p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
                         a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
 
 
       section._c-copy-and-picture-color-box.accent-profeaso
-         .o-container 
-         
+         .o-container   
             ._c-copy-and-picture-color-box--grid
-
                ._c-copy-and-picture-color-box--textbox
-                  h2 ¡Nuestros estudiantes siempre estarán acompañados! 
-                  ._c-copy-and-picture-color-box--acordeon.accordeon-active
-                     ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
-                        h3 Acompañamiento
-                     ._c-copy-and-picture-color-box--acordeon-body
-                        p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
-                     ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
-                        h3 Competencias esenciales
-                     ._c-copy-and-picture-color-box--acordeon-body
-                        p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
-                     ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
-                        h3 Desarrollo del idioma inglés
-                     ._c-copy-and-picture-color-box--acordeon-body
-                        p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
-                     ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
-                        h3 Vivencia Estudiantil
-                     ._c-copy-and-picture-color-box--acordeon-body
-                        p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
+                  h2 Lo que diferencia a nuestras carreras cortas
+                  ._c-copy-and-picture-color-box--acordeon-section.accordeon-init
+                     ._c-copy-and-picture-color-box--acordeon.accordeon-active
+                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                           h3 Acompañamiento
+                        ._c-copy-and-picture-color-box--acordeon-body
+                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
+                     ._c-copy-and-picture-color-box--acordeon
+                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                           h3 Competencias esenciales
+                        ._c-copy-and-picture-color-box--acordeon-body
+                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
+                     ._c-copy-and-picture-color-box--acordeon
+                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                           h3 Desarrollo del idioma inglés
+                        ._c-copy-and-picture-color-box--acordeon-body
+                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
+                     ._c-copy-and-picture-color-box--acordeon
+                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                           h3 Vivencia Estudiantil
+                        ._c-copy-and-picture-color-box--acordeon-body
+                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
 
                ._c-copy-and-picture-color-box--img
                   img(src="../../images/img-prepa-preview-2.jpg", srcset="../../images/img-prepa-preview-2.jpg", alt="Prepa")
@@ -194,7 +256,6 @@ block contenido
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                         a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
 
-
       section._c-banner-cta.bg-color-profe-aso-2
          .o-container
             ._c-banner-cta--intro
@@ -218,10 +279,14 @@ block contenido
          // Body width size
          const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
 
+         // Accordeon 
+         accordeonSection( '._c-copy-and-picture-color-box' )
+         
+
          // === Carousel scripts === 
 
          // Carousel for modalidades
-         $('._slide-slick-imgside ._slide-slick-imgside--modalidadesList').slick({
+         $('._c-slide-slick-imgside ._c-slide-slick-imgside--modalidadesList').slick({
             dots: false,
             infinite: false,
             speed: 300,
@@ -255,7 +320,12 @@ block contenido
             });
          }
 
+         if ( widthDevice < 960 ){
+            accordeonCareers( '._c-careers-list-in-level' );
+         }
+
          if ( widthDevice < 740 ){
+
             // Carousel for modalidades
             $('._c-events-in-career-section--slidepart').slick({
                dots: true,
