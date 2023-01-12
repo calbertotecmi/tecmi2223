@@ -1,0 +1,95 @@
+._c-sectionandbox
+    padding: 60px 0
+
+
+    @include minDesktopSmall
+        padding: 100px 0
+    @include maxPhablet
+        padding: 80px 0 50px
+    @include maxMobileLandscape
+        padding: 50px 0
+
+    &.accent-profaso
+        ._c-sectionandbox--title
+            &::before
+                background-color: $color-profesional-aso-transparent            
+            h2
+                color: $dark-green
+        ._c-sectionandbox--objinf
+            h3
+                color: $color-profesional-aso-3
+        ._c-sectionandbox--objpic::before
+            background-color: $color-profesional-aso
+            @include minMobile
+                background-color: $color-profesional-aso-3 
+        ._c-sectionandbox--objpic::after
+            background-color: $color-profesional-aso-3
+        .o-grid-row .col:nth-child(even) ._c-sectionandbox--objpic::after
+            background-color: $color-profesional-aso-transparent
+
+
+
+    .o-container
+        @include maxMobile
+            width: 100%
+            padding: 0 0
+
+    .o-grid-row
+        .col
+            &:nth-child(even)
+                ._c-sectionandbox--objpic
+                    &::before
+                        display: none
+    &--title
+        position: relative
+        margin-bottom: 50px
+        @include minMobile
+            text-align: center
+            @include squareInBefore( absolute, 105px, unset, -105px, $semi-negro )                
+        @include maxMobileLandscape
+            margin-bottom: 50px        
+        @include maxPhablet
+            margin-bottom: 80px        
+        @include minDesktopSmall
+            margin-bottom: 70px
+        @include maxMobile
+            padding: 0 30px
+            margin-bottom: 50px
+        p
+            width: 100%
+            max-width: 805px
+            margin: 20px auto 0
+
+    &--listobjs
+        width: 100%
+        max-width: 470px
+        margin: 0 auto
+    &--objpic
+        width: 100%
+        position: relative
+        img
+            max-width: 100%
+            width: 100%
+            display: block
+        @include minMobile
+            @include squareInBefore( absolute, 105px, unset, unset, $semi-negro )
+        @include maxMobile
+            @include squareInBefore( absolute, 50px, unset, unset, $semi-negro )
+            @include squareInAfter( absolute, 50px, 0, 0, $semi-negro )
+        &::before
+            @include minMobile
+                bottom: 0
+                left: -105px
+            @include maxMobile
+                bottom: 0
+    &--objinf
+        @include minMobile
+            padding: 15px 0
+        @include maxMobile
+            padding: 30px
+        h3
+            text-transform: uppercase
+            @include minMobile
+                margin: 15px 0 10px
+            @include maxMobile
+                margin-bottom: 15px
