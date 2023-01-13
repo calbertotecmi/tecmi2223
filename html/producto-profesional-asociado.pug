@@ -1,0 +1,369 @@
+//- Extend template global
+extends layout/_template
+
+append configuracion
+   -var page			= {}
+   -page['lang']		= 'es'
+   -page['libsCss']	= ['slick','slick-theme']
+block contenido
+   main
+
+      include layout/_header
+
+      section._c-banner-principal-t.accent-profeaso
+         .o-container
+            .o-grid-row.no-padding.row-center
+               .col.size-6
+                  ._c-banner-principal-t--intro
+                     h1.color-white Administración #[br] De Negocios
+                     p.color-white Prepárate para asistir en las funciones administrativas de una empresa o negocio y contribuir a que se cumplan los objetivos.
+                     a.o-btn.btn-solid.bg-dark-green(href="#!") Quiero más información               
+               .col.size-6
+                  ._c-banner-principal-t--picture
+                     img(src="../images/img-t.jpg", srcset="../images/img-t.jpg", alt="Imagen")
+
+      //- End banner t
+
+
+      section._c-intro-producto.accent-profeaso
+         .o-container
+            .o-grid-row.row-center
+               .col.size-6
+                  ._c-intro-producto--info
+                     h3 ¿De qué trata la carrera de #[br]Profesional Asociado en#[br]Administración de Negocios?
+                     p Sabemos que el mundo ha cambiado, por eso hemos creado el plan de estudios de #[strong Prepa Intercultural Tecmilenio, con un programa académico que ayuda a las y los estudiantes a descubrir su vocación y adquirir las bases para su carrera profesional], mientras reciben acompañamiento en el descubrimiento de su Propósito de Vida.
+                     p #[strong En Prepa Intercultural Tecmilenio] nuestros(as) estudiantes desarrollan la competencia en el idioma inglés, que le dará el acceso a mayores oportunidades en su futuro profesional. 
+               .col.size-6
+                  ._c-intro-producto--icons-boxes
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
+                        ._c-intro-producto--text
+                           h3 Modalidad 
+                           p Autodirigido
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
+                        ._c-intro-producto--text
+                           h3 Plan
+                           p Tetramestral
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
+                        ._c-intro-producto--text
+                           h3 Duración
+                           p 6 tetramestres
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
+                        ._c-intro-producto--text
+                           h3 Idioma
+                           p Español
+      //- End intro
+
+      section._c-slide-slick-imgside.accent-profeaso
+         ._c-slide-slick-imgside--background 
+            img(src="../images/bg-modalidades-grid.jpg", alt="", srcset="../images/bg-modalidades-grid.jpg")
+
+         .o-container
+            ._c-slide-slick-imgside--intro
+               h2 3 beneficios exclusivos de las carreras profesionales semestrales
+
+            ._c-slide-slick-imgside--modalidadesNav
+               .modalidadNav.prev
+                  img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
+               .modalidadNav.next
+                  img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
+
+
+            ._c-slide-slick-imgside--modalidadesList
+
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/modalidad-1.png", alt="", srcset="../images/modalidad-1.png")
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 Presencial
+                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
+                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
+
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 Online
+                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
+                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
+
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 Connect
+                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
+                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
+
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 Autodirigido
+                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
+                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
+
+      //- End slick carousel
+
+
+      section._c-banner-cta.bg-picture.accent-profeaso
+         .o-container
+            ._c-banner-cta--background
+               img.img-responsive(src="../images/intercambio-bg.jpg", alt="", srcset="../images/intercambio-bg.jpg")
+            ._c-banner-cta--intro
+               img.img-responsive(src="../images/ico-inter.png", alt="", srcset="../images/ico-inter.png")
+               h2 Conoce todos los beneficios que te da estudiar esta carrera en Universidad Tecmilenio
+            ._c-banner-cta--footer
+               a.o-btn.btn-outline(href="#!") Experiencia Intercultural
+
+      //- End banner cta
+
+
+      section._c-plan-de-estudios.accent-profeaso
+         .o-container
+            h2.text-center.color-dark-green Plan de estudios de Prepa Intercultural Tecmilenio
+
+            ._c-plan-de-estudios--content
+               .o-grid-row
+                  .col.size-9
+                     img.img-responsive(src="../images/programa-pa.png", srcset="../images/programa-pa.png", alt="demo")
+                  .col.size-3._c-plan-de-estudios--percentageboxes
+                     ._c-plan-de-estudios--box
+                        p 33%
+                        span Certificados y especialidades
+                     ._c-plan-de-estudios--box
+                        p 18%
+                        span Formación personal
+                     ._c-plan-de-estudios--box
+                        p 49%
+                        span Formación carrera
+
+               a.o-btn.btn-solid.bg-dark-green(href="#!") Descarga aquí nuestro plan de estudios
+      //- End plan de estudios
+
+
+      section._c-certifications-accordeons.accent-profeaso
+         .o-container
+            h2.text-center Potencializa tu carrera con certificados
+            p.text-center Aprende cómo las innovaciones tecnológicas están cambiando los negocios y las organizaciones, #[br] a través de estrategias de digitalización.
+
+            .o-grid-row.row-start._c-certifications-accordeons--grid
+
+               .col.size-8._c-certifications-accordeons--list.accordeon-init
+                  ._c-certifications-accordeons--certificate.accordeon-active
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Bienestar Integral
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Modelo de acompañamiento
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Vivencia Estudiantil
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate   
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Impacto Social
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Modelo de acompañamiento
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Vivencia Estudiantil
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate   
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Impacto Social
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate   
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Impacto Social
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Modelo de acompañamiento
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Vivencia Estudiantil
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate   
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Impacto Social
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+                  ._c-certifications-accordeons--certificate
+                     ._c-certifications-accordeons--certificate-title.accordeon-btn
+                        h3 Vivencia Estudiantil
+                     ._c-certifications-accordeons--certificate-body
+                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+
+               .col.size-4._c-certifications-accordeons--gallery
+                  img(src="../images/img-pa-prod-1.jpg", srcset="../images/img-pa-prod-1.jpg").img-responsive
+                  img(src="../images/img-pa-prod-2.jpg", srcset="../images/img-pa-prod-2.jpg").img-responsive
+                  img(src="../images/img-pa-prod-3.jpg", srcset="../images/img-pa-prod-3.jpg").img-responsive
+                  img(src="../images/img-pa-prod-4.jpg", srcset="../images/img-pa-prod-4.jpg").img-responsive
+                  //- img(src="../images/img-prepa-certifications.jpg", srcset="../images/img-prepa-certifications.jpg", alt="GG")
+                  
+      //- End accordeons
+
+
+      section._c-picture-with-copy.extended-info.accent-profeaso
+         .o-container
+            .o-grid-row
+               .col.size-6
+                  ._c-picture-with-copy--picture
+                     img(src="../images/img-home-1.jpg", alt="Img Home", srcset="../images/img-home-1.jpg").img-responsive
+                  ._c-picture-with-copy--footer
+                     img(src="../images/img-home-2.jpg", alt="Home", srcset="../images/img-home-2.jpg")                     
+                     .square
+               .col.size-6
+                  ._c-picture-with-copy--copy
+                     .square.first
+                     .square.second
+                     //- .square
+                     h2 Esta carrera es para ti, si:
+                     p Cuentas con tu certificado de bachillerato terminado.
+                     h3.color-dark-green Al terminar de estudiar Profesional Asociado en Administración de Negocios podrás:
+                     ul
+                        li
+                           span Entender los principales procesos y funciones de la administración de empresas, los cuales involucran la comprensión y el conocimiento de herramientas y estrategias relacionadas con la mercadotecnia, la administración del recurso humano, principios fundamentales de producción y fundamentos de finanzas.
+                        li
+                           span Ser líder y dirigir tanto equipos como proyectos de trabajo, sirviendo de apoyo a gerentes y directivos. 
+                        li
+                           span Desempeñar tareas de apoyo en una organización, incluyendo los procesos de planeación estratégica de una empresa o negocio. 
+                        li
+                           span Llevar a cabo procesos de auditoría y proponer metodologías de evaluación y diagnóstico de consultoría administrativa aplicada. 
+                        li
+                           span Entender las bases de las matemáticas financieras y asistir en la elaboración y/o interpretación de análisis financieros. 
+                        li
+                           span Comprender los factores a considerar para la toma de decisiones acertadas para el negocio u organización.
+                        li
+                           span Aplicar las principales técnicas y herramientas de planeación, administración y evaluación de proyectos. 
+                        li
+                           span Comunicar efectivamente, en forma oral y escrita, los resultados de tu trabajo, tanto en español como en una lengua extranjera.
+   
+      //- End
+
+
+      section._c-graduate-grid.accent-profaso-alter
+         .o-container
+            h2.text-center Si te preguntas ¿En que podrás trabajar al terminar?
+            p.text-center El campo de trabajo para un PA en Administración de Negocios incluye:
+            .o-grid-row
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Study Tours 
+                        
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Intercambios virtuales
+                        
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Proyectos colaborativos
+
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Proyectos colaborativos
+
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Study Tours 
+                        
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Intercambios virtuales
+                        
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Proyectos colaborativos
+
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Proyectos colaborativos
+
+      //- end graduate
+
+
+      include layout/_footer
+   
+   script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+   script(src="../js/global.js")
+   script(src="../vendor/slick.min.js")
+
+   script.
+      // Body width size
+      const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+      // Accordeon for certificados
+      accordeonSection( '._c-certifications-accordeons' )
+      // Carousel for modalidades
+      $('._c-slide-slick-imgside ._c-slide-slick-imgside--modalidadesList').slick({
+         dots: false,
+         infinite: false,
+         speed: 300,
+         slidesToShow: 2,
+         centerMode: true,
+         variableWidth: true,
+         prevArrow: '.modalidadNav.prev',
+         nextArrow: '.modalidadNav.next',
+         responsive: [
+            {
+               breakpoint: 700,
+               settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  centerMode: false,
+                  variableWidth: false,                     
+               }
+            }
+         ]            
+      });

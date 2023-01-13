@@ -4,6 +4,8 @@
    @include maxMobile
       padding: 30px 0 0
 
+
+
    .o-container
       @include maxMobile
          padding: 0
@@ -223,6 +225,31 @@
             margin-bottom: 40px
          p
             margin-top: 20px
+         ul
+            padding-left: 55px
+            @include maxMobile
+               padding-left: 40px
+               padding-right: 10px
+            li
+               margin-bottom: 30px
+               position: relative
+               &::before
+                  content: ""
+                  position: absolute
+                  width: 30px
+                  height: 30px
+                  background-position: center center
+                  background-repeat: no-repeat
+                  left: -50px   
+                  @include maxMobile
+                     left: -40px
+                     transform: scale(.7)
+               &:last-child
+                  margin-bottom: 0
+               span
+                  display: block
+
+               
 
 
       ._c-picture-with-copy--picture
@@ -235,20 +262,20 @@
          .col
             padding: 0 10px
             margin: 0
-            .square
-               right: -90px
-               @include desktopSmallToBig
-                  display: none
-               @media (min-width: 1200px) and ( max-width: 1300px )
-                  display: none               
-               @include phabletToTablet
-                  display: none
-               @include maxPhablet
-                  right: 0
-                  width: 50px
-                  height: 50px
-                  top: 0px
-                  right: 10%
+         .square
+            right: -90px
+            @include desktopSmallToBig
+               display: none
+            @media (min-width: 1200px) and ( max-width: 1300px )
+               display: none               
+            @include phabletToTablet
+               display: none
+            @include maxPhablet
+               right: 0
+               width: 50px
+               height: 50px
+               top: 0px
+               right: 10%
          img
             display: block
             margin-left: auto
@@ -284,5 +311,38 @@
                   width: 70px
                   height: 70px
                   right: -60px               
+            
+
+      &.accent-profeaso
+         
+         ._c-picture-with-copy--discover
+            @media (min-width: 1300px)
+               margin-top: -25%
+            h3
+               color: $dark-green
+
+         ._c-picture-with-copy--copy
+            .first
+               background-color: $color-profesional-aso-3
+            @include squareID( second, absolute, 105px, 0, -105px, $color-profesional-aso )
+
+            .square
+               @include maxMobile
+                  display: none
+
+            h2
+               color: $dark-green
+            
+            ul
+               li
+                  &::before
+                     background-image: url('../images/red-arrow.png')
+                     background-size: 100%
+         
+         ._c-picture-with-copy--footer
+            display: flex
+            @include square( relative, 105px, 0, 0, $color-profesional-aso-2 )
+            @include maxMobile
+               display: none
             
       

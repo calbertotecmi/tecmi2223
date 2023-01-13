@@ -45,6 +45,16 @@
          margin-right: auto
 
 
+   &.accent-profeaso
+      background-color: $white-gray 
+      ._c-intro-producto--ico,
+      ._c-intro-producto--info .o-btn
+         background-color: $dark-green
+      ._c-intro-producto--info h3
+         color: $dark-green         
+      ._c-intro-producto--text h3
+         color: $dark-green
+
    &.accent-green
       ._c-intro-producto--ico,
       ._c-intro-producto--info .o-btn
@@ -54,6 +64,10 @@
 
    &--info
       width: 100%
+      h3
+         margin: 0 0 30px
+         @include minTabletPortrait
+            font-size: 2rem
       p
          line-height: 1.5
          margin-bottom: 20px
