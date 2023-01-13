@@ -1,0 +1,490 @@
+//- Extend template global
+extends layout/_template
+
+append configuracion
+   -var page			= {}
+   -page['lang']		= 'es'
+   -page['libsCss']	= ['slick','slick-theme']
+block contenido
+   main
+      include layout/_header
+
+      include components/profesionalsemestral/_c-hero-lobby-profesional-semestral
+
+      section._c-intro-producto.variant-grid.accent-green
+         .o-container
+            .o-grid-row.row-center
+               .col.size-12
+                  ._c-intro-producto--info
+                     p En Tecmilenio hasta #[strong 9 de cada 10 egresados obtienen un empleo] alineado a su propósito de vida y a su campo de estudio antes de graduarse.
+                     a.o-btn.btn-solid(href="#!")  ¡Quiero conocer más!
+               .col.size-12
+                  ._c-intro-producto--icons-boxes.grid-four
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
+                        ._c-intro-producto--text
+                           h3 Modalidad 
+                           p 
+                              span Presencial
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
+                        ._c-intro-producto--text
+                           h3 Plan
+                           p 
+                              span Semestral
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
+                        ._c-intro-producto--text
+                           h3 Duración
+                           p 
+                              span 4 años
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
+                        ._c-intro-producto--text
+                           h3 Idioma
+                           p 
+                              span Español
+                              span Inglés
+
+
+      section._c-careers-list-in-level.accent-profesemestral
+         .o-container
+            ._c-careers-list-in-level--intro
+               h2 Carreras profesionales semestrales que #[br] puedes estudiar en Tecmilenio
+
+            ._c-careers-list-in-level--filters
+               ._c-careers-list-in-level--filtres
+                  span Todos
+               ._c-careers-list-in-level--filtlist
+                  p Filtrar por categoría
+                  ul
+                     li
+                        span Arte, Cultura y Humanidades
+                     li
+                        span Bienestar y Salud
+                     li
+                        span Ingeniería y TI 
+                     li
+                        span Negocios
+
+            ._c-careers-list-in-level--list.accordeon-init
+
+               ._c-careers-list-in-level--itm
+
+                  ._c-careers-list-in-level--itm-accordeon
+                     ._c-careers-list-in-level--info
+                        ._c-careers-list-in-level--title.accordeon-btn
+                           h3 
+                              a(href="#!") Licenciatura en Nutrición
+                        ._c-careers-list-in-level--body
+                           p Podrás dar atención nutricional a la comunidad en general, para mantener un estilo de vida saludable; diseñando programas que los ayuden a mejorar su calidad de vida.
+                           a.o-btn.btn-solid.bg-dark-green(href="#!") Ver más
+                     ._c-careers-list-in-level--picture
+                        img(src="../images/img-career-nutri.jpg", srcset="../images/img-career-nutri.jpg", alt="Carrera")
+
+      //- End careers list
+
+      section._c-plan-de-estudios.accent-profesemestral
+         .o-container
+            h2.text-center.color-dark-green Diseña tu carrera profesional con base #[br] en tu Propósito de Vida
+
+            ._c-plan-de-estudios--content
+               .o-grid-row
+                  .col.size-9
+                     img.img-responsive(src="../images/programaprofesemestral.png", srcset="../images/programaprofesemestral.png", alt="demo")
+                  .col.size-3._c-plan-de-estudios--percentageboxes
+                     ._c-plan-de-estudios--copy
+                        p En #[strong Universidad Tecmilenio] diseñas tu carrera profesional de acuerdo con tus objetivos, ya que el 60% se basa en el plan de estudios y el otro 40% lo personalizas con los certificados que selecciones y vayan acorde con tu Propósito de Vida.
+                     ._c-plan-de-estudios--box
+                        p 40%
+                        span Flexibilidad
+                     ._c-plan-de-estudios--box
+                        p 60%
+                        span Plan de Estudios
+               a.o-btn.btn-solid.bg-dark-green(href="#!") Descargar Plan
+
+      //- End plan de estudios
+
+      section._c-copy-and-picture-color-box.accent-profesemestral
+         .o-container 
+            ._c-copy-and-picture-color-box--grid
+               ._c-copy-and-picture-color-box--textbox
+                  h2 Personaliza tu carrera profesional
+                  p #[strong Más de 50 certificados] #[br] #[br] Desarrolla habilidades de gran demanda en el mercado laboral con #[strong certificados que personalizarán] tu carrera profesional.
+                  h3 Diseña tu carrera de acuerdo con tus objetivos profesionales:
+                  ul
+                     li 
+                        span Podrás elegir un certificado relacionado a tu carrera. 
+                     li 
+                        span Selecciona un certificado que sea de tu interés. 
+                     li 
+                        span Escoge dos certificados más, de acuerdo con tu área de estudio. 
+                     li 
+                        span Al final, tendrás una carrera única alineada a tu Propósito de Vida.
+               ._c-copy-and-picture-color-box--img
+                  img(src="../../images/img-profe-sem.jpg", srcset="../../images/img-profe-sem.jpg", alt="Profesional")
+
+      //- End copy and picture
+
+      section._c-slide-slick-imgside.accent-profesemestral
+         ._c-slide-slick-imgside--background 
+            img(src="../images/bg-modalidades-grid.jpg", alt="", srcset="../images/bg-modalidades-grid.jpg")
+
+         .o-container
+            ._c-slide-slick-imgside--intro
+               h2 3 beneficios exclusivos de las carreras profesionales semestrales
+
+            ._c-slide-slick-imgside--modalidadesNav
+               .modalidadNav.prev
+                  img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
+               .modalidadNav.next
+                  img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
+
+
+            ._c-slide-slick-imgside--modalidadesList
+
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/modalidad-1.png", alt="", srcset="../images/modalidad-1.png")
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 Presencial
+                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
+                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
+
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 Online
+                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
+                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
+
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 Connect
+                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
+                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
+
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 Autodirigido
+                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
+                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
+
+      //- End slick carousel
+
+      section._c-icons-grid.type-transparent.m-b-50
+         .o-container
+            
+            h2.text-center.color-dark-green.m-b-50 ¡Aprovecha las clases a tu manera!
+            
+
+            .o-grid-row
+               .col
+                  ._c-icons-grid--icondot
+                     ._c-icons-grid--icon-img 
+                        img.img-responsive(src="../images/svg/icon-innovacion-home.svg", alt="Innovacion", srcset="../images/svg/icon-innovacion-home.svg")
+                     ._c-icons-grid--icon-inf
+                        h3 Innovación
+                        p Nos entusiasma #[br]la disrupción que#[br]genera valor
+               .col
+                  ._c-icons-grid--icondot
+                     ._c-icons-grid--icon-img 
+                        img.img-responsive(src="../images/svg/icon-integridad-home.svg", alt="Innovacion", srcset="../images/svg/icon-integridad-home.svg")
+                     ._c-icons-grid--icon-inf
+                        h3 Integridad
+                        p Ejercemos la #[br] libertad con #[br] responsabilidad
+               .col
+                  ._c-icons-grid--icondot
+                     ._c-icons-grid--icon-img 
+                        img.img-responsive(src="../images/svg/icon-colaboracion-home.svg", alt="Innovacion", srcset="../images/svg/icon-colaboracion-home.svg")
+                     ._c-icons-grid--icon-inf
+                        h3 Colaboración
+                        p Juntos #[br] alcanzamos #[br] la visión
+               .col
+                  ._c-icons-grid--icondot
+                     ._c-icons-grid--icon-img 
+                        img.img-responsive(src="../images/svg/icon-inclusion-home.svg", alt="Innovacion", srcset="../images/svg/icon-inclusion-home.svg")
+                     ._c-icons-grid--icon-inf
+                        h3 Empatía e inclusión
+                        p Ponemos siempre #[br] en primer lugar a #[br] las personas
+               .col
+                  ._c-icons-grid--icondot
+                     ._c-icons-grid--icon-img 
+                        img.img-responsive(src="../images/svg/icon-ciudadania-home.svg", alt="Innovacion", srcset="../images/svg/icon-ciudadania-home.svg")
+                     ._c-icons-grid--icon-inf
+                        h3 Ciudadanía global
+                        p Trabajamos #[br] por un mundo #[br] sostenible
+      //- end icons
+
+      ._c-cta-intercultural.accent-profesemestral
+         ._c-cta-intercultural--picture
+            ._c-cta-intercultural--picture-bg
+               img(src="../../images/img-banner-prepa-internacional.jpg", srcset="../../images/img-banner-prepa-internacional.jpg", alt="FF")
+            ._c-cta-intercultural--picture-inf
+               .ico
+                  img(src="../../images/icon-prod-tab-head.png", srcset="../../images/icon-prod-tab-head.png")
+               h2 Vive diferentes experiencias interculturales
+         ._c-cta-intercultural--text
+            p #[strong Enriquece tu experiencia personal] conociendo, conviviendo y #[strong aprendiendo de otras culturas], a través de diferentes programas interculturales que te permitirán desarrollar nuevas habilidades para:
+            ul
+               li 
+                  span Aprender un nuevo idioma 
+               li 
+                  span Conocer más tus fortalezas
+               li 
+                  span Desarrollar tu autonomía 
+               li 
+                  span Sensibilizarte y ampliar tu visión
+            a.o-btn.btn-outline(href="#!") Quiero conocerlas
+      //- end cta intercultural
+
+
+      section._c-graduate-grid.accent-profesemestral
+         .o-container
+            h2.text-center Al estudiar una carrera de Profesional Asociado Tecmilenio, vivirás experiencias como:
+            .o-grid-row
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Study Tours 
+                        br
+                        a.o-btn.btn-outline(href="#!") Ver más                        
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Intercambios virtuales
+                        br
+                        a.o-btn.btn-outline(href="#!") Ver más                        
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Proyectos colaborativos
+                        br
+                        a.o-btn.btn-outline(href="#!") Ver más
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Proyectos colaborativos
+                        br
+                        a.o-btn.btn-outline(href="#!") Ver más
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Study Tours 
+                        br
+                        a.o-btn.btn-outline(href="#!") Ver más                        
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Intercambios virtuales
+                        br
+                        a.o-btn.btn-outline(href="#!") Ver más                        
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Proyectos colaborativos
+                        br
+                        a.o-btn.btn-outline(href="#!") Ver más
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                     ._c-graduate-grid--copy
+                        p Proyectos colaborativos
+                        br
+                        a.o-btn.btn-outline(href="#!") Ver más
+
+            h2.text-center ¡Imagina lo que estas experiencias traerán a tu vida!
+            p.text-center 
+               a.color-white.o-btn.btn-outline(href="#!") Más información
+      //- end graduate
+
+      section._c-events-in-career-section.accent-profesemestral
+         .o-container
+            ._c-events-in-career-section--intro
+               h2 Conoce nuestras actividades extracurriculares
+               p.m-b-50 Ten la oportunidad de participar en talleres deportivos y culturales, que te permitirán descubrir tu pasión y vivir en bienestar.
+
+               h3.m-b-10.text-center.color-dark-green Algunos eventos nacionales que podrás vivir
+               p Al estudiar alguna de las carreras profesionales tendrás a tu alcance actividades que te ayudarán a conocer nuevas personas y conectar con la comunidad Tecmilenio, mientras participas en eventos a nivel nacional como:
+
+            ._c-events-in-career-section--slidepart
+               ._c-events-in-career-section--slideitm
+                  ._c-events-in-career-section--eventbox
+                     ._c-events-in-career-section--eventpic
+                        img(src="../../images/evento-esports.jpg", srcset="../../images/evento-esports.jpg", alt="Evento")
+                     ._c-events-in-career-section--eventinf
+                        h3 Semana de #[br] la Felicidad 
+                        p Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más.   
+               ._c-events-in-career-section--slideitm
+                  ._c-events-in-career-section--eventbox
+                     ._c-events-in-career-section--eventpic
+                        img(src="../../images/evento-esports.jpg", srcset="../../images/evento-esports.jpg", alt="Evento")
+                     ._c-events-in-career-section--eventinf
+                        h3 Esports
+                        p Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más.
+               ._c-events-in-career-section--slideitm
+                  ._c-events-in-career-section--eventbox
+                     ._c-events-in-career-section--eventpic
+                        img(src="../../images/evento-esports.jpg", srcset="../../images/evento-esports.jpg", alt="Evento")
+                     ._c-events-in-career-section--eventinf
+                        h3 FIRST Robotics#[br]Competition
+                        p Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más.
+
+            ._c-events-in-career-section--slidenavs
+               ._c-events-in-career-section--nav.prev
+                  img(src="../../images/arrow-prepa-carousel.png", srcset="../../images/arrow-prepa-carousel.png")
+               ._c-events-in-career-section--nav.next
+                  img(src="../../images/arrow-prepa-carousel.png", srcset="../../images/arrow-prepa-carousel.png")
+         
+         h2.text-center ¡Vive estas experiencias y sé un Halcón Tecmilenio!
+
+      section._c-events-list.variant-three
+         .o-container 
+            h2.text-center.text-uppercase Estamos comprometidos con tu proyección profesional
+            p.text-center Tendrás acceso a los diferentes programas que fortalecerán tus habilidades para tu crecimiento profesional.
+            #events-list-id.o-grid-row.row-center
+               .col.size-4
+                  ._c-events-list--event
+                     ._c-events-list--picture
+                        a(href="#!")
+                           img.img-responsive(src="../images/event-1.jpg", alt="", srcset="../images/event-1.jpg")
+                     ._c-events-list--information
+                        h3 #[a(href="#!") Wellbeing 360]
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
+               .col.size-4
+                  ._c-events-list--event
+                     ._c-events-list--picture
+                        a(href="#!")
+                           img.img-responsive(src="../images/event-2.jpg", alt="", srcset="../images/event-2.jpg")
+                     ._c-events-list--information
+                        h3 #[a(href="#!") Semana de la Felicidad]
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
+               .col.size-4
+                  ._c-events-list--event
+                     ._c-events-list--picture
+                        a(href="#!")
+                           img.img-responsive(src="../images/event-3.jpg", alt="", srcset="../images/event-3.jpg")
+                     ._c-events-list--information
+                        h3 #[a(href="#!") Open House Prepa]
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
+                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
+
+      section._c-banner-cta.accent-profesemestral
+         .o-container
+            ._c-banner-cta--intro
+               img.img-responsive(src="../images/burbuja-de-dialogo 4.png", alt="", srcset="../images/burbuja-de-dialogo 4.png")
+               h2 Si tienes alguna duda, escríbenos.
+            ._c-banner-cta--info
+               p Nos contactaremos contigo para ayudarte y que tomes la mejor decisión para que construyas tu historia con nosotros.
+            ._c-banner-cta--sesionInfo
+               a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Sí! Quiero más información
+
+
+      include layout/_footer
+
+      script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+      script(src="../js/global.js")
+      script(src="../vendor/slick.min.js")
+      script(src="../vendor/slick-lightbox.min.js")
+
+
+      script.
+      
+         // Body width size
+         const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+
+         // Acordeon for careers script
+         if ( widthDevice < 960 ){
+            accordeonCareers( '._c-careers-list-in-level' );
+         }
+
+
+         // Carousel for modalidades
+         $('._c-slide-slick-imgside ._c-slide-slick-imgside--modalidadesList').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 2,
+            centerMode: true,
+            variableWidth: true,
+            prevArrow: '.modalidadNav.prev',
+            nextArrow: '.modalidadNav.next',
+            responsive: [
+               {
+                  breakpoint: 700,
+                  settings: {
+                     slidesToShow: 1,
+                     slidesToScroll: 1,
+                     centerMode: false,
+                     variableWidth: false,                     
+                  }
+               }
+            ]            
+         });
+
+
+         if ( widthDevice >= 1140 ){
+            // Carousel for modalidades
+            $('._c-events-in-career-section--slidepart').slick({
+               arrows: false,
+               dots: false,
+               infinite: false,
+               speed: 300,
+               slidesToShow: 3,
+            });
+         }
+
+         if ( (widthDevice >= 740) && (widthDevice < 1140) ){
+            // Carousel for modalidades
+            $('._c-events-in-career-section--slidepart').slick({
+               dots: true,
+               infinite: false,
+               speed: 300,
+               slidesToShow: 2,
+               prevArrow: $('._c-events-in-career-section--nav.prev'),
+               nextArrow: $('._c-events-in-career-section--nav.next')
+            });
+         }
+
+         if ( widthDevice < 740 ){
+
+            // Carousel for modalidades
+            $('._c-events-in-career-section--slidepart').slick({
+               dots: true,
+               infinite: true,
+               speed: 300,
+               slidesToShow: 1,
+               prevArrow: $('._c-events-in-career-section--nav.prev'),
+               nextArrow: $('._c-events-in-career-section--nav.next')
+            });
+         }

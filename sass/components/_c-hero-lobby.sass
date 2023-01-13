@@ -72,6 +72,56 @@
             @include maxDesktopSmall
                right: 0
             
+            
+   &.accent-profesemestral
+      background-color: $color-profesional-semestral
+      ._c-hero-lobby--copytext 
+         h1
+            @include minDesktopSize
+               max-width: 100%
+      ._c-hero-lobby--pictures
+         width: 100%
+         max-width: 500px
+         margin-left: auto
+      .decorations
+         width: 100%
+         max-width: $container-width
+         margin: 0 auto
+         left: 0
+         right: 0
+         height: 100%
+         display: none
+         // @include minTabletLandscape
+         @include flexEndColumnReverse
+         position: absolute
+         z-index: 2
+         bottom: 0
+         right: 0
+         width: 100%
+         @include squareID( box-1, relative, 105px, 0, 515px, $color-profesional-3 )
+         @include squareID( box-2, relative, 105px, 0, 410px, $color-profesional-4 )
+         span
+            display: block
+         .box-1,
+         .box-2,
+         .box-3
+            @include maxDesktopSmall
+               width: 50px
+               height: 50px
+         .box-1
+            @include maxDesktopSmall
+               right: 50px!important
+            @include maxTabletPortrait
+               margin-right: 50px!important
+         .box-2
+            margin-top: auto
+            @include maxDesktopSmall
+               right: 0
+         // .box-3
+         //    margin-right: auto
+         //    @include maxDesktopSmall
+         //       right: 0
+            
 
    &.accent-prepa
       background-color: $color-prepa

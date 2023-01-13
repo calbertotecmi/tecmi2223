@@ -29,6 +29,27 @@
          border-color: $dark-green
          h3 
             color: $dark-green
+
+   &.accent-profesemestral
+      background-color: white
+      ._c-copy-and-picture-color-box--textbox
+         &::before
+            background-color: $color-profesional-semestral
+         h2
+            color: $color-profesional-semestral
+            margin-bottom: 50px
+         h3
+            color: $dark-green
+         ul
+            li
+               &::before
+                  background-image: url('../images/check-profe-semestral.png')
+                  background-size: 100%
+   
+      ._c-copy-and-picture-color-box--acordeon-title
+         border-color: $dark-green
+         h3 
+            color: $dark-green
    
    .o-container
       @include maxMobile
@@ -91,6 +112,11 @@
          line-height: 1.2
          @include tabletPortraitToDesktopSmall
             font-size: 2.2rem
+      h3
+         margin: 0 0 30px
+         font-family: $tipografia-acento
+         font-weight: bold
+         line-height: 1
       p, span
          // font-size: 1.25rem
          line-height: 1.5
@@ -101,7 +127,7 @@
          @include maxMobilePortrait
             // font-size: 1rem
       p
-         margin: 50px 0
+         margin: 35px 0
          @include maxMobile
             margin: 25px 0
       ul
