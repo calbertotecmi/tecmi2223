@@ -334,6 +334,31 @@ block contenido
       //- end graduate
 
 
+      section._c-testimonios-section.accent-profeaso
+         .o-container
+            ._c-testimonios-section--title
+               h2 Testimonios
+            ._c-testimonios-section--carousel
+               ._c-testimonios-section--carouselitm
+                  ._c-testimonios-section--testimonio
+                     ._c-testimonios-section--copy
+                        p "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit."
+                        h3 Rebeca López
+                        h4 Alumna Ingeniería Industrial
+                     ._c-testimonios-section--pic
+                        img(src="../images/img-testimonio-example.jpg", srcset="../images/img-testimonio-example.jpg")
+               ._c-testimonios-section--carouselitm
+                  ._c-testimonios-section--testimonio
+                     ._c-testimonios-section--copy
+                        p "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit."
+                        h3 Rebeca López
+                        h4 Alumna Ingeniería Industrial
+                     ._c-testimonios-section--pic
+                        img(src="../images/img-testimonio-example.jpg", srcset="../images/img-testimonio-example.jpg")
+
+
+      //- end testimonios
+
 
       section._c-banner-cta.banner-in-product.accent-profeaso
          .o-container
@@ -448,6 +473,7 @@ block contenido
                         h3 #[a(href="#!") Carrera relacionada]
                         a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
 
+      //- end
 
       include layout/_footer
    
@@ -484,15 +510,19 @@ block contenido
       });
 
       // Carousel related careers
+      $('._c-testimonios-section--carousel').slick({
+         dots: true,
+         infinite: false,
+         speed: 300,
+         slidesToShow: 1,
+      });      
+
+      // Carousel related careers
       $('#related-careers-list-id').slick({
          dots: false,
          infinite: false,
          speed: 300,
          slidesToShow: 4,
-         //- centerMode: true,
-         //- variableWidth: true,
-         //- prevArrow: '.modalidadNav.prev',
-         //- nextArrow: '.modalidadNav.next',
          responsive: [
             {
                breakpoint: 1080,

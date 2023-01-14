@@ -461,6 +461,35 @@
             </div>
           </div>
         </section>
+        <section class="_c-testimonios-section accent-profeaso">
+          <div class="o-container">
+            <div class="_c-testimonios-section--title">
+              <h2>Testimonios</h2>
+            </div>
+            <div class="_c-testimonios-section--carousel">
+              <div class="_c-testimonios-section--carouselitm">
+                <div class="_c-testimonios-section--testimonio">
+                  <div class="_c-testimonios-section--copy">
+                    <p>"Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit."</p>
+                    <h3>Rebeca López</h3>
+                    <h4>Alumna Ingeniería Industrial</h4>
+                  </div>
+                  <div class="_c-testimonios-section--pic"><img src="../images/img-testimonio-example.jpg" srcset="../images/img-testimonio-example.jpg"></div>
+                </div>
+              </div>
+              <div class="_c-testimonios-section--carouselitm">
+                <div class="_c-testimonios-section--testimonio">
+                  <div class="_c-testimonios-section--copy">
+                    <p>"Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit."</p>
+                    <h3>Rebeca López</h3>
+                    <h4>Alumna Ingeniería Industrial</h4>
+                  </div>
+                  <div class="_c-testimonios-section--pic"><img src="../images/img-testimonio-example.jpg" srcset="../images/img-testimonio-example.jpg"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section class="_c-banner-cta banner-in-product accent-profeaso">
           <div class="o-container">
             <div class="_c-banner-cta--intro"><img class="img-responsive" src="../images/burbuja-de-dialogo 4.png" alt="" srcset="../images/burbuja-de-dialogo 4.png">
@@ -651,15 +680,19 @@
         });
         
         // Carousel related careers
+        $('._c-testimonios-section--carousel').slick({
+           dots: true,
+           infinite: false,
+           speed: 300,
+           slidesToShow: 1,
+        });      
+        
+        // Carousel related careers
         $('#related-careers-list-id').slick({
            dots: false,
            infinite: false,
            speed: 300,
            slidesToShow: 4,
-           //- centerMode: true,
-           //- variableWidth: true,
-           //- prevArrow: '.modalidadNav.prev',
-           //- nextArrow: '.modalidadNav.next',
            responsive: [
               {
                  breakpoint: 1080,

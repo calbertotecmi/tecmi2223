@@ -1,0 +1,88 @@
+._c-testimonios-section
+
+    padding: 80px 0
+
+    @include maxMobileLandscape
+        padding: 50px 0 30px
+
+    &.accent-profeaso
+        ._c-testimonios-section--title
+            h2
+                color: $dark-green
+
+        .slick-arrow
+            background-image: url('../images/red-arrow.png')
+        .slick-slider ul.slick-dots li button
+            background-color: $color-profesional-aso-3
+
+    &--title
+        text-align: center
+        margin-bottom: 50px
+
+        @include maxMobileLandscape
+            margin-bottom: 25px
+
+    &--testimonio
+        @include flexCenter
+        @include maxTabletPortrait
+            display: block
+            padding: 0 10px
+    
+    &--copy
+        width: 100%
+        padding: 40px 30px
+        background-color: $dark-green
+        color: white
+        position: relative
+        z-index: 2
+        @include minTabletPortrait
+            max-width: 370px
+            transform: translateX(50%)
+        @include maxTabletPortrait
+            max-width: 90%
+            margin: 0 auto -50px
+        @include maxMobileLandscape
+            padding: 30px 20px
+            margin-bottom: -20px
+        h3
+            margin: 30px 0 5px
+            @include maxMobileLandscape
+                font-size: 1.3rem
+        h4
+            font-weight: 500
+        p
+            color: white
+            margin: 0 0
+    
+    &--pic
+        width: 100%
+        position: relative
+        z-index: 1
+        @include maxTabletPortrait
+            height: 280px
+            overflow: hidden
+        @include maxMobileLandscape
+            height: 220px
+            display: flex
+            align-items: flex-start            
+        @include maxMobilePortrait
+            display: flex
+            align-items: flex-end
+            height: 200px
+        img
+            width: 100%
+            max-width: 770px
+            @include maxMobilePortrait
+                height: 100%
+    
+    // Slick
+    .slick-arrow
+        width: 37px
+        height: 19px
+        background-size: 100%
+        @include maxTabletPortrait
+            display: none!important
+        &:before
+            display: none
+    .slick-prev
+        transform: rotate(180deg)
