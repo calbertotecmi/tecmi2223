@@ -61,6 +61,8 @@
       z-index: 0
       left: 0
       @include flexCenter
+      @include maxTabletPortrait
+         display: none
       img
          min-width: 100%  
          min-height: 100%
@@ -74,6 +76,9 @@
       margin-left: auto
       margin-bottom: 80px
       padding-top: 30px
+      @include maxTabletPortrait
+         margin-bottom: 30px
+         text-align: center
       p
          margin: 25px 0
          line-height: 1.75

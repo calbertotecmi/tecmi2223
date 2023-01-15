@@ -173,6 +173,10 @@ $mobile-portrait: 355px
 @mixin maxTabletPortrait
    @media ( max-width: $tablet-portrait )
       @content
+// min 740 - desktop
+@mixin phabletToDesktop
+   @media ( min-width: $phablet ) and ( max-width: $desktop )
+      @content
 // min 740 - 1140
 @mixin phabletToDesktopSmall
    @media ( min-width: $phablet ) and ( max-width: $desktop-small )

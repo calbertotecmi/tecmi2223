@@ -1,6 +1,10 @@
 //.type-transparent
 ._c-icons-grid
    padding: 50px 0
+
+   @include maxMobile
+      padding-bottom: 0
+
    // Type numbers
    &.type-numbers
 
@@ -29,9 +33,18 @@
       .o-grid-row
          display: flex
          justify-content: space-around
+         flex-wrap: wrap
       .col
          width: 20%
          position: relative
+         @include phabletToTablet
+            width: 30%
+         @include mobileToPhablet
+            width: 30%
+         @include maxMobile
+            width: 30%
+         @include maxMobileLandscape
+            width: 50%
          &:last-child
             &::before
                display: none
@@ -43,6 +56,12 @@
             width: 1px
             height: 100%
             background-color: $green-pastel
+            @include phabletToTablet
+               display: none
+            @include mobileToPhablet
+               display: none
+            @include maxMobile
+               display: none
       [class*="--icondot"]
          max-width: 215px
          padding: 20px 0
@@ -76,5 +95,11 @@
          font-family: $tipografia-principal
       h3
          margin: 20px 0 5px
+         @include maxMobile
+            font-size: 1.25rem!important
       p
          font-size: 1.2rem
+         @include mobileToPhablet
+            font-size: 1.1rem!important
+         @include maxMobile
+            font-size: 1rem!important

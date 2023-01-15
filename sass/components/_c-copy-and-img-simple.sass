@@ -1,0 +1,102 @@
+._c-copy-and-img-simple
+
+    padding: 50px 0
+    background-color: $dark-green
+    position: relative
+    @include squareInAfter( absolute, 105px, 0, 0, $color-profesional-4 )
+    &::after
+        bottom: 0
+        @include maxPhablet
+            display: none
+        @include phabletToDesktop
+            display: none
+
+    @include maxMobile
+        padding: 40px 0 15px
+    @include maxPhablet
+        padding: 50px 0 30px
+    @include minTabletLandscape
+        padding: 80px 0
+        overflow: hidden
+    @include minDesktopSize
+        padding: 120px 0 105px
+        overflow: hidden
+
+
+
+    .o-container
+        @include maxPhablet
+            padding: 0 0
+            width: 100%
+    
+
+    &--copy
+        width: 100%
+        max-width: 650px
+        margin: 0 auto
+        color: $blanco
+        @include maxPhablet
+            padding: 30px 
+        h2, p
+            color: $blanco
+        
+        h2
+            margin-bottom: 25px
+            @include minDesktopSize
+                margin-bottom: 50px
+            @include maxPhablet
+                display: none
+        
+        p
+            margin-bottom: 20px
+            @include minTabletLandscape
+                font-size: 1.25rem
+            &:last-child
+                margin-bottom: 0
+    
+    &--image
+        position: relative
+        h2
+            display: none
+            text-align: center
+            color: $blanco
+            margin-bottom: 40px
+            padding: 0 20px
+            @include maxPhablet
+                display: block
+
+    &--pic
+        position: relative
+        @include maxPhablet
+            height: 195px
+            overflow: hidden
+            @include flexCenter
+        @include squareInAfter( absolute, 105px, unset, unset, $color-profesional )
+        &::after
+            bottom: 0
+            @include maxPhablet
+                width: 55px
+                height: 55px
+                bottom: 55px
+                left: 55px
+            @include phabletToDesktop
+                width: 55px
+                height: 55px
+                bottom: 55px
+                left: 55px
+        @include squareInBefore( absolute, 105px, 100%, unset, $color-profesional-2 )
+        &::before
+            left: -105px
+            @include maxPhablet
+                width: 55px
+                height: 55px
+                left: 0
+                bottom: 0
+                top: unset        
+            @include phabletToDesktop
+                width: 55px
+                height: 55px
+                left: 0
+                bottom: 0
+                top: unset        
+
