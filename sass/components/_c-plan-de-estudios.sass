@@ -5,6 +5,17 @@
       padding: 40px 0
 
 
+   &.accent-prepa
+      background-color: $blanco
+      ._c-plan-de-estudios--percentageboxes 
+         ._c-plan-de-estudios--box
+            &:nth-child(1)
+               background-color: $color-prepa
+            &:nth-child(2)
+               background-color: $color-prepa-2
+            &:nth-child(3)
+               background-color: $dark-green
+
    &.accent-profeaso
       background-color: $blanco
       ._c-plan-de-estudios--percentageboxes 
@@ -50,17 +61,6 @@
       flex-flow: column
       @include maxTabletPortrait
          margin-top: 30px
-
-      &.accent-prepa
-         ._c-plan-de-estudios--box
-            &:first-child
-               background-color: $color-prepa
-            &:nth-child(2)
-               background-color: $color-prepa-2
-               p, span
-                  color: $dark-green
-            &:last-child
-               background-color: $dark-green
 
    &--box
       @include flexCenter

@@ -1,21 +1,27 @@
-section._c-plan-de-estudios
-   .o-container
-      h2.text-center.color-dark-green Plan de estudios de Prepa Intercultural Tecmilenio
+mixin sectionPlanEstudios( titulo, imgplan, boxcopy, box1, box1span, box2, box2span, box3, box3span, descarga, btncopy )
+   section._c-plan-de-estudios&attributes(attributes)
+      .o-container
+         h2.text-center.color-dark-green #{titulo}
 
-      ._c-plan-de-estudios--content
-         .o-grid-row
-            .col.size-9
-               img.img-responsive(src="../images/plan-estudios-demo.png", srcset="../images/plan-estudios-demo.png", alt="demo")
-            .col.size-3._c-plan-de-estudios--percentageboxes.accent-prepa
-               ._c-plan-de-estudios--box
-                  p 33%
-                  span Certificados y especialidades
-               ._c-plan-de-estudios--box
-                  p 18%
-                  span Formación personal
-               ._c-plan-de-estudios--box
-                  p 49%
-                  span Formación carrera
+         ._c-plan-de-estudios--content
+            .o-grid-row
+               .col.size-9
+                  img.img-responsive(src="../images/" + imgplan, srcset="../images/" + imgplan)
+               .col.size-3._c-plan-de-estudios--percentageboxes
+                  if boxcopy
+                     ._c-plan-de-estudios--copy
+                        p #{boxcopy}
+                  if box1
+                     ._c-plan-de-estudios--box
+                        p #{box1}
+                        span #{box1span}
+                  if box2
+                     ._c-plan-de-estudios--box
+                        p #{box2}
+                        span #{box2span}
+                  if box3
+                     ._c-plan-de-estudios--box
+                        p #{box3}
+                        span #{box3span}
 
-
-         a.o-btn.btn-solid.bg-dark-green(href="#!") Descargar Plan
+            a.o-btn.btn-solid.bg-dark-green(href=descarga) #{btncopy}

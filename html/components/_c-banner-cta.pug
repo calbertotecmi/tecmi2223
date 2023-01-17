@@ -1,10 +1,69 @@
-section._c-banner-cta.bg-dark-green
-   .o-container
-      ._c-banner-cta--intro
-         img.img-responsive(src="../images/videollamada.png", alt="", srcset="../images/videollamada.png")
-         h2 ¿Aún tienes dudas? 
-      ._c-banner-cta--info
-         p Ingresa a nuestra sala virtual y resuelve tus dudas de admisiones al instante. Uno de nuestros asesores te atenderá
-      ._c-banner-cta--sesionInfo
-         h4 Horario de atención 9:00am a 6:30pm
-         a.o-btn.btn-solid.bg-aqua-dark(href="#!") Inicia Video Conferencia ¡AHORA!
+mixin bannerCta( title, icon, parr, footext, copybtn, linkbtn, bgimg, isbgpic, parrintro = null, parrintro2 = null, gridbtns = false, btn1link = null, btn1title = null, btn1sub = null, btn1ico = null, btn2link = null, btn2title = null, btn2sub = null, btn2ico = null, btn3link = null, btn3title = null, btn3sub = null, btn3ico = null, btn4link = null, btn4title = null, btn4sub = null, btn4ico = null )
+   section(class=isbgpic==true ? "_c-banner-cta bg-picture" : "_c-banner-cta")&attributes(attributes)
+      .o-container
+         if bgimg
+            ._c-banner-cta--background
+               img.img-responsive(src="../images/" + bgimg, srcset="../images/" + bgimg, alt=title)
+         ._c-banner-cta--intro
+            img.img-responsive(src="../images/" + icon, srcset="../images/" + icon, alt=title)
+            if title
+               h2 #{title}
+            if parrintro
+               p #{ parrintro }
+            if parrintro2
+               p #{ parrintro2 }
+
+         if parr
+            ._c-banner-cta--info
+               p Ingresa a nuestra sala virtual y resuelve tus dudas de admisiones al instante. Uno de nuestros asesores te atenderá
+         if isbgpic == false
+            if (footext || copybtn || gridbtns == true )
+               ._c-banner-cta--sesionInfo
+                  h4 #{footext}
+                  if (copybtn && gridbtns != true )
+                     a.o-btn.btn-outline.color-dark-green(href=linkbtn) #{ copybtn }
+                  if gridbtns == true
+                     .o-grid-row
+                        if btn1link
+                           .col.size-xs-42.size-sm-6.size-3
+                              a.o-btn.btn-solid.bg-dark-green(href=btn1link) 
+                                 span.o-grid-row 
+                                    span.col.size-3
+                                       img(src="../images/" + btn1ico, srcset="../images/" + btn1ico, alt=btn1title)
+                                    span.col.size-9
+                                       strong #{btn1title} #[br]
+                                       if btn1sub
+                                          | #{btn1sub}                     
+                        if btn2link
+                           .col.size-xs-42.size-sm-6.size-3
+                              a.o-btn.btn-solid.bg-dark-green(href=btn2link) 
+                                 span.o-grid-row 
+                                    span.col.size-3
+                                       img(src="../images/" + btn2ico, srcset="../images/" + btn2ico, alt=btn2title)
+                                    span.col.size-9
+                                       strong #{btn2title} #[br]
+                                       if btn2sub
+                                          | #{btn2sub}                     
+                        if btn3link
+                           .col.size-xs-42.size-sm-6.size-3
+                              a.o-btn.btn-solid.bg-dark-green(href=btn3link) 
+                                 span.o-grid-row 
+                                    span.col.size-3
+                                       img(src="../images/" + btn3ico, srcset="../images/" + btn3ico, alt=btn3title)
+                                    span.col.size-9
+                                       strong #{btn3title} #[br]
+                                       if btn3sub
+                                          | #{btn3sub}                     
+                        if btn4link
+                           .col.size-xs-42.size-sm-6.size-3
+                              a.o-btn.btn-solid.bg-dark-green(href=btn4link) 
+                                 span.o-grid-row 
+                                    span.col.size-3
+                                       img(src="../images/" + btn4ico, srcset="../images/" + btn4ico, alt=btn4title)
+                                    span.col.size-9
+                                       strong #{btn4title} #[br]
+                                       if btn4sub
+                                          | #{btn4sub}                     
+         if isbgpic == true
+            ._c-banner-cta--footer
+               a.o-btn.btn-outline.color-dark-green(href=linkbtn) #{ copybtn }

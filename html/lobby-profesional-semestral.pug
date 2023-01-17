@@ -10,46 +10,35 @@ block contenido
       include layout/_header
 
       include components/profesionalsemestral/_c-hero-lobby-profesional-semestral
-
-      section._c-intro-producto.variant-grid.accent-green
-         .o-container
-            .o-grid-row.row-center
-               .col.size-12
-                  ._c-intro-producto--info
-                     p En Tecmilenio hasta #[strong 9 de cada 10 egresados obtienen un empleo] alineado a su propósito de vida y a su campo de estudio antes de graduarse.
-                     a.o-btn.btn-solid(href="#!")  ¡Quiero conocer más!
-               .col.size-12
-                  ._c-intro-producto--icons-boxes.grid-four
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Modalidad 
-                           p 
-                              span Presencial
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Plan
-                           p 
-                              span Semestral
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Duración
-                           p 
-                              span 4 años
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Idioma
-                           p 
-                              span Español
-                              span Inglés
-
+      include components/_c-intro-producto
+      +introProductoInfo4Items(
+         true,
+         null,
+         "En Tecmilenio hasta 9 de cada 10 egresados obtienen un empleo alineado a su propósito de vida y a su campo de estudio antes de graduarse.",
+         null,
+         null,
+         null,
+         null,
+         "#!",
+         "¡Quiero conocer más!",
+         /* icon first */
+         "modalidad-1.png",
+         "Modalidad ",
+         "Presencial",
+         /* icon two */
+         "modalidad-1.png",
+         "Plan",
+         "Semestral",
+         /* icon three */
+         "modalidad-1.png",
+         "Duración",
+         "4 años",
+         /* icon four */
+         "modalidad-1.png",
+         "Idioma",
+         "Español | Inglés"
+      )(class="variant-grid accent-green")  /* por si lleva un tema */
+      
 
       section._c-careers-list-in-level.accent-profesemestral
          .o-container
@@ -276,7 +265,7 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Study Tours 
                         br
@@ -284,7 +273,7 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Intercambios virtuales
                         br
@@ -292,7 +281,7 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
                         br
@@ -300,7 +289,7 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
                         br
@@ -308,7 +297,7 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Study Tours 
                         br
@@ -316,7 +305,7 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Intercambios virtuales
                         br
@@ -324,7 +313,7 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
                         br
@@ -332,7 +321,7 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
                         br

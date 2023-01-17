@@ -1,0 +1,77 @@
+mixin relatedCareers( titlesection, career1, career1link, career1pic, career2, career2link, career2pic, career3, career3link, career3pic, career4, career4link, career4pic, career5, career5link, career5pic, career6, career6link, career6pic, career7, career7link, career7pic, career8, career8link, career8pic )
+    section._c-related-careers&attributes(attributes)
+        .o-container
+            h2 #{titlesection}
+            #related-careers-list-id.o-grid-row
+                if career1
+                    .col.size-3
+                        ._c-related-careers--career
+                            ._c-related-careers--picture
+                                a(href=carrer1link)
+                                    img.img-responsive(src="../images/" + career1pic, srcset="../images/" + career1pic, alt=career1)
+                            ._c-related-careers--information
+                                h3 #[a(href=career1link) #{career1} ]
+                                a.o-btn.btn-solid.bg-aqua-dark(href=career1link) Conoce más
+                if career2
+                    .col.size-3
+                        ._c-related-careers--career
+                            ._c-related-careers--picture
+                                a(href=carrer2link)
+                                    img.img-responsive(src="../images/" + career2pic, srcset="../images/" + career2pic, alt=career2)
+                            ._c-related-careers--information
+                                h3 #[a(href=career2link) #{career2} ]
+                                a.o-btn.btn-solid.bg-aqua-dark(href=career2link) Conoce más
+                if career3
+                    .col.size-3
+                        ._c-related-careers--career
+                            ._c-related-careers--picture
+                                a(href=carrer3link)
+                                    img.img-responsive(src="../images/" + career3pic, srcset="../images/" + career3pic, alt=career3)
+                            ._c-related-careers--information
+                                h3 #[a(href=career3link) #{career3} ]
+                                a.o-btn.btn-solid.bg-aqua-dark(href=career3link) Conoce más
+                if career4
+                    .col.size-3
+                        ._c-related-careers--career
+                            ._c-related-careers--picture
+                                a(href=carrer4link)
+                                    img.img-responsive(src="../images/" + career4pic, srcset="../images/" + career4pic, alt=career4)
+                            ._c-related-careers--information
+                                h3 #[a(href=career4link) #{career4} ]
+                                a.o-btn.btn-solid.bg-aqua-dark(href=career4link) Conoce más
+                if career5
+                    .col.size-3
+                        ._c-related-careers--career
+                            ._c-related-careers--picture
+                                a(href=carrer5link)
+                                    img.img-responsive(src="../images/" + career5pic, srcset="../images/" + career5pic, alt=career5)
+                            ._c-related-careers--information
+                                h3 #[a(href=career5link) #{career5} ]
+                                a.o-btn.btn-solid.bg-aqua-dark(href=career5link) Conoce más
+                if career6
+                    .col.size-3
+                        ._c-related-careers--career
+                            ._c-related-careers--picture
+                                a(href=carrer6link)
+                                    img.img-responsive(src="../images/" + career6pic, srcset="../images/" + career6pic, alt=career6)
+                            ._c-related-careers--information
+                                h3 #[a(href=career6link) #{career6} ]
+                                a.o-btn.btn-solid.bg-aqua-dark(href=career6link) Conoce más
+                if career7
+                    .col.size-3
+                        ._c-related-careers--career
+                            ._c-related-careers--picture
+                                a(href=carrer7link)
+                                    img.img-responsive(src="../images/" + career7pic, srcset="../images/" + career7pic, alt=career7)
+                            ._c-related-careers--information
+                                h3 #[a(href=career7link) #{career7} ]
+                                a.o-btn.btn-solid.bg-aqua-dark(href=career7link) Conoce más
+                if career8
+                    .col.size-3
+                        ._c-related-careers--career
+                            ._c-related-careers--picture
+                                a(href=carrer8link)
+                                    img.img-responsive(src="../images/" + career8pic, srcset="../images/" + career8pic, alt=career8)
+                            ._c-related-careers--information
+                                h3 #[a(href=career8link) #{career8} ]
+                                a.o-btn.btn-solid.bg-aqua-dark(href=career8link) Conoce más

@@ -1,0 +1,42 @@
+mixin testimoniosBlock(title, test1, person1, work1, pic1, test2, person2, work2, pic2, test3, person3, work3, pic3, test4, person4, work4, pic4 )
+    section._c-testimonios-section&attributes(attributes)
+        .o-container
+        ._c-testimonios-section--title
+            h2 #{ title }
+        ._c-testimonios-section--carousel
+            if test1
+                ._c-testimonios-section--carouselitm
+                    ._c-testimonios-section--testimonio
+                        ._c-testimonios-section--copy
+                            p #{ test1 }
+                            h3 #{ person1 }
+                            h4 #{ work1 }
+                        ._c-testimonios-section--pic
+                            img.img-responsive(src="../images/" + pic1, srcset="../images/" + pic1, alt=person1)
+            if test2
+                ._c-testimonios-section--carouselitm
+                    ._c-testimonios-section--testimonio
+                        ._c-testimonios-section--copy
+                            p #{ test2 }
+                            h3 #{ person2 }
+                            h4 #{ work2 }
+                        ._c-testimonios-section--pic
+                            img.img-responsive(src="../images/" + pic2, srcset="../images/" + pic2, alt=person2)
+            if test3
+                ._c-testimonios-section--carouselitm
+                    ._c-testimonios-section--testimonio
+                        ._c-testimonios-section--copy
+                            p #{ test3 }
+                            h3 #{ person3 }
+                            h4 #{ work3 }
+                        ._c-testimonios-section--pic
+                            img.img-responsive(src="../images/" + pic3, srcset="../images/" + pic3, alt=person3)
+            if test4
+                ._c-testimonios-section--carouselitm
+                    ._c-testimonios-section--testimonio
+                        ._c-testimonios-section--copy
+                            p #{ test4 }
+                            h3 #{ person4 }
+                            h4 #{ work4 }
+                        ._c-testimonios-section--pic
+                            img.img-responsive(src="../images/" + pic4, srcset="../images/" + pic4, alt=person4)

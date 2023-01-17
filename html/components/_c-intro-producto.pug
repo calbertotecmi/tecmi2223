@@ -1,34 +1,52 @@
-section._c-intro-producto.accent-green
-   .o-container
-      .o-grid-row.row-center
-         .col.size-6
-            ._c-intro-producto--info
-               p Sabemos que el mundo ha cambiado, por eso hemos creado el plan de estudios de #[strong Prepa Intercultural Tecmilenio, con un programa académico que ayuda a las y los estudiantes a descubrir su vocación y adquirir las bases para su carrera profesional], mientras reciben acompañamiento en el descubrimiento de su Propósito de Vida.
-               p #[strong En Prepa Intercultural Tecmilenio] nuestros(as) estudiantes desarrollan la competencia en el idioma inglés, que le dará el acceso a mayores oportunidades en su futuro profesional. 
-               a.o-btn.btn-solid(href="#!") ¡Quiero conocer más!
-         .col.size-6
-            ._c-intro-producto--icons-boxes
-               ._c-intro-producto--ico-box
-                  ._c-intro-producto--ico
-                     img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                  ._c-intro-producto--text
-                     h3 Modalidad 
-                     p Presencial
-               ._c-intro-producto--ico-box
-                  ._c-intro-producto--ico
-                     img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                  ._c-intro-producto--text
-                     h3 Plan
-                     p Semestral
-               ._c-intro-producto--ico-box
-                  ._c-intro-producto--ico
-                     img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                  ._c-intro-producto--text
-                     h3 Duración
-                     p 3 años
-               ._c-intro-producto--ico-box
-                  ._c-intro-producto--ico
-                     img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                  ._c-intro-producto--text
-                     h3 Idioma
-                     p Español
+mixin introProductoInfo4Items( isbig, bigtitle, bigtext, bigtext2, textouno, textodos, textotres, enlace, copyenlace, ico1, tit1, text1, ico3, tit3, text3, ico2, tit2, text2, ico4, tit4, text4 )
+   section._c-intro-producto&attributes(attributes)
+      .o-container
+         .o-grid-row.row-center
+            if isbig == true
+               .col.size-12
+                  ._c-intro-producto--info
+                     if bigtitle
+                        h3 #{ bigtitle }
+                     p #{ bigtext }
+                     if bigtext2
+                        p #{ bigtext2 }
+                     if copyenlace
+                        a.o-btn.btn-solid(href="#{enlace}") #{copyenlace}                     
+            if isbig != true
+               .col.size-6
+                  ._c-intro-producto--info
+                     p #{textouno}
+                     p #{textodos}
+                     p #{textotres}
+                     if copyenlace
+                        a.o-btn.btn-solid(href="#{enlace}") #{copyenlace}
+            div(class=isbig==true ? "col size-12" : "col size-6")
+               ._c-intro-producto--icons-boxes
+                  if ico1
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/" + ico1, srcset="../images/" + ico1, alt=tit1)
+                        ._c-intro-producto--text
+                           h3 #{tit1}
+                           p #{text1}
+                  if ico2
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/" + ico2, srcset="../images/" + ico2, alt=tit2)
+                        ._c-intro-producto--text
+                           h3 #{tit2}
+                           p #{text2}
+                  if ico3
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/" + ico3, srcset="../images/" + ico3, alt=tit3)
+                        ._c-intro-producto--text
+                           h3 #{tit3}
+                           p #{text3}
+                  if ico4
+                     ._c-intro-producto--ico-box
+                        ._c-intro-producto--ico
+                           img(src="../images/" + ico4, srcset="../images/" + ico4, alt=tit4)
+                        ._c-intro-producto--text
+                           h3 #{tit4}
+                           p #{text4}

@@ -7,8 +7,8 @@
 				"!html/components/*.pug"
 			],
 			"destino": {
-				"dev": "dist/dev/",
-				"prod": "dist/prod"
+				"dev": "dist/dev/html",
+				"prod": "dist/prod/html"
 			},
 			"watcher": "html/**/*.pug",
 			"recargar": {
@@ -60,7 +60,8 @@
 		"vendor": {
 			"fuente": "vendor/**/*.*",
 			"destino": {
-				"dev": "dist/dev/vendor"
+				"dev": "dist/dev/vendor",
+				"prod": "dist/prod/vendor"
 			}
 		}
 	}

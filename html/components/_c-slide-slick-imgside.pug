@@ -1,0 +1,62 @@
+mixin slideSlickWithBg( bgimg, title, parrint, ico1, tit1, text1, copybtn1, enlacebtn1, ico2, tit2, text2, copybtn2, enlacebtn2, ico3, tit3, text3, copybtn3, enlacebtn3, ico4, tit4, text4, copybtn4, enlacebtn4 )
+   section._c-slide-slick-imgside&attributes(attributes)
+      ._c-slide-slick-imgside--background 
+         img(src="../images/" + bgimg, srcset="../images/" + bgimg, alt=title)
+
+      .o-container
+         ._c-slide-slick-imgside--intro
+            h2 #{ title }
+            p #{ parrint }
+
+         ._c-slide-slick-imgside--modalidadesNav
+            .modalidadNav.prev
+               img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
+            .modalidadNav.next
+               img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
+
+
+         ._c-slide-slick-imgside--modalidadesList
+
+            if tit1
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/" + ico1, srcset="../images/" + ico1, alt=tit1)
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 #{ tit1 }
+                        p #{ text1 }
+                        if copybtn1
+                           a.o-btn.btn-outline.color-dark-green(href=enlacebtn1) #{ copybtn1 }
+
+            if tit2
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/" + ico2, srcset="../images/" + ico2, alt=tit2)
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 #{ tit2 }
+                        p #{ text2 }
+                        if copybtn2
+                           a.o-btn.btn-outline.color-dark-green(href=enlacebtn2) #{ copybtn2 }
+
+            if tit3
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/" + ico3, srcset="../images/" + ico3, alt=tit3)
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 #{ tit3 }
+                        p #{ text3 }
+                        if copybtn3
+                           a.o-btn.btn-outline.color-dark-green(href=enlacebtn3) #{ copybtn3 }
+
+            if tit4
+               .item-modalidad
+                  ._c-slide-slick-imgside--modalidad
+                     ._c-slide-slick-imgside--modalidad-ico
+                        img(src="../images/" + ico4, srcset="../images/" + ico4, alt=tit4)
+                     ._c-slide-slick-imgside--modalidad-info
+                        h3 #{ tit4 }
+                        p #{ text4 }
+                        if copybtn4
+                           a.o-btn.btn-outline.color-dark-green(href=enlacebtn4) #{ copybtn4 }

@@ -11,8 +11,58 @@ block contenido
       include layout/_header
 
       include components/_c-banner-principal-t
+      +bannerT( 
+         'Prepa intercultural', /* titulo en h1 */
+         'Crea tu historia en Prepa Intercultural Tecmilenio', /* titulo en h2 - si no usar dejar null (aplica para todos) */
+         'Nuestro programa de preparatoria se enfoca en desarrollar habilidades para acercar a las y los estudiantes al mundo laboral. Por medio de rutas exploratorias, tomarán la mejor decisión con respecto a su vocación profesional al experimentar diferentes áreas de interés.', /* descripcion en parrafo */
+         '#!', /* enlace del boton */
+         'Quiero más información', /* copy del boton */
+         'img-t.jpg' /* imagen, la ruta por defecto es ../images/ no se puede cambiar */
+      )(class="accent-prepa-inter")  /* por si lleva un tema */
+      
       include components/_c-intro-producto
+      +introProductoInfo4Items(
+         false,
+         null,
+         null,
+         null,
+         "Sabemos que el mundo ha cambiado, por eso hemos creado el plan de estudios de strong Prepa Intercultural Tecmilenio, con un programa académico que ayuda a las y los estudiantes a descubrir su vocación y adquirir las bases para su carrera profesional, mientras reciben acompañamiento en el descubrimiento de su Propósito de Vida.",
+         "En Prepa Intercultural Tecmilenio nuestros(as) estudiantes desarrollan la competencia en el idioma inglés, que le dará el acceso a mayores oportunidades en su futuro profesional. ",
+         null,
+         "#!",
+         "¡Quiero conocer más!",
+         /* icon first */
+         "modalidad-1.png",
+         "Modalidad",
+         "Presencial",
+         /* icon two */
+         "modalidad-1.png",
+         "Plan",
+         "Semestral",
+         /* icon three */
+         "modalidad-1.png",
+         "Duración",
+         "3 años",
+         /* last icon */
+         "modalidad-1.png",
+         "Idioma",
+         "Español"
+      )(class="accent-green")  /* por si lleva un tema */
+
       include components/_c-plan-de-estudios
+      +sectionPlanEstudios(
+         "Plan de estudios de Prepa Intercultural Tecmilenio",
+         "plan-estudios-demo.png",
+         null,
+         "33%",
+         "Certificados y especialidades",
+         "18%",
+         "Formación personal",
+         "49%",
+         "Formación carrera",
+         "#!",
+         "Descargar Plan"
+      )(class="accent-prepa")
 
       section._c-picture-with-copy.extended-info.accent-prepa
          .o-container

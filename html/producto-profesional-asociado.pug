@@ -9,157 +9,112 @@ block contenido
    main
 
       include layout/_header
-
-      section._c-banner-principal-t.accent-profeaso
-         .o-container
-            .o-grid-row.no-padding.row-center
-               .col.size-6
-                  ._c-banner-principal-t--intro
-                     h1.color-white Administración #[br] De Negocios
-                     p.color-white Prepárate para asistir en las funciones administrativas de una empresa o negocio y contribuir a que se cumplan los objetivos.
-                     a.o-btn.btn-solid.bg-dark-green(href="#!") Quiero más información               
-               .col.size-6
-                  ._c-banner-principal-t--picture
-                     img(src="../images/img-t.jpg", srcset="../images/img-t.jpg", alt="Imagen")
-
+      include components/_c-banner-principal-t
+      +bannerT( 
+         'Administración De Negocios', /* titulo en h1 */
+         null, /* titulo en h2 - si no usar dejar null (aplica para todos) */
+         'Prepárate para asistir en las funciones administrativas de una empresa o negocio y contribuir a que se cumplan los objetivos.', /* descripcion en parrafo */
+         '#!', /* enlace del boton */
+         'Quiero más información', /* copy del boton */
+         'img-t.jpg' /* imagen, la ruta por defecto es ../images/ no se puede cambiar */
+      )(class="accent-profeaso")  /* por si lleva un tema */
       //- End banner t
 
-
-      section._c-intro-producto.accent-profeaso
-         .o-container
-            .o-grid-row.row-center
-               .col.size-6
-                  ._c-intro-producto--info
-                     h3 ¿De qué trata la carrera de #[br]Profesional Asociado en#[br]Administración de Negocios?
-                     p Sabemos que el mundo ha cambiado, por eso hemos creado el plan de estudios de #[strong Prepa Intercultural Tecmilenio, con un programa académico que ayuda a las y los estudiantes a descubrir su vocación y adquirir las bases para su carrera profesional], mientras reciben acompañamiento en el descubrimiento de su Propósito de Vida.
-                     p #[strong En Prepa Intercultural Tecmilenio] nuestros(as) estudiantes desarrollan la competencia en el idioma inglés, que le dará el acceso a mayores oportunidades en su futuro profesional. 
-               .col.size-6
-                  ._c-intro-producto--icons-boxes
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Modalidad 
-                           p Autodirigido
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Plan
-                           p Tetramestral
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Duración
-                           p 6 tetramestres
-                     ._c-intro-producto--ico-box
-                        ._c-intro-producto--ico
-                           img(src="../images/modalidad-1.png", srcset="../images/modalidad-1.png", alt="Icono")
-                        ._c-intro-producto--text
-                           h3 Idioma
-                           p Español
+      include components/_c-intro-producto
+      +introProductoInfo4Items(
+         false,
+         null,
+         null,
+         null,
+         "Sabemos que el mundo ha cambiado, por eso hemos creado el plan de estudios de strong Prepa Intercultural Tecmilenio, con un programa académico que ayuda a las y los estudiantes a descubrir su vocación y adquirir las bases para su carrera profesional, mientras reciben acompañamiento en el descubrimiento de su Propósito de Vida.",
+         "En Prepa Intercultural Tecmilenio nuestros(as) estudiantes desarrollan la competencia en el idioma inglés, que le dará el acceso a mayores oportunidades en su futuro profesional. ",
+         null,
+         "#!",
+         "¡Quiero conocer más!",
+         /* icon first */
+         "modalidad-1.png",
+         "Modalidad",
+         "Autodirigida",
+         /* icon two */
+         "modalidad-1.png",
+         "Plan",
+         "Tetramestral",
+         /* icon three */
+         "modalidad-1.png",
+         "Duración",
+         "6 tetramestres",
+         /* last icon */
+         "modalidad-1.png",
+         "Idioma",
+         "Español"
+      )(class="accent-profeaso")  /* por si lleva un tema */
       //- End intro
 
-      section._c-slide-slick-imgside.accent-profeaso
-         ._c-slide-slick-imgside--background 
-            img(src="../images/bg-modalidades-grid.jpg", alt="", srcset="../images/bg-modalidades-grid.jpg")
+      include components/_c-slide-slick-imgside
+      +slideSlickWithBg( 
+         "bg-modalidades-grid.jpg",
+         /*title,*/ "Conoce las modalidades que te permitirán cumplir tus sueños",
+         /*parrint,*/ "Selecciona la modalidad que se adapte a tu estilo de vida, a tus objetivos profesionales y que beneficie más tus necesidades de aprendizaje.",
+         /* ico1 */ "modalidad-1.png",
+         /*tit1,*/ "Presencial",
+         /*text1,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de tomar la clase en vivo de manera virtual.",
+         /*copybtn1,*/ "Leer más",
+         /*enlacebtn1,*/ "#!",
 
-         .o-container
-            ._c-slide-slick-imgside--intro
-               h2 3 beneficios exclusivos de las carreras profesionales semestrales
+         /*ico2,*/ "modalidad-1.png",
+         /*tit2,*/ "Online",
+         /*text2,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn2,*/ "Leer más",
+         /*enlacebtn2,*/ "#!",
 
-            ._c-slide-slick-imgside--modalidadesNav
-               .modalidadNav.prev
-                  img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
-               .modalidadNav.next
-                  img(src="../images/svg/arrow-green-pastel.svg", alt="", srcset="../images/svg/arrow-green-pastel.svg")
+         /*ico3,*/ "modalidad-1.png",
+         /*tit3,*/ "Connect",
+         /*text3,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn3,*/ "Leer más",
+         /*enlacebtn3,*/ "#!",
 
-
-            ._c-slide-slick-imgside--modalidadesList
-
-               .item-modalidad
-                  ._c-slide-slick-imgside--modalidad
-                     ._c-slide-slick-imgside--modalidad-ico
-                        img(src="../images/modalidad-1.png", alt="", srcset="../images/modalidad-1.png")
-                     ._c-slide-slick-imgside--modalidad-info
-                        h3 Presencial
-                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
-                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
-
-               .item-modalidad
-                  ._c-slide-slick-imgside--modalidad
-                     ._c-slide-slick-imgside--modalidad-ico
-                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._c-slide-slick-imgside--modalidad-info
-                        h3 Online
-                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
-                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
-
-               .item-modalidad
-                  ._c-slide-slick-imgside--modalidad
-                     ._c-slide-slick-imgside--modalidad-ico
-                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._c-slide-slick-imgside--modalidad-info
-                        h3 Connect
-                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
-                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
-
-               .item-modalidad
-                  ._c-slide-slick-imgside--modalidad
-                     ._c-slide-slick-imgside--modalidad-ico
-                        img(src="../images/ico-modalidad-2.png", alt="", srcset="../images/ico-modalidad-2.png")
-                     ._c-slide-slick-imgside--modalidad-info
-                        h3 Autodirigido
-                        p Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] 
-                        a.o-btn.btn-outline.color-dark-green(href="#!") Leer más
-
+         /*ico4,*/ "modalidad-1.png",
+         /*tit4,*/ "Autodirigido",
+         /*text4 */ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn4,*/ "Leer más",
+         /*enlacebtn4,*/ "#!"
+      )(class="accent-profeaso")
       //- End slick carousel
 
-
-      section._c-banner-cta.bg-picture.accent-profeaso
-         .o-container
-            ._c-banner-cta--background
-               img.img-responsive(src="../images/intercambio-bg.jpg", alt="", srcset="../images/intercambio-bg.jpg")
-            ._c-banner-cta--intro
-               img.img-responsive(src="../images/ico-inter.png", alt="", srcset="../images/ico-inter.png")
-               h2 Conoce todos los beneficios que te da estudiar esta carrera en Universidad Tecmilenio
-            ._c-banner-cta--footer
-               a.o-btn.btn-outline(href="#!") Experiencia Intercultural
-
+      include components/_c-banner-cta
+      +bannerCta( 
+         /*title, */ "Conoce todos los beneficios que te da estudiar esta carrera en Universidad Tecmilenio",
+         /*icon, */ "ico-inter.png",
+         /*parr, */ null,
+         /*footext, */ null,
+         /*copybtn, */ "Experiencia Intercultural",
+         /*linkbtn, */ "#!",
+         /*bgimg */ "intercambio-bg.jpg",
+         /* big pic */ true
+      )(class="accent-profeaso")
       //- End banner cta
 
-
-      section._c-plan-de-estudios.accent-profeaso
-         .o-container
-            h2.text-center.color-dark-green Plan de estudios de Prepa Intercultural Tecmilenio
-
-            ._c-plan-de-estudios--content
-               .o-grid-row
-                  .col.size-9
-                     img.img-responsive(src="../images/programa-pa.png", srcset="../images/programa-pa.png", alt="demo")
-                  .col.size-3._c-plan-de-estudios--percentageboxes
-                     ._c-plan-de-estudios--box
-                        p 33%
-                        span Certificados y especialidades
-                     ._c-plan-de-estudios--box
-                        p 18%
-                        span Formación personal
-                     ._c-plan-de-estudios--box
-                        p 49%
-                        span Formación carrera
-
-               a.o-btn.btn-solid.bg-dark-green(href="#!") Descarga aquí nuestro plan de estudios
+      include components/_c-plan-de-estudios
+      +sectionPlanEstudios(
+         "Plan de estudios de Profesional Asociado en Turismo",
+         "programa-pa.png",
+         null,
+         "33%",
+         "Certificados y especialidades",
+         "18%",
+         "Formación personal",
+         "49%",
+         "Formación carrera",
+         "#!",
+         "Descarga aquí nuestro plan de estudios"
+      )(class="accent-profeaso")
       //- End plan de estudios
-
 
       section._c-certifications-accordeons.accent-profeaso
          .o-container
             h2.text-center Potencializa tu carrera con certificados
             p.text-center Aprende cómo las innovaciones tecnológicas están cambiando los negocios y las organizaciones, #[br] a través de estrategias de digitalización.
-
             .o-grid-row.row-start._c-certifications-accordeons--grid
-
                .col.size-8._c-certifications-accordeons--list.accordeon-init
                   ._c-certifications-accordeons--certificate.accordeon-active
                      ._c-certifications-accordeons--certificate-title.accordeon-btn
@@ -278,201 +233,155 @@ block contenido
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Study Tours 
                         
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Intercambios virtuales
                         
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
 
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
 
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Study Tours 
                         
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Intercambios virtuales
                         
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
 
                .col.size-3
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
-                        img(src="./images/img-pa-1.png", alt="", srcset="./images/img-pa-1.png")
+                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
 
       //- end graduate
 
-
-      section._c-testimonios-section.accent-profeaso
-         .o-container
-            ._c-testimonios-section--title
-               h2 Testimonios
-            ._c-testimonios-section--carousel
-               ._c-testimonios-section--carouselitm
-                  ._c-testimonios-section--testimonio
-                     ._c-testimonios-section--copy
-                        p "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit."
-                        h3 Rebeca López
-                        h4 Alumna Ingeniería Industrial
-                     ._c-testimonios-section--pic
-                        img(src="../images/img-testimonio-example.jpg", srcset="../images/img-testimonio-example.jpg")
-               ._c-testimonios-section--carouselitm
-                  ._c-testimonios-section--testimonio
-                     ._c-testimonios-section--copy
-                        p "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit."
-                        h3 Rebeca López
-                        h4 Alumna Ingeniería Industrial
-                     ._c-testimonios-section--pic
-                        img(src="../images/img-testimonio-example.jpg", srcset="../images/img-testimonio-example.jpg")
-
-
+      include components/_c-testimonios
+      +testimoniosBlock(
+         /*title, */ "Testimonios",
+         /*test1, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person1, */ "Rebeca López",
+         /*work1, */ "Alumna Ingeniería Industrial",
+         /*pic1, */ "img-testimonio-example.jpg",
+         /*test2, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person2, */ "Rebeca López",
+         /*work2, */ "Alumna Ingeniería Industrial",
+         /*pic2, */ "img-testimonio-example.jpg",
+         /*test3, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person3, */ "Rebeca López",
+         /*work3, */ "Alumna Ingeniería Industrial",
+         /*pic3, */ "img-testimonio-example.jpg",
+         /*test4, */ null,
+         /*person4, */ null,
+         /*work4, */ null,
+         /*pic4 */ null
+      )(class="accent-profeaso")
       //- end testimonios
 
 
-      section._c-banner-cta.banner-in-product.accent-profeaso
-         .o-container
-            ._c-banner-cta--intro
-               img.img-responsive(src="../images/burbuja-de-dialogo 4.png", alt="", srcset="../images/burbuja-de-dialogo 4.png")
-               p Si todavía estás pensando si esta carrera es para tí, envíanos un mensaje y nos contactaremos contigo para aclarar tus dudas y ayudarte a tomar la mejor decisión para impulsar tu camino profesional.
-               p Nos importa que realices tu Proposito de Vida, en Tecmilenio te ayudamos y te preparamos
-            ._c-banner-cta--sesionInfo
-               .o-grid-row
-                  .col.size-xs-12.size-sm-6.size-3
-                     a.o-btn.btn-solid.bg-dark-green(href="#!") 
-                        span.o-grid-row 
-                           span.col.size-3
-                              img(src="../images/ico-phone.png", srcset="../images/ico-phone.png")
-                           span.col.size-9
-                              strong Proceso de Admisión #[br]
-                              | Consultar
-                  .col.size-xs-12.size-sm-6.size-3
-                     a.o-btn.btn-solid.bg-dark-green(href="#!") 
-                        span.o-grid-row 
-                           span.col.size-3
-                              img(src="../images/ico-phone.png", srcset="../images/ico-phone.png")
-                           span.col.size-9
-                              strong Requisitos #[br]
-                              | Consultar
-                  .col.size-xs-12.size-sm-6.size-3
-                     a.o-btn.btn-solid.bg-dark-green(href="#!") 
-                        span.o-grid-row 
-                           span.col.size-3
-                              img(src="../images/ico-phone.png", srcset="../images/ico-phone.png")
-                           span.col.size-9
-                              strong Periodos de Ingresos #[br]
-                              | Consultar
-                  .col.size-xs-12.size-sm-6.size-3
-                     a.o-btn.btn-solid.bg-dark-green(href="#!") 
-                        span.o-grid-row 
-                           span.col.size-3
-                              img(src="../images/ico-phone.png", srcset="../images/ico-phone.png")
-                           span.col.size-9
-                              strong Contacto #[br]
-                              | Consultar
+      +bannerCta( 
+         /*title, */ null,
+         /*icon, */ "burbuja-de-dialogo%204.png",
+         /*parr, */ null,
+         /*footext, */ null,
+         /*copybtn, */ "Experiencia Intercultural",
+         /*linkbtn, */ "#!",
+         /*bgimg */ null,
+         /* big pic */ false,
+         /* parr1intro */ "Si todavía estás pensando si esta carrera es para tí, envíanos un mensaje y nos contactaremos contigo para aclarar tus dudas y ayudarte a tomar la mejor decisión para impulsar tu camino profesional.",
+         /* parr2intro */ "Nos importa que realices tu Proposito de Vida, en Tecmilenio te ayudamos y te preparamos",
+
+         /* es grid= */ true,
+         /* btn 1 link */ "#!",
+         /* btn 1 titulo */ "Titulo",
+         /* btn 1 subtitulo */ "Subtitulo",
+         /* btn 1 icon */ "ico-phone.png",
+         
+         /* btn 2 link */ "#!",
+         /* btn 2 titulo */ "Titulo",
+         /* btn 2 subtitulo */ "Subtitulo",
+         /* btn 2 icon */ "ico-phone.png",
+         
+         /* btn 3 link */ "#!",
+         /* btn 3 titulo */ "Titulo",
+         /* btn 3 subtitulo */ "Subtitulo",
+         /* btn 3 icon */ "ico-phone.png",
+         
+         /* btn 4 link */ "#!",
+         /* btn 4 titulo */ "Titulo",
+         /* btn 4 subtitulo */ "Subtitulo",
+         /* btn 4 icon */ "ico-phone.png"
+
+      )(class="banner-in-product accent-profeaso")
       //- end
 
+      include components/_c-related-careers
+      +relatedCareers( 
+         /*titlesection*/ "Carreras relacionadas",
+         /*career1*/ "Carrera relacionada 1",
+         /*career1link*/ "#!",
+         /*career1pic  */ "career-example.jpg",
 
+         /*career2*/ "Carrera relacionada 2",
+         /*career2link*/ "#!",
+         /*career2pic  */ "career-example.jpg",
 
-      section._c-related-careers.accent-profeaso
-         .o-container
-            h2 Carreras relacionadas
-            #related-careers-list-id.o-grid-row
-               .col.size-3
-                  ._c-related-careers--career
-                     ._c-related-careers--picture
-                        a(href="#!")
-                           img.img-responsive(src="../images/event-1.jpg", alt="", srcset="../images/event-1.jpg")
-                     ._c-related-careers--information
-                        h3 #[a(href="#!") Carrera relacionada]
-                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
-               .col.size-3
-                  ._c-related-careers--career
-                     ._c-related-careers--picture
-                        a(href="#!")
-                           img.img-responsive(src="../images/event-2.jpg", alt="", srcset="../images/event-2.jpg")
-                     ._c-related-careers--information
-                        h3 #[a(href="#!") Carrera relacionada]
-                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
-               .col.size-3
-                  ._c-related-careers--career
-                     ._c-related-careers--picture
-                        a(href="#!")
-                           img.img-responsive(src="../images/event-3.jpg", alt="", srcset="../images/event-3.jpg")
-                     ._c-related-careers--information
-                        h3 #[a(href="#!") Carrera relacionada]
-                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
-               .col.size-3
-                  ._c-related-careers--career
-                     ._c-related-careers--picture
-                        a(href="#!")
-                           img.img-responsive(src="../images/event-4.jpg", alt="", srcset="../images/event-4.jpg")
-                     ._c-related-careers--information
-                        h3 #[a(href="#!") Carrera relacionada]
-                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
-               .col.size-3
-                  ._c-related-careers--career
-                     ._c-related-careers--picture
-                        a(href="#!")
-                           img.img-responsive(src="../images/event-1.jpg", alt="", srcset="../images/event-1.jpg")
-                     ._c-related-careers--information
-                        h3 #[a(href="#!") Carrera relacionada]
-                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
-               .col.size-3
-                  ._c-related-careers--career
-                     ._c-related-careers--picture
-                        a(href="#!")
-                           img.img-responsive(src="../images/event-2.jpg", alt="", srcset="../images/event-2.jpg")
-                     ._c-related-careers--information
-                        h3 #[a(href="#!") Carrera relacionada]
-                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
-               .col.size-3
-                  ._c-related-careers--career
-                     ._c-related-careers--picture
-                        a(href="#!")
-                           img.img-responsive(src="../images/event-3.jpg", alt="", srcset="../images/event-3.jpg")
-                     ._c-related-careers--information
-                        h3 #[a(href="#!") Carrera relacionada]
-                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
-               .col.size-3
-                  ._c-related-careers--career
-                     ._c-related-careers--picture
-                        a(href="#!")
-                           img.img-responsive(src="../images/event-4.jpg", alt="", srcset="../images/event-4.jpg")
-                     ._c-related-careers--information
-                        h3 #[a(href="#!") Carrera relacionada]
-                        a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
+         /*career3*/ "Carrera relacionada 3",
+         /*career3link*/ "#!",
+         /*career3pic  */ "career-example.jpg",
 
+         /*career4*/ "Carrera relacionada 4",
+         /*career4link*/ "#!",
+         /*career4pic  */ "career-example.jpg",
+
+         /*career5*/ "Carrera relacionada 5",
+         /*career5link*/ "#!",
+         /*career5pic  */ "career-example.jpg",
+
+         /*career6*/ "Carrera relacionada 6",
+         /*career6link*/ "#!",
+         /*career6pic  */ "career-example.jpg",
+
+         /*career7*/ "Carrera relacionada 7",
+         /*career7link*/ "#!",
+         /*career7pic  */ "career-example.jpg",
+
+         /*career8*/ "Carrera relacionada 8",
+         /*career8link*/ "#!",
+         /*career8pic  */ "career-example.jpg"
+      )
       //- end
 
       include layout/_footer
@@ -523,6 +432,7 @@ block contenido
          infinite: false,
          speed: 300,
          slidesToShow: 4,
+         slidesToScroll: 1,
          responsive: [
             {
                breakpoint: 1080,
