@@ -8,7 +8,7 @@ append configuracion
 block contenido
    main
       include layout/_header
-
+    
       include components/profesionalsemestral/_c-hero-lobby-profesional-semestral
       include components/_c-intro-producto
       +introProductoInfo4Items(
@@ -24,26 +24,28 @@ block contenido
          /* icon first */
          "modalidad-1.png",
          "Modalidad ",
-         "Presencial",
+         "Presencial | Connect | Online",
          /* icon two */
          "modalidad-1.png",
          "Plan",
-         "Semestral",
+         "Tetramestral",
          /* icon three */
          "modalidad-1.png",
          "Duración",
-         "4 años",
+         "9 tetramestres (3 años)",
          /* icon four */
          "modalidad-1.png",
          "Idioma",
-         "Español | Inglés"
+         "Español"
       )(class="variant-grid accent-green")  /* por si lleva un tema */
-      
+      //- End intro      
+
+
 
       section._c-careers-list-in-level.accent-profesemestral
          .o-container
             ._c-careers-list-in-level--intro
-               h2 Carreras profesionales semestrales que #[br] puedes estudiar en Tecmilenio
+               h2 Carreras ejecutivas que puedes estudiar en Tecmilenio
 
             ._c-careers-list-in-level--filters
                ._c-careers-list-in-level--filtres
@@ -77,26 +79,77 @@ block contenido
 
       //- End careers list
 
-      section._c-copy-and-picture-color-box.accent-profesemestral
-         .o-container 
-            ._c-copy-and-picture-color-box--grid
-               ._c-copy-and-picture-color-box--textbox
-                  h2 Personaliza tu carrera profesional
-                  p #[strong Más de 50 certificados] #[br] #[br] Desarrolla habilidades de gran demanda en el mercado laboral con #[strong certificados que personalizarán] tu carrera profesional.
-                  h3 Diseña tu carrera de acuerdo con tus objetivos profesionales:
-                  ul
-                     li 
-                        span Podrás elegir un certificado relacionado a tu carrera. 
-                     li 
-                        span Selecciona un certificado que sea de tu interés. 
-                     li 
-                        span Escoge dos certificados más, de acuerdo con tu área de estudio. 
-                     li 
-                        span Al final, tendrás una carrera única alineada a tu Propósito de Vida.
-               ._c-copy-and-picture-color-box--img
-                  img(src="../../images/img-profe-sem.jpg", srcset="../../images/img-profe-sem.jpg", alt="Profesional")
+      include components/_c-slide-slick-imgside
+      +slideSlickWithBg( 
+         "bg-modalidades-grid.jpg",
+         /*title,*/ "4 beneficios de estudiar una carrera profesional ejecutiva en Tecmilenio",
+         /*parrint,*/ null,
+         /* ico1 */ "modalidad-1.png",
+         /*tit1,*/ "Presencial",
+         /*text1,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de tomar la clase en vivo de manera virtual.",
+         /*copybtn1,*/ "Leer más",
+         /*enlacebtn1,*/ "#!",
 
-      //- End copy and picture
+         /*ico2,*/ "modalidad-1.png",
+         /*tit2,*/ "Online",
+         /*text2,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn2,*/ "Leer más",
+         /*enlacebtn2,*/ "#!",
+
+         /*ico3,*/ "modalidad-1.png",
+         /*tit3,*/ "Connect",
+         /*text3,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn3,*/ "Leer más",
+         /*enlacebtn3,*/ "#!",
+
+         /*ico4,*/ "modalidad-1.png",
+         /*tit4,*/ "Autodirigido",
+         /*text4 */ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn4,*/ "Leer más",
+         /*enlacebtn4,*/ "#!"
+      )(class="accent-profesemestral")
+      //- End slick carousel
+
+
+      section._c-exploration-routes.accent-profesemestral
+         .o-container
+            ._c-exploration-routes--intro
+               h2 Conoce las modalidades que Tecmilenio tiene para ti
+               p Impulsa tu carrera ejecutiva seleccionando la modalidad que se adapte a tu estilo de vida, para alcanzar tus objetivos profesionales:
+
+            .o-grid-row._c-exploration-routes--grid.accordeon-init
+               
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Presencial
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+               
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Online
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+               
+               .col.size-4
+                  ._c-exploration-routes--route
+                     ._c-exploration-routes--routehead
+                        ._c-exploration-routes--routeact.accordeon-btn
+                           h3 Connect
+                        ._c-exploration-routes--routeimg
+                           img(src="../images/ruta-img.jpg", srcset="../images/ruta-img.jpg")
+                     ._c-exploration-routes--routebody.accordeon-box
+                        p Nuestros(as) estudiantes dominarán una de #[strong las metodologías para mejorar procesos, Lean Sigma], mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. 
+
+      //- end
 
 
       section._c-copy-and-img-simple
@@ -113,51 +166,8 @@ block contenido
                      h2 Practica con nuestros laboratorios presenciales y remotos
                      p En cada campus contamos con laboratorios presenciales, donde podrás desarrollar y practicar las competencias de tu área y carrera.
                      p Utiliza nuestros laboratorios remotos, donde podrás operar 24/7, un laboratorio físico, desde cualquier ubicación con conexión a internet.
-      //- end
+      //- end      
 
-      section._c-icons-grid.type-transparent.m-b-50
-         .o-container
-            
-            h2.text-center.color-dark-green.m-b-50 ¡Aprovecha las clases a tu manera!
-            
-
-            .o-grid-row
-               .col
-                  ._c-icons-grid--icondot
-                     ._c-icons-grid--icon-img 
-                        img.img-responsive(src="../images/svg/icon-innovacion-home.svg", alt="Innovacion", srcset="../images/svg/icon-innovacion-home.svg")
-                     ._c-icons-grid--icon-inf
-                        h3 Innovación
-                        p Nos entusiasma #[br]la disrupción que#[br]genera valor
-               .col
-                  ._c-icons-grid--icondot
-                     ._c-icons-grid--icon-img 
-                        img.img-responsive(src="../images/svg/icon-integridad-home.svg", alt="Innovacion", srcset="../images/svg/icon-integridad-home.svg")
-                     ._c-icons-grid--icon-inf
-                        h3 Integridad
-                        p Ejercemos la #[br] libertad con #[br] responsabilidad
-               .col
-                  ._c-icons-grid--icondot
-                     ._c-icons-grid--icon-img 
-                        img.img-responsive(src="../images/svg/icon-colaboracion-home.svg", alt="Innovacion", srcset="../images/svg/icon-colaboracion-home.svg")
-                     ._c-icons-grid--icon-inf
-                        h3 Colaboración
-                        p Juntos #[br] alcanzamos #[br] la visión
-               .col
-                  ._c-icons-grid--icondot
-                     ._c-icons-grid--icon-img 
-                        img.img-responsive(src="../images/svg/icon-inclusion-home.svg", alt="Innovacion", srcset="../images/svg/icon-inclusion-home.svg")
-                     ._c-icons-grid--icon-inf
-                        h3 Empatía e inclusión
-                        p Ponemos siempre #[br] en primer lugar a #[br] las personas
-               .col
-                  ._c-icons-grid--icondot
-                     ._c-icons-grid--icon-img 
-                        img.img-responsive(src="../images/svg/icon-ciudadania-home.svg", alt="Innovacion", srcset="../images/svg/icon-ciudadania-home.svg")
-                     ._c-icons-grid--icon-inf
-                        h3 Ciudadanía global
-                        p Trabajamos #[br] por un mundo #[br] sostenible
-      //- end icons
 
       ._c-cta-intercultural.accent-profesemestral
          ._c-cta-intercultural--picture
@@ -181,80 +191,6 @@ block contenido
             a.o-btn.btn-outline(href="#!") Quiero conocerlas
       //- end cta intercultural
 
-
-      section._c-graduate-grid.accent-profesemestral
-         .o-container
-            h2.text-center Al estudiar una carrera de Profesional Asociado Tecmilenio, vivirás experiencias como:
-            .o-grid-row
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Study Tours 
-                        br
-                        a.o-btn.btn-outline(href="#!") Ver más                        
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Intercambios virtuales
-                        br
-                        a.o-btn.btn-outline(href="#!") Ver más                        
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Proyectos colaborativos
-                        br
-                        a.o-btn.btn-outline(href="#!") Ver más
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Proyectos colaborativos
-                        br
-                        a.o-btn.btn-outline(href="#!") Ver más
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Study Tours 
-                        br
-                        a.o-btn.btn-outline(href="#!") Ver más                        
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Intercambios virtuales
-                        br
-                        a.o-btn.btn-outline(href="#!") Ver más                        
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Proyectos colaborativos
-                        br
-                        a.o-btn.btn-outline(href="#!") Ver más
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Proyectos colaborativos
-                        br
-                        a.o-btn.btn-outline(href="#!") Ver más
-
-            h2.text-center ¡Imagina lo que estas experiencias traerán a tu vida!
-            p.text-center 
-               a.color-white.o-btn.btn-outline(href="#!") Más información
-      //- end graduate
 
       section._c-events-in-career-section.accent-profesemestral
          .o-container
@@ -294,7 +230,8 @@ block contenido
                ._c-events-in-career-section--nav.next
                   img(src="../../images/arrow-prepa-carousel.png", srcset="../../images/arrow-prepa-carousel.png")
 
-         //- h2.text-center ¡Vive estas experiencias y sé un Halcón Tecmilenio!
+         //- end
+      
 
       section._c-events-list.variant-three
          .o-container 
@@ -329,6 +266,8 @@ block contenido
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
                         a.o-btn.btn-solid.bg-aqua-dark(href="#!") Conoce más
 
+      //- end
+      
       section._c-banner-cta.accent-profesemestral
          .o-container
             ._c-banner-cta--intro
@@ -338,6 +277,8 @@ block contenido
                p Nos contactaremos contigo para ayudarte y que tomes la mejor decisión para que construyas tu historia con nosotros.
             ._c-banner-cta--sesionInfo
                a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Sí! Quiero más información
+      //- end
+
 
 
       include layout/_footer
@@ -353,11 +294,10 @@ block contenido
          // Body width size
          const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
 
-         // Acordeon for careers script
-         if ( widthDevice < 960 ){
-            accordeonCareers( '._c-careers-list-in-level' );
+         if ( widthDevice < 1140 ){
+            // Accordeon
+            accordeonSection( '._c-exploration-routes' )
          }
-
 
          // Carousel for modalidades
          $('._c-slide-slick-imgside ._c-slide-slick-imgside--modalidadesList').slick({
@@ -381,8 +321,6 @@ block contenido
                }
             ]            
          });
-
-
          if ( widthDevice >= 1140 ){
             // Carousel for modalidades
             $('._c-events-in-career-section--slidepart').slick({
