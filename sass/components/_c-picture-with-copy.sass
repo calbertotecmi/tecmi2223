@@ -345,4 +345,37 @@
             @include maxMobile
                display: none
             
+
+      &.accent-profesemestral
+         
+         ._c-picture-with-copy--discover
+            @media (min-width: 1300px)
+               margin-top: -25%
+            h3
+               color: $dark-green
+
+         ._c-picture-with-copy--copy
+            .first
+               background-color: $dark-green
+            @include squareID( second, absolute, 105px, 0, -105px, #A6D342 )
+
+            .square
+               @include maxMobile
+                  display: none
+
+            h2
+               color: $dark-green
+            
+            ul
+               li
+                  &::before
+                     background-image: url('../images/arrow-green-pastel.png')
+                     background-size: 100%
+         
+         ._c-picture-with-copy--footer
+            display: flex
+            @include square( relative, 105px, 0, 0, #A6D342 )
+            @include maxMobile
+               display: none
+            
       

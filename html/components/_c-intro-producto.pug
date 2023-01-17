@@ -1,4 +1,4 @@
-mixin introProductoInfo4Items( isbig, bigtitle, bigtext, bigtext2, textouno, textodos, textotres, enlace, copyenlace, ico1, tit1, text1, ico3, tit3, text3, ico2, tit2, text2, ico4, tit4, text4 )
+mixin introProductoInfo4Items( isbig, bigtitle, bigtext, bigtext2, textouno, textodos, textotres, enlace, copyenlace, ico1, tit1, text1, ico3, tit3, text3, ico2, tit2, text2, ico4, tit4, text4, titulodequetrata = null )
    section._c-intro-producto&attributes(attributes)
       .o-container
          .o-grid-row.row-center
@@ -15,6 +15,8 @@ mixin introProductoInfo4Items( isbig, bigtitle, bigtext, bigtext2, textouno, tex
             if isbig != true
                .col.size-6
                   ._c-intro-producto--info
+                     if titulodequetrata
+                        h3 #{ titulodequetrata }
                      p #{textouno}
                      p #{textodos}
                      p #{textotres}

@@ -37,10 +37,45 @@
             &:nth-child(3)
                background-color: $color-profesional-2
 
+   &.accent-profesemestral-2
+      background-color: $blanco  
+      h2 
+         color: #74A433
+      ._c-plan-de-estudios--intro
+         a 
+            color: #74A433
+      ._c-plan-de-estudios--percentageboxes 
+         ._c-plan-de-estudios--box
+            &:nth-child(1)
+               background-color: #8FD360
+            &:nth-child(2)
+               background-color: #CCE67D
+               p, span
+                  color: $dark-green
+            &:nth-child(3)
+               background-color: $dark-green
+
    h2
       margin-bottom: 80px
       @include maxMobile
          margin-bottom: 40px
+
+   
+   &--intro
+      text-align: center
+      line-height: 1.5
+      margin: -60px 0 60px
+      padding: 0 50px
+      @include maxMobile
+         padding: 0 0
+      p, a
+         font-size: 1.15rem
+         @include maxMobile
+            font-size: 1.1rem
+      p
+         margin: 15px 0
+      a
+         text-decoration: underline
 
 
    .o-grid-row

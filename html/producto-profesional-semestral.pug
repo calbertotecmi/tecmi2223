@@ -11,13 +11,13 @@ block contenido
       include layout/_header
       include components/_c-banner-principal-t
       +bannerT( 
-         'Administración De Negocios', /* titulo en h1 */
-         null, /* titulo en h2 - si no usar dejar null (aplica para todos) */
-         'Prepárate para asistir en las funciones administrativas de una empresa o negocio y contribuir a que se cumplan los objetivos.', /* descripcion en parrafo */
-         '#!', /* enlace del boton */
-         'Quiero más información', /* copy del boton */
-         'img-t.jpg' /* imagen, la ruta por defecto es ../images/ no se puede cambiar */
-      )(class="accent-profeaso")  /* por si lleva un tema */
+         /* titulo en h1 */ 'Licenciatura en Diseño Gráfico y Animación', 
+         /* titulo en h2 - si no usar dejar null (aplica para todos) */ null, 
+         /* descripcion en parrafo */ 'Enriquece la toma de decisión de quienes consumen bienes y servicios, comunicando de manera creativa y atractiva los mensajes de las diferentes industrias.', 
+         /* enlace del boton */ '#!', 
+         /* copy del boton */ 'Quiero más información', 
+         /* imagen, la ruta por defecto es ../images/ no se puede cambiar */ 'img-t.jpg' 
+      )(class="accent-profesemestral")  /* por si lleva un tema */
       //- End banner t
 
       include components/_c-intro-producto
@@ -29,32 +29,34 @@ block contenido
          "Sabemos que el mundo ha cambiado, por eso hemos creado el plan de estudios de strong Prepa Intercultural Tecmilenio, con un programa académico que ayuda a las y los estudiantes a descubrir su vocación y adquirir las bases para su carrera profesional, mientras reciben acompañamiento en el descubrimiento de su Propósito de Vida.",
          "En Prepa Intercultural Tecmilenio nuestros(as) estudiantes desarrollan la competencia en el idioma inglés, que le dará el acceso a mayores oportunidades en su futuro profesional. ",
          null,
-         "#!",
-         "¡Quiero conocer más!",
+         null,
+         null,
          /* icon first */
          "modalidad-1.png",
          "Modalidad",
-         "Autodirigida",
+         "Presencial",
          /* icon two */
          "modalidad-1.png",
          "Plan",
-         "Tetramestral",
+         "Semestral",
          /* icon three */
          "modalidad-1.png",
          "Duración",
-         "6 tetramestres",
+         "4 años",
          /* last icon */
          "modalidad-1.png",
          "Idioma",
-         "Español"
+         "Español",
+         /* titulo de que trata opcional */ "¿De qué trata la carrera de Diseño Gráfico y Animación?"
       )(class="accent-profeaso")  /* por si lleva un tema */
       //- End intro
 
       include components/_c-slide-slick-imgside
       +slideSlickWithBg( 
          "bg-modalidades-grid.jpg",
-         /*title,*/ "Conoce las modalidades que te permitirán cumplir tus sueños",
-         /*parrint,*/ "Selecciona la modalidad que se adapte a tu estilo de vida, a tus objetivos profesionales y que beneficie más tus necesidades de aprendizaje.",
+         /*title,*/ "Algunos de los principales beneficios al estudiar esta carrera",
+         /*parrint,*/ null,
+
          /* ico1 */ "modalidad-1.png",
          /*tit1,*/ "Presencial",
          /*text1,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de tomar la clase en vivo de manera virtual.",
@@ -78,7 +80,7 @@ block contenido
          /*text4 */ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
          /*copybtn4,*/ "Leer más",
          /*enlacebtn4,*/ "#!"
-      )(class="accent-profeaso")
+      )(class="accent-profesemestral")
       //- End slick carousel
 
       include components/_c-banner-cta
@@ -96,8 +98,8 @@ block contenido
 
       include components/_c-plan-de-estudios
       +sectionPlanEstudios(
-         "Plan de estudios de Profesional Asociado en Turismo",
-         "programa-pa.png",
+         "El Plan de Estudios de Diseño Gráfico y Animación en Tecmilenio",
+         "programaprofesemestral.png",
          null,
          "33%",
          "Certificados y especialidades",
@@ -106,88 +108,47 @@ block contenido
          "49%",
          "Formación carrera",
          "#!",
-         "Descarga aquí nuestro plan de estudios"
-      )(class="accent-profeaso")
+         "Descarga aquí nuestro plan de estudios",
+         /* text intro */ "Nuestros programas son creados en coordinación con empresas multinacionales especialistas en Diseño Gráfico y Animación para que conozcas a fondo cómo desarrollar soluciones creativas que impacten en las personas y las organizaciones.",
+         /* text intro 2 */ "La Licenciatura en Diseño Gráfico y Animación cuenta con Reconocimiento de Validez Oficial de Estudios (RVOE) otorgado por la Secretaría de Educación Pública.",
+         /*linkrvoe*/ "#!."
+         
+      )(class="accent-profesemestral-2")
       //- End plan de estudios
 
-      section._c-certifications-accordeons.accent-profeaso
-         .o-container
-            h2.text-center Potencializa tu carrera con certificados
-            p.text-center Aprende cómo las innovaciones tecnológicas están cambiando los negocios y las organizaciones, #[br] a través de estrategias de digitalización.
-            .o-grid-row.row-start._c-certifications-accordeons--grid
-               .col.size-8._c-certifications-accordeons--list.accordeon-init
-                  ._c-certifications-accordeons--certificate.accordeon-active
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Bienestar Integral
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Modelo de acompañamiento
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Vivencia Estudiantil
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate   
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Impacto Social
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Modelo de acompañamiento
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Vivencia Estudiantil
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate   
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Impacto Social
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate   
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Impacto Social
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Modelo de acompañamiento
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Vivencia Estudiantil
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate   
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Impacto Social
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-                  ._c-certifications-accordeons--certificate
-                     ._c-certifications-accordeons--certificate-title.accordeon-btn
-                        h3 Vivencia Estudiantil
-                     ._c-certifications-accordeons--certificate-body
-                        p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
+      section._c-copy-and-picture-color-box.accent-profesemestral
+         .o-container   
+            ._c-copy-and-picture-color-box--grid
+               ._c-copy-and-picture-color-box--textbox
+                  h2 Potencializa tu carrera con certificados
+                  p Además de profundizar en el área de Diseño Gráfico y Animación podrás especializarte con algunos de nuestros más de 50 certificados que impulsarán tu futuro laboral.
+                  ._c-copy-and-picture-color-box--acordeon-section.accordeon-init
+                     ._c-copy-and-picture-color-box--acordeon.accordeon-active
+                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                           h3 Acompañamiento
+                        ._c-copy-and-picture-color-box--acordeon-body
+                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
+                     ._c-copy-and-picture-color-box--acordeon
+                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                           h3 Competencias esenciales
+                        ._c-copy-and-picture-color-box--acordeon-body
+                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
+                     ._c-copy-and-picture-color-box--acordeon
+                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                           h3 Desarrollo del idioma inglés
+                        ._c-copy-and-picture-color-box--acordeon-body
+                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
+                     ._c-copy-and-picture-color-box--acordeon
+                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                           h3 Vivencia Estudiantil
+                        ._c-copy-and-picture-color-box--acordeon-body
+                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
 
-               .col.size-4._c-certifications-accordeons--gallery
-                  img(src="../images/img-pa-prod-1.jpg", srcset="../images/img-pa-prod-1.jpg").img-responsive
-                  img(src="../images/img-pa-prod-2.jpg", srcset="../images/img-pa-prod-2.jpg").img-responsive
-                  img(src="../images/img-pa-prod-3.jpg", srcset="../images/img-pa-prod-3.jpg").img-responsive
-                  img(src="../images/img-pa-prod-4.jpg", srcset="../images/img-pa-prod-4.jpg").img-responsive
-                  //- img(src="../images/img-prepa-certifications.jpg", srcset="../images/img-prepa-certifications.jpg", alt="GG")
-                  
-      //- End accordeons
+               ._c-copy-and-picture-color-box--img
+                  img(src="../../images/img-prepa-preview-2.jpg", srcset="../../images/img-prepa-preview-2.jpg", alt="Prepa")
+      //- End
 
-
-      section._c-picture-with-copy.extended-info.accent-profeaso
+      section._c-picture-with-copy.extended-info.accent-profesemestral
          .o-container
             .o-grid-row
                .col.size-6
@@ -224,69 +185,34 @@ block contenido
    
       //- End
 
-
-      section._c-graduate-grid.accent-profaso-alter
+      section._c-graduate-grid.accent-profesemestral-alter
          .o-container
             h2.text-center Si te preguntas ¿En que podrás trabajar al terminar?
             p.text-center El campo de trabajo para un PA en Administración de Negocios incluye:
             .o-grid-row
-               .col.size-3
+               .col.size-4
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
                         img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Study Tours 
                         
-               .col.size-3
+               .col.size-4
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
                         img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Intercambios virtuales
                         
-               .col.size-3
+               .col.size-4
                   ._c-graduate-grid--icograduate
                      ._c-graduate-grid--ico
                         img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
                      ._c-graduate-grid--copy
                         p Proyectos colaborativos
+      //- end graduate    
 
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Proyectos colaborativos
 
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Study Tours 
-                        
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Intercambios virtuales
-                        
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Proyectos colaborativos
-
-               .col.size-3
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Proyectos colaborativos
-
-      //- end graduate
 
       include components/_c-testimonios
       +testimoniosBlock(
@@ -307,9 +233,8 @@ block contenido
          /*person4, */ null,
          /*work4, */ null,
          /*pic4 */ null
-      )(class="accent-profeaso")
+      )(class="accent-profesemestral")
       //- end testimonios
-
 
       +bannerCta( 
          /*title, */ null,
@@ -344,9 +269,9 @@ block contenido
          /* btn 4 subtitulo */ "Subtitulo",
          /* btn 4 icon */ "ico-phone.png"
 
-      )(class="banner-in-product accent-profeaso")
+      )(class="banner-in-product accent-profesemestral")
 
-      //- end
+
 
       include components/_c-related-careers
       +relatedCareers( 
@@ -382,8 +307,10 @@ block contenido
          /*career8*/ "Carrera relacionada 8",
          /*career8link*/ "#!",
          /*career8pic  */ "career-example.jpg"
-      )
+      )(class="accent-profesemestral")
       //- end
+
+
 
       include layout/_footer
    
@@ -395,7 +322,8 @@ block contenido
       // Body width size
       const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
       // Accordeon for certificados
-      accordeonSection( '._c-certifications-accordeons' )
+      accordeonSection( '._c-copy-and-picture-color-box--grid' )
+
       // Carousel for modalidades
       $('._c-slide-slick-imgside ._c-slide-slick-imgside--modalidadesList').slick({
          dots: false,
@@ -425,7 +353,8 @@ block contenido
          infinite: false,
          speed: 300,
          slidesToShow: 1,
-      });      
+      });    
+
 
       // Carousel related careers
       $('#related-careers-list-id').slick({
@@ -460,4 +389,4 @@ block contenido
                }
             }
          ]
-      });      
+      });            

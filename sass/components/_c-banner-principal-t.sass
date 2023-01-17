@@ -77,6 +77,39 @@
                background-color: $color-profesional-aso
       a.o-btn
          background-color: $dark-green
+
+   &.accent-profesemestral
+      background-color: $color-profesional-2
+      &::before
+         content: ""
+         position: absolute
+         right: 0
+         bottom: 0
+         height: 100%
+         width: 50%
+         background-color: $color-profesional-4
+         @include tabletPortraitToDesktopSmall
+            width: 40%
+         @include mobileToPortrait         
+            width: 80px
+            height: 80px
+         @include maxMobile
+            width: 55px
+            height: 55px
+      ._c-banner-principal-t--picture
+         &::before
+            background-color: $color-profesional-2
+            @include tabletPortraitToDesktopSmall
+               background-color: $color-profesional-2
+         &::after
+            background-color: $color-profesional-3
+            @include tabletPortraitToDesktopSmall
+               background-color: $color-profesional-3
+      a.o-btn
+         background-color: $dark-green
+
+
+
    &--intro
       width: 100%
       max-width: 615px

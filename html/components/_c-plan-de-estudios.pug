@@ -1,7 +1,15 @@
-mixin sectionPlanEstudios( titulo, imgplan, boxcopy, box1, box1span, box2, box2span, box3, box3span, descarga, btncopy )
+mixin sectionPlanEstudios( titulo, imgplan, boxcopy, box1, box1span, box2, box2span, box3, box3span, descarga, btncopy, textintro = null, textintro2 = null, linkrvoe=null )
    section._c-plan-de-estudios&attributes(attributes)
       .o-container
          h2.text-center.color-dark-green #{titulo}
+
+         if textintro
+            ._c-plan-de-estudios--intro
+               .o-grid-row 
+                  .col.size-12
+                     p #{ textintro }
+                     p #{ textintro2 }
+                     a(href=linkrvoe) Consúltalo aquí
 
          ._c-plan-de-estudios--content
             .o-grid-row
