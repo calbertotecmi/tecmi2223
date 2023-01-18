@@ -115,104 +115,54 @@ block contenido
          
       )(class="accent-profesemestral-2")
       //- End plan de estudios
+ 
+      - var listforcopy = '<ul><li><span>La mentora o el mentor ofrecen orientación, apoyo, ayuda y asesoramiento en el proceso de autodescubrimiento y educación. </span></li><li><span>Este modelo es una práctica que les ayudará a optimizar sus experiencias en la preparatoria y alcanzar sus sueños y metas.</span></li></ul>';
 
-      section._c-copy-and-picture-color-box.accent-profesemestral
-         .o-container   
-            ._c-copy-and-picture-color-box--grid
-               ._c-copy-and-picture-color-box--textbox
-                  h2 Potencializa tu carrera con certificados
-                  p Además de profundizar en el área de Diseño Gráfico y Animación podrás especializarte con algunos de nuestros más de 50 certificados que impulsarán tu futuro laboral.
-                  ._c-copy-and-picture-color-box--acordeon-section.accordeon-init
-                     ._c-copy-and-picture-color-box--acordeon.accordeon-active
-                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
-                           h3 Acompañamiento
-                        ._c-copy-and-picture-color-box--acordeon-body
-                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
-                     ._c-copy-and-picture-color-box--acordeon
-                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
-                           h3 Competencias esenciales
-                        ._c-copy-and-picture-color-box--acordeon-body
-                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
-                     ._c-copy-and-picture-color-box--acordeon
-                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
-                           h3 Desarrollo del idioma inglés
-                        ._c-copy-and-picture-color-box--acordeon-body
-                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
-                     ._c-copy-and-picture-color-box--acordeon
-                        ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
-                           h3 Vivencia Estudiantil
-                        ._c-copy-and-picture-color-box--acordeon-body
-                           p Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.
-
-               ._c-copy-and-picture-color-box--img
-                  img(src="../../images/img-prepa-preview-2.jpg", srcset="../../images/img-prepa-preview-2.jpg", alt="Prepa")
+      include components/_c-copy-and-picture-color-box
+      +copyAndPictureBox( 
+         /*title*/ "Potencializa tu carrera con certificados", 
+         /*subtitle, */ "Además de profundizar en el área de Diseño Gráfico y Animación podrás especializarte con algunos de nuestros más de 50 certificados que impulsarán tu futuro laboral.",
+         /* islist*/ false,
+         /*list */  null,
+         /* is tabs */ true,
+         /* tab1 */ "Acompañamiento",
+         /* tab1info */ "Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.",
+         /* tab2 */ "Acompañamiento",
+         /* tab2info */ "Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.",
+         /* tab3 */ "Acompañamiento",
+         /* tab3info */ "Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico."
+      )(class="accent-profesemestral")
       //- End
 
-      section._c-picture-with-copy.extended-info.accent-profesemestral
-         .o-container
-            .o-grid-row
-               .col.size-6
-                  ._c-picture-with-copy--picture
-                     img(src="../images/img-home-1.jpg", alt="Img Home", srcset="../images/img-home-1.jpg").img-responsive
-                  ._c-picture-with-copy--footer
-                     img(src="../images/img-home-2.jpg", alt="Home", srcset="../images/img-home-2.jpg")                     
-                     .square
-               .col.size-6
-                  ._c-picture-with-copy--copy
-                     .square.first
-                     .square.second
-                     //- .square
-                     h2 Esta carrera es para ti, si:
-                     p Cuentas con tu certificado de bachillerato terminado.
-                     h3.color-dark-green Al terminar de estudiar Profesional Asociado en Administración de Negocios podrás:
-                     ul
-                        li
-                           span Entender los principales procesos y funciones de la administración de empresas, los cuales involucran la comprensión y el conocimiento de herramientas y estrategias relacionadas con la mercadotecnia, la administración del recurso humano, principios fundamentales de producción y fundamentos de finanzas.
-                        li
-                           span Ser líder y dirigir tanto equipos como proyectos de trabajo, sirviendo de apoyo a gerentes y directivos. 
-                        li
-                           span Desempeñar tareas de apoyo en una organización, incluyendo los procesos de planeación estratégica de una empresa o negocio. 
-                        li
-                           span Llevar a cabo procesos de auditoría y proponer metodologías de evaluación y diagnóstico de consultoría administrativa aplicada. 
-                        li
-                           span Entender las bases de las matemáticas financieras y asistir en la elaboración y/o interpretación de análisis financieros. 
-                        li
-                           span Comprender los factores a considerar para la toma de decisiones acertadas para el negocio u organización.
-                        li
-                           span Aplicar las principales técnicas y herramientas de planeación, administración y evaluación de proyectos. 
-                        li
-                           span Comunicar efectivamente, en forma oral y escrita, los resultados de tu trabajo, tanto en español como en una lengua extranjera.
-   
-      //- End
-
-      section._c-graduate-grid.accent-profesemestral-alter
-         .o-container
-            h2.text-center Si te preguntas ¿En que podrás trabajar al terminar?
-            p.text-center El campo de trabajo para un PA en Administración de Negocios incluye:
-            .o-grid-row
-               .col.size-4
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Study Tours 
-                        
-               .col.size-4
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Intercambios virtuales
-                        
-               .col.size-4
-                  ._c-graduate-grid--icograduate
-                     ._c-graduate-grid--ico
-                        img(src="../images/img-pa-1.png", alt="", srcset="../images/img-pa-1.png")
-                     ._c-graduate-grid--copy
-                        p Proyectos colaborativos
+      - var contenidoPictureWithCopyExtend = '<h3 class="color-dark-green">Al terminar de estudiar Profesional Asociado en Administración de Negocios podrás:</h3><ul><li><span>Entender los principales procesos y funciones de la administración de empresas, los cuales involucran la comprensión y el conocimiento de herramientas y estrategias relacionadas con la mercadotecnia, la administración del recurso humano, principios fundamentales de producción y fundamentos de finanzas.</span></li><li><span>Ser líder y dirigir tanto equipos como proyectos de trabajo, sirviendo de apoyo a gerentes y directivos. </span></li><li><span>Desempeñar tareas de apoyo en una organización, incluyendo los procesos de planeación estratégica de una empresa o negocio. </span></li><li><span>Llevar a cabo procesos de auditoría y proponer metodologías de evaluación y diagnóstico de consultoría administrativa aplicada. </span></li><li><span>Entender las bases de las matemáticas financieras y asistir en la elaboración y/o interpretación de análisis financieros. </span></li><li><span>Comprender los factores a considerar para la toma de decisiones acertadas para el negocio u organización.</span></li><li><span>Aplicar las principales técnicas y herramientas de planeación, administración y evaluación de proyectos. </span></li><li><span>Comunicar efectivamente, en forma oral y escrita, los resultados de tu trabajo, tanto en español como en una lengua extranjera.</span></li></ul>';
+      include components/_c-picture-with-copy-extended-info
+      +pictureWithCopyExtendInfo( 
+         /*img1, */ "img-home-1.jpg",
+         /*img2, */ "img-home-2.jpg",
+         /*title, */ "Esta carrera es para ti, si:",
+         /*subtitle, */ "Cuentas con tu certificado de bachillerato terminado.",
+         /*content , */ contenidoPictureWithCopyExtend
+      )(class="accent-profesemestral")
+      //- end
+      
+      include components/_c-graduate-grid-items
+      +graduateGridThreeItems(
+         /*title, */ "Si te preguntas ¿En que podrás trabajar al terminar?",
+         /*subtitle, */ "El campo de trabajo para un PA en Administración de Negocios incluye:",
+         /*icon1, */ "img-pa-1.png",
+         /*copy1, */ "Study Tours ",
+         /*icon2, */ "img-pa-1.png",
+         /*copy2, */ "Intercambios virtuales",
+         /*icon3, */ "img-pa-1.png",
+         /*copy3, */ "Proyectos colaborativos",
+         /*icon4, */ null,
+         /*copy4, */ null,
+         /*icon5, */ null,
+         /*copy5, */ null,
+         /*icon6, */ null,
+         /*copy6*/ null
+      )(class="accent-profesemestral-alter")
       //- end graduate    
-
-
 
       include components/_c-testimonios
       +testimoniosBlock(
@@ -270,8 +220,7 @@ block contenido
          /* btn 4 icon */ "ico-phone.png"
 
       )(class="banner-in-product accent-profesemestral")
-
-
+      //- end
 
       include components/_c-related-careers
       +relatedCareers( 

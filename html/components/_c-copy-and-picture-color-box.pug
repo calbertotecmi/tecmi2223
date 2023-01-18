@@ -1,16 +1,51 @@
-._c-copy-and-picture-color-box.accent-prepa
-   .o-container 
-   
-      ._c-copy-and-picture-color-box--grid
-         ._c-copy-and-picture-color-box--textbox
-            h2 ¡Nuestros estudiantes siempre estarán acompañados! 
-            p Sabemos lo difícil que puede ser esta etapa de la vida. Por eso, en Prepa Tecmilenio tenemos #[strong un modelo de acompañamiento] apreciativo. 
-            ul
-               li 
-                  span La mentora o el mentor ofrecen orientación, apoyo, ayuda y asesoramiento en el proceso de autodescubrimiento y educación. 
-               li 
-                  span Este modelo es una práctica que les ayudará a optimizar sus experiencias en la preparatoria y alcanzar sus sueños y metas.
+mixin copyAndPictureBox( title, subtitle, islist=true, list, istabs=false, tab1=null, tab1inf=null, tab2=null, tab2inf=null, tab3=null, tab3inf=null, tab4=null, tab4inf=null, tab5=null, tab5inf=null, tab6=null, tab6inf=null )
+   ._c-copy-and-picture-color-box.accent-prepa&attributes(attributes)
+      .o-container 
+         ._c-copy-and-picture-color-box--grid
+            ._c-copy-and-picture-color-box--textbox
+               h2 #{ title }
+               if subtitle
+                  p #{ subtitle }
+               if islist
+                  !=list
+               if istabs
+                  ._c-copy-and-picture-color-box--acordeon-section.accordeon-init
+                     if tab1
+                        ._c-copy-and-picture-color-box--acordeon
+                           ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                              h3 #{tab1}
+                           ._c-copy-and-picture-color-box--acordeon-body
+                              p #{tab1inf}
+                     if tab2
+                        ._c-copy-and-picture-color-box--acordeon
+                           ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                              h3 #{tab2}
+                           ._c-copy-and-picture-color-box--acordeon-body
+                              p #{tab2inf}
+                     if tab3
+                        ._c-copy-and-picture-color-box--acordeon
+                           ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                              h3 #{tab3}
+                           ._c-copy-and-picture-color-box--acordeon-body
+                              p #{tab3inf}
+                     if tab4
+                        ._c-copy-and-picture-color-box--acordeon
+                           ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                              h3 #{tab4}
+                           ._c-copy-and-picture-color-box--acordeon-body
+                              p #{tab4inf}
+                     if tab5
+                        ._c-copy-and-picture-color-box--acordeon
+                           ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                              h3 #{tab5}
+                           ._c-copy-and-picture-color-box--acordeon-body
+                              p #{tab5inf}
+                     if tab6
+                        ._c-copy-and-picture-color-box--acordeon
+                           ._c-copy-and-picture-color-box--acordeon-title.accordeon-btn
+                              h3 #{tab6}
+                           ._c-copy-and-picture-color-box--acordeon-body
+                              p #{tab6inf}
 
-
-         ._c-copy-and-picture-color-box--img
-            img(src="../../images/img-prepa-preview-2.jpg", srcset="../../images/img-prepa-preview-2.jpg", alt="Prepa")
+            ._c-copy-and-picture-color-box--img
+               img(src="../../images/img-prepa-preview-2.jpg", srcset="../../images/img-prepa-preview-2.jpg", alt="Prepa")
