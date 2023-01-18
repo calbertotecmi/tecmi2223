@@ -5,8 +5,8 @@ mixin slideSlickWithBg( bgimg, title, parrint, ico1, tit1, text1, copybtn1, enla
 
       .o-container
          ._c-slide-slick-imgside--intro
-            h2 #{ title }
-            p #{ parrint }
+            h2!=title
+            p!=parrint
 
          ._c-slide-slick-imgside--modalidadesNav
             .modalidadNav.prev

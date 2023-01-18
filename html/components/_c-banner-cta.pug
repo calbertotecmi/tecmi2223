@@ -5,7 +5,8 @@ mixin bannerCta( title, icon, parr, footext, copybtn, linkbtn, bgimg, isbgpic, p
             ._c-banner-cta--background
                img.img-responsive(src="../images/" + bgimg, srcset="../images/" + bgimg, alt=title)
          ._c-banner-cta--intro
-            img.img-responsive(src="../images/" + icon, srcset="../images/" + icon, alt=title)
+            if icon
+               img.img-responsive(src="../images/" + icon, srcset="../images/" + icon, alt=title)
             if title
                h2 #{title}
             if parrintro
@@ -66,4 +67,5 @@ mixin bannerCta( title, icon, parr, footext, copybtn, linkbtn, bgimg, isbgpic, p
                                           | #{btn4sub}                     
          if isbgpic == true
             ._c-banner-cta--footer
-               a.o-btn.btn-outline.color-dark-green(href=linkbtn) #{ copybtn }
+               if copybtn
+                  a.o-btn.btn-outline.color-dark-green(href=linkbtn) #{ copybtn }

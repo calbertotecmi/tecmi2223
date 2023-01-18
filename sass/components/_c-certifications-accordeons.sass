@@ -34,6 +34,22 @@
                span
                   color: $color-text-default
 
+   &.accent-master
+      h2
+         color: $dark-green
+      ._c-certifications-accordeons--certificate-title 
+         border-color: $dark-green
+         h3
+            color: $dark-green
+      ._c-certifications-accordeons--img::before
+         background-color: #C5E86C
+      ._c-certifications-accordeons--infocontent 
+         ul
+            li
+               color: $green-pastel
+               span
+                  color: $color-text-default
+
    &.accent-profeaso
       h2
          color: $color-profesional-aso-3
@@ -104,6 +120,16 @@
    p
       @include maxMobile      
          text-align: left
+
+   &--intro
+      margin-bottom: 60px
+      h2
+         margin: 0 0 0
+      p
+         width: 100%
+         max-width: 1000px
+         margin: 30px auto
+         padding: 0 10px
 
    &--grid
       @include flexCenter

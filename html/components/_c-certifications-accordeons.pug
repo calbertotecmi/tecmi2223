@@ -1,8 +1,11 @@
-mixin certificationsAccordeons( title, imagen, istabs, tab1=null, tab1inf=null, tab2=null, tab2inf=null, tab3=null, tab3inf=null, tab4=null, tab4inf=null, tab5=null, tab5inf=null, tab6=null, tab6inf=null, islist, contenido )
+mixin certificationsAccordeons( title, imagen, istabs, tab1=null, tab1inf=null, tab2=null, tab2inf=null, tab3=null, tab3inf=null, tab4=null, tab4inf=null, tab5=null, tab5inf=null, tab6=null, tab6inf=null, islist, contenido, desc = null)
    ._c-certifications-accordeons&attributes(attributes)
       .o-container
          if !islist
-            h2.text-center!=title
+            div(class= desc!=null ? "_c-certifications-accordeons--intro" : "")
+               h2.text-center!=title
+               if desc
+                  p.text-center!=desc
 
          .o-grid-row._c-certifications-accordeons--grid
 
@@ -52,3 +55,4 @@ mixin certificationsAccordeons( title, imagen, istabs, tab1=null, tab1inf=null, 
                   h2!=title 
                   ._c-certifications-accordeons--infocontent
                      !=contenido
+
