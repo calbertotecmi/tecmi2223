@@ -18,6 +18,22 @@
       ._c-certifications-accordeons--img::before
          background-color: $dark-green
 
+   &.accent-default
+      h2
+         color: $dark-green
+      ._c-certifications-accordeons--certificate-title 
+         border-color: $dark-green
+         h3
+            color: $dark-green
+      ._c-certifications-accordeons--img::before
+         background-color: $dark-green
+      ._c-certifications-accordeons--infocontent 
+         ul
+            li
+               color: $green-pastel
+               span
+                  color: $color-text-default
+
    &.accent-profeaso
       h2
          color: $color-profesional-aso-3
@@ -191,6 +207,29 @@
          @include maxMobile
             // font-size: 1.1rem
 
-
+   &--info
+      width: 100%
+      max-width: 630px
+      padding: 0 10px
+      @include minMobile
+         margin-left: 50px
+      h2
+         color: $dark-green
+         margin-bottom: 40px
+      
+   &--infocontent
+      ul
+         @include minMobile
+            padding-left: 40px
+         @include maxMobile
+            padding-left: 30px
+         li
+            list-style: disc
+            @include minMobile
+               margin-bottom: 20px
+            @include maxMobile
+               margin-bottom: 15px
+      
+      
 
       

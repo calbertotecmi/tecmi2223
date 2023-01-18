@@ -138,6 +138,36 @@
       a.o-btn
          background-color: $dark-green
 
+   &.accent-especialidad
+      background-color: #97D700
+      &::before
+         content: ""
+         position: absolute
+         right: 0
+         bottom: 0
+         height: 100%
+         width: 50%
+         background-color: #A6D342
+         @include tabletPortraitToDesktopSmall
+            width: 40%
+         @include mobileToPortrait         
+            width: 80px
+            height: 80px
+         @include maxMobile
+            width: 55px
+            height: 55px
+      ._c-banner-principal-t--picture
+         &::before
+            background-color: #97D700
+            @include tabletPortraitToDesktopSmall
+               background-color: #97D700
+         &::after
+            background-color: #74A433
+            @include tabletPortraitToDesktopSmall
+               background-color: #74A433
+      a.o-btn
+         background-color: $dark-green
+
 
 
    &--intro

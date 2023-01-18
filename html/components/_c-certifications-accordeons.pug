@@ -1,26 +1,54 @@
-._c-certifications-accordeons.accent-prepa
-   .o-container
-      h2.text-center Obtén certificaciones para tu futuro profesional 
+mixin certificationsAccordeons( title, imagen, istabs, tab1=null, tab1inf=null, tab2=null, tab2inf=null, tab3=null, tab3inf=null, tab4=null, tab4inf=null, tab5=null, tab5inf=null, tab6=null, tab6inf=null, islist, contenido )
+   ._c-certifications-accordeons&attributes(attributes)
+      .o-container
+         if !islist
+            h2.text-center!=title
 
-      .o-grid-row._c-certifications-accordeons--grid
+         .o-grid-row._c-certifications-accordeons--grid
 
-         .col.size-5._c-certifications-accordeons--img
-            img(src="../images/img-prepa-certifications.jpg", srcset="../images/img-prepa-certifications.jpg", alt="GG")
-            
-         .col.size-7._c-certifications-accordeons--list.accordeon-init
-            ._c-certifications-accordeons--certificate.accordeon-active
-               ._c-certifications-accordeons--certificate-title.accordeon-btn
-                  h3 Certificación en Tecnología (Python)
-               ._c-certifications-accordeons--certificate-body
-                  p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-            ._c-certifications-accordeons--certificate
-               ._c-certifications-accordeons--certificate-title.accordeon-btn
-                  h3 Certificación en Creatividad e Innovación
-               ._c-certifications-accordeons--certificate-body
-                  p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-            ._c-certifications-accordeons--certificate
-               ._c-certifications-accordeons--certificate-title.accordeon-btn
-                  h3 Certificación en Finanzas Personales
-               ._c-certifications-accordeons--certificate-body
-                  p Con esta certificación aprenderás uno de los lenguajes de programación más importantes en la actualidad, para desarrollar una amplia gama de aplicaciones tecnológicas, incluso con desarrollos de inteligencia artificial que te abrirán las puertas a mayores oportunidades laborales.
-
+            .col.size-5._c-certifications-accordeons--img
+               img(src="../images/" + imagen, srcset="../images/" + imagen, alt=title)
+               
+            if istabs
+               .col.size-7._c-certifications-accordeons--list.accordeon-init
+                  if tab1
+                     ._c-certifications-accordeons--certificate
+                        ._c-certifications-accordeons--certificate-title.accordeon-btn
+                           h3!=tab1
+                        ._c-certifications-accordeons--certificate-body
+                           p!=tab1inf
+                  if tab2
+                     ._c-certifications-accordeons--certificate
+                        ._c-certifications-accordeons--certificate-title.accordeon-btn
+                           h3!=tab2
+                        ._c-certifications-accordeons--certificate-body
+                           p!=tab2inf
+                  if tab3
+                     ._c-certifications-accordeons--certificate
+                        ._c-certifications-accordeons--certificate-title.accordeon-btn
+                           h3!=tab3
+                        ._c-certifications-accordeons--certificate-body
+                           p!=tab3inf
+                  if tab4
+                     ._c-certifications-accordeons--certificate
+                        ._c-certifications-accordeons--certificate-title.accordeon-btn
+                           h3!=tab4
+                        ._c-certifications-accordeons--certificate-body
+                           p!=tab4inf
+                  if tab5
+                     ._c-certifications-accordeons--certificate
+                        ._c-certifications-accordeons--certificate-title.accordeon-btn
+                           h3!=tab5
+                        ._c-certifications-accordeons--certificate-body
+                           p!=tab5inf
+                  if tab6
+                     ._c-certifications-accordeons--certificate
+                        ._c-certifications-accordeons--certificate-title.accordeon-btn
+                           h3!=tab6
+                        ._c-certifications-accordeons--certificate-body
+                           p!=tab6inf
+            if islist
+               .col.size-7._c-certifications-accordeons--info
+                  h2!=title 
+                  ._c-certifications-accordeons--infocontent
+                     !=contenido

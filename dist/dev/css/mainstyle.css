@@ -3279,6 +3279,47 @@ header .mainNav--mobileActions a {
 ._c-banner-cta.banner-in-product.accent-profesemestral ._c-banner-cta--sesionInfo a.o-btn .col {
   padding: 0;
 }
+._c-banner-cta.banner-in-product.accent-especialidad {
+  background-color: #78D64B;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--intro {
+  max-width: 945px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--intro h2 {
+  marign: 0 0 20px;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--intro p {
+  color: #00534C;
+  margin: 0 0 20px;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--intro p.last-child {
+  margin-bottom: 0;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--sesionInfo {
+  padding: 0 0;
+  margin: 20px 0 0;
+  width: 100%;
+  max-width: 900px;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--sesionInfo img {
+  display: block;
+  max-width: 100%;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--sesionInfo a.o-btn {
+  text-align: left;
+  font-weight: 500;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 15px;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--sesionInfo a.o-btn strong {
+  font-weight: 600;
+}
+._c-banner-cta.banner-in-product.accent-especialidad ._c-banner-cta--sesionInfo a.o-btn .col {
+  padding: 0;
+}
 ._c-banner-cta--background {
   position: absolute;
   left: 0;
@@ -4621,6 +4662,54 @@ header .mainNav--mobileActions a {
 ._c-banner-principal-t.accent-profeejec a.o-btn {
   background-color: #00534C;
 }
+._c-banner-principal-t.accent-especialidad {
+  background-color: #97D700;
+}
+._c-banner-principal-t.accent-especialidad::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #A6D342;
+}
+@media (min-width: 960px) and (max-width: 1140px) {
+  ._c-banner-principal-t.accent-especialidad::before {
+    width: 40%;
+  }
+}
+@media (min-width: 568px) and (max-width: 960px) {
+  ._c-banner-principal-t.accent-especialidad::before {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 568px) {
+  ._c-banner-principal-t.accent-especialidad::before {
+    width: 55px;
+    height: 55px;
+  }
+}
+._c-banner-principal-t.accent-especialidad ._c-banner-principal-t--picture::before {
+  background-color: #97D700;
+}
+@media (min-width: 960px) and (max-width: 1140px) {
+  ._c-banner-principal-t.accent-especialidad ._c-banner-principal-t--picture::before {
+    background-color: #97D700;
+  }
+}
+._c-banner-principal-t.accent-especialidad ._c-banner-principal-t--picture::after {
+  background-color: #74A433;
+}
+@media (min-width: 960px) and (max-width: 1140px) {
+  ._c-banner-principal-t.accent-especialidad ._c-banner-principal-t--picture::after {
+    background-color: #74A433;
+  }
+}
+._c-banner-principal-t.accent-especialidad a.o-btn {
+  background-color: #00534C;
+}
 ._c-banner-principal-t--intro {
   width: 100%;
   max-width: 615px;
@@ -5584,6 +5673,19 @@ header .mainNav--mobileActions a {
 ._c-cta-intercultural.accent-prepa ._c-cta-intercultural--text ul li::before {
   background-image: url("../images/arrow-check-prepa.png");
 }
+._c-cta-intercultural.accent-especialidad ._c-cta-intercultural--picture-inf .ico {
+  background-color: #97D700;
+}
+._c-cta-intercultural.accent-especialidad ._c-cta-intercultural--text a.o-btn {
+  color: #00534C;
+}
+._c-cta-intercultural.accent-especialidad ._c-cta-intercultural--text a.o-btn:hover {
+  background-color: #00534C;
+  color: #ffffff;
+}
+._c-cta-intercultural.accent-especialidad ._c-cta-intercultural--text ul li::before {
+  background-image: url("../images/arrow-check-prepa.png");
+}
 ._c-cta-intercultural.accent-profesemestral ._c-cta-intercultural--picture-inf .ico {
   background-color: #70D44B;
 }
@@ -5597,6 +5699,9 @@ header .mainNav--mobileActions a {
 ._c-cta-intercultural.accent-profesemestral ._c-cta-intercultural--text ul li::before {
   background-image: url("../images/arrow-green-pastel.png");
   background-size: 100%;
+}
+._c-cta-intercultural.shortcta ._c-cta-intercultural--picture-bg {
+  max-height: 600px;
 }
 ._c-cta-intercultural .o-container {
   padding: 0;
@@ -5838,6 +5943,24 @@ header .mainNav--mobileActions a {
 }
 ._c-certifications-accordeons.accent-prepa ._c-certifications-accordeons--img::before {
   background-color: #00534C;
+}
+._c-certifications-accordeons.accent-default h2 {
+  color: #00534C;
+}
+._c-certifications-accordeons.accent-default ._c-certifications-accordeons--certificate-title {
+  border-color: #00534C;
+}
+._c-certifications-accordeons.accent-default ._c-certifications-accordeons--certificate-title h3 {
+  color: #00534C;
+}
+._c-certifications-accordeons.accent-default ._c-certifications-accordeons--img::before {
+  background-color: #00534C;
+}
+._c-certifications-accordeons.accent-default ._c-certifications-accordeons--infocontent ul li {
+  color: #26D07C;
+}
+._c-certifications-accordeons.accent-default ._c-certifications-accordeons--infocontent ul li span {
+  color: #151515;
 }
 ._c-certifications-accordeons.accent-profeaso h2 {
   color: #79242F;
@@ -6109,6 +6232,44 @@ header .mainNav--mobileActions a {
   line-height: 1.5;
   padding: 0;
 }
+._c-certifications-accordeons--info {
+  width: 100%;
+  max-width: 630px;
+  padding: 0 10px;
+}
+@media (min-width: 568px) {
+  ._c-certifications-accordeons--info {
+    margin-left: 50px;
+  }
+}
+._c-certifications-accordeons--info h2 {
+  color: #00534C;
+  margin-bottom: 40px;
+}
+@media (min-width: 568px) {
+  ._c-certifications-accordeons--infocontent ul {
+    padding-left: 40px;
+  }
+}
+@media (max-width: 568px) {
+  ._c-certifications-accordeons--infocontent ul {
+    padding-left: 30px;
+  }
+}
+._c-certifications-accordeons--infocontent ul li {
+  list-style: disc;
+}
+@media (min-width: 568px) {
+  ._c-certifications-accordeons--infocontent ul li {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 568px) {
+  ._c-certifications-accordeons--infocontent ul li {
+    margin-bottom: 15px;
+  }
+}
+
 ._c-events-in-career-section {
   background-color: #EFEFEF;
   padding: 70px 0;
@@ -7735,6 +7896,30 @@ header .mainNav--mobileActions a {
 ._c-graduate-grid {
   padding: 100px 0 50px;
   background-color: #EFEFEF;
+}
+._c-graduate-grid.accent-especialidad {
+  background-color: #00534C;
+  padding: 50px 0;
+}
+._c-graduate-grid.accent-especialidad h2 {
+  color: #ffffff;
+  font-size: 1.375rem;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+._c-graduate-grid.accent-especialidad h2:last-child {
+  margin-bottom: 0;
+}
+._c-graduate-grid.accent-especialidad ._c-graduate-grid--ico {
+  background-color: #64A70B;
+}
+._c-graduate-grid.accent-especialidad ._c-graduate-grid--copy {
+  color: #ffffff;
+}
+._c-graduate-grid.accent-especialidad ._c-graduate-grid--copy h2, ._c-graduate-grid.accent-especialidad ._c-graduate-grid--copy h3, ._c-graduate-grid.accent-especialidad ._c-graduate-grid--copy a, ._c-graduate-grid.accent-especialidad ._c-graduate-grid--copy p, ._c-graduate-grid.accent-especialidad ._c-graduate-grid--copy p a {
+  color: #ffffff;
 }
 ._c-graduate-grid.accent-profaso {
   background-color: #00534C;

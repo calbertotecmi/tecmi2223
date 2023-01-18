@@ -1,0 +1,270 @@
+//- Extend template global
+extends layout/_template
+
+append configuracion
+   -var page			= {}
+   -page['lang']		= 'es'
+   -page['libsCss']	= ['slick','slick-theme']
+block contenido
+   main
+
+      include layout/_header
+      include components/_c-banner-principal-t
+      +bannerT( 
+         /* titulo en h1 */ 'Especialidad <br>En Innovación', 
+         /* titulo en h2 - si no usar dejar null (aplica para todos) */ null, 
+         /* descripcion en parrafo */ 'Especializarte en innovación te dará herramientas para generar modelos de negocios diferentes, atractivos, tecnológicos y disruptivos, que te permitirán convertirte en un referente en el área que más te apasiona.', 
+         /* enlace del boton */ '#!', 
+         /* copy del boton */ 'Quiero más información', 
+         /* imagen, la ruta por defecto es ../images/ no se puede cambiar */ 'img-t.jpg' 
+      )(class="accent-especialidad")  /* por si lleva un tema */
+      //- End banner t
+
+      include components/_c-intro-producto
+      +introProductoInfo4Items(
+         false,
+         null,
+         null,
+         null,
+         "Los negocios se han vuelto cada vez más digitales, desarrollando soluciones de aplicaciones disruptivas, como las plataformas de streaming, los servicios de transporte y hospedaje, entre otros muchos ejemplos, en donde la tecnología se ha vuelto parte de nuestro día a día. ",
+         "En la Especialidad en Innovación podrás crear soluciones de negocio que te darán una ventaja competitiva en la industria. A lo largo de la especialidad también aprenderás y practicarás las técnicas y metodologías para desarrollar proyectos con una clara estrategia creativa que te permita detectar oportunidades no resueltas o necesidades no atendidas en el mercado.",                
+         null,
+         null,
+         null,
+         /* icon first */
+         "modalidad-1.png",
+         "Modalidad",
+         "Online",
+         /* icon two */
+         "modalidad-1.png",
+         "Plan",
+         "Tetramestral",
+         /* icon three */
+         "modalidad-1.png",
+         "Duración",
+         "3 años",
+         /* last icon */
+         "modalidad-1.png",
+         "Idioma",
+         "Español",
+         /* titulo de que trata opcional */ "¿De qué trata la Especialidad en Innovación?"
+      )(class="accent-profeaso")  /* por si lleva un tema */
+      //- End intro      
+
+      include components/_c-plan-de-estudios
+      +sectionPlanEstudios(
+         "Plan de estudios",
+         "programaprofesemestral.png",
+         null,
+         "33%",
+         "Certificados y especialidades",
+         "18%",
+         "Formación personal",
+         "49%",
+         "Formación carrera",
+         "#!",
+         "Descarga aquí nuestro plan de estudios",
+         /* text intro */ "Nuestros programas son creados en coordinación con empresas multinacionales especialistas en Innovación para que conozcas a fondo cómo desarrollar estrategias e incrementar procesos, productos y servicios innovadores en las organizaciones.",
+         /* text intro 2 */ "La Especialidad en Innovación cuenta con Reconocimiento de Validez Oficial de Estudios (RVOE) otorgado por la Secretaría de Educación Pública.",
+         /*linkrvoe*/ "#!."
+      )(class="accent-profesemestral-2")
+      //- End plan de estudios
+
+
+      - var cuerpolista = '<ul class="o-grid-row"><li class="col size-xs-12 size-6"><span>Design Thinking</span> </li> <li class="col size-xs-12 size-6"><span>Jobs To Be Done </span></li> <li class="col size-xs-12 size-6"><span>Service Thinking </span></li> <li class="col size-xs-12 size-6"><span>STEEP Analysis </span></li> <li class="col size-xs-12 size-6"><span>TrendWatching </span></li> <li class="col size-xs-12 size-6"><span>Quality Function Development </span></li> <li class="col size-xs-12 size-6"><span>Consumer Trends </span></li> <li class="col size-xs-12 size-6"><span>IDEO Design Kits </span></li> <li class="col size-xs-12 size-6"><span>Canvas Scamper </span></li> <li class="col size-xs-12 size-6"><span>Modelo KANO </span></li> <li class="col size-xs-12 size-6"><span>Método Delphi </span></li> <li class="col size-xs-12 size-6"><span>Metodología SCRUM </span></li> <li class="col size-xs-12 size-6"><span>Método TRIZ</span></li> <li class="col size-xs-12 size-6"><span>Metodología Agile</span></li></ul>';
+      include components/_c-certifications-accordeons
+      +certificationsAccordeons( 
+         /* title,  */ "Conocerás las herramientas para encontrar mejores soluciones a los retos que se presentan día a día",
+         /* imagen,  */ "img-prepa-certifications.jpg",
+         /* istabs=true,  */ false,
+         /* tab1=null,  */ null,
+         /* tab1inf=null,  */ null,
+         /* tab2=null,  */ null,
+         /* tab2inf=null,  */ null,
+         /* tab3=null,  */ null,
+         /* tab3inf=null,  */ null,
+         /* tab4=null,  */ null,
+         /* tab4inf=null,  */ null,
+         /* tab5=null,  */ null,
+         /* tab5inf=null,  */ null,
+         /* tab6=null,  */ null,
+         /* tab6inf=null , */ null,
+         /* islist=null */ true,
+         /* cuerpo=null */ cuerpolista,
+      )(class="accent-default")
+      
+      include components/_c-cta-intercultural
+      +ctaIntercultural(
+         /*title* */ "Al terminar de estudiar la Maestría enfocada en Logística podrás:",
+         /*desc* */null,
+         /*content* */"<p class='text-center'>Crear soluciones de negocio, bajo un proceso de innovación basadas en metodologías ágiles que te ayudarán a generar un gran impacto económico y social para tu empresa.</p>",
+         /*icon* */ "icon-prod-tab-head.png",
+         /* bg */ "img-banner-prepa-internacional.jpg"
+      )(class="accent-especialidad shortcta")
+      //- end
+      
+      include components/_c-graduate-grid-items
+      +graduateGridSixItems(
+         /*title, */ null,
+         /*subtitle, */ null,
+         /*icon1, */ "img-pa-1.png",
+         /*copy1, */ "Study Tours ",
+         /*icon2, */ "img-pa-1.png",
+         /*copy2, */ "Intercambios virtuales",
+         /*icon3, */ "img-pa-1.png",
+         /*copy3, */ "Proyectos colaborativos",
+         /*icon1, */ "img-pa-1.png",
+         /*copy1, */ "Study Tours ",
+         /*icon2, */ "img-pa-1.png",
+         /*copy2, */ "Intercambios virtuales",
+         /*icon3, */ "img-pa-1.png",
+         /*copy3, */ "Proyectos colaborativos",
+
+      )(class="accent-especialidad")
+      //- end graduate
+
+      include components/_c-testimonios
+      +testimoniosBlock(
+         /*title, */ "Testimonios",
+         /*test1, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person1, */ "Rebeca López",
+         /*work1, */ "Alumna Ingeniería Industrial",
+         /*pic1, */ "img-testimonio-example.jpg",
+         /*test2, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person2, */ "Rebeca López",
+         /*work2, */ "Alumna Ingeniería Industrial",
+         /*pic2, */ "img-testimonio-example.jpg",
+         /*test3, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person3, */ "Rebeca López",
+         /*work3, */ "Alumna Ingeniería Industrial",
+         /*pic3, */ "img-testimonio-example.jpg",
+         /*test4, */ null,
+         /*person4, */ null,
+         /*work4, */ null,
+         /*pic4 */ null
+      )(class="accent-profesemestral bg-white-gray")
+      //- end testimonios
+
+      include components/_c-banner-cta
+      +bannerCta( 
+         /*title, */ null,
+         /*icon, */ "burbuja-de-dialogo%204.png",
+         /*parr, */ null,
+         /*footext, */ null,
+         /*copybtn, */ "Experiencia Intercultural",
+         /*linkbtn, */ "#!",
+         /*bgimg */ null,
+         /* big pic */ false,
+         /* parr1intro */ "Si todavía estás pensando si esta carrera es para tí, envíanos un mensaje y nos contactaremos contigo para aclarar tus dudas y ayudarte a tomar la mejor decisión para impulsar tu camino profesional.",
+         /* parr2intro */ "Nos importa que realices tu Proposito de Vida, en Tecmilenio te ayudamos y te preparamos",
+         /* es grid= */ true,
+         /* btn 1 link */ "#!",
+         /* btn 1 titulo */ "Proceso de Admisión",
+         /* btn 1 subtitulo */ "Consultar",
+         /* btn 1 icon */ "ico-phone.png",
+         
+         /* btn 2 link */ "#!",
+         /* btn 2 titulo */ "Requisitos",
+         /* btn 2 subtitulo */ "Consultar",
+         /* btn 2 icon */ "ico-phone.png",
+         
+         /* btn 3 link */ "#!",
+         /* btn 3 titulo */ "Periodos de ingresos",
+         /* btn 3 subtitulo */ "Consultar",
+         /* btn 3 icon */ "ico-phone.png",
+         
+         /* btn 4 link */ "#!",
+         /* btn 4 titulo */ "Contacto",
+         /* btn 4 subtitulo */ "Consultar",
+         /* btn 4 icon */ "ico-phone.png"
+
+      )(class="banner-in-product accent-especialidad")
+      //- end
+
+      include components/_c-related-careers
+      +relatedCareers( 
+         /*titlesection*/ "Carreras relacionadas",
+         /*career1*/ "Carrera relacionada 1",
+         /*career1link*/ "#!",
+         /*career1pic  */ "career-example.jpg",
+
+         /*career2*/ "Carrera relacionada 2",
+         /*career2link*/ "#!",
+         /*career2pic  */ "career-example.jpg",
+
+         /*career3*/ "Carrera relacionada 3",
+         /*career3link*/ "#!",
+         /*career3pic  */ "career-example.jpg",
+
+         /*career4*/ "Carrera relacionada 4",
+         /*career4link*/ "#!",
+         /*career4pic  */ "career-example.jpg",
+
+         /*career5*/ "Carrera relacionada 5",
+         /*career5link*/ "#!",
+         /*career5pic  */ "career-example.jpg",
+
+         /*career6*/ "Carrera relacionada 6",
+         /*career6link*/ "#!",
+         /*career6pic  */ "career-example.jpg",
+
+         /*career7*/ "Carrera relacionada 7",
+         /*career7link*/ "#!",
+         /*career7pic  */ "career-example.jpg",
+
+         /*career8*/ "Carrera relacionada 8",
+         /*career8link*/ "#!",
+         /*career8pic  */ "career-example.jpg"
+      )(class="accent-profesemestral")
+      //- end
+
+
+      include layout/_footer
+   
+   script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+   script(src="../js/global.js")
+   script(src="../vendor/slick.min.js")
+   script.
+      // Carousel testimonios
+      $('._c-testimonios-section--carousel').slick({
+         dots: true,
+         infinite: false,
+         speed: 300,
+         slidesToShow: 1,
+      });
+
+
+      // Carousel related careers
+      $('#related-careers-list-id').slick({
+         dots: false,
+         infinite: false,
+         speed: 300,
+         slidesToShow: 4,
+         slidesToScroll: 1,
+         responsive: [
+            {
+               breakpoint: 1080,
+               settings: {
+                  centerMode: false,
+                  slidesToShow: 3,
+                  dots: true
+               }
+            },
+            {
+               breakpoint: 700,
+               settings: {
+                  centerMode: false,
+                  slidesToShow: 2,
+                  dots: true
+               }
+            },
+            {
+               breakpoint: 560,
+               settings: {
+                  centerMode: false,
+                  slidesToShow: 1,
+                  dots: true
+               }
+            }
+         ]
+      });                  
