@@ -1,0 +1,319 @@
+//- Extend template global
+extends layout/_template
+
+append configuracion
+   -var page			= {}
+   -page['lang']		= 'es'
+   -page['libsCss']	= ['slick','slick-theme']
+block contenido
+   main
+
+      include layout/_header
+      include components/_c-banner-principal-t
+      +bannerT( 
+         /* titulo en h1 */ 'Licenciatura en Psicología empresarial', 
+         /* titulo en h2 - si no usar dejar null (aplica para todos) */ null, 
+         /* descripcion en parrafo */ 'Diseña ambientes laborales mejorando la cohesión de los equipos que permita a la empresa alcanzar sus objetivos.', 
+         /* enlace del boton */ '#!', 
+         /* copy del boton */ 'Quiero más información', 
+         /* imagen, la ruta por defecto es ../images/ no se puede cambiar */ 'img-t.jpg' 
+      )(class="accent-profeejec")  /* por si lleva un tema */
+      //- End banner t
+
+      include components/_c-intro-producto
+      +introProductoInfo4Items(
+         false,
+         null,
+         null,
+         null,
+         "La psicología empresarial busca promover el desarrollo de las personas dentro de las organizaciones o instituciones, a través del análisis del comportamiento de los individuos y sus grupos de influencia, creando con esto ambientes laborales que promuevan el desarrollo y el bienestar integral del capital humano. La carrera de Psicología Empresarial analiza, evalúa y propone medidas eficaces para entender el comportamiento de los colaboradores y promover la cohesión entre los equipos para mejorar clima laboral y el rendimiento en los puestos de trabajo en una empresa. ",
+         "Al estudiar la Licenciatura en Psicología Empresarial sabrás diseñar ambientes laborales que promuevan el desarrollo de los colaboradores y trabajen de manera integral, equitativa y propositiva, proponiendo mecanismos de comunicación y estilos de liderazgo para alcanzar los objetivos que se han planteado.  ",       
+         null,
+         null,
+         null,
+         /* icon first */
+         "modalidad-1.png",
+         "Modalidad",
+         "Online",
+         /* icon two */
+         "modalidad-1.png",
+         "Plan",
+         "Tetramestral",
+         /* icon three */
+         "modalidad-1.png",
+         "Duración",
+         "3 años",
+         /* last icon */
+         "modalidad-1.png",
+         "Idioma",
+         "Español",
+         /* titulo de que trata opcional */ "¿De qué trata la carrera de Psicología Empresarial?"
+      )(class="accent-profeaso")  /* por si lleva un tema */
+      //- End intro
+
+      include components/_c-slide-slick-imgside
+      +slideSlickWithBg( 
+         "bg-modalidades-grid.jpg",
+         /*title,*/ "Algunos de los principales beneficios al estudiar esta carrera",
+         /*parrint,*/ null,
+
+         /* ico1 */ "modalidad-1.png",
+         /*tit1,*/ "Presencial",
+         /*text1,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de tomar la clase en vivo de manera virtual.",
+         /*copybtn1,*/ "Leer más",
+         /*enlacebtn1,*/ "#!",
+
+         /*ico2,*/ "modalidad-1.png",
+         /*tit2,*/ "Online",
+         /*text2,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn2,*/ "Leer más",
+         /*enlacebtn2,*/ "#!",
+
+         /*ico3,*/ "modalidad-1.png",
+         /*tit3,*/ "Connect",
+         /*text3,*/ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn3,*/ "Leer más",
+         /*enlacebtn3,*/ "#!",
+
+         /*ico4,*/ "modalidad-1.png",
+         /*tit4,*/ "Autodirigido",
+         /*text4 */ "Vive la experiencia de disfrutar de la convivencia con el resto de los estudiantes y profesores, al presentarte físicamente en el aula. En caso de que se complique tu traslado al campus, también tienes la opción de #[strong tomar la clase en vivo de manera virtual.] ",
+         /*copybtn4,*/ "Leer más",
+         /*enlacebtn4,*/ "#!"
+      )(class="accent-profesemestral")
+      //- End slick carousel
+
+      include components/_c-banner-cta
+      +bannerCta( 
+         /*title, */ "Conoce todos los beneficios que te da estudiar esta carrera en Universidad Tecmilenio",
+         /*icon, */ "ico-inter.png",
+         /*parr, */ null,
+         /*footext, */ null,
+         /*copybtn, */ "Experiencia Intercultural",
+         /*linkbtn, */ "#!",
+         /*bgimg */ "intercambio-bg.jpg",
+         /* big pic */ true
+      )(class="accent-profeaso")
+      //- End banner cta
+
+      include components/_c-plan-de-estudios
+      +sectionPlanEstudios(
+         "El Plan de estudios de psicología empresarial",
+         "programaprofesemestral.png",
+         null,
+         "33%",
+         "Certificados y especialidades",
+         "18%",
+         "Formación personal",
+         "49%",
+         "Formación carrera",
+         "#!",
+         "Descarga aquí nuestro plan de estudios",
+         /* text intro */ "Nuestros programas son creados tomando en cuenta las tendencias de las competencias requeridas por especialistas en Recursos Humanos y Desarrollo de Talento, para que conozcas a fondo cómo desarrollar estrategias que impacten en una una cultura organizacional sostenible que lleve a la empresa a lograr sus objetivos.",
+         /* text intro 2 */ "La Licenciatura de Psicología Empresarial cuenta con Reconocimiento de Validez Oficial de Estudios (RVOE) otorgado por la Secretaría de Educación Pública.",
+         /*linkrvoe*/ "#!."
+         
+      )(class="accent-profesemestral-2")
+      //- End plan de estudios
+
+      include components/_c-copy-and-picture-color-box
+      +copyAndPictureBox( 
+         /*title*/ "Potencializa tu carrera con certificados", 
+         /*subtitle, */ "Además de profundizar en el área de Psicología Empresarial, podrás especializarte con algunos de nuestros más de 30 certificados, que impulsarán tu futuro laboral.",
+         /* islist*/ false,
+         /*list */  null,
+         /* is tabs */ true,
+         /* tab1 */ "Psicología para la educación",
+         /* tab1info */ "Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.",
+         /* tab2 */ "Psicología organizacional",
+         /* tab2info */ "Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico.",
+         /* tab3 */ "Liderazgo Plus",
+         /* tab3info */ "Durante tus estudios contarás con personal que te asesorará y brindará orientación para que logres tu éxito académico."
+      )(class="accent-profesemestral")
+      //- End
+
+      - var contenidoPictureWithCopyExtend = '<ul><li><span>Diseñar e implementar procesos de capacitación para mejorar la productividad en la organización. </span></li><li><span>Resolver problemas basándote en indicadores psicológicos y sociales medidos con pruebas psicométricas e interretados con diversas estrategias matemáticas y estadísticas. </span></li><li><span>Implementar modelos estadísticos que apoyen el proceso de toma de decisiones de la organización. </span></li><li><span>Evaluar la manera en la que, quienes trabajan en una organización, cumplen los objetivos de la misma para definir estrategias que ayuden a la mejora continua del equipo. </span></li><li><span>Realizar intervenciones para ayudar a las personas con las dificultades que puedan tener en diferentes contextos sociales y que puedan afectar su desempeño en la organización. </span></li><li><span>Conocerás las características de cada personalidad, desde la gestación hasta el final de la vida humana, la base es vital para entender el comportamiento humano. </span></li><li><span>Podrás interpretar indicadores psicológicos y sociales para desarrollar soluciones a problemas de capital humano en la organización. </span></li><li><span>Tendrás la capacidad de proponer soluciones al detectar problemas de comportamiento en personas o en grupos, que puedan estar afectando a la institución. </span></li><li><span>Entender el comportamiento organizacional, analizando las características de las personas trabajadoras en la organización, para diseñar estrategias que lleven a la empresa a cumplir sus objetivos.</span></li></ul>';
+      include components/_c-picture-with-copy-extended-info
+      +pictureWithCopyExtendInfo( 
+         /*img1, */ "img-home-1.jpg",
+         /*img2, */ "img-home-2.jpg",
+         /*title, */ "Al terminar de estudiar Psicología Empresarial podrás:",
+         /*subtitle, */ null,
+         /*content , */ contenidoPictureWithCopyExtend
+      )(class="accent-profesemestral")
+      //- end    
+
+      include components/_c-testimonios
+      +testimoniosBlock(
+         /*title, */ "Testimonios",
+         /*test1, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person1, */ "Rebeca López",
+         /*work1, */ "Alumna Ingeniería Industrial",
+         /*pic1, */ "img-testimonio-example.jpg",
+         /*test2, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person2, */ "Rebeca López",
+         /*work2, */ "Alumna Ingeniería Industrial",
+         /*pic2, */ "img-testimonio-example.jpg",
+         /*test3, */ "Quidam officiis similique tollit indoctum efficiendi nihil tantas platonem nemore singulis an ius, nullam ornatus nam maiestatis mel everti invenire intellegam, legendos consequuntur eu sit.",
+         /*person3, */ "Rebeca López",
+         /*work3, */ "Alumna Ingeniería Industrial",
+         /*pic3, */ "img-testimonio-example.jpg",
+         /*test4, */ null,
+         /*person4, */ null,
+         /*work4, */ null,
+         /*pic4 */ null
+      )(class="accent-profesemestral bg-white-gray")
+      //- end testimonios
+
+      +bannerCta( 
+         /*title, */ null,
+         /*icon, */ "burbuja-de-dialogo%204.png",
+         /*parr, */ null,
+         /*footext, */ null,
+         /*copybtn, */ "Experiencia Intercultural",
+         /*linkbtn, */ "#!",
+         /*bgimg */ null,
+         /* big pic */ false,
+         /* parr1intro */ "Si todavía estás pensando si esta carrera es para tí, envíanos un mensaje y nos contactaremos contigo para aclarar tus dudas y ayudarte a tomar la mejor decisión para impulsar tu camino profesional.",
+         /* parr2intro */ "Nos importa que realices tu Proposito de Vida, en Tecmilenio te ayudamos y te preparamos",
+         /* es grid= */ true,
+         /* btn 1 link */ "#!",
+         /* btn 1 titulo */ "Proceso de Admisión",
+         /* btn 1 subtitulo */ "Consultar",
+         /* btn 1 icon */ "ico-phone.png",
+         
+         /* btn 2 link */ "#!",
+         /* btn 2 titulo */ "Requisitos",
+         /* btn 2 subtitulo */ "Consultar",
+         /* btn 2 icon */ "ico-phone.png",
+         
+         /* btn 3 link */ "#!",
+         /* btn 3 titulo */ "Periodos de ingresos",
+         /* btn 3 subtitulo */ "Consultar",
+         /* btn 3 icon */ "ico-phone.png",
+         
+         /* btn 4 link */ "#!",
+         /* btn 4 titulo */ "Contacto",
+         /* btn 4 subtitulo */ "Consultar",
+         /* btn 4 icon */ "ico-phone.png"
+
+      )(class="banner-in-product accent-profesemestral")
+      //- end
+
+      include components/_c-related-careers
+      +relatedCareers( 
+         /*titlesection*/ "Carreras relacionadas",
+         /*career1*/ "Carrera relacionada 1",
+         /*career1link*/ "#!",
+         /*career1pic  */ "career-example.jpg",
+
+         /*career2*/ "Carrera relacionada 2",
+         /*career2link*/ "#!",
+         /*career2pic  */ "career-example.jpg",
+
+         /*career3*/ "Carrera relacionada 3",
+         /*career3link*/ "#!",
+         /*career3pic  */ "career-example.jpg",
+
+         /*career4*/ "Carrera relacionada 4",
+         /*career4link*/ "#!",
+         /*career4pic  */ "career-example.jpg",
+
+         /*career5*/ "Carrera relacionada 5",
+         /*career5link*/ "#!",
+         /*career5pic  */ "career-example.jpg",
+
+         /*career6*/ "Carrera relacionada 6",
+         /*career6link*/ "#!",
+         /*career6pic  */ "career-example.jpg",
+
+         /*career7*/ "Carrera relacionada 7",
+         /*career7link*/ "#!",
+         /*career7pic  */ "career-example.jpg",
+
+         /*career8*/ "Carrera relacionada 8",
+         /*career8link*/ "#!",
+         /*career8pic  */ "career-example.jpg"
+      )(class="accent-profesemestral")
+      //- end
+
+
+
+      include layout/_footer
+   
+   script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
+   script(src="../js/global.js")
+   script(src="../vendor/slick.min.js")
+
+   script.
+      // Body width size
+      const widthDevice = document.getElementsByTagName('body')[0].clientWidth;
+      // Accordeon for certificados
+      accordeonSection( '._c-copy-and-picture-color-box--grid' )
+
+      // Carousel for modalidades
+      $('._c-slide-slick-imgside ._c-slide-slick-imgside--modalidadesList').slick({
+         dots: false,
+         infinite: false,
+         speed: 300,
+         slidesToShow: 2,
+         centerMode: true,
+         variableWidth: true,
+         prevArrow: '.modalidadNav.prev',
+         nextArrow: '.modalidadNav.next',
+         responsive: [
+            {
+               breakpoint: 700,
+               settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  centerMode: false,
+                  variableWidth: false,                     
+               }
+            }
+         ]            
+      });
+
+      // Carousel related careers
+      $('._c-testimonios-section--carousel').slick({
+         dots: true,
+         infinite: false,
+         speed: 300,
+         slidesToShow: 1,
+      });    
+
+
+      // Carousel related careers
+      $('#related-careers-list-id').slick({
+         dots: false,
+         infinite: false,
+         speed: 300,
+         slidesToShow: 4,
+         slidesToScroll: 1,
+         responsive: [
+            {
+               breakpoint: 1080,
+               settings: {
+                  centerMode: false,
+                  slidesToShow: 3,
+                  dots: true
+               }
+            },
+            {
+               breakpoint: 700,
+               settings: {
+                  centerMode: false,
+                  slidesToShow: 2,
+                  dots: true
+               }
+            },
+            {
+               breakpoint: 560,
+               settings: {
+                  centerMode: false,
+                  slidesToShow: 1,
+                  dots: true
+               }
+            }
+         ]
+      });            

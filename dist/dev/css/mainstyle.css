@@ -408,6 +408,10 @@ strong {
   background-color: #00A499;
 }
 
+.bg-white-gray {
+  background-color: #EFEFEF;
+}
+
 .maploc-color-yellow {
   color: #FFC639;
 }
@@ -4567,6 +4571,54 @@ header .mainNav--mobileActions a {
   }
 }
 ._c-banner-principal-t.accent-profesemestral a.o-btn {
+  background-color: #00534C;
+}
+._c-banner-principal-t.accent-profeejec {
+  background-color: #A6D342;
+}
+._c-banner-principal-t.accent-profeejec::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #74A433;
+}
+@media (min-width: 960px) and (max-width: 1140px) {
+  ._c-banner-principal-t.accent-profeejec::before {
+    width: 40%;
+  }
+}
+@media (min-width: 568px) and (max-width: 960px) {
+  ._c-banner-principal-t.accent-profeejec::before {
+    width: 80px;
+    height: 80px;
+  }
+}
+@media (max-width: 568px) {
+  ._c-banner-principal-t.accent-profeejec::before {
+    width: 55px;
+    height: 55px;
+  }
+}
+._c-banner-principal-t.accent-profeejec ._c-banner-principal-t--picture::before {
+  background-color: #A6D342;
+}
+@media (min-width: 960px) and (max-width: 1140px) {
+  ._c-banner-principal-t.accent-profeejec ._c-banner-principal-t--picture::before {
+    background-color: #A6D342;
+  }
+}
+._c-banner-principal-t.accent-profeejec ._c-banner-principal-t--picture::after {
+  background-color: #8FD360;
+}
+@media (min-width: 960px) and (max-width: 1140px) {
+  ._c-banner-principal-t.accent-profeejec ._c-banner-principal-t--picture::after {
+    background-color: #8FD360;
+  }
+}
+._c-banner-principal-t.accent-profeejec a.o-btn {
   background-color: #00534C;
 }
 ._c-banner-principal-t--intro {
