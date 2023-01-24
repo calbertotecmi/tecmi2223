@@ -1,20 +1,18 @@
 mixin pictureWithCopyExtendInfo( img1, img2, title, subtitle, content )
-    section._c-picture-with-copy.extended-info&attributes(attributes)
-        .o-container
-            .o-grid-row
-                .col.size-6
-                    ._c-picture-with-copy--picture
-                        //- img(src="../images/img-home-1.jpg", alt="Img Home", srcset="../images/img-home-1.jpg").img-responsive
-                        img(src="../images/" + img1, srcset="../images/" + img1).img-responsive
-                    ._c-picture-with-copy--footer
-                        //- img(src="../images/img-home-2.jpg", alt="Home", srcset="../images/img-home-2.jpg")
-                        img(src="../images/" + img2, srcset="../images/" + img2)
-                        .square
-                .col.size-6
-                    ._c-picture-with-copy--copy
-                        .square.first
-                        .square.second
-                        //- .square
-                        h2=title
-                        p=subtitle
-                        !=content
+	section._c-picture-with-copy.extended-info&attributes(attributes)
+		.o-container
+			.o-grid-row
+				.col.size-6
+					._c-picture-with-copy--picture
+						img(src="../images/" + img1, srcset="../images/" + img1).img-responsive
+					if img2 != null
+						._c-picture-with-copy--footer
+							img(src="../images/" + img2, srcset="../images/" + img2)
+							.square
+				.col.size-6
+					._c-picture-with-copy--copy
+						.square.first
+						//- .square.second
+						h2!=title
+						p!=subtitle
+						!=content

@@ -7,13 +7,13 @@ append configuracion
    -page['libsCss']	= ['slick','slick-theme']
 block contenido
    main
-
       include layout/_header
+
       include components/_c-banner-principal-t
       +bannerT( 
-         /* titulo en h1 */ 'Especialidad <br>En Innovación', 
+         /* titulo en h1 */ '<span>Maestría en</span> Administración de negocios área logística', 
          /* titulo en h2 - si no usar dejar null (aplica para todos) */ null, 
-         /* descripcion en parrafo */ 'Especializarte en innovación te dará herramientas para generar modelos de negocios diferentes, atractivos, tecnológicos y disruptivos, que te permitirán convertirte en un referente en el área que más te apasiona.', 
+         /* descripcion en parrafo */ 'Aprende a generar mejores estrategias en la cadena de suministro y fortaleciendo la cadena de valor del sector logístico, que ha incrementado su demanda desde el año 2020.', 
          /* enlace del boton */ '#!', 
          /* copy del boton */ 'Quiero más información', 
          /* imagen, la ruta por defecto es ../images/ no se puede cambiar */ 'img-t.jpg' 
@@ -26,15 +26,15 @@ block contenido
          null,
          null,
          null,
-         "Los negocios se han vuelto cada vez más digitales, desarrollando soluciones de aplicaciones disruptivas, como las plataformas de streaming, los servicios de transporte y hospedaje, entre otros muchos ejemplos, en donde la tecnología se ha vuelto parte de nuestro día a día. ",
-         "En la Especialidad en Innovación podrás crear soluciones de negocio que te darán una ventaja competitiva en la industria. A lo largo de la especialidad también aprenderás y practicarás las técnicas y metodologías para desarrollar proyectos con una clara estrategia creativa que te permita detectar oportunidades no resueltas o necesidades no atendidas en el mercado.",                
+         "Desde las empresas de logística 1PL, 2PL, hasta las 5PL tienen grandes retos para contemplar y llevar a cabo la total trazabilidad de los productos y su almacenamiento, adoptando modelos de logística inteligentes para cumplir satisfactoriamente su función. ",
+         "Por eso, la Maestría en Administración de Empresas con enfoque en Logística te ayudará a dar una dirección estratégica al negocio logístico, entendiendo desde los fundamentos de la administración, hasta la toma de decisiones financieras; diseñando estrategias para reducir costos a través del adecuado funcionamiento de inventarios, mejorando los tiempos de traslado; dirigiendo a la empresa a cumplir con los objetivos que se han planteado.",
          null,
          null,
          null,
          /* icon first */
          "modalidad-1.png",
          "Modalidad",
-         "Online",
+         "Presencial | Online",
          /* icon two */
          "modalidad-1.png",
          "Plan",
@@ -42,14 +42,37 @@ block contenido
          /* icon three */
          "modalidad-1.png",
          "Duración",
-         "3 años",
+         "1 año 8 meses",
          /* last icon */
          "modalidad-1.png",
          "Idioma",
          "Español",
-         /* titulo de que trata opcional */ "¿De qué trata la Especialidad en Innovación?"
-      )(class="accent-profeaso")  /* por si lleva un tema */
+         /* titulo de que trata opcional */ "¿De qué trata la Maestría en Administración de Negocios enfocada en Logística?"
+      )(class="accent-green") /* por si lleva un tema */
       //- End intro      
+
+      include components/_c-copy-and-picture-color-box
+      +copyAndPictureBox( 
+         /*title, */ "Con certificaciones que darán mayor valor a tu carrera profesional.",
+         /*subtitle, */ "Tenemos alianzas con las y los mejores de la industria para que puedas complementar tu Maestría con certificaciones que impulsarán tu perfil al siguiente nivel.",
+         /*islist=true, */ false,
+         /*list, */ null,
+         /*istabs=false, */ true,
+         /*tab1=null, */ "Certificación en Social Media Marketing",
+         /*tab1inf=null, */ "<p>En el certificado de Redes Sociales y Estrategias de Contenido, podrás elegir estas tres certificaciones para especializarte aún más:<br><br><span>- Inbound Marketing</span> <br><span>- Content Marketing </span> <br><span>- Social Media Marketing</span></p>",
+         /*tab2=null, */ null,
+         /*tab2inf=null, */ null,
+         /*tab3=null, */ null,
+         /*tab3inf=null, */ null,
+         /*tab4=null, */ null,
+         /*tab4inf=null, */ null,
+         /*tab5=null, */ null,
+         /*tab5inf=null, */ null,
+         /*tab6=null, */ null,
+         /*tab6inf=null */ null,
+         /* img */ "img-prod-maestria.jpg",
+      )(class="accent-profesemestral")
+      //- end 
 
       include components/_c-plan-de-estudios
       +sectionPlanEstudios(
@@ -68,58 +91,53 @@ block contenido
          /* text intro 2 */ "La Especialidad en Innovación cuenta con Reconocimiento de Validez Oficial de Estudios (RVOE) otorgado por la Secretaría de Educación Pública.",
          /*linkrvoe*/ "#!."
       )(class="accent-profesemestral-2")
-      //- End plan de estudios
+      //- End plan de estudios      
 
-      - var cuerpolista = '<ul class="o-grid-row"><li class="col size-xs-12 size-6"><span>Design Thinking</span> </li> <li class="col size-xs-12 size-6"><span>Jobs To Be Done </span></li> <li class="col size-xs-12 size-6"><span>Service Thinking </span></li> <li class="col size-xs-12 size-6"><span>STEEP Analysis </span></li> <li class="col size-xs-12 size-6"><span>TrendWatching </span></li> <li class="col size-xs-12 size-6"><span>Quality Function Development </span></li> <li class="col size-xs-12 size-6"><span>Consumer Trends </span></li> <li class="col size-xs-12 size-6"><span>IDEO Design Kits </span></li> <li class="col size-xs-12 size-6"><span>Canvas Scamper </span></li> <li class="col size-xs-12 size-6"><span>Modelo KANO </span></li> <li class="col size-xs-12 size-6"><span>Método Delphi </span></li> <li class="col size-xs-12 size-6"><span>Metodología SCRUM </span></li> <li class="col size-xs-12 size-6"><span>Método TRIZ</span></li> <li class="col size-xs-12 size-6"><span>Metodología Agile</span></li></ul>';
+      //- FALTA UN BLOQUEEEEEE
+      include components/_c-block-two-picstext
+      +blockTwoPicsText( 
+         /*text1, */ "En Universidad Tecmilenio aprendes haciendo, dando soluciones a problemáticas reales de una empresa, a través del desarrollo de proyectos prácticos. ",
+         /*ico1, */ "ico-inter.png",
+         /*bg1, */ "img-bg-test.jpg",
+         /*============*/
+         /*text2, */ "Además, en el Posgrado de Logística desarrollarás un proyecto en colaboración con compañeras y compañeros de distintos perfiles laborales.",
+         /*ico2, */ "ico-inter.png",
+         /*bg2 */ "img-bg-test-2.jpg",
+      )      
+
       include components/_c-certifications-accordeons
       +certificationsAccordeons( 
-         /* title,  */ "Conocerás las herramientas para encontrar mejores soluciones a los retos que se presentan día a día",
+         /* title,  */ "Personaliza tu perfil personal",
          /* imagen,  */ "img-prepa-certifications.jpg",
-         /* istabs=true,  */ false,
-         /* tab1=null,  */ null,
-         /* tab1inf=null,  */ null,
-         /* tab2=null,  */ null,
-         /* tab2inf=null,  */ null,
-         /* tab3=null,  */ null,
-         /* tab3inf=null,  */ null,
+         /* istabs=true,  */ true,
+         /* tab1=null,  */ "Redes sociales y estrategias de contenido",
+         /* tab1inf=null,  */ "Durante el 1er tetramestre aprenderás sobre inbound marketing y content marketing para analizar todo lo relacionado con las últimas tendencias en social media y complementar tus estrategias de posicionamiento.",
+         /* tab2=null,  */ "Mercadotecnia Estratégica",
+         /* tab2inf=null,  */ "Durante el 1er tetramestre aprenderás sobre inbound marketing y content marketing para analizar todo lo relacionado con las últimas tendencias en social media y complementar tus estrategias de posicionamiento.",
+         /* tab3=null,  */ "Inteligencia de Mercados",
+         /* tab3inf=null,  */ "Durante el 1er tetramestre aprenderás sobre inbound marketing y content marketing para analizar todo lo relacionado con las últimas tendencias en social media y complementar tus estrategias de posicionamiento.",
          /* tab4=null,  */ null,
-         /* tab4inf=null,  */ null,
+         /* tab4inf=null , */ null,
          /* tab5=null,  */ null,
-         /* tab5inf=null,  */ null,
+         /* tab5inf=null , */ null,         
          /* tab6=null,  */ null,
          /* tab6inf=null , */ null,
-         /* islist=null */ true,
-         /* cuerpo=null */ cuerpolista,
-      )(class="accent-default")
+         /* islist=null */ false,
+         /* cuerpo=null */ null,
+         /* desc adicional abajo del title */ "Además de profundizar en el área de la Logística podrás especializarte con nuestros certificados que potencializarán tu futuro laboral.",
+      )(class="accent-master")
+      //- end accordeons
 
-      include components/_c-cta-intercultural
-      +ctaIntercultural(
-         /*title* */ "Al terminar de estudiar la Maestría enfocada en Logística podrás:",
-         /*desc* */null,
-         /*content* */"<p class='text-center'>Crear soluciones de negocio, bajo un proceso de innovación basadas en metodologías ágiles que te ayudarán a generar un gran impacto económico y social para tu empresa.</p>",
-         /*icon* */ "icon-prod-tab-head.png",
-         /* bg */ "img-banner-prepa-internacional.jpg"
-      )(class="accent-especialidad shortcta")
-      //- end
-
-      include components/_c-graduate-grid-items
-      +graduateGridSixItems(
-         /*title, */ null,
+      - var contenidoPictureWithCopyExtend = '<ul><li><span>Diseñar e implementar procesos de capacitación para mejorar la productividad en la organización. </span></li><li><span>Resolver problemas basándote en indicadores psicológicos y sociales medidos con pruebas psicométricas e interretados con diversas estrategias matemáticas y estadísticas. </span></li><li><span>Implementar modelos estadísticos que apoyen el proceso de toma de decisiones de la organización. </span></li><li><span>Evaluar la manera en la que, quienes trabajan en una organización, cumplen los objetivos de la misma para definir estrategias que ayuden a la mejora continua del equipo. </span></li><li><span>Realizar intervenciones para ayudar a las personas con las dificultades que puedan tener en diferentes contextos sociales y que puedan afectar su desempeño en la organización. </span></li><li><span>Conocerás las características de cada personalidad, desde la gestación hasta el final de la vida humana, la base es vital para entender el comportamiento humano. </span></li><li><span>Podrás interpretar indicadores psicológicos y sociales para desarrollar soluciones a problemas de capital humano en la organización. </span></li><li><span>Tendrás la capacidad de proponer soluciones al detectar problemas de comportamiento en personas o en grupos, que puedan estar afectando a la institución. </span></li></ul>';
+      include components/_c-picture-with-copy-extended-info
+      +pictureWithCopyExtendInfo( 
+         /*img1, */ "img-home-1.jpg",
+         /*img2, */ "img-home-2.jpg",
+         /*title, */ "Cuando termines el Máster en Mercadotecnia Digital",
          /*subtitle, */ null,
-         /*icon1, */ "img-pa-1.png",
-         /*copy1, */ "Study Tours ",
-         /*icon2, */ "img-pa-1.png",
-         /*copy2, */ "Intercambios virtuales",
-         /*icon3, */ "img-pa-1.png",
-         /*copy3, */ "Proyectos colaborativos",
-         /*icon1, */ "img-pa-1.png",
-         /*copy1, */ "Study Tours ",
-         /*icon2, */ "img-pa-1.png",
-         /*copy2, */ "Intercambios virtuales",
-         /*icon3, */ "img-pa-1.png",
-         /*copy3, */ "Proyectos colaborativos",
-      )(class="accent-especialidad")
-      //- end graduate
+         /*content , */ contenidoPictureWithCopyExtend
+      )(class="accent-profesemestral")
+      //- end    
 
       include components/_c-testimonios
       +testimoniosBlock(
@@ -215,13 +233,44 @@ block contenido
       )(class="accent-profesemestral")
       //- end
 
-      
+
       include layout/_footer
+
+
+
 
    script(src="https://code.jquery.com/jquery-3.6.1.min.js") 
    script(src="../js/global.js")
    script(src="../vendor/slick.min.js")
    script.
+
+      // Accordeon for certificados
+      accordeonSection( '._c-certifications-accordeons' )   
+      accordeonSection( '._c-copy-and-picture-color-box' )
+
+      // Carousel for modalidades
+      $('._c-slide-slick-imgside ._c-slide-slick-imgside--modalidadesList').slick({
+         dots: false,
+         infinite: false,
+         speed: 300,
+         slidesToShow: 2,
+         centerMode: true,
+         variableWidth: true,
+         prevArrow: '.modalidadNav.prev',
+         nextArrow: '.modalidadNav.next',
+         responsive: [
+            {
+               breakpoint: 700,
+               settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  centerMode: false,
+                  variableWidth: false,                     
+               }
+            }
+         ]            
+      });
+
       // Carousel testimonios
       $('._c-testimonios-section--carousel').slick({
          dots: true,

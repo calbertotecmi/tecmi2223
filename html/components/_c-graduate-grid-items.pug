@@ -48,6 +48,73 @@ mixin graduateGridThreeItems( title, subtitle=null, icon1, copy1, icon2, copy2, 
                      ._c-graduate-grid--copy
                         p #{copy6}
             
+
+mixin graduateGridFourItems( title, subtitle=null, icon1, copy1, icon2, copy2, icon3, copy3, icon4, copy4, icon5, copy5, icon6, copy6, icon7, copy7, icon8, copy8)
+   section._c-graduate-grid&attributes(attributes)
+      .o-container
+         h2.color-dark-green.text-center.m-b-100 #{title}
+         if subtitle
+            p.text-center #{subtitle}
+         .o-grid-row
+            if icon1
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="../images/" + icon1, srcset="../images/" + icon1, alt=copy1)
+                     ._c-graduate-grid--copy
+                        p #{copy1}
+            if icon2
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="../images/" + icon2, srcset="../images/" + icon2, alt=copy2)
+                     ._c-graduate-grid--copy
+                        p #{copy2}
+            if icon3
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="../images/" + icon3, srcset="../images/" + icon3, alt=copy3)
+                     ._c-graduate-grid--copy
+                        p #{copy3}
+            if icon4
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="../images/" + icon4, srcset="../images/" + icon4, alt=copy4)
+                     ._c-graduate-grid--copy
+                        p #{copy4}
+            if icon5
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="../images/" + icon5, srcset="../images/" + icon5, alt=copy5)
+                     ._c-graduate-grid--copy
+                        p #{copy5}
+            if icon6
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="../images/" + icon6, srcset="../images/" + icon6, alt=copy6)
+                     ._c-graduate-grid--copy
+                        p #{copy6}
+            if icon7
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="../images/" + icon7, srcset="../images/" + icon7, alt=copy7)
+                     ._c-graduate-grid--copy
+                        p #{copy7}
+            if icon8
+               .col.size-3
+                  ._c-graduate-grid--icograduate
+                     ._c-graduate-grid--ico
+                        img(src="../images/" + icon8, srcset="../images/" + icon8, alt=copy8)
+                     ._c-graduate-grid--copy
+                        p #{copy8}
+
+
+
 mixin graduateGridSixItems( title, subtitle=null, icon1, copy1, icon2, copy2, icon3, copy3, icon4, copy4, icon5, copy5, icon6, copy6)
    section._c-graduate-grid&attributes(attributes)
       .o-container

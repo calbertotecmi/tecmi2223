@@ -1,0 +1,12 @@
+mixin blockTwoPicsText( text1, ico1, bg1, text2, ico2, bg2 )
+        ._c-block-two-picstext.hidden
+            .o-container
+                .o-grid-row
+                    .col.size-xs-12.size-sm-12.size-6(style=bg1!=null ? "background-image: url('../images/" + bg1 + "')" : '')
+                        ._c-block-two-picstext--inf
+                            img(src="../images/" + ico1, srcset="../images/" + ico1, alt=text1)
+                            h2!=text1
+                    .col.size-xs-12.size-sm-12.size-6(style=bg2!=null ? "background-image: url('../images/" + bg2 + "')" : '')
+                        ._c-block-two-picstext--inf
+                            img(src="../images/" + ico2, srcset="../images/" + ico2, alt=text2)
+                            h2!=text2

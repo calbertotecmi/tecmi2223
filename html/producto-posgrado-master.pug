@@ -9,6 +9,8 @@ block contenido
    main
 
       include layout/_header
+      //- end
+      
       include components/_c-banner-principal-t
       +bannerT( 
          /* titulo en h1 */ 'Máster en Mercadotecnia Digital', 
@@ -51,7 +53,6 @@ block contenido
       )  /* por si lleva un tema */
       //- End intro
 
-
       include components/_c-slide-slick-imgside
       +slideSlickWithBg( 
          "bg-modalidades-grid.jpg",
@@ -83,7 +84,6 @@ block contenido
       )
       //- End slick carousel
 
-
       include components/_c-banner-cta
       +bannerCta( 
          /*title, */ "Conoce todos los beneficios que te da estudiar esta carrera en Universidad Tecmilenio",
@@ -96,7 +96,6 @@ block contenido
          /* big pic */ true
       )(class="accent-profeaso")
       //- End banner cta
-
 
       include components/_c-plan-de-estudios
       +sectionPlanEstudios(
@@ -138,7 +137,7 @@ block contenido
          /* cuerpo=null */ null,
          /* desc adicional abajo del title */ "Recuerda que tanto los certificados como las insignias, son <strong>documentos digitales</strong>, otorgados por <strong>Universidad Tecmilenio</strong>, que validan el conocimiento y las habilidades que has adquirido en cada módulo.",
       )(class="accent-master")
-
+      //- end
 
       include components/_c-copy-and-picture-color-box
       +copyAndPictureBox( 
@@ -148,11 +147,11 @@ block contenido
          /*list, */ null,
          /*istabs=false, */ true,
          /*tab1=null, */ "Tetramestre 3",
-         /*tab1inf=null, */ "<p>En el certificado de Redes Sociales y Estrategias de Contenido, podrás elegir estas tres certificaciones para especializarte aún más:<br><span>- Inbound Marketing</span> <br><span>- Content Marketing </span> <br><br><span>- Social Media Marketing</span></p>",
+         /*tab1inf=null, */ "<p>En el certificado de Redes Sociales y Estrategias de Contenido, podrás elegir estas tres certificaciones para especializarte aún más:<br><br><span>- Inbound Marketing</span> <br><span>- Content Marketing </span> <br><span>- Social Media Marketing</span></p>",
          /*tab2=null, */ "Tetramestre 4",
-         /*tab2inf=null, */ "<p>En el certificado de Redes Sociales y Estrategias de Contenido, podrás elegir estas tres certificaciones para especializarte aún más:<br><span>- Inbound Marketing</span> <br><span>- Content Marketing </span> <br><br><span>- Social Media Marketing</span></p>",
+         /*tab2inf=null, */ "<p>En el certificado de Redes Sociales y Estrategias de Contenido, podrás elegir estas tres certificaciones para especializarte aún más:<br><br><span>- Inbound Marketing</span> <br><span>- Content Marketing </span><br><span>- Social Media Marketing</span></p>",
          /*tab3=null, */ "Tetramestre 5",
-         /*tab3inf=null, */ "<p>En el certificado de Redes Sociales y Estrategias de Contenido, podrás elegir estas tres certificaciones para especializarte aún más:<br><span>- Inbound Marketing</span> <br><span>- Content Marketing </span> <br><br><span>- Social Media Marketing</span></p>",
+         /*tab3inf=null, */ "<p>En el certificado de Redes Sociales y Estrategias de Contenido, podrás elegir estas tres certificaciones para especializarte aún más:<br><br><span>- Inbound Marketing</span> <br><span>- Content Marketing </span><br><span>- Social Media Marketing</span></p>",
          /*tab4=null, */ null,
          /*tab4inf=null, */ null,
          /*tab5=null, */ null,
@@ -185,7 +184,6 @@ block contenido
          /*content , */ contenidoPictureWithCopyExtend
       )(class="accent-profesemestral")
       //- end    
-
 
       include components/_c-testimonios
       +testimoniosBlock(
@@ -281,7 +279,6 @@ block contenido
       )(class="accent-profesemestral")
       //- end
 
-      
       include layout/_footer
 
    script(src="https://code.jquery.com/jquery-3.6.1.min.js") 

@@ -55,4 +55,14 @@ mixin certificationsAccordeons( title, imagen, istabs, tab1=null, tab1inf=null, 
                   h2!=title 
                   ._c-certifications-accordeons--infocontent
                      !=contenido
+mixin certificationsAccordeonsLarge( title, subtitle, codefortabs, codeforgallery )
+   section._c-certifications-accordeons.accent-profeaso
+      .o-container
+         h2.text-center=title
+         p.text-center!=subtitle
+         .o-grid-row.row-start._c-certifications-accordeons--grid
+            .col.size-8._c-certifications-accordeons--list.accordeon-init
+               !=codefortabs
 
+            .col.size-4._c-certifications-accordeons--gallery
+               !=codeforgallery

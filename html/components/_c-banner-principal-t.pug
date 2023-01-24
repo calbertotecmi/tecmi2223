@@ -5,9 +5,9 @@ mixin bannerT( titulo, subtitulo, descripcion, enlace, copyenlace, imagen )
             .col.size-6
                ._c-banner-principal-t--intro
                   h1.color-white!=titulo
-                  h2.color-prepa-3 #{subtitulo}
-                  p.color-white #{descripcion}
-                  a.o-btn.btn-solid(href="#{enlace}") #{copyenlace}
+                  h2.color-prepa-3!=subtitulo
+                  p.color-white!=descripcion
+                  a.o-btn.btn-solid(href="#{enlace}")!=copyenlace
             .col.size-6
                ._c-banner-principal-t--picture
                   img(src="../images/" + imagen, srcset="../images/" + imagen)

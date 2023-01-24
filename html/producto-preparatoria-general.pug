@@ -64,36 +64,67 @@ block contenido
          "Descargar Plan"
       )(class="accent-prepa")
 
-      section._c-picture-with-copy.extended-info.accent-prepa
-         .o-container
-            .o-grid-row
-               .col.size-6
-                  ._c-picture-with-copy--picture
-                     img(src="../images/img-home-1.jpg", alt="Img Home", srcset="../images/img-home-1.jpg").img-responsive
-               .col.size-6
-                  ._c-picture-with-copy--copy
-                     .square.first
-                     .square.second
-                     //- .square
-                     h2 Conoce #[br] nuestras actividades extracurriculares
-                     p Estudiar la preparatoria no será lo mismo sin las actividades extracurriculares que tenemos para ti. 
-                     p Participa cada tarde en diferentes talleres y experiencias deportivas como fútbol, baile, canto, entre otros, que #[strong te impulsarán a descubrir tus talentos, socializar y crear una base de disciplina] que te ayudará a lograr lo que te propongas en la vida.
-            ._c-picture-with-copy--footer
-               .o-grid-row
-                  .col.size-6
-                     img(src="../images/img-home-2.jpg", alt="Home", srcset="../images/img-home-2.jpg")
-                     .square
-                  .col.size-6
-                     ._c-picture-with-copy--discover
-                        h3 ¡Descubre cómo se vive esta experiencia!
-                        p Queremos que no pierdas la oportunidad de participar en talleres deportivos y culturales que te permitan descubrir tu pasión y ser feliz durante tu paso como estudiante en #[strong Prepa Tecmilenio].
-                        p Además, #[strong puedes pertenecer a una sociedad] y convivir con otros(as) estudiantes que comparten los mismos intereses, desarrollar hábitos y habilidades que contribuyan a su bienestar, mientras construyen relaciones positivas. 
-                        img.img-responsive(src="../images/associations-icons.png", srcset="../images/associations-icons.png")
-      
+      - var footerdesc = '<h3>¡Descubre cómo se vive esta experiencia!</h3> <p>Queremos que no pierdas la oportunidad de participar en talleres deportivos y culturales que te permitan descubrir tu pasión y ser feliz durante tu paso como estudiante en <strong>Prepa Tecmilenio</strong>.</p> <p>Además, <strong>puedes pertenecer a una sociedad</strong> y convivir con otros(as) estudiantes que comparten los mismos intereses, desarrollar hábitos y habilidades que contribuyan a su bienestar, mientras construyen relaciones positivas. </p><br><img class="img-responsive" src="../images/associations-icons.png" srcset="../images/associations-icons.png">';
+      include components/_c-picture-with-copy-extended-info
+      +pictureWithCopyExtendInfo( 
+         /*img1, */ "img-home-1.jpg",
+         /*img2, */ "img-home-2.jpg",
+         /*title, */ "Conoce <br>nuestras actividades <br>extracurriculares",
+         /*subtitle, */ "Estudiar la preparatoria no será lo mismo sin las actividades extracurriculares que tenemos para ti. <p>Participa cada tarde en diferentes talleres y experiencias deportivas como fútbol, baile, canto, entre otros, que te impulsarán a descubrir tus talentos, socializar y crear una base de disciplina que te ayudará a lograr lo que te propongas en la vida.</p>",
+         /*content , */ footerdesc
+      )(class="accent-prepa")
+      //- end          
+
+      - var eventsincareer = '<div class="_c-events-in-career-section--slideitm"> <div class="_c-events-in-career-section--eventbox"> <div class="_c-events-in-career-section--eventpic"><img src="../../images/evento-esports.jpg" srcset="../../images/evento-esports.jpg" alt="Evento"></div> <div class="_c-events-in-career-section--eventinf"> <h3>Semana de <br> la Felicidad </h3> <p>Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más. </p> </div> </div> </div> <div class="_c-events-in-career-section--slideitm"> <div class="_c-events-in-career-section--eventbox"> <div class="_c-events-in-career-section--eventpic"><img src="../../images/evento-esports.jpg" srcset="../../images/evento-esports.jpg" alt="Evento"></div> <div class="_c-events-in-career-section--eventinf"> <h3>Esports</h3> <p>Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más.</p> </div> </div> </div> <div class="_c-events-in-career-section--slideitm"> <div class="_c-events-in-career-section--eventbox"> <div class="_c-events-in-career-section--eventpic"><img src="../../images/evento-esports.jpg" srcset="../../images/evento-esports.jpg" alt="Evento"></div> <div class="_c-events-in-career-section--eventinf"> <h3>FIRST Robotics<br>Competition</h3> <p>Ofrecemos torneos de deportes electrónicos a nivel nacional, donde demostrarás tu talento en League of Legends, FIFA, Fortnite, Valorant, entre muchos más.</p> </div> </div> </div>';
       include components/_c-events-in-career-section
+      +eventsInCareer(
+         /*title*/ "Algunos eventos que se viven en prepa tecmilenio",
+         /*subtitle*/ "Al estudiar alguna de las carreras cortas en Tecmilenio, porás vivir actividaes que te ayudarán a seguir conociendo gente, conectar con la <strong>comunidad Tecmilenio</strong> y participar en los eventos que tenemos a nivel nacional como:",
+         /*content*/ eventsincareer
+      )
+
+
+      - var explorationhmtl = ' <div class="col size-4"> <div class="_c-exploration-routes--route"> <div class="_c-exploration-routes--routehead"> <div class="_c-exploration-routes--routeact accordeon-btn"> <h3>Marketing Digital</h3><span>NEGOCIOS</span> </div> <div class="_c-exploration-routes--routeimg"><img src="../images/ruta-img.jpg" srcset="../images/ruta-img.jpg"></div> </div> <div class="_c-exploration-routes--routebody accordeon-box"> <p>Nuestros(as) estudiantes dominarán una de <strong>las metodologías para mejorar procesos Lean Sigma</strong>, mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. </p> </div> </div> </div> <div class="col size-4"> <div class="_c-exploration-routes--route"> <div class="_c-exploration-routes--routehead"> <div class="_c-exploration-routes--routeact accordeon-btn"> <h3>Marketing Digital</h3><span>NEGOCIOS</span> </div> <div class="_c-exploration-routes--routeimg"><img src="../images/ruta-img.jpg" srcset="../images/ruta-img.jpg"></div> </div> <div class="_c-exploration-routes--routebody accordeon-box"> <p>Nuestros(as) estudiantes dominarán una de <strong>las metodologías para mejorar procesos, Lean Sigma</strong>, mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. </p> </div> </div> </div> <div class="col size-4"> <div class="_c-exploration-routes--route"> <div class="_c-exploration-routes--routehead"> <div class="_c-exploration-routes--routeact accordeon-btn"> <h3>Marketing Digital</h3><span>NEGOCIOS</span> </div> <div class="_c-exploration-routes--routeimg"><img src="../images/ruta-img.jpg" srcset="../images/ruta-img.jpg"></div> </div> <div class="_c-exploration-routes--routebody accordeon-box"> <p>Nuestros(as) estudiantes dominarán una de <strong>las metodologías para mejorar procesos, Lean Sigma</strong>, mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. </p> </div> </div> </div> <div class="col size-4"> <div class="_c-exploration-routes--route"> <div class="_c-exploration-routes--routehead"> <div class="_c-exploration-routes--routeact accordeon-btn"> <h3>Marketing Digital</h3><span>NEGOCIOS</span> </div> <div class="_c-exploration-routes--routeimg"><img src="../images/ruta-img.jpg" srcset="../images/ruta-img.jpg"></div> </div> <div class="_c-exploration-routes--routebody accordeon-box"> <p>Nuestros(as) estudiantes dominarán una de <strong>las metodologías para mejorar procesos, Lean Sigma</strong>, mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. </p> </div> </div> </div> <div class="col size-4"> <div class="_c-exploration-routes--route"> <div class="_c-exploration-routes--routehead"> <div class="_c-exploration-routes--routeact accordeon-btn"> <h3>Marketing Digital</h3><span>NEGOCIOS</span> </div> <div class="_c-exploration-routes--routeimg"><img src="../images/ruta-img.jpg" srcset="../images/ruta-img.jpg"></div> </div> <div class="_c-exploration-routes--routebody accordeon-box"> <p>Nuestros(as) estudiantes dominarán una de <strong>las metodologías para mejorar procesos, Lean Sigma</strong>, mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. </p> </div> </div> </div> <div class="col size-4"> <div class="_c-exploration-routes--route"> <div class="_c-exploration-routes--routehead"> <div class="_c-exploration-routes--routeact accordeon-btn"> <h3>Marketing Digital</h3><span>NEGOCIOS</span> </div> <div class="_c-exploration-routes--routeimg"><img src="../images/ruta-img.jpg" srcset="../images/ruta-img.jpg"></div> </div> <div class="_c-exploration-routes--routebody accordeon-box"> <p>Nuestros(as) estudiantes dominarán una de <strong>las metodologías para mejorar procesos, Lean Sigma</strong>, mediante herramientas estadísticas y análisis de datos que ayudan a realizar cualquier actividad laboral de manera más eficiente. </p> </div> </div> </div>'
       include components/_c-exploration-routes
+      +explorationRoutes( 
+         /*title, */ "Preparamos a nuestros estudiantes para dar su siguiente paso",
+         /*subtitle, */ "Nuestros(as) estudiantes de preparatoria experimentarán una área de interés con <strong>nuestras Rutas de Exploración</strong>.",
+         /*routesinhtml */ explorationhmtl,
+      )
+
+      - var listapicturebox = '<ul> <li> <span>La mentora o el mentor ofrecen orientación, apoyo, ayuda y asesoramiento en el proceso de autodescubrimiento y educación. </span></li> <li> <span>Este modelo es una práctica que les ayudará a optimizar sus experiencias en la preparatoria y alcanzar sus sueños y metas.</span></li> </ul>';
       include components/_c-copy-and-picture-color-box
+      +copyAndPictureBox( 
+         /*title,*/ "Obtén certificaciones para tu futuro profesional",
+         /*subtitle,*/ "Sabemos lo difícil que puede ser esta etapa de la vida. Por eso, en Prepa Tecmilenio tenemos un modelo de acompañamiento apreciativo. ",
+         /*islist=true,*/ true,
+         /*list,*/ listapicturebox,
+         /*istabs=false,*/ false,
+         /*tab1=null, */ null,
+         /*tab1inf=null,*/ null,
+         /*tab2=null,*/ null,
+         /*tab2inf=null,*/ null,
+         /*tab3=null,*/ null,
+         /*tab3inf=null,*/ null,
+         /*tab4=null,*/ null,
+         /*tab4inf=null,*/ null,
+         /*tab5=null,*/ null,
+         /*tab5inf=null,*/ null,
+         /*tab6=null,*/ null,
+         /*tab6inf=null,*/ null,
+         /*picture= ,*/ "img-prepa-preview-2.jpg",
+      )(class="accent-prepa")
+
+      - var contenidoctainter = '<p><strong>Enriquece tu experiencia personal</strong> conociendo, conviviendo y <strong>aprendiendo de otras culturas</strong>, a través de diferentes programas interculturales que te permitirán desarrollar nuevas habilidades para:</p> <ul> <li> <span>Aprender un nuevo idioma </span></li> <li> <span>Conocer más tus fortalezas</span></li> <li> <span>Desarrollar tu autonomía </span></li> <li> <span>Sensibilizarte y ampliar tu visión</span></li> </ul><a class="o-btn btn-outline" href="#!">Quiero conocerlas</a>';
       include components/_c-cta-intercultural
+      +ctaIntercultural(
+         /*title* */ "Vive diferentes experiencias interculturales",
+         /*desc* */null,
+         /*content* */ contenidoctainter,
+         /*icon* */ "icon-prod-tab-head.png",
+         /* bg */ "img-banner-prepa-internacional.jpg"
+      )(class="accent-prepa")
+      //- end
 
       include components/_c-certifications-accordeons
       +certificationsAccordeons( 
@@ -116,15 +147,9 @@ block contenido
       )(class="accent-prepa")
          
 
-      section._c-banner-cta.bg-color-prepa
-         .o-container
-            ._c-banner-cta--intro
-               img.img-responsive(src="../images/dialogo-dark-green.png", alt="", srcset="../images/dialogo-dark-green.png")
-               h2 Comienza tu historia en Prepa Intercultural Tecmilenio
-            ._c-banner-cta--info
-               p Si tienes alguna duda sobre el proceso de admisión, escríbenos. Nos contactaremos contigo para ayudarte a tomar la mejor decisión.
-            ._c-banner-cta--sesionInfo
-               a.o-btn.btn-solid.bg-aqua-dark(href="#!") ¡Sí! Quiero más información
+      include components/_c-banner-cta
+      +bannerCta( "Comienza tu historia en Prepa Intercultural Tecmilenio", "dialogo-dark-green.png", "Si tienes alguna duda sobre el proceso de admisión, escríbenos. Nos contactaremos contigo para ayudarte a tomar la mejor decisión.", null, "¡Sí! Quiero más información", "#!", null, false)(class="bg-color-prepa")
+
 
    include layout/_footer
    

@@ -1,4 +1,4 @@
-mixin copyAndPictureBox( title, subtitle, islist=true, list, istabs=false, tab1=null, tab1inf=null, tab2=null, tab2inf=null, tab3=null, tab3inf=null, tab4=null, tab4inf=null, tab5=null, tab5inf=null, tab6=null, tab6inf=null )
+mixin copyAndPictureBox( title, subtitle, islist=true, list, istabs=false, tab1=null, tab1inf=null, tab2=null, tab2inf=null, tab3=null, tab3inf=null, tab4=null, tab4inf=null, tab5=null, tab5inf=null, tab6=null, tab6inf=null, picture="img-prepa-preview-2.jpg" )
    ._c-copy-and-picture-color-box&attributes(attributes)
       .o-container 
          ._c-copy-and-picture-color-box--grid
@@ -46,6 +46,5 @@ mixin copyAndPictureBox( title, subtitle, islist=true, list, istabs=false, tab1=
                               h3 #{tab6}
                            ._c-copy-and-picture-color-box--acordeon-body
                               !=tab6inf
-
             ._c-copy-and-picture-color-box--img
-               img(src="../../images/img-prepa-preview-2.jpg", srcset="../../images/img-prepa-preview-2.jpg", alt="Prepa")
+               img(src="../images/" + picture, srcset="../images/" + picture, alt=title)

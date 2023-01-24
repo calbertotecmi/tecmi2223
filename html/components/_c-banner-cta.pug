@@ -22,7 +22,7 @@ mixin bannerCta( title, icon, parr, footext, copybtn, linkbtn, bgimg, isbgpic, p
                ._c-banner-cta--sesionInfo
                   h4 #{footext}
                   if (copybtn && gridbtns != true )
-                     a.o-btn.btn-outline.color-dark-green(href=linkbtn) #{ copybtn }
+                     a.o-btn.btn-outline.color-dark-green(href=linkbtn)=copybtn
                   if gridbtns == true
                      .o-grid-row
                         if btn1link
