@@ -1,4 +1,4 @@
-mixin bannerCta( title, icon, parr, footext, copybtn, linkbtn, bgimg, isbgpic, parrintro = null, parrintro2 = null, gridbtns = false, btn1link = null, btn1title = null, btn1sub = null, btn1ico = null, btn2link = null, btn2title = null, btn2sub = null, btn2ico = null, btn3link = null, btn3title = null, btn3sub = null, btn3ico = null, btn4link = null, btn4title = null, btn4sub = null, btn4ico = null )
+mixin bannerCta( title, icon, parr = 'Ingresa a nuestra sala virtual y resuelve tus dudas de admisiones al instante. Uno de nuestros asesores te atenderá', footext, copybtn, linkbtn, bgimg, isbgpic, parrintro = null, parrintro2 = null, gridbtns = false, btn1link = null, btn1title = null, btn1sub = null, btn1ico = null, btn2link = null, btn2title = null, btn2sub = null, btn2ico = null, btn3link = null, btn3title = null, btn3sub = null, btn3ico = null, btn4link = null, btn4title = null, btn4sub = null, btn4ico = null )
    section(class=isbgpic==true ? "_c-banner-cta bg-picture" : "_c-banner-cta")&attributes(attributes)
       .o-container
          if bgimg
@@ -16,7 +16,7 @@ mixin bannerCta( title, icon, parr, footext, copybtn, linkbtn, bgimg, isbgpic, p
 
          if parr
             ._c-banner-cta--info
-               p Ingresa a nuestra sala virtual y resuelve tus dudas de admisiones al instante. Uno de nuestros asesores te atenderá
+               p=parr 
          if isbgpic == false
             if (footext || copybtn || gridbtns == true )
                ._c-banner-cta--sesionInfo
