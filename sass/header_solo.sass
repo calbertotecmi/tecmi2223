@@ -1,0 +1,1003 @@
+$container-width: 1400px 
+$font-size-body: 15px
+
+// Tipografia
+
+$tipografia-principal: 'Source Sans Pro', sans-serif
+$tipografia-acento: 'Gentium Plus', sans-serif
+$tipografia-titulos: 'Cairo', sans-serif
+
+$font-size-h1: 3.4rem
+$font-size-h2: 2.5rem
+$font-size-h3: 1.5rem
+$font-size-h4: 1.4rem
+$font-size-h5: 1.3rem
+$font-size-h6: 1.25rem
+$font-size-p: 1.15rem
+// $font-size-p: 1.1rem
+$font-size-a: 1rem
+$font-size-links-hyf: 1rem
+
+// Weight font
+
+$thin: 100
+$light: 300
+$regular: 400
+$medium: 500
+$semiBold: 600
+$bold: 700
+$extraBold: 800
+
+// Colores
+$color-prepa: #F68D2E
+$color-prepa-2: #FFB549
+$color-prepa-3: #CB6015
+$color-prepa-brillante: #FF7F32
+$color-profesional: #78D64B
+$color-profesional-2: #64A70B
+$color-profesional-3: #C5E86C
+$color-profesional-4: #97D700
+$color-profesional-aso: #DB0032
+$color-profesional-aso-2: #A12B2F
+$color-profesional-aso-3: #79242F
+$color-profesional-aso-transparent: #C7868D
+$color-profesional-semestral: #70D44B
+$color-cdc: #1EC6BD
+
+// Primary colors
+$dark-green: #00534C
+$darker-green: #00433D
+$light-dark-green: #007864
+$aqua-dark: #00A499
+$aqua-light: #6BCABA
+$green-pastel: #26D07C
+
+// Secondary colors
+$white-yellow: #F9F1E6
+$gray-blue: #C3D7EE
+$white-gray: #EFEFEF
+
+// Text color
+$color-text-default: #151515
+$color-text-gray: #393939
+$color-text-white: #F8F9FA
+
+$maploc-yellow: #FFC639
+$maploc-orange: #FF983B
+$maploc-pink: #FF668B
+$maploc-skyblue: #40D3E2
+$maploc-aqua: #42D1B5
+
+$shadow-grey: #dcdddf
+$footer-grey: #171717
+$semi-negro: #171717
+$dock-campus-inter: #747474
+$bajo-negro: #3C3C3C
+$grey-iron: #dadcde
+$negro: #000000
+$blanco: #ffffff
+$colortexto: #2B2B2B
+$grisfondovideo: #313131
+$grisfondodropmenu: #f1f1f1
+
+// Media queries
+// 1440 
+$desktop: $container-width
+$desktop-small: 1140px
+$tablet-landscape: 1024px
+$tablet-portrait: 960px
+$tablet: 768px
+$phablet: 740px
+$mobile: 568px
+$mobile-landscape: 480px
+$mobile-portrait: 355px
+
+// min desktopBig
+@mixin minDesktopSize
+   @media ( min-width: $desktop)
+      @content
+
+// min 1140
+@mixin minDesktopSmall
+   @media ( min-width: $desktop-small)
+      @content
+// max 1140
+@mixin maxDesktopSmall
+   @media ( max-width: $desktop-small )
+      @content
+// 1140 - desktop
+@mixin desktopSmallToBig
+   @media (min-width: $desktop-small ) and ( max-width: $desktop )
+      @content
+// 1024 - 1140      
+@mixin tabletLandscapeDesktop
+   @media (min-width: $tablet-landscape ) and ( max-width: $desktop-small )
+      @content
+// max 1024
+@mixin maxTabletLandscape
+   @media (max-width: $tablet-landscape ) 
+      @content
+// min 1024
+@mixin minTabletLandscape
+   @media (min-width: $tablet-landscape ) 
+      @content
+// 960 - 1140
+@mixin tabletPortraitToDesktopSmall
+   @media ( min-width: $tablet-portrait ) and ( max-width: $desktop-small )
+      @content
+// min 960
+@mixin minTabletPortrait
+   @media ( min-width: $tablet-portrait )
+      @content
+// max 960
+@mixin maxTabletPortrait
+   @media ( max-width: $tablet-portrait )
+      @content
+// min 740 - desktop
+@mixin phabletToDesktop
+   @media ( min-width: $phablet ) and ( max-width: $desktop )
+      @content
+// min 740 - 1140
+@mixin phabletToDesktopSmall
+   @media ( min-width: $phablet ) and ( max-width: $desktop-small )
+      @content
+// min 740 - 960
+@mixin phabletToTablet
+   @media ( min-width: $phablet ) and ( max-width: $tablet-portrait )
+      @content
+// 568 - 960      
+@mixin mobileToPortrait
+   @media ( min-width: $mobile ) and ( max-width: $tablet-portrait )
+      @content
+// 568 - 740      
+@mixin mobileToPhablet
+   @media ( min-width: $mobile ) and ( max-width: $phablet )
+      @content
+// 740
+@mixin maxPhablet
+   @media ( max-width: $phablet )
+      @content
+// max 568     
+@mixin maxMobile
+   @media ( max-width: $mobile )
+      @content
+// min 568     
+@mixin minMobile
+   @media ( min-width: $mobile )
+      @content
+// 480 - 568
+@mixin mobileLandscapeToMobile 
+   @media (min-width: $mobile-landscape) and (max-width: $mobile )
+      @content
+// max 480
+@mixin maxMobileLandscape
+   @media (max-width: $mobile-landscape)
+      @content
+// min 355 max 568
+@mixin mobilePortraitToMobile
+   @media (min-width: $mobile-portrait) and (max-width: $mobile)
+      @content
+// max 355
+@mixin maxMobilePortrait
+   @media (max-width: $mobile-portrait)
+      @content
+
+// Mixins
+@mixin flexTopLeft
+   display: flex
+   align-items: flex-start
+   justify-content: flex-start
+
+@mixin flexStrech
+   display: flex
+   align-items: stretch
+
+@mixin flexStart
+   display: flex
+   align-items: flex-start
+   justify-content: flex-start
+
+@mixin flexEnd
+   display: flex
+   align-items: center
+   justify-content: flex-end
+
+@mixin flexEndColumnReverse
+   display: flex
+   align-items: flex-end
+   justify-content: flex-end
+   flex-flow: column-reverse
+
+@mixin flexCenter
+   display: flex
+   align-items: center
+   justify-content: center
+
+@mixin flexAround
+   display: flex
+   align-items: center
+   justify-content: space-around
+
+@mixin flexBetween
+   display: flex
+   align-items: center
+   justify-content: space-between
+
+@mixin flexEvenly
+   display: flex
+   align-items: center
+   justify-content: space-evenly   
+
+@mixin flexColumnSpaceBetween
+   display: flex
+   flex-flow: column
+   justify-content: space-between            
+
+@mixin flexRowReverse
+   display: flex
+   flex-flow: row-reverse
+   // justify-content: space-between            
+
+@mixin square( $position, $size, $top, $right, $color )
+   .square
+      position: $position
+      width: $size
+      height: $size
+      top: $top
+      right: $right
+      background-color: $color
+@mixin squareID( $id, $position, $size, $top, $right, $color )
+   .#{$id}
+      position: $position
+      width: $size
+      height: $size
+      top: $top
+      right: $right
+      background-color: $color
+
+@mixin squareInAfter( $position, $size, $top, $right, $color )
+   &::after
+      content: ""
+      position: $position
+      width: $size
+      height: $size
+      top: $top
+      right: $right
+      background-color: $color
+@mixin squareInBefore( $position, $size, $top, $right, $color )
+   &::before
+      content: ""
+      position: $position
+      width: $size
+      height: $size
+      top: $top
+      right: $right
+      background-color: $color
+
+*
+   margin: 0
+   padding: 0
+   -webkit-box-sizing: border-box
+   -moz-box-sizing: border-box
+   box-sizing: border-box
+   font-smoothing: antialiased
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   font-size: $font-size-body
+   @include maxMobile
+      font-size: 15px
+
+html
+   -webkit-text-size-adjust: 100%
+
+body
+   margin: 0
+   font-smoothing: antialiased
+   -webkit-font-smoothing: antialiased
+   -moz-osx-font-smoothing: grayscale
+   font-family: $tipografia-principal
+   overflow-x: hidden
+   max-width: 100%
+
+:after,
+:before
+   -webkit-box-sizing: border-box
+   -moz-box-sizing: border-box
+   box-sizing: border-box
+
+
+
+
+header#mainNavGlobal
+   ul
+      li
+         list-style: none
+         a
+            text-decoration: none
+
+   span
+      font-size: inherit
+      color: inherit   
+
+
+   .hidden,
+   .hide
+      display: none
+
+   // Global class for colors
+   .white-color
+      color: $blanco
+
+   .aqua-dark-color,
+   .color-aqua-dark
+      color: $aqua-dark
+
+
+   .color-white
+      color: $blanco   
+
+   .color-dark-green
+      color: $dark-green
+
+   .color-prepa
+      color: $color-prepa
+   .color-prepa-2
+      color: $color-prepa-2
+   .color-prepa-3
+      color: $color-prepa-3
+
+
+// Aplica para el alto del head y el top del menu level 2
+$altoheader: 80px
+// Se usa para el padding del level 2 y top del level 3
+$paddingMenuUpDown: 70px
+
+// Espacio para el main
+// main
+//    padding-top: $altoheader
+
+//    @include maxMobile
+//       padding-top: 60px
+
+// Clase global objetos btons
+.o-btn
+   display: inline-block
+   border-radius: 3px
+   text-align: center
+   font-size: 1rem
+   position: relative
+   // Default size - medium
+   padding: 7px 20px
+   min-width: 115px
+   &.small-btn
+      padding: 6px 12px
+   &.large-btn
+      padding: 10px 22px
+   &.btn-ico
+      @include flexCenter
+      // padding-left: 35px
+      &::before
+         content: ""
+         position: relative
+         // top: 10px
+         // left: 15px
+         width: 15px
+         height: 15px
+         background-size: 15px            
+         margin-right: 10px
+      img
+         display: block
+         margin-right: 5px
+         max-width: 100%
+      &.ico-informacion
+         &::before
+            background-image: url('../images/svg/ico-informacion-btn.svg')
+      &.ico-admision
+         &::before
+            background-image: url('../images/svg/ico-admisiones-btn.svg')
+   &.btn-outline
+      border: 1px solid
+      &.outline-aqua-dark
+         border-color: $aqua-dark
+         &:hover
+            background-color: $aqua-dark
+            color: $blanco
+   &.btn-solid
+      color: $blanco   
+
+
+header#mainNavGlobal
+   position: absolute
+   // margin-bottom: $altoheader
+   top: 0
+   left: 0
+   width: 100%
+   background-color: $dark-green
+   transition: all .1s linear
+   z-index: 10001
+   border-bottom: 1px solid $dark-green
+   // Cuando se da scroll se aplica esta clase
+   &.sticky-nav
+      position: fixed
+      animation: stickyHeadEffectUp .1s ease-in-out forwards
+      border-bottom: 1px solid transparent
+      // animation: stickyHeadEffect 5s linear
+      .mainNav
+         &--menu
+            ul.level--one
+               height: ($altoheader - 10)
+               li
+                  a
+                     color: white
+                     &::before
+                       background-color: $blanco 
+   // Nav principal
+   .mainNav
+      display: flex
+      align-items: center
+      width: 100%
+      max-width: $container-width
+      margin: 0 auto
+      position: relative
+      padding: 0 15px
+      // @media (min-width: $desktop)
+         // padding: 0 0
+      // padding: 0 15px
+      // logo head
+      &--logo
+         width: 100%
+         max-width: 160px
+         margin-right: auto
+         // margin-left: 30px
+         // display: none
+      &--menu
+         width: 100%
+         &.activeMenuMobile
+            display: block         
+         ul
+            width: 100%
+
+         // first level - superior nav
+         ul.level--one 
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            height: $altoheader
+            li.level--one-li
+               padding: 0 15px
+               &:last-child
+                  margin-left: 15px
+               &.search-lk,
+               &:last-child
+                  a
+                     &::before
+                        display: none
+               a.level--one-a
+                  font-size: $font-size-links-hyf
+                  color: $dark-green
+                  color: $blanco
+                  position: relative
+                  // z-index: 3
+                  &::before
+                     content: ""
+                     position: absolute
+                     bottom: -3px
+                     left: 0
+                     width: 0
+                     height: 1px
+                     background-color: $dark-green
+                     transition: all .1s linear
+                  &.activeLk,
+                  &:hover
+                     &::before
+                        width: 100%
+                  &.o-btn
+                     min-width: 155px
+                     max-width: 155px
+                     padding: 12px 0
+                     background-color: $green-pastel
+               
+               // second level - left nav
+               .level--two 
+                  width: 100%
+                  // display: flex
+                  align-items: center
+                  justify-content: flex-end
+                  display: none
+                  position: absolute
+                  top: $altoheader
+                  left: 0
+                  padding: $paddingMenuUpDown 0
+                  flex-flow: column
+                  // z-index: 10
+                  &::after,
+                  &::before
+                     z-index: 0
+                  &::after
+                     content: ""
+                     position: absolute
+                     right: 60%
+                     top: 0
+                     min-height: 330px
+                     height: 100%
+                     width: 270%
+                     background-color: $light-dark-green
+                     // z-index: 0                 
+                  &::before
+                     content: ""
+                     position: absolute
+                     left: 0
+                     top: 0
+                     min-height: 330px
+                     height: 100%
+                     width: 270%
+                     background-color: $blanco
+                     // z-index: 0
+                     border-bottom: 1px solid $grey-iron
+
+                  li.level--two-li
+                     width: 100%
+                     display: flex
+                     align-items: flex-start
+                     margin: 0 0 3px
+                     padding-left: 5%
+                     // position: relative
+                     // z-index: 1
+                     &:last-child
+                        margin: 0 0 0
+                        a
+                           border-bottom: 0
+                     a.level--two-a
+                        width: 30%
+                        color: white
+                        padding: 10px 5px
+                        // z-index: 10
+                        border-bottom: 1px solid $dark-green
+                        position: relative
+                        z-index: 2
+                        &::before
+                           display: none
+                        &:hover
+                           font-weight: 600
+                        &.activeLinkDrop
+                           border-bottom: 0
+                     // third level - right nav
+                     ul.level--three 
+                        width: 100%
+                        max-width: 430px
+                        top: $paddingMenuUpDown
+                        // top: 0
+                        left: 45%
+                        flex-flow: column
+                        display: none
+                        position: absolute
+                        z-index: 1001
+                        li.level--three-li
+                           width: 100%
+                           display: -webkit-box
+                           display: -ms-flexbox
+                           display: flex
+                           -webkit-box-align: start
+                           -ms-flex-align: start
+                           align-items: flex-start
+                           margin: 0 0 3px
+                           padding-left: 0
+                           &:last-child
+                              a
+                                 border-bottom: 0
+                           a.level--three-a
+                              width: 100%
+                              color: $dark-green
+                              padding: 10px 5px
+                              border-bottom: 1px solid $dark-green
+                              font-size: 14px
+                              // z-index: 11
+                              // &::before
+                              //    display: none
+                        // Drop for mobile
+                        &.activeDrop
+                           display: block
+                           top: 0
+                           left: 0
+                           position: relative
+                           max-width: 100%
+                           padding: 15px 10px
+                           background-color: #00A499
+                           border-top: 1px solid #00A499
+                           border-bottom: 1px solid #00A499
+                           li.level--three-li
+                              width: 100%
+                              a.level--three-a
+                                 width: 80%
+                                 font-size: 15px
+                                 color: white
+                                 margin: 0 auto
+                                 &::after
+                                    display: none
+                  &--cta-link
+                     position: absolute
+                     width: 100%
+                     max-width: 275px
+                     right: 3%
+                     top: 20%
+                     display: flex
+                     opacity: 0
+                     z-index: -1
+                     // transition: all .1s linear
+                     a.link-go
+                        width: 100%
+                        padding: 0
+                        border: 0
+                        position: relative
+                        overflow: hidden
+                        border-radius: 0px 20px
+                        img
+                           position: relative
+                           width: 100%
+                           height: 100%
+                        span
+                           position: absolute
+                           color: white
+                           bottom: 0
+                           z-index: 2
+                           left: 0  
+                           font-size: 18px
+                           font-weight: $semiBold
+                           padding: 20px
+                           display: flex
+                           align-items: center
+                           // &::after
+                           //    font-family: 'tecmilenio' !important
+                           //    content: "\e920"
+                     &.visible-cta
+                        opacity: 1
+                        z-index: 5
+         // Clase para mostrar drops
+         .activeMenu
+            display: flex!important
+
+      // For use in mobile - go back link in menu
+      .link-back-menu
+         width: 100%
+         background-color: #00433D
+         color: #26D07C
+         font-size: 17px
+         padding: 15px
+         padding-left: 30px
+         margin-bottom: 10px
+         position: relative
+         border-bottom: 1px solid 
+         &::before
+            content: ""
+            position: absolute
+            bottom: 0
+            left: 5px
+            width: 20px
+            height: 100%
+            background-image: url(https://2429099.fs1.hubspotusercontent-na1.net/hubfs/2429099/ico-arrow-return.png)
+            background-repeat: no-repeat
+            background-position: center center
+            background-size: 9px
+            display: flex
+            align-items: center            
+
+      &--mobileActions
+         display: none
+         margin-left: 15px
+         a
+            color: white
+            font-size: 22px
+            margin: 0 5px
+            padding: 0 5px
+         
+
+// Animaciones
+@keyframes stickyHeadEffectUp
+   0%
+      top: (-1)*$altoheader
+      background-color: rgba(0,0,0,0) 
+   100%
+      top: 0
+      background-color: rgba(0,0,0,100%)
+
+
+
+
+
+// Responsive part
+   
+@media ( min-width: $desktop-small ) and ( max-width: $desktop )
+   header#mainNavGlobal
+      .mainNav--menu 
+         ul.level--one 
+            li.level--one-li
+               a.level--one-a
+                  font-size: 15px
+               .level--two
+                  padding: 50px 0
+                  &--cta-link
+                     max-width: 225px
+                     a.link-go
+                        span
+                           font-size: 14px
+                  li.level--two-li
+                     a.level--two-a
+                        font-size: 14px
+                     ul.level--three
+                        max-width: 300px
+                        top: 50px
+                        
+@media ( min-width: $tablet-landscape ) and ( max-width: $desktop-small )
+   header#mainNavGlobal 
+      .mainNav--menu 
+         ul.level--one 
+            li.level--one-li
+               padding: 0 10px
+               a.level--one-a
+                  font-size: 14px
+               .level--two
+                  padding: 50px 0
+                  &--cta-link
+                     max-width: 225px
+                     right: 1%
+                     a.link-go
+                        span
+                           font-size: 14px
+                  li.level--two-li
+                     a.level--two-a
+                        font-size: 14px
+                     ul.level--three
+                        max-width: 300px
+                        top: 50px
+
+@media ( min-width: $tablet-portrait ) and ( max-width: $tablet-landscape )
+   header#mainNavGlobal 
+      .mainNav
+         &--logo
+            max-width: 120px
+         &--menu 
+            ul.level--one 
+               height: 90px
+               li.level--one-li
+                  padding: 0 10px
+                  a.level--one-a
+                     font-size: 13px
+                  &:last-child
+                     a
+                        &.o-btn
+                           min-width: 140px
+
+                  .level--two
+                     top: 90px
+                     padding: 35px 0
+                     &--cta-link
+                        width: 180px
+                        right: 2%
+                        top: 35px
+                        a.link-go
+                           span
+                              font-size: 14px
+                     //    display: none 
+                     li.level--two-li
+                        a.level--two-a
+                           font-size: 14px
+                     
+                        ul.level--three
+                           top: 35px
+                           max-width: 270px
+
+@media ( min-width: $tablet ) and ( max-width: $tablet-portrait )
+   header#mainNavGlobal 
+      .mainNav
+         &--logo
+            max-width: 120px
+         &--menu 
+            ul.level--one 
+               height: 80px
+               li.level--one-li
+                  padding: 0 10px
+                  a.level--one-a
+                     font-size: 13px
+                  &:last-child
+                     a
+                        &.o-btn
+                           min-width: 140px
+
+                  .level--two
+                     top: 80px
+                     padding: 35px 0
+                     &--cta-link
+                        width: 160px
+                        right: 1%
+                        top: 35px
+                        a.link-go
+                           span
+                              font-size: 14px
+                     //    display: none 
+                     li.level--two-li
+                        a.level--two-a
+                           font-size: 14px
+                     
+                        ul.level--three
+                           top: 35px
+                           max-width: 210px                   
+
+// @media ( min-width: $phablet ) and ( max-width: $tablet )
+
+//    $altoheader: 80px
+
+//    header#mainNavGlobal 
+//       .mainNav
+//          height: $altoheader
+//          &--logo
+//             max-width: 170px
+
+//          &--mobileActions
+//             display: flex
+
+@media ( min-width: $mobile ) and ( max-width: $tablet )
+
+   $altoheader: 80px
+
+   header
+      .mainNav
+         padding-right: 0
+         height: $altoheader
+         &--logo
+            max-width: 150px
+         &--menu
+            display: none
+         &--mobileActions
+            display: flex
+
+
+
+// Header for mobile
+@media ( max-width: 769px )
+
+   $altoheader: 80px
+
+   header#mainNavGlobal 
+      .mainNav
+         padding: 0 15px
+         height: $altoheader
+         &--logo
+            max-width: 170px
+         &--menu 
+            display: none
+            position: absolute
+            top: $altoheader
+            left: 0
+            width: 100%
+            background: #00433D
+            padding: 15px
+            ul.level--one
+               display: block
+               min-height: 100vh
+               li.level--one-li
+                  width: 100%
+                  padding: 5px 35px
+                  display: block
+                  &.search-lk
+                     display: none
+                  &:last-child
+                     margin-left: 0
+                     a.level--one-a
+                        border-bottom: 0
+                        padding: 15px
+                        color: white
+                        &.o-btn
+                           text-align: center
+                           justify-content: center
+                           max-width: 250px
+                           margin: 20px auto 0
+                           color: $blanco!important
+                           &::after
+                              display: none
+                  a.level--one-a
+                     font-size: 17px
+                     display: flex
+                     padding-bottom: 10px
+                     border-bottom: 1px solid #00A499
+                     font-weight: 500
+                     color: $blanco!important
+                     &::after
+                        content: ""
+                        position: absolute
+                        right: 0
+                        width: 20px
+                        height: 20px
+                        background-image: url(https://2429099.fs1.hubspotusercontent-na1.net/hubfs/2429099/ico-arrow-return.png)
+                        background-repeat: no-repeat
+                        background-position: center center
+                        background-size: 9px
+                        transform: rotate(180deg)
+                     &.activeLk,
+                     &:hover
+                        &::before
+                           display: none
+                  .level--two
+                     z-index: 1
+                     width: 100%
+                     padding: 0 30px 35px
+                     top: 0
+                     min-height: 100vh
+                     justify-content: flex-start
+                     &::before
+                        height: 100vh
+                        background-color: #00433D
+                        border: 0
+                     &::after
+                        display: none
+                     li.level--two-li
+                        padding: 0 0
+                        margin: 10px 0
+                        display: block
+                        position: relative
+                        a.level--two-a
+                           width: 85%
+                           margin: 0 auto
+                           color: #fff !important
+                           display: flex
+
+                        ul.level--three.activeDrop
+                           max-width: 85%
+                           margin: 0 auto
+                           padding: 0
+                           li.level--three-li
+                              &:last-child
+                                 a.level--three-a
+                                    border-bottom: 0
+                              a.level--three-a
+                                 width: 100%
+                                 padding: 10px 15px
+                                 font-size: 14px
+
+                     &--cta-link
+                        display: none
+
+         &--mobileActions
+            display: flex
+
+
+
+@media ( max-width: $mobile )
+   $altoheader: 80px
+
+   header#mainNavGlobal
+      .mainNav
+         // padding-right: 0
+         height: $altoheader
+         &--logo
+            max-width: 120px
+            margin: 0 auto 0 10px
+            img
+               margin: 0
+         &--menu
+            display: none
+         &--mobileActions
+            display: flex
+            margin: 0
+         ul.level--one 
+            li.level--one-li
+               padding: 5px 15px
+               
+               .level--two
+                  padding-left: 15px
+                  padding-right: 15px
+                  li.level--two-li 
+                     a.level--two-a,
+                     ul.level--three.activeDrop
+                        width: 100%
+                        max-width: 100%
+                  
+// @media ( max-width: $mobile-landscape )
+//    $altoheader: 80px
+
+//    header#mainNavGlobal
+//       .mainNav
+//          // padding-right: 0
+//          height: $altoheader
+//          &--logo
+//             max-width: 100px

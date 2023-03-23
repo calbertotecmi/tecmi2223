@@ -4,11 +4,6 @@ const bodyWith = document.getElementsByTagName('body')[0].clientWidth;
 // Ejecutar funciones
 window.addEventListener('load', () => {
    headerScripts();
-   // if ( bodyWith <= 568  ){
-
-   //    footerScripts();
-
-   // }
 })
 
 // Funciones
